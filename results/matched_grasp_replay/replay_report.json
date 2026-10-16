@@ -1,0 +1,482 @@
+{
+  "source_match": {
+    "source_url": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets/resolve/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_goal/put_the_bowl_on_the_plate_demo.hdf5",
+    "source_revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+    "published_full_file_lfs_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406",
+    "access": "HTTP Range; full file SHA not recomputed",
+    "lerobot_dataset_revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "lerobot_episode": 0,
+    "matched_original_demo": "demo_10",
+    "action_match_mode": "original",
+    "full_action_max_abs_error": 2.895082740206334e-08,
+    "original_steps": 112,
+    "retained_nonnoop_steps": 112,
+    "target_steps": 112,
+    "hdf5_env_args": {
+      "type": 1,
+      "env_name": "Libero_Tabletop_Manipulation",
+      "problem_name": "libero_tabletop_manipulation",
+      "bddl_file": "chiliocosm/bddl_files/libero_goal/put_the_bowl_on_the_plate.bddl",
+      "env_kwargs": {
+        "robots": [
+          "Panda"
+        ],
+        "controller_configs": {
+          "type": "OSC_POSE",
+          "input_max": 1,
+          "input_min": -1,
+          "output_max": [
+            0.05,
+            0.05,
+            0.05,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "output_min": [
+            -0.05,
+            -0.05,
+            -0.05,
+            -0.5,
+            -0.5,
+            -0.5
+          ],
+          "kp": 150,
+          "damping_ratio": 1,
+          "impedance_mode": "fixed",
+          "kp_limits": [
+            0,
+            300
+          ],
+          "damping_ratio_limits": [
+            0,
+            10
+          ],
+          "position_limits": null,
+          "orientation_limits": null,
+          "uncouple_pos_ori": true,
+          "control_delta": true,
+          "interpolation": null,
+          "ramp_ratio": 0.2
+        },
+        "bddl_file_name": "chiliocosm/bddl_files/libero_goal/put_the_bowl_on_the_plate.bddl",
+        "has_renderer": false,
+        "has_offscreen_renderer": true,
+        "ignore_done": true,
+        "use_camera_obs": true,
+        "camera_depths": false,
+        "camera_names": [
+          "robot0_eye_in_hand",
+          "agentview"
+        ],
+        "reward_shaping": true,
+        "control_freq": 20,
+        "camera_heights": 128,
+        "camera_widths": 128,
+        "camera_segmentations": null
+      }
+    },
+    "joint_names": [
+      "robot0_joint1",
+      "robot0_joint2",
+      "robot0_joint3",
+      "robot0_joint4",
+      "robot0_joint5",
+      "robot0_joint6",
+      "robot0_joint7",
+      "gripper0_finger_joint1",
+      "gripper0_finger_joint2",
+      "akita_black_bowl_1_joint0",
+      "cream_cheese_1_joint0",
+      "wine_bottle_1_joint0",
+      "plate_1_joint0",
+      "wooden_cabinet_1_top_level",
+      "wooden_cabinet_1_middle_level",
+      "wooden_cabinet_1_bottom_level",
+      "flat_stove_1_button"
+    ],
+    "examined": [
+      {
+        "demo": "demo_0",
+        "original_length": 90,
+        "filtered_length": 90,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_1",
+        "original_length": 88,
+        "filtered_length": 88,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_2",
+        "original_length": 92,
+        "filtered_length": 92,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_3",
+        "original_length": 94,
+        "filtered_length": 94,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_4",
+        "original_length": 80,
+        "filtered_length": 80,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_5",
+        "original_length": 89,
+        "filtered_length": 89,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_6",
+        "original_length": 105,
+        "filtered_length": 105,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_7",
+        "original_length": 92,
+        "filtered_length": 92,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_8",
+        "original_length": 84,
+        "filtered_length": 84,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_9",
+        "original_length": 90,
+        "filtered_length": 90,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_10",
+        "original_length": 112,
+        "filtered_length": 112,
+        "max_abs_error_if_shape_matches": 2.895082740206334e-08
+      },
+      {
+        "demo": "demo_11",
+        "original_length": 85,
+        "filtered_length": 84,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_12",
+        "original_length": 88,
+        "filtered_length": 88,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_13",
+        "original_length": 98,
+        "filtered_length": 98,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_14",
+        "original_length": 87,
+        "filtered_length": 87,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_15",
+        "original_length": 84,
+        "filtered_length": 84,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_16",
+        "original_length": 95,
+        "filtered_length": 95,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_17",
+        "original_length": 88,
+        "filtered_length": 88,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_18",
+        "original_length": 93,
+        "filtered_length": 93,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_19",
+        "original_length": 95,
+        "filtered_length": 95,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_20",
+        "original_length": 95,
+        "filtered_length": 95,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_21",
+        "original_length": 106,
+        "filtered_length": 106,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_22",
+        "original_length": 80,
+        "filtered_length": 80,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_23",
+        "original_length": 107,
+        "filtered_length": 107,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_24",
+        "original_length": 90,
+        "filtered_length": 89,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_25",
+        "original_length": 103,
+        "filtered_length": 103,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_26",
+        "original_length": 96,
+        "filtered_length": 96,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_27",
+        "original_length": 87,
+        "filtered_length": 87,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_28",
+        "original_length": 87,
+        "filtered_length": 87,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_29",
+        "original_length": 103,
+        "filtered_length": 103,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_30",
+        "original_length": 103,
+        "filtered_length": 103,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_31",
+        "original_length": 97,
+        "filtered_length": 97,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_32",
+        "original_length": 92,
+        "filtered_length": 92,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_33",
+        "original_length": 86,
+        "filtered_length": 86,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_34",
+        "original_length": 92,
+        "filtered_length": 92,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_35",
+        "original_length": 94,
+        "filtered_length": 91,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_36",
+        "original_length": 79,
+        "filtered_length": 79,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_37",
+        "original_length": 96,
+        "filtered_length": 96,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_38",
+        "original_length": 106,
+        "filtered_length": 106,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_39",
+        "original_length": 83,
+        "filtered_length": 83,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_40",
+        "original_length": 90,
+        "filtered_length": 90,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_41",
+        "original_length": 90,
+        "filtered_length": 90,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_42",
+        "original_length": 103,
+        "filtered_length": 103,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_43",
+        "original_length": 126,
+        "filtered_length": 126,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_44",
+        "original_length": 89,
+        "filtered_length": 89,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_45",
+        "original_length": 109,
+        "filtered_length": 104,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_46",
+        "original_length": 79,
+        "filtered_length": 79,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_47",
+        "original_length": 93,
+        "filtered_length": 93,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_48",
+        "original_length": 90,
+        "filtered_length": 90,
+        "max_abs_error_if_shape_matches": null
+      },
+      {
+        "demo": "demo_49",
+        "original_length": 89,
+        "filtered_length": 89,
+        "max_abs_error_if_shape_matches": null
+      }
+    ],
+    "extracted_npz_sha256": "273d84e9b46bc00427efea860a49ed0da0d92cb757b0e3f8a9484e36601f75a2"
+  },
+  "protocols": {
+    "matched_settle10": {
+      "protocol": "matched_settle10",
+      "settling_steps": 10,
+      "steps": 112,
+      "matched_source_demo": "demo_10",
+      "initial_restore_max_abs_error": 0.0,
+      "all_joint_names_and_order_match": true,
+      "final_success": true,
+      "first_success_step": 92,
+      "reference_position_rmse_m": 2.9548183561523393e-08,
+      "reference_position_max_error_m": 5.90309326339609e-08,
+      "reference_rotation_rmse_rad": 7.302895999287812e-08,
+      "reference_finger_qpos_rmse_m": 8.887452699609433e-10,
+      "initial_reference_position_error_m": 5.728825187555207e-08,
+      "bowl_lift_m": 0.12585096429568143,
+      "final_bowl_minus_plate_xyz_m": [
+        0.011520127081330156,
+        -0.003803385644147901,
+        0.004354702465984017
+      ],
+      "peak_rss_mib": 830.35546875,
+      "camera_rotation": "180deg to match training display",
+      "visual_assets": "CPU texture1024 diagnostic copy",
+      "note": "Recorded open-loop actions; no learned policy, not a benchmark success rate"
+    },
+    "matched_settle0": {
+      "protocol": "matched_settle0",
+      "settling_steps": 0,
+      "steps": 112,
+      "matched_source_demo": "demo_10",
+      "initial_restore_max_abs_error": 0.0,
+      "all_joint_names_and_order_match": true,
+      "final_success": true,
+      "first_success_step": 92,
+      "reference_position_rmse_m": 0.0010355636463599206,
+      "reference_position_max_error_m": 0.004797356412581043,
+      "reference_rotation_rmse_rad": 0.041469117057264866,
+      "reference_finger_qpos_rmse_m": 0.0017100438197160989,
+      "initial_reference_position_error_m": 0.004797356412581043,
+      "bowl_lift_m": 0.12552398524287622,
+      "final_bowl_minus_plate_xyz_m": [
+        0.012547209308608497,
+        -0.005018556188046908,
+        0.004578266578833423
+      ],
+      "peak_rss_mib": 829.54296875,
+      "camera_rotation": "180deg to match training display",
+      "visual_assets": "CPU texture1024 diagnostic copy",
+      "note": "Recorded open-loop actions; no learned policy, not a benchmark success rate"
+    },
+    "matched_repeat": {
+      "protocol": "matched_repeat",
+      "settling_steps": 10,
+      "steps": 112,
+      "matched_source_demo": "demo_10",
+      "initial_restore_max_abs_error": 0.0,
+      "all_joint_names_and_order_match": true,
+      "final_success": true,
+      "first_success_step": 92,
+      "reference_position_rmse_m": 2.9548183561523393e-08,
+      "reference_position_max_error_m": 5.90309326339609e-08,
+      "reference_rotation_rmse_rad": 7.302895999287812e-08,
+      "reference_finger_qpos_rmse_m": 8.887452699609433e-10,
+      "initial_reference_position_error_m": 5.728825187555207e-08,
+      "bowl_lift_m": 0.12585096429568143,
+      "final_bowl_minus_plate_xyz_m": [
+        0.011520127081330156,
+        -0.003803385644147901,
+        0.004354702465984017
+      ],
+      "peak_rss_mib": 519.34375,
+      "camera_rotation": "180deg to match training display",
+      "visual_assets": "CPU texture1024 diagnostic copy",
+      "note": "Recorded open-loop actions; no learned policy, not a benchmark success rate"
+    }
+  },
+  "repeat_max_abs_state_error": 0.0,
+  "repeat_passed": true,
+  "scope": "One matched recorded demonstration replay, no policy or benchmark score"
+}

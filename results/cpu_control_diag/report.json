@@ -1,0 +1,721 @@
+{
+  "description": "Control interface diagnostics; no learned policy or robustness score",
+  "args": {
+    "out": "/root/autodl-tmp/wam_glance_project/results/cpu_control_diag",
+    "suite": "libero_goal",
+    "task": 0,
+    "episode": 0,
+    "seed": 42,
+    "size": 224,
+    "amplitude": 0.1,
+    "pulse_steps": 10,
+    "hold_steps": 10,
+    "replay_atol": 1e-07,
+    "actions": null,
+    "asset_profile": "/root/autodl-tmp/wam_glance_project/LIBERO_CPU_DIAG/cpu_asset_profile.json"
+  },
+  "instruction": "open the middle drawer of the cabinet",
+  "conditions": {
+    "clean": {
+      "brightness": 1.0,
+      "saturation": 1.0,
+      "gains": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "dark": {
+      "brightness": 0.7,
+      "saturation": 1.0,
+      "gains": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "color": {
+      "brightness": 1.0,
+      "saturation": 1.0,
+      "gains": [
+        0.9,
+        1.0,
+        1.1
+      ]
+    }
+  },
+  "torch_loaded_in_sim_process": false,
+  "hard_reset": false,
+  "numba_disable_jit": "1",
+  "execution_mode": "separate rollout processes",
+  "visual_asset_profile": {
+    "mode": "cpu_diagnostic_textures",
+    "texture_max_size": 1024,
+    "source": "/root/autodl-tmp/wam_glance_project/LIBERO_CPU",
+    "destination": "/root/autodl-tmp/wam_glance_project/LIBERO_CPU_DIAG",
+    "unchanged_files_checked": 140,
+    "physics_files_unchanged": true,
+    "changed_textures": [
+      {
+        "path": "libero/libero/assets/stable_hope_objects/cream_cheese/texture_map.png",
+        "original_size": [
+          2048,
+          2048
+        ],
+        "diagnostic_size": [
+          1024,
+          1024
+        ],
+        "original_sha256": "6ef390c92c83f6f27da79df09130e48bda6785f98181942d2ec2548ab2afa814",
+        "diagnostic_sha256": "eaa1b972f239e7ef8008eecb8da9e2e3d6f24f0fb703577cfa622adbfb4da12b"
+      },
+      {
+        "path": "libero/libero/assets/stable_scanned_objects/akita_black_bowl/texture.png",
+        "original_size": [
+          4096,
+          4096
+        ],
+        "diagnostic_size": [
+          1024,
+          1024
+        ],
+        "original_sha256": "8a646d98b084b7400dd91beed9c83e10b4a4dca572896b3974356b7937a4bd85",
+        "diagnostic_sha256": "e906b61c2eab6c3f686b8c82a5b969a1bb9094b0c482145c870886dee00179af"
+      },
+      {
+        "path": "libero/libero/assets/stable_scanned_objects/plate/texture.png",
+        "original_size": [
+          4096,
+          4096
+        ],
+        "diagnostic_size": [
+          1024,
+          1024
+        ],
+        "original_sha256": "6b742142bf0e29a90d76c4b0254a4481e9eff4807eff3ac6c4ac67a5888fb005",
+        "diagnostic_sha256": "83e633a6088e667203458f2a8ea15fe56224ebaf8afb53b0052d3244c7ecc163"
+      },
+      {
+        "path": "libero/libero/assets/textures/martin_novak_wood_table.png",
+        "original_size": [
+          1270,
+          1270
+        ],
+        "diagnostic_size": [
+          1024,
+          1024
+        ],
+        "original_sha256": "9d714fbf44d4d44f279761c0ddd0b2fd7271446cdbb85fcbef8677fe5f929850",
+        "diagnostic_sha256": "911e5390cae77b7ecffe741d5bed4e40633856b546609f3a59e950d13e6b8625"
+      },
+      {
+        "path": "libero/libero/assets/turbosquid_objects/wine_rack/light-wood.png",
+        "original_size": [
+          1036,
+          1036
+        ],
+        "diagnostic_size": [
+          1024,
+          1024
+        ],
+        "original_sha256": "967be64bdb170d36283bc43c2ae5d525ec88f78bc837dc7d0efc9a28d68caad1",
+        "diagnostic_sha256": "c6a2ddcf3f0093c946edeb3fa8d46e17cab2d9f57a4aab91f7aa202b5658ab2c"
+      }
+    ],
+    "scope": "Control/replay diagnostics; not official visual benchmark scores"
+  },
+  "initial_state_sha256": "5a8f40221c0b59dfaa1061b36a49d4b10b0b47ffb82a1ac0b10080a2aa466ec4",
+  "camera_transform": "rotate180",
+  "visual_pairing": "three transforms of each identical physics frame",
+  "packages": {
+    "mujoco": "3.2.3",
+    "robosuite": "1.4.0",
+    "numpy": "1.26.4",
+    "scipy": "1.15.3",
+    "imageio": "2.38.0"
+  },
+  "single_axis": [
+    {
+      "name": "zero",
+      "axis": null,
+      "sign": 0,
+      "pulse": {
+        "translation_m": [
+          -6.420693210273942e-06,
+          -9.496434401832371e-05,
+          -7.788420479659663e-06
+        ],
+        "rotation_world_rotvec_rad": [
+          2.0869789238982314e-05,
+          3.380019914413044e-05,
+          -0.0002746663259262912
+        ],
+        "gripper_qpos_delta": [
+          0.00027154752784026154,
+          -0.0002712191550649015
+        ]
+      },
+      "total": {
+        "translation_m": [
+          -1.838172746984612e-05,
+          -0.0003220352208641846,
+          -2.344568786538659e-05
+        ],
+        "rotation_world_rotvec_rad": [
+          0.00040735933952884865,
+          0.00010856209300311795,
+          -0.0021796970765179708
+        ],
+        "gripper_qpos_delta": [
+          0.0009600170466596974,
+          -0.0009580147479230777
+        ]
+      },
+      "task_done_steps": []
+    },
+    {
+      "name": "x_pos",
+      "axis": 0,
+      "sign": 1,
+      "pulse": {
+        "translation_m": [
+          0.009859749722680278,
+          -2.0991868701527097e-05,
+          -0.001784047643575315
+        ],
+        "rotation_world_rotvec_rad": [
+          0.00046053146187862993,
+          -0.002373277240671028,
+          -0.0005755607312225221
+        ],
+        "gripper_qpos_delta": [
+          0.0002716472472824097,
+          -0.00027111951240404303
+        ]
+      },
+      "total": {
+        "translation_m": [
+          0.011881538016012383,
+          -0.0001963241939797987,
+          -0.0010148053101521892
+        ],
+        "rotation_world_rotvec_rad": [
+          0.0008413088732508165,
+          0.0015918795737259479,
+          -0.0024251758653678116
+        ],
+        "gripper_qpos_delta": [
+          0.0009602384385730689,
+          -0.000957793418906755
+        ]
+      },
+      "task_done_steps": []
+    },
+    {
+      "name": "x_neg",
+      "axis": 0,
+      "sign": -1,
+      "pulse": {
+        "translation_m": [
+          -0.00991295631463976,
+          -0.00021009640378105016,
+          0.0016749295409372866
+        ],
+        "rotation_world_rotvec_rad": [
+          -9.035557267157784e-05,
+          0.0028358697004391862,
+          -0.0004459836128059527
+        ],
+        "gripper_qpos_delta": [
+          0.00027148980563231756,
+          -0.00027127652027307547
+        ]
+      },
+      "total": {
+        "translation_m": [
+          -0.01198161070411008,
+          -0.0004582378747018945,
+          0.0008593767120981255
+        ],
+        "rotation_world_rotvec_rad": [
+          0.00031753240696447247,
+          -0.000924604496899761,
+          -0.00233852333476652
+        ],
+        "gripper_qpos_delta": [
+          0.0009599736562954445,
+          -0.0009580578574670401
+        ]
+      },
+      "task_done_steps": []
+    },
+    {
+      "name": "y_pos",
+      "axis": 1,
+      "sign": 1,
+      "pulse": {
+        "translation_m": [
+          -0.00038589524781179607,
+          0.011523672618546687,
+          -8.759882199504965e-05
+        ],
+        "rotation_world_rotvec_rad": [
+          0.0001549637781083272,
+          0.00019448110365307504,
+          0.00011694822844475249
+        ],
+        "gripper_qpos_delta": [
+          0.00027407207591739063,
+          -0.00026862794579908533
+        ]
+      },
+      "total": {
+        "translation_m": [
+          -0.0004399226014397406,
+          0.012322043697717553,
+          -0.00010590468232418715
+        ],
+        "rotation_world_rotvec_rad": [
+          0.0001845079654398175,
+          0.0002533669709872149,
+          -0.0026216881846223275
+        ],
+        "gripper_qpos_delta": [
+          0.0009599604727593344,
+          -0.0009580238293505627
+        ]
+      },
+      "task_done_steps": []
+    },
+    {
+      "name": "y_neg",
+      "axis": 1,
+      "sign": -1,
+      "pulse": {
+        "translation_m": [
+          7.801133973400765e-05,
+          -0.01155803850235827,
+          -2.0600273278326142e-06
+        ],
+        "rotation_world_rotvec_rad": [
+          0.0002219608132633334,
+          2.8026867152071207e-05,
+          -0.001804093820128784
+        ],
+        "gripper_qpos_delta": [
+          0.0002690602235322914,
+          -0.0002736397145860561
+        ]
+      },
+      "total": {
+        "translation_m": [
+          5.8762402879664055e-05,
+          -0.012736077650775127,
+          -1.8582414064161057e-05
+        ],
+        "rotation_world_rotvec_rad": [
+          0.0009419583061338036,
+          0.00010337868848440416,
+          -0.0026502409670858037
+        ],
+        "gripper_qpos_delta": [
+          0.0009602055918463137,
+          -0.0009577786459557397
+        ]
+      },
+      "task_done_steps": []
+    },
+    {
+      "name": "z_pos",
+      "axis": 2,
+      "sign": 1,
+      "pulse": {
+        "translation_m": [
+          -0.0008015650998034196,
+          -8.229217705750524e-05,
+          0.011446616329084724
+        ],
+        "rotation_world_rotvec_rad": [
+          -7.06943289503812e-05,
+          -0.0010190371613259836,
+          -0.00029484263376519383
+        ],
+        "gripper_qpos_delta": [
+          0.0002715321057845388,
+          -0.00027123459432702723
+        ]
+      },
+      "total": {
+        "translation_m": [
+          -0.0008975867306684759,
+          -0.00029880037002635515,
+          0.01222273636344684
+        ],
+        "rotation_world_rotvec_rad": [
+          0.0003101954505670201,
+          -0.000181513089268161,
+          -0.0021838847136899874
+        ],
+        "gripper_qpos_delta": [
+          0.0009599672059460718,
+          -0.0009580646073315199
+        ]
+      },
+      "task_done_steps": []
+    },
+    {
+      "name": "z_neg",
+      "axis": 2,
+      "sign": -1,
+      "pulse": {
+        "translation_m": [
+          0.0006946196262614668,
+          -9.581910269856539e-05,
+          -0.011511195991796397
+        ],
+        "rotation_world_rotvec_rad": [
+          0.00020340662449746218,
+          0.0014913688521955312,
+          -0.00033429643589452185
+        ],
+        "gripper_qpos_delta": [
+          0.00027157993971876904,
+          -0.00027118674688231953
+        ]
+      },
+      "total": {
+        "translation_m": [
+          0.0007775874649215142,
+          -0.00032874718598919876,
+          -0.012310052296242269
+        ],
+        "rotation_world_rotvec_rad": [
+          0.0005951399938392319,
+          0.000869445099974584,
+          -0.002244141496934996
+        ],
+        "gripper_qpos_delta": [
+          0.0009601126822404785,
+          -0.0009579191093919831
+        ]
+      },
+      "task_done_steps": []
+    },
+    {
+      "name": "rx_pos",
+      "axis": 3,
+      "sign": 1,
+      "pulse": {
+        "translation_m": [
+          -4.688658301058024e-05,
+          0.0024946877515028224,
+          5.608525646705331e-05
+        ],
+        "rotation_world_rotvec_rad": [
+          0.11811812944200006,
+          -0.00221855758965733,
+          -0.0011052446512305266
+        ],
+        "gripper_qpos_delta": [
+          0.00029368074529722427,
+          -0.00024924751626743263
+        ]
+      },
+      "total": {
+        "translation_m": [
+          -0.00040190662207870154,
+          0.0008041691767348251,
+          -0.000603923039783183
+        ],
+        "rotation_world_rotvec_rad": [
+          0.15600730085078604,
+          -0.0024028477668091475,
+          -0.002993022468820179
+        ],
+        "gripper_qpos_delta": [
+          0.0010305492452921533,
+          -0.0008876154032654987
+        ]
+      },
+      "task_done_steps": []
+    },
+    {
+      "name": "rx_neg",
+      "axis": 3,
+      "sign": -1,
+      "pulse": {
+        "translation_m": [
+          -0.00031612292622976157,
+          -0.0024990614145188952,
+          -0.00020232799302966065
+        ],
+        "rotation_world_rotvec_rad": [
+          -0.11800492626808869,
+          -0.0036248656120197727,
+          0.0011462603513184798
+        ],
+        "gripper_qpos_delta": [
+          0.00024959465386709817,
+          -0.0002933333733576779
+        ]
+      },
+      "total": {
+        "translation_m": [
+          -0.0008522969653939894,
+          -0.0011970106467114154,
+          -0.0010085320944954734
+        ],
+        "rotation_world_rotvec_rad": [
+          -0.15513573607145062,
+          -0.004057270794442317,
+          -0.0004683355937917203
+        ],
+        "gripper_qpos_delta": [
+          0.0008896366537737913,
+          -0.0010285277573291174
+        ]
+      },
+      "task_done_steps": []
+    },
+    {
+      "name": "ry_pos",
+      "axis": 4,
+      "sign": 1,
+      "pulse": {
+        "translation_m": [
+          -0.006895529570124875,
+          3.5404181771283086e-05,
+          -0.004916829396471867
+        ],
+        "rotation_world_rotvec_rad": [
+          -0.0006215170594193316,
+          0.0984074137048725,
+          -0.0002989224351267934
+        ],
+        "gripper_qpos_delta": [
+          0.0002714884515977248,
+          -0.00027127825785830395
+        ]
+      },
+      "total": {
+        "translation_m": [
+          -0.002648078315356822,
+          -6.701372688797808e-07,
+          -0.0023509231607028447
+        ],
+        "rotation_world_rotvec_rad": [
+          -0.0005827376360317147,
+          0.14202649305440532,
+          -0.002016055161195423
+        ],
+        "gripper_qpos_delta": [
+          0.0009597037137535347,
+          -0.0009583278792509933
+        ]
+      },
+      "task_done_steps": []
+    },
+    {
+      "name": "ry_neg",
+      "axis": 4,
+      "sign": -1,
+      "pulse": {
+        "translation_m": [
+          0.0065746183628832,
+          -0.00010118590463711885,
+          0.005320008967953482
+        ],
+        "rotation_world_rotvec_rad": [
+          0.0006491267483503226,
+          -0.09888666148666855,
+          0.00027956471354530666
+        ],
+        "gripper_qpos_delta": [
+          0.00027159889262390324,
+          -0.00027116769105726274
+        ]
+      },
+      "total": {
+        "translation_m": [
+          0.0026368313554540612,
+          -0.000491708050391157,
+          0.0019210820511574855
+        ],
+        "rotation_world_rotvec_rad": [
+          0.0014307538099923496,
+          -0.14182931679329347,
+          -0.0015262789421498506
+        ],
+        "gripper_qpos_delta": [
+          0.0009603267356220677,
+          -0.0009577045812380475
+        ]
+      },
+      "task_done_steps": []
+    },
+    {
+      "name": "rz_pos",
+      "axis": 5,
+      "sign": 1,
+      "pulse": {
+        "translation_m": [
+          -1.651447082631763e-05,
+          0.000828378418219573,
+          9.421860713842989e-07
+        ],
+        "rotation_world_rotvec_rad": [
+          0.0010627067896732574,
+          0.00020329012267938722,
+          0.11236331558978076
+        ],
+        "gripper_qpos_delta": [
+          0.00027170125716705074,
+          -0.0002712260691234772
+        ]
+      },
+      "total": {
+        "translation_m": [
+          -5.765071297098023e-06,
+          0.00025779550361289434,
+          2.635586071608742e-07
+        ],
+        "rotation_world_rotvec_rad": [
+          0.0015967723962412078,
+          0.0004557528058882029,
+          0.14808705688090532
+        ],
+        "gripper_qpos_delta": [
+          0.0009606548639725654,
+          -0.0009575104818562788
+        ]
+      },
+      "task_done_steps": []
+    },
+    {
+      "name": "rz_neg",
+      "axis": 5,
+      "sign": -1,
+      "pulse": {
+        "translation_m": [
+          2.772813535067975e-05,
+          -0.0009872488481340036,
+          7.056675858985173e-06
+        ],
+        "rotation_world_rotvec_rad": [
+          -0.0009511176059356774,
+          0.0003205913884070792,
+          -0.11246892895019996
+        ],
+        "gripper_qpos_delta": [
+          0.00027154099949907445,
+          -0.00027138599957924475
+        ]
+      },
+      "total": {
+        "translation_m": [
+          2.7300889452908095e-05,
+          -0.0008083109500232836,
+          8.016598478155501e-06
+        ],
+        "rotation_world_rotvec_rad": [
+          -0.0007520429130910066,
+          0.0005590796661252956,
+          -0.15173956594957513
+        ],
+        "gripper_qpos_delta": [
+          0.0009595170118024063,
+          -0.0009586480938979583
+        ]
+      },
+      "task_done_steps": []
+    },
+    {
+      "name": "gripper_pos",
+      "axis": 6,
+      "sign": 1,
+      "pulse": {
+        "translation_m": [
+          -6.423471590993879e-06,
+          -9.482020788536584e-05,
+          -7.788260114161005e-06
+        ],
+        "rotation_world_rotvec_rad": [
+          2.0869577866318445e-05,
+          3.3799595415664424e-05,
+          -0.0002743492686884626
+        ],
+        "gripper_qpos_delta": [
+          -0.03503950740425553,
+          0.03504025499605062
+        ]
+      },
+      "total": {
+        "translation_m": [
+          -1.8384100970547657e-05,
+          -0.000321912038811472,
+          -2.3445553340550873e-05
+        ],
+        "rotation_world_rotvec_rad": [
+          0.00040735546743363204,
+          0.00010856160250473785,
+          -0.0021794292332263116
+        ],
+        "gripper_qpos_delta": [
+          -0.037802162500105624,
+          0.03780454322809098
+        ]
+      },
+      "task_done_steps": []
+    },
+    {
+      "name": "gripper_neg",
+      "axis": 6,
+      "sign": -1,
+      "pulse": {
+        "translation_m": [
+          -6.421366825326569e-06,
+          -9.49224606656366e-05,
+          -7.788298576061337e-06
+        ],
+        "rotation_world_rotvec_rad": [
+          2.0864643171320804e-05,
+          3.379973377122127e-05,
+          -0.0002745992356103581
+        ],
+        "gripper_qpos_delta": [
+          0.0316252763010915,
+          -0.03162503767591015
+        ]
+      },
+      "total": {
+        "translation_m": [
+          -1.8385760181177657e-05,
+          -0.00032181300563080203,
+          -2.3445232030017138e-05
+        ],
+        "rotation_world_rotvec_rad": [
+          0.0004074325308249935,
+          0.00010856202427548694,
+          -0.002179423523690342
+        ],
+        "gripper_qpos_delta": [
+          0.0003592571779553605,
+          -0.00035687598828818695
+        ]
+      },
+      "task_done_steps": []
+    }
+  ],
+  "replay": {
+    "actions_sha256": "22a56945257cb1c01ebd922f51829a5d55f9506000138d25a916a93c3d4378d0",
+    "steps": 150,
+    "max_abs_state_error": 0.0,
+    "atol": 1e-07,
+    "passed": true,
+    "states_sha256": [
+      "88ce87143c30a5635d3057cebc0bf8066ae35a091fe4603afa78065dceb7d4b0",
+      "88ce87143c30a5635d3057cebc0bf8066ae35a091fe4603afa78065dceb7d4b0"
+    ]
+  },
+  "peak_sim_rss_mib": 769.51953125
+}

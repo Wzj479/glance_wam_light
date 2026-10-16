@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-16",
+  "environment": "existing CPU simulation environment, Python 3.10",
+  "command": "../cpu_sim_env/bin/python -m pytest -q day1/test_control_sensitivity.py day1/test_finetune_utils.py day1/test_eval_protocol.py day1/test_robust_pipeline.py",
+  "tests_passed": 27,
+  "subtests_passed": 5,
+  "scope": "CPU unit tests; no new physics runs or GPU integration tests in publication step"
+}

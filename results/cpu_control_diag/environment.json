@@ -1,0 +1,21 @@
+{
+  "python": "3.10.22 (main, Oct  1 2026, 20:14:04) [GCC 14.3.0]",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.15.3",
+    "mujoco": "3.2.3",
+    "robosuite": "1.4.0",
+    "numba": "0.68.0",
+    "llvmlite": "0.50.0",
+    "Pillow": "12.3.0",
+    "imageio": "2.38.0",
+    "imageio-ffmpeg": "0.6.0",
+    "opencv-python": "4.10.0.84",
+    "gym": "0.25.2",
+    "bddl": "1.0.1",
+    "future": "1.0.0",
+    "torch": "2.7.1+cu126"
+  },
+  "memory_limit_bytes": 2147483648,
+  "disk_free_gib": 2.8593788146972656
+}

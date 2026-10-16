@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "datasets": {
+    "libero_goal_no_noops_1.0.0_lerobot": {
+      "train_episode_ids": [
+        0,
+        43,
+        47,
+        54,
+        68,
+        69,
+        80,
+        87
+      ],
+      "val_episode_ids": [
+        52,
+        72
+      ]
+    }
+  },
+  "sources": [
+    {
+      "task": "put the bowl on the plate",
+      "selected_episodes": [
+        0,
+        43,
+        47,
+        52,
+        54,
+        68,
+        69,
+        72,
+        80,
+        87
+      ]
+    }
+  ],
+  "dataset_revision": "0b9208dff852914f94be879f702cd40118255bce",
+  "scope": "Adaptation holdout; possible pretrained overlap"
+}

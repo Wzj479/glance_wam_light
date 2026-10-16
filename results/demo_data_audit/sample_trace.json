@@ -1,0 +1,308 @@
+[
+  {
+    "tag": "train",
+    "episode": 20,
+    "split": "train",
+    "base_frame": 10,
+    "episode_length": 136,
+    "language": "open the middle drawer of the cabinet",
+    "requested_goal_offset": 14,
+    "effective_goal_offset": 14,
+    "image_episode_indices": [
+      10,
+      58,
+      24
+    ],
+    "requested_action_indices": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "action_episode_indices": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "tail_padding": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "action_shape": [
+      8,
+      7
+    ],
+    "action_dtype": "float16",
+    "image_shape": [
+      3,
+      224,
+      448,
+      3
+    ],
+    "normalization": "published full-dataset min_max for first 6, no clamp; gripper unchanged",
+    "action_sha256": "7669b16bc106b7c6543127df24f63bdca9e5cbd707681cad0b831a7b96bcd409",
+    "sources": [
+      {
+        "slot": 0,
+        "camera": "observation.images.image",
+        "episode_frame": 10,
+        "shared_video_frame": 2561,
+        "timestamp": 128.05
+      },
+      {
+        "slot": 0,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 10,
+        "shared_video_frame": 2561,
+        "timestamp": 128.05
+      },
+      {
+        "slot": 1,
+        "camera": "observation.images.image",
+        "episode_frame": 58,
+        "shared_video_frame": 2609,
+        "timestamp": 130.45
+      },
+      {
+        "slot": 1,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 58,
+        "shared_video_frame": 2609,
+        "timestamp": 130.45
+      },
+      {
+        "slot": 2,
+        "camera": "observation.images.image",
+        "episode_frame": 24,
+        "shared_video_frame": 2575,
+        "timestamp": 128.75
+      },
+      {
+        "slot": 2,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 24,
+        "shared_video_frame": 2575,
+        "timestamp": 128.75
+      }
+    ]
+  },
+  {
+    "tag": "validation",
+    "episode": 42,
+    "split": "validation",
+    "base_frame": 10,
+    "episode_length": 136,
+    "language": "open the middle drawer of the cabinet",
+    "requested_goal_offset": 20,
+    "effective_goal_offset": 20,
+    "image_episode_indices": [
+      10,
+      58,
+      30
+    ],
+    "requested_action_indices": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "action_episode_indices": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "tail_padding": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "action_shape": [
+      8,
+      7
+    ],
+    "action_dtype": "float16",
+    "image_shape": [
+      3,
+      224,
+      448,
+      3
+    ],
+    "normalization": "published full-dataset min_max for first 6, no clamp; gripper unchanged",
+    "action_sha256": "524610d8ac28739452d26ba4c2407e84a66bd8d4b5bfee4a1877a6468d99a415",
+    "sources": [
+      {
+        "slot": 0,
+        "camera": "observation.images.image",
+        "episode_frame": 10,
+        "shared_video_frame": 5579,
+        "timestamp": 278.95
+      },
+      {
+        "slot": 0,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 10,
+        "shared_video_frame": 5579,
+        "timestamp": 278.95
+      },
+      {
+        "slot": 1,
+        "camera": "observation.images.image",
+        "episode_frame": 58,
+        "shared_video_frame": 5627,
+        "timestamp": 281.34999999999997
+      },
+      {
+        "slot": 1,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 58,
+        "shared_video_frame": 5627,
+        "timestamp": 281.34999999999997
+      },
+      {
+        "slot": 2,
+        "camera": "observation.images.image",
+        "episode_frame": 30,
+        "shared_video_frame": 5599,
+        "timestamp": 279.95
+      },
+      {
+        "slot": 2,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 30,
+        "shared_video_frame": 5599,
+        "timestamp": 279.95
+      }
+    ]
+  },
+  {
+    "tag": "tail",
+    "episode": 20,
+    "split": "train",
+    "base_frame": 133,
+    "episode_length": 136,
+    "language": "open the middle drawer of the cabinet",
+    "requested_goal_offset": 19,
+    "effective_goal_offset": 2,
+    "image_episode_indices": [
+      133,
+      135,
+      135
+    ],
+    "requested_action_indices": [
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140
+    ],
+    "action_episode_indices": [
+      133,
+      134,
+      135,
+      135,
+      135,
+      135,
+      135,
+      135
+    ],
+    "tail_padding": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "action_shape": [
+      8,
+      7
+    ],
+    "action_dtype": "float16",
+    "image_shape": [
+      3,
+      224,
+      448,
+      3
+    ],
+    "normalization": "published full-dataset min_max for first 6, no clamp; gripper unchanged",
+    "action_sha256": "1d3154ebaf16a533a1492408324d2841539f0ba7d7d9055c435231fcc1072d92",
+    "sources": [
+      {
+        "slot": 0,
+        "camera": "observation.images.image",
+        "episode_frame": 133,
+        "shared_video_frame": 2684,
+        "timestamp": 134.2
+      },
+      {
+        "slot": 0,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 133,
+        "shared_video_frame": 2684,
+        "timestamp": 134.2
+      },
+      {
+        "slot": 1,
+        "camera": "observation.images.image",
+        "episode_frame": 135,
+        "shared_video_frame": 2686,
+        "timestamp": 134.3
+      },
+      {
+        "slot": 1,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 135,
+        "shared_video_frame": 2686,
+        "timestamp": 134.3
+      },
+      {
+        "slot": 2,
+        "camera": "observation.images.image",
+        "episode_frame": 135,
+        "shared_video_frame": 2686,
+        "timestamp": 134.3
+      },
+      {
+        "slot": 2,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 135,
+        "shared_video_frame": 2686,
+        "timestamp": 134.3
+      }
+    ]
+  }
+]

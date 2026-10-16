@@ -1,0 +1,34 @@
+{
+  "matched_grasp_source": {
+    "data/matched_grasp_source/checkpoint_dataset_statistics.json": {
+      "sha256": "553c1603b46983126318d467d2d6f1c93876cd531ba8ab3485005fb4b1fe75fe",
+      "bytes": 2905
+    },
+    "data/matched_grasp_source/initial_state.npy": {
+      "sha256": "65e27de292fd8a2e7d35d91ba141065d1744ea7015198b450c9873a18c1391e6",
+      "bytes": 760
+    },
+    "data/matched_grasp_source/match.json": {
+      "sha256": "f151004c3b7327d1eaa49eeb6e26cbde591ccbfc8756058d17b80f986fc77e64",
+      "bytes": 10332
+    },
+    "data/matched_grasp_source/matched_demo.npz": {
+      "sha256": "273d84e9b46bc00427efea860a49ed0da0d92cb757b0e3f8a9484e36601f75a2",
+      "bytes": 67447
+    },
+    "data/matched_grasp_source/source_model.xml": {
+      "sha256": "cdbf9256737ac91575025cbe7278bf764e88751c2b3c3474493b8bf84cb1b0b0",
+      "bytes": 91900
+    }
+  },
+  "interface_source": {
+    "data/interface_source/eval_libero.py": {
+      "sha256": "a61e72663e30458c5c69bdf554b0a151adeb58219c27d3700496df7566843fa9",
+      "bytes": 15667
+    },
+    "data/interface_source/model2libero_interface.py": {
+      "sha256": "95f35b1fcf0d788edf79dd50ea59b5ef949084e5c1e12eb9f1b34315d11540c5",
+      "bytes": 14386
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "split": "results/grasp_episode_split.json",
+  "train_episodes": [
+    0,
+    43,
+    47,
+    54,
+    68,
+    69,
+    80,
+    87
+  ],
+  "val_episodes": [
+    52,
+    72
+  ],
+  "train_windows": 766,
+  "validation_windows_stride8": 26,
+  "scope": "Real Parquet + trainer split helpers; full official loader/GPU not executed"
+}

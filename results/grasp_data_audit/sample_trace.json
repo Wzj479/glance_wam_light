@@ -1,0 +1,567 @@
+[
+  {
+    "tag": "train",
+    "episode": 0,
+    "split": "train",
+    "base_frame": 45,
+    "episode_length": 112,
+    "language": "put the bowl on the plate",
+    "requested_goal_offset": 14,
+    "effective_goal_offset": 14,
+    "image_episode_indices": [
+      45,
+      93,
+      59
+    ],
+    "requested_action_indices": [
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52
+    ],
+    "action_episode_indices": [
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52
+    ],
+    "tail_padding": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "action_shape": [
+      8,
+      7
+    ],
+    "action_dtype": "float16",
+    "image_shape": [
+      3,
+      224,
+      448,
+      3
+    ],
+    "normalization": "published full-dataset min_max for first 6, no clamp; gripper unchanged",
+    "action_sha256": "c60fa6bef2096f03e8fe4c35011952018dd4bc54e224fc48c74f2cdf5921fb57",
+    "sources": [
+      {
+        "slot": 0,
+        "camera": "observation.images.image",
+        "episode_frame": 45,
+        "shared_video_frame": 45,
+        "timestamp": 2.25
+      },
+      {
+        "slot": 0,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 45,
+        "shared_video_frame": 45,
+        "timestamp": 2.25
+      },
+      {
+        "slot": 1,
+        "camera": "observation.images.image",
+        "episode_frame": 93,
+        "shared_video_frame": 93,
+        "timestamp": 4.65
+      },
+      {
+        "slot": 1,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 93,
+        "shared_video_frame": 93,
+        "timestamp": 4.65
+      },
+      {
+        "slot": 2,
+        "camera": "observation.images.image",
+        "episode_frame": 59,
+        "shared_video_frame": 59,
+        "timestamp": 2.95
+      },
+      {
+        "slot": 2,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 59,
+        "shared_video_frame": 59,
+        "timestamp": 2.95
+      }
+    ],
+    "gripper_action_labels": [
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "event": "close"
+  },
+  {
+    "tag": "train_release",
+    "episode": 0,
+    "split": "train",
+    "base_frame": 96,
+    "episode_length": 112,
+    "language": "put the bowl on the plate",
+    "requested_goal_offset": 2,
+    "effective_goal_offset": 2,
+    "image_episode_indices": [
+      96,
+      111,
+      98
+    ],
+    "requested_action_indices": [
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "action_episode_indices": [
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "tail_padding": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "action_shape": [
+      8,
+      7
+    ],
+    "action_dtype": "float16",
+    "image_shape": [
+      3,
+      224,
+      448,
+      3
+    ],
+    "normalization": "published full-dataset min_max for first 6, no clamp; gripper unchanged",
+    "action_sha256": "c010b1a10eb664bc13277d169a2bc874ea984f978801a6aa2b3bb2f7677c9b70",
+    "sources": [
+      {
+        "slot": 0,
+        "camera": "observation.images.image",
+        "episode_frame": 96,
+        "shared_video_frame": 96,
+        "timestamp": 4.8
+      },
+      {
+        "slot": 0,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 96,
+        "shared_video_frame": 96,
+        "timestamp": 4.8
+      },
+      {
+        "slot": 1,
+        "camera": "observation.images.image",
+        "episode_frame": 111,
+        "shared_video_frame": 111,
+        "timestamp": 5.55
+      },
+      {
+        "slot": 1,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 111,
+        "shared_video_frame": 111,
+        "timestamp": 5.55
+      },
+      {
+        "slot": 2,
+        "camera": "observation.images.image",
+        "episode_frame": 98,
+        "shared_video_frame": 98,
+        "timestamp": 4.9
+      },
+      {
+        "slot": 2,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 98,
+        "shared_video_frame": 98,
+        "timestamp": 4.9
+      }
+    ],
+    "gripper_action_labels": [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "event": "open"
+  },
+  {
+    "tag": "validation",
+    "episode": 52,
+    "split": "validation",
+    "base_frame": 38,
+    "episode_length": 106,
+    "language": "put the bowl on the plate",
+    "requested_goal_offset": 4,
+    "effective_goal_offset": 4,
+    "image_episode_indices": [
+      38,
+      86,
+      42
+    ],
+    "requested_action_indices": [
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "action_episode_indices": [
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "tail_padding": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "action_shape": [
+      8,
+      7
+    ],
+    "action_dtype": "float16",
+    "image_shape": [
+      3,
+      224,
+      448,
+      3
+    ],
+    "normalization": "published full-dataset min_max for first 6, no clamp; gripper unchanged",
+    "action_sha256": "800e1c3a63e6afa688629e7626a8cae983defaa50f5c934ff32076c2d1fa727c",
+    "sources": [
+      {
+        "slot": 0,
+        "camera": "observation.images.image",
+        "episode_frame": 38,
+        "shared_video_frame": 6818,
+        "timestamp": 340.9
+      },
+      {
+        "slot": 0,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 38,
+        "shared_video_frame": 6818,
+        "timestamp": 340.9
+      },
+      {
+        "slot": 1,
+        "camera": "observation.images.image",
+        "episode_frame": 86,
+        "shared_video_frame": 6866,
+        "timestamp": 343.3
+      },
+      {
+        "slot": 1,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 86,
+        "shared_video_frame": 6866,
+        "timestamp": 343.3
+      },
+      {
+        "slot": 2,
+        "camera": "observation.images.image",
+        "episode_frame": 42,
+        "shared_video_frame": 6822,
+        "timestamp": 341.1
+      },
+      {
+        "slot": 2,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 42,
+        "shared_video_frame": 6822,
+        "timestamp": 341.1
+      }
+    ],
+    "gripper_action_labels": [
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "event": "close"
+  },
+  {
+    "tag": "validation_release",
+    "episode": 52,
+    "split": "validation",
+    "base_frame": 89,
+    "episode_length": 106,
+    "language": "put the bowl on the plate",
+    "requested_goal_offset": 24,
+    "effective_goal_offset": 16,
+    "image_episode_indices": [
+      89,
+      105,
+      105
+    ],
+    "requested_action_indices": [
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96
+    ],
+    "action_episode_indices": [
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96
+    ],
+    "tail_padding": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "action_shape": [
+      8,
+      7
+    ],
+    "action_dtype": "float16",
+    "image_shape": [
+      3,
+      224,
+      448,
+      3
+    ],
+    "normalization": "published full-dataset min_max for first 6, no clamp; gripper unchanged",
+    "action_sha256": "d2d6925aa43674b0c1f4e77214ced6b79f7f8788d969fedda9c7601ba70fd232",
+    "sources": [
+      {
+        "slot": 0,
+        "camera": "observation.images.image",
+        "episode_frame": 89,
+        "shared_video_frame": 6869,
+        "timestamp": 343.45
+      },
+      {
+        "slot": 0,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 89,
+        "shared_video_frame": 6869,
+        "timestamp": 343.45
+      },
+      {
+        "slot": 1,
+        "camera": "observation.images.image",
+        "episode_frame": 105,
+        "shared_video_frame": 6885,
+        "timestamp": 344.25
+      },
+      {
+        "slot": 1,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 105,
+        "shared_video_frame": 6885,
+        "timestamp": 344.25
+      },
+      {
+        "slot": 2,
+        "camera": "observation.images.image",
+        "episode_frame": 105,
+        "shared_video_frame": 6885,
+        "timestamp": 344.25
+      },
+      {
+        "slot": 2,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 105,
+        "shared_video_frame": 6885,
+        "timestamp": 344.25
+      }
+    ],
+    "gripper_action_labels": [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "event": "open"
+  },
+  {
+    "tag": "tail",
+    "episode": 0,
+    "split": "train",
+    "base_frame": 109,
+    "episode_length": 112,
+    "language": "put the bowl on the plate",
+    "requested_goal_offset": 26,
+    "effective_goal_offset": 2,
+    "image_episode_indices": [
+      109,
+      111,
+      111
+    ],
+    "requested_action_indices": [
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116
+    ],
+    "action_episode_indices": [
+      109,
+      110,
+      111,
+      111,
+      111,
+      111,
+      111,
+      111
+    ],
+    "tail_padding": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "action_shape": [
+      8,
+      7
+    ],
+    "action_dtype": "float16",
+    "image_shape": [
+      3,
+      224,
+      448,
+      3
+    ],
+    "normalization": "published full-dataset min_max for first 6, no clamp; gripper unchanged",
+    "action_sha256": "0f3ef47fb3e47341107775ab246d11092c12bd46601000b85dcdf127f2043308",
+    "sources": [
+      {
+        "slot": 0,
+        "camera": "observation.images.image",
+        "episode_frame": 109,
+        "shared_video_frame": 109,
+        "timestamp": 5.45
+      },
+      {
+        "slot": 0,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 109,
+        "shared_video_frame": 109,
+        "timestamp": 5.45
+      },
+      {
+        "slot": 1,
+        "camera": "observation.images.image",
+        "episode_frame": 111,
+        "shared_video_frame": 111,
+        "timestamp": 5.55
+      },
+      {
+        "slot": 1,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 111,
+        "shared_video_frame": 111,
+        "timestamp": 5.55
+      },
+      {
+        "slot": 2,
+        "camera": "observation.images.image",
+        "episode_frame": 111,
+        "shared_video_frame": 111,
+        "timestamp": 5.55
+      },
+      {
+        "slot": 2,
+        "camera": "observation.images.wrist_image",
+        "episode_frame": 111,
+        "shared_video_frame": 111,
+        "timestamp": 5.55
+      }
+    ],
+    "gripper_action_labels": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "event": "tail"
+  }
+]

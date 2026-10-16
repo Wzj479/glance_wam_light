@@ -1,0 +1,38 @@
+{
+  "glancewam_repository": "https://github.com/linhanwang/GlanceWAM",
+  "glancewam_commit": "6a51bdc5139e72e8ad525779db0c989e1af5abab",
+  "libero_repository": "https://github.com/Lifelong-Robot-Learning/LIBERO",
+  "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+  "checkpoint_dataset": "LinhanWang/GlanceWAM",
+  "base_model": "Skywork/SkyReels-V2-DF-1.3B-540P-Diffusers",
+  "validation_performed": "Python syntax compilation and 20 passing CPU tests, including synthetic evaluation pairing/aggregation and pilot/final state separation",
+  "gpu_validation_performed": false,
+  "note": "Includes day-one smoke tools and a standalone action-head SFT trainer. This is not an officially verified A100 recipe. GPU training, memory use, feature-parity integration and official-loader execution must be verified on the target host. Validation episodes are held out from adaptation only; pretrained weights may already have seen them.",
+  "remote_readiness": {
+    "gpu_count": 0,
+    "cuda_available": false,
+    "nvidia_smi_bytes": 0,
+    "data_disk_free_gb_approx": 2.86,
+    "memory_limit_gib": 2
+  },
+  "cpu_control_validation": {
+    "completed": true,
+    "suite": "libero_goal",
+    "task": 0,
+    "episode": 0,
+    "seed": 42,
+    "memory_limit_gib": 2,
+    "cases": 15,
+    "axis_direction_checks_passed": 12,
+    "replay_steps_per_run": 150,
+    "replay_runs": 2,
+    "max_abs_state_error": 0.0,
+    "peak_worker_rss_mib": 769.51953125,
+    "texture_profile": "cpu_diagnostic_textures_1024",
+    "changed_textures": 5,
+    "unchanged_source_files_verified": 140,
+    "numba_disable_jit": true,
+    "torch_loaded_in_sim_process": false,
+    "scope": "CPU control/replay diagnostics, no learned policy evaluation or training"
+  }
+}

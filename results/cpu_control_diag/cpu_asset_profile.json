@@ -1,0 +1,76 @@
+{
+  "mode": "cpu_diagnostic_textures",
+  "texture_max_size": 1024,
+  "source": "/root/autodl-tmp/wam_glance_project/LIBERO_CPU",
+  "destination": "/root/autodl-tmp/wam_glance_project/LIBERO_CPU_DIAG",
+  "unchanged_files_checked": 140,
+  "physics_files_unchanged": true,
+  "changed_textures": [
+    {
+      "path": "libero/libero/assets/stable_hope_objects/cream_cheese/texture_map.png",
+      "original_size": [
+        2048,
+        2048
+      ],
+      "diagnostic_size": [
+        1024,
+        1024
+      ],
+      "original_sha256": "6ef390c92c83f6f27da79df09130e48bda6785f98181942d2ec2548ab2afa814",
+      "diagnostic_sha256": "eaa1b972f239e7ef8008eecb8da9e2e3d6f24f0fb703577cfa622adbfb4da12b"
+    },
+    {
+      "path": "libero/libero/assets/stable_scanned_objects/akita_black_bowl/texture.png",
+      "original_size": [
+        4096,
+        4096
+      ],
+      "diagnostic_size": [
+        1024,
+        1024
+      ],
+      "original_sha256": "8a646d98b084b7400dd91beed9c83e10b4a4dca572896b3974356b7937a4bd85",
+      "diagnostic_sha256": "e906b61c2eab6c3f686b8c82a5b969a1bb9094b0c482145c870886dee00179af"
+    },
+    {
+      "path": "libero/libero/assets/stable_scanned_objects/plate/texture.png",
+      "original_size": [
+        4096,
+        4096
+      ],
+      "diagnostic_size": [
+        1024,
+        1024
+      ],
+      "original_sha256": "6b742142bf0e29a90d76c4b0254a4481e9eff4807eff3ac6c4ac67a5888fb005",
+      "diagnostic_sha256": "83e633a6088e667203458f2a8ea15fe56224ebaf8afb53b0052d3244c7ecc163"
+    },
+    {
+      "path": "libero/libero/assets/textures/martin_novak_wood_table.png",
+      "original_size": [
+        1270,
+        1270
+      ],
+      "diagnostic_size": [
+        1024,
+        1024
+      ],
+      "original_sha256": "9d714fbf44d4d44f279761c0ddd0b2fd7271446cdbb85fcbef8677fe5f929850",
+      "diagnostic_sha256": "911e5390cae77b7ecffe741d5bed4e40633856b546609f3a59e950d13e6b8625"
+    },
+    {
+      "path": "libero/libero/assets/turbosquid_objects/wine_rack/light-wood.png",
+      "original_size": [
+        1036,
+        1036
+      ],
+      "diagnostic_size": [
+        1024,
+        1024
+      ],
+      "original_sha256": "967be64bdb170d36283bc43c2ae5d525ec88f78bc837dc7d0efc9a28d68caad1",
+      "diagnostic_sha256": "c6a2ddcf3f0093c946edeb3fa8d46e17cab2d9f57a4aab91f7aa202b5658ab2c"
+    }
+  ],
+  "scope": "Control/replay diagnostics; not official visual benchmark scores"
+}

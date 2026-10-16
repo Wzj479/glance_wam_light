@@ -1,0 +1,90 @@
+{
+  "revision": "0b9208dff852914f94be879f702cd40118255bce",
+  "prefix": "datasets/libero_goal_no_noops_1.0.0_lerobot",
+  "files": [
+    {
+      "type": "file",
+      "oid": "faaffbe8ff533dabc6f2dae4693797ce4588a9c2",
+      "size": 3122591,
+      "lfs": {
+        "oid": "2d8d4559706f4359a1d4a8e70d920e12869f398d10f20c0e017a7d3055161b9a",
+        "size": 3122591,
+        "pointerSize": 132
+      },
+      "xetHash": "521f20e5f7e87c15c3d2c45fde57fa9dbcfb379b35d45f63368cdb2afd57cb1a",
+      "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/data/chunk-000/file-000.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "e6f6105b90520119ceca0b807ce44b6b4f8a4779",
+      "size": 470170,
+      "lfs": {
+        "oid": "d78752a1c90a4f11e180479ba70452539cd146a0d1136dc23aede6593290e5d7",
+        "size": 470170,
+        "pointerSize": 131
+      },
+      "xetHash": "941f30e454b63e1bf9d9175feea2a1be8bced761e56d4067c30af0009f350f91",
+      "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/meta/episodes/chunk-000/file-000.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "58497e16eec462cb40656b7fabfd4708d7775ba6",
+      "size": 3515,
+      "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/meta/info.json"
+    },
+    {
+      "type": "file",
+      "oid": "085f340d34a647fc47c069c49c453ac70bd4f083",
+      "size": 1452,
+      "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/meta/modality.json"
+    },
+    {
+      "type": "file",
+      "oid": "8150bac94a216399a565685c8d744b4fd30cfd3f",
+      "size": 6309,
+      "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/meta/stats.json"
+    },
+    {
+      "type": "file",
+      "oid": "531924bc1d0f482a43a01ba4daf1a2cebb73f298",
+      "size": 5756,
+      "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/meta/stats_gr00t.json"
+    },
+    {
+      "type": "file",
+      "oid": "b7724227a7678f6f9ec1d2fcb74b242e1643495e",
+      "size": 2367,
+      "lfs": {
+        "oid": "3ffe58848555d373038facfefcd5addd8c786381a40913e857fbf1b6eb304929",
+        "size": 2367,
+        "pointerSize": 129
+      },
+      "xetHash": "9f83c08804c558b6350b2d708c3600e12bd161405be980d4908a803ef72d489c",
+      "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/meta/tasks.parquet"
+    },
+    {
+      "type": "file",
+      "oid": "0ab20a577b6bda09b9150b67ca5c40bf33d82ca5",
+      "size": 177125809,
+      "lfs": {
+        "oid": "477f644fa3d9103c4bb6ee2383155fce7bd8159c85fa2593b49ef4dfe39cc478",
+        "size": 177125809,
+        "pointerSize": 134
+      },
+      "xetHash": "bebea09f25c19e0cb72ef99f2cb9aa53da876f00d8219401aed34ede7119ef70",
+      "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/videos/observation.images.image/chunk-000/file-000.mp4"
+    },
+    {
+      "type": "file",
+      "oid": "acbeff84d674bb8a0b821a600a70017dd9078bb7",
+      "size": 153250080,
+      "lfs": {
+        "oid": "b9e7c3e75f027348a3b3accb91066fb91ed79b557b2f27d1bf8caef7266213fd",
+        "size": 153250080,
+        "pointerSize": 134
+      },
+      "xetHash": "90374eac2d26a079207bf4dacae182aa73ee83558e852160ad8846acb7af6ab3",
+      "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/videos/observation.images.wrist_image/chunk-000/file-000.mp4"
+    }
+  ]
+}

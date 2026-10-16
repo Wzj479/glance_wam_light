@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "datasets": {
+    "libero_goal_no_noops_1.0.0_lerobot": {
+      "train_episode_ids": [
+        0,
+        20,
+        26,
+        31,
+        43,
+        47,
+        54,
+        58,
+        64,
+        68,
+        69,
+        80,
+        84,
+        87,
+        94,
+        111
+      ],
+      "val_episode_ids": [
+        42,
+        52,
+        72,
+        90
+      ]
+    }
+  },
+  "sources": [
+    {
+      "task": "open the middle drawer of the cabinet",
+      "selected_episodes": [
+        20,
+        26,
+        31,
+        42,
+        58,
+        64,
+        84,
+        90,
+        94,
+        111
+      ]
+    },
+    {
+      "task": "put the bowl on the plate",
+      "selected_episodes": [
+        0,
+        43,
+        47,
+        52,
+        54,
+        68,
+        69,
+        72,
+        80,
+        87
+      ]
+    }
+  ],
+  "dataset_revision": "0b9208dff852914f94be879f702cd40118255bce",
+  "scope": "Adaptation holdout; possible pretrained overlap"
+}

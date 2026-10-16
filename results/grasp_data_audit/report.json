@@ -1,0 +1,158 @@
+{
+  "status": "passed",
+  "dataset_revision": "0b9208dff852914f94be879f702cd40118255bce",
+  "code_revision": "6a51bdc5139e72e8ad525779db0c989e1af5abab",
+  "task": "put the bowl on the plate",
+  "episodes": 10,
+  "real_action_rows": 962,
+  "train_rows": 766,
+  "val_rows": 196,
+  "train_episodes": [
+    0,
+    43,
+    47,
+    54,
+    68,
+    69,
+    80,
+    87
+  ],
+  "val_episodes": [
+    52,
+    72
+  ],
+  "finite_actions": true,
+  "episode_overlap": 0,
+  "gripper_values": [
+    0.0,
+    1.0
+  ],
+  "raw_action_min": [
+    -0.8303571343421936,
+    -0.375,
+    -0.9375,
+    -0.07928571105003357,
+    -0.1735714226961136,
+    -0.1810714304447174,
+    0.0
+  ],
+  "gripper_summary": {
+    "train": {
+      "length": 766,
+      "open_rows": 393,
+      "closed_rows": 373,
+      "windows_spanning_switch": 112,
+      "close_events": 8,
+      "open_events": 8
+    },
+    "validation": {
+      "length": 196,
+      "open_rows": 101,
+      "closed_rows": 95,
+      "windows_spanning_switch": 28,
+      "close_events": 2,
+      "open_events": 2
+    }
+  },
+  "raw_action_max": [
+    0.9375,
+    0.3910714387893677,
+    0.9241071343421936,
+    0.14142857491970062,
+    0.2046428620815277,
+    0.07392857223749161,
+    1.0
+  ],
+  "peak_rss_mib": 234.77734375,
+  "input_files_sha256_verified": [
+    "data/chunk-000/file-000.parquet",
+    "meta/episodes/chunk-000/file-000.parquet",
+    "meta/info.json",
+    "meta/modality.json",
+    "meta/stats.json",
+    "meta/stats_gr00t.json",
+    "meta/tasks.parquet"
+  ],
+  "missing_full_videos": [
+    "videos/observation.images.image/chunk-000/file-000.mp4",
+    "videos/observation.images.wrist_image/chunk-000/file-000.mp4"
+  ],
+  "image_input_mode": "verified_sparse_png_cache",
+  "checks": [
+    "contiguous episode frames",
+    "global row bounds",
+    "20Hz timestamps",
+    "video episode durations",
+    "task IDs",
+    "finite 7D actions",
+    "episode split isolation",
+    "tail repeat padding",
+    "appearance variants preserve action labels"
+  ],
+  "limits": [
+    "No WAM forward/backward or official complete loader run",
+    "PIL bilinear reference resize; pixel-exact upstream resize parity untested",
+    "roll/pitch/yaw are source field names; LIBERO uses axis-angle command components",
+    "Official data are simulator demonstrations, not physical-robot captures"
+  ],
+  "download_receipt": {
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "host": "huggingface.co",
+    "files": [
+      {
+        "path": "data/chunk-000/file-000.parquet",
+        "size": 3122591,
+        "sha256": "2d8d4559706f4359a1d4a8e70d920e12869f398d10f20c0e017a7d3055161b9a",
+        "official_lfs_sha256": "2d8d4559706f4359a1d4a8e70d920e12869f398d10f20c0e017a7d3055161b9a"
+      },
+      {
+        "path": "meta/episodes/chunk-000/file-000.parquet",
+        "size": 470170,
+        "sha256": "d78752a1c90a4f11e180479ba70452539cd146a0d1136dc23aede6593290e5d7",
+        "official_lfs_sha256": "d78752a1c90a4f11e180479ba70452539cd146a0d1136dc23aede6593290e5d7"
+      },
+      {
+        "path": "meta/info.json",
+        "size": 3515,
+        "sha256": "829aece3083f1ac0aaf77f67b006becf89a7d754f50bae1c1e126039f7955322",
+        "official_lfs_sha256": null
+      },
+      {
+        "path": "meta/modality.json",
+        "size": 1452,
+        "sha256": "89a88c62ed7746d7769d69b4bfde2d64bb5b7572b0657d15ca796dd4e99d5649",
+        "official_lfs_sha256": null
+      },
+      {
+        "path": "meta/stats.json",
+        "size": 6309,
+        "sha256": "2be2a4603379e3bea06c59457e9cfbabcd7cf55e5811d66f9d57a8c1a874c4b7",
+        "official_lfs_sha256": null
+      },
+      {
+        "path": "meta/stats_gr00t.json",
+        "size": 5756,
+        "sha256": "b43ccbf508622ab3b784984c7f00f5629f36ab6b0ac520c4fa8b8faffd59b92a",
+        "official_lfs_sha256": null
+      },
+      {
+        "path": "meta/tasks.parquet",
+        "size": 2367,
+        "sha256": "3ffe58848555d373038facfefcd5addd8c786381a40913e857fbf1b6eb304929",
+        "official_lfs_sha256": "3ffe58848555d373038facfefcd5addd8c786381a40913e857fbf1b6eb304929"
+      },
+      {
+        "path": "videos/observation.images.image/chunk-000/file-000.mp4",
+        "size": 177125809,
+        "sha256": "477f644fa3d9103c4bb6ee2383155fce7bd8159c85fa2593b49ef4dfe39cc478",
+        "official_lfs_sha256": "477f644fa3d9103c4bb6ee2383155fce7bd8159c85fa2593b49ef4dfe39cc478"
+      },
+      {
+        "path": "videos/observation.images.wrist_image/chunk-000/file-000.mp4",
+        "size": 153250080,
+        "sha256": "b9e7c3e75f027348a3b3accb91066fb91ed79b557b2f27d1bf8caef7266213fd",
+        "official_lfs_sha256": "b9e7c3e75f027348a3b3accb91066fb91ed79b557b2f27d1bf8caef7266213fd"
+      }
+    ]
+  }
+}

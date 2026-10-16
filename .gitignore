@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+cpu_sim_env/
+LIBERO_CPU/
+LIBERO_CPU_DIAG/
+GlanceWAM/
+data/
+checkpoints/
+*.zip
+*.part
+*.log
+.env
+.env.*
+*.pem
+*.key

@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "videos": [
+    {
+      "case": "baseline",
+      "frames": 137,
+      "seconds": 6.85,
+      "sha256": "fc7bd55040305ca4eb191fd8daf7c3deacff976e0fb79504b4924deb8fc1e32a"
+    },
+    {
+      "case": "gripper_delay_4",
+      "frames": 137,
+      "seconds": 6.85,
+      "sha256": "ef6e41d62cc6990252778bf30639a5d0cab43a10eec08909c75920d352050838"
+    },
+    {
+      "case": "hold_4",
+      "frames": 137,
+      "seconds": 6.85,
+      "sha256": "26bdaeaa5637e6254f9f3d84e779857f386f0d552adcb320b1f6d17fe089b55b"
+    },
+    {
+      "case": "baseline_vs_perturbed",
+      "left": "baseline",
+      "right": "gripper_delay_4",
+      "frames": 137,
+      "seconds": 6.85,
+      "sha256": "1f526461f74bfc1664f5409822ab39d13e787dcfd88c27ff1d701b120b96dc2d"
+    }
+  ],
+  "rendered_and_nonrendered_states_match_atol": 1e-07
+}

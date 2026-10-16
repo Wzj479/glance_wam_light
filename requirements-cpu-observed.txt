@@ -1,0 +1,22 @@
+# Selected installed packages from the actual CPU environment; not a full lock.
+numpy==1.26.4
+mujoco==3.2.3
+robosuite==1.4.0
+bddl==1.0.1
+gym==0.25.2
+matplotlib==3.8.4
+scipy==1.15.3
+numba==0.68.0
+easydict==1.13
+PyYAML==6.0.3
+imageio==2.38.0
+imageio-ffmpeg==0.6.0
+Pillow==12.3.0
+PyOpenGL==3.1.10
+transforms3d==0.4.2
+future==1.0.0
+psutil==7.2.2
+pyarrow==25.0.1
+pytest==9.1.1
+fsspec==2025.9.0
+requests==2.34.2

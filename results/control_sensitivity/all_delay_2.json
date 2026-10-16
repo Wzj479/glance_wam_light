@@ -1,0 +1,26 @@
+{
+  "case": "all_delay_2",
+  "kind": "all_delay",
+  "amount": 2,
+  "delay_ms": 100,
+  "original_actions": 112,
+  "executed_actions": 136,
+  "common_horizon_s": 6.8,
+  "final_success": true,
+  "ever_success": true,
+  "first_success_step": 94,
+  "bowl_lift_m": 0.12641894201754,
+  "final_bowl_plate_xy_distance_m": 0.01190648502377556,
+  "final_bowl_plate_z_difference_m": 0.004418501930304353,
+  "gripper_transition_steps": [
+    50,
+    101
+  ],
+  "actions_sha256": "f393f3021f38ff9571ae992c566dcde99eb8f131bc76e8feda53e9d294087ce3",
+  "initial_postsettle_state_sha256": "51eba53c21dd6444efbeca46ac0b2e95d7519f168560d1828e10eb3012dbe595",
+  "peak_rss_mib": 519.0078125,
+  "video": false,
+  "scope": "One recorded demonstration, no policy or inference latency measurement",
+  "control_hz": 20,
+  "command_refresh_hz": 20
+}

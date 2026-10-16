@@ -1,0 +1,8 @@
+{
+  "scope": "zero command rollout only",
+  "state_max_abs_error": 0.0,
+  "actions_identical": true,
+  "physics_identical_within_1e_10": true,
+  "reference_trace": "references/original_zero.npz",
+  "diagnostic_trace": "zero.npz"
+}

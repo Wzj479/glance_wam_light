@@ -1,0 +1,87 @@
+{
+  "axis_direction_checks": [
+    {
+      "name": "x_pos",
+      "response": 9.859749722680277,
+      "unit": "mm",
+      "sign_ok": true
+    },
+    {
+      "name": "x_neg",
+      "response": -9.912956314639759,
+      "unit": "mm",
+      "sign_ok": true
+    },
+    {
+      "name": "y_pos",
+      "response": 11.523672618546687,
+      "unit": "mm",
+      "sign_ok": true
+    },
+    {
+      "name": "y_neg",
+      "response": -11.558038502358269,
+      "unit": "mm",
+      "sign_ok": true
+    },
+    {
+      "name": "z_pos",
+      "response": 11.446616329084724,
+      "unit": "mm",
+      "sign_ok": true
+    },
+    {
+      "name": "z_neg",
+      "response": -11.511195991796397,
+      "unit": "mm",
+      "sign_ok": true
+    },
+    {
+      "name": "rx_pos",
+      "response": 6.767670301006553,
+      "unit": "deg",
+      "sign_ok": true
+    },
+    {
+      "name": "rx_neg",
+      "response": -6.761184236913945,
+      "unit": "deg",
+      "sign_ok": true
+    },
+    {
+      "name": "ry_pos",
+      "response": 5.6383294780870505,
+      "unit": "deg",
+      "sign_ok": true
+    },
+    {
+      "name": "ry_neg",
+      "response": -5.665788353324971,
+      "unit": "deg",
+      "sign_ok": true
+    },
+    {
+      "name": "rz_pos",
+      "response": 6.437943755390964,
+      "unit": "deg",
+      "sign_ok": true
+    },
+    {
+      "name": "rz_neg",
+      "response": -6.443994955203178,
+      "unit": "deg",
+      "sign_ok": true
+    }
+  ],
+  "all_12_directions_correct": true,
+  "gripper_width": {
+    "gripper_pos": {
+      "before_m": 0.07847072149433568,
+      "after_m": 0.008390959094029536
+    },
+    "gripper_neg": {
+      "before_m": 0.008386480574971197,
+      "after_m": 0.07163679455197285
+    }
+  }
+}

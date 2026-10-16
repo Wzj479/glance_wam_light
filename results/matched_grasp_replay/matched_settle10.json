@@ -1,0 +1,25 @@
+{
+  "protocol": "matched_settle10",
+  "settling_steps": 10,
+  "steps": 112,
+  "matched_source_demo": "demo_10",
+  "initial_restore_max_abs_error": 0.0,
+  "all_joint_names_and_order_match": true,
+  "final_success": true,
+  "first_success_step": 92,
+  "reference_position_rmse_m": 2.9548183561523393e-08,
+  "reference_position_max_error_m": 5.90309326339609e-08,
+  "reference_rotation_rmse_rad": 7.302895999287812e-08,
+  "reference_finger_qpos_rmse_m": 8.887452699609433e-10,
+  "initial_reference_position_error_m": 5.728825187555207e-08,
+  "bowl_lift_m": 0.12585096429568143,
+  "final_bowl_minus_plate_xyz_m": [
+    0.011520127081330156,
+    -0.003803385644147901,
+    0.004354702465984017
+  ],
+  "peak_rss_mib": 830.35546875,
+  "camera_rotation": "180deg to match training display",
+  "visual_assets": "CPU texture1024 diagnostic copy",
+  "note": "Recorded open-loop actions; no learned policy, not a benchmark success rate"
+}

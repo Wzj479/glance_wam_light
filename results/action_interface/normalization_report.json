@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "rows": 112,
+  "checkpoint_stats_sha256": "553c1603b46983126318d467d2d6f1c93876cd531ba8ab3485005fb4b1fe75fe",
+  "checkpoint_mask": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false
+  ],
+  "suite_min": [
+    -0.9375,
+    -0.9375,
+    -0.9375,
+    -0.2582142949104309,
+    -0.375,
+    -0.2871428430080414,
+    0.0
+  ],
+  "checkpoint_min": [
+    -0.9375,
+    -0.9375,
+    -0.9375,
+    -0.2582142949104309,
+    -0.375,
+    -0.3675000071525574,
+    0.0
+  ],
+  "max_abs_command_error_aligned_float16": [
+    0.0002275705337524414,
+    0.00010856986045837402,
+    0.0002275705337524414,
+    3.6754663597093895e-05,
+    4.5515596866607666e-05,
+    3.754429781110957e-05,
+    0.0
+  ],
+  "max_abs_first6_error_without_alignment": [
+    0.0002275705337524414,
+    0.00010856986045837402,
+    0.0002275705337524414,
+    3.6754663597093895e-05,
+    4.5515596866607666e-05,
+    0.0675125599373132
+  ],
+  "zero_yaw_command_without_alignment": -0.04551132607230102,
+  "max_abs_controller_goal_error_aligned": [
+    1.137852668762207e-05,
+    5.428493022918701e-06,
+    1.137852668762207e-05,
+    1.8377331798546948e-05,
+    2.2757798433303833e-05,
+    1.8772148905554786e-05
+  ],
+  "gripper_mapping_all_rows_match": true,
+  "official_source_sha256": {
+    "data/interface_source/model2libero_interface.py": "95f35b1fcf0d788edf79dd50ea59b5ef949084e5c1e12eb9f1b34315d11540c5",
+    "data/interface_source/eval_libero.py": "a61e72663e30458c5c69bdf554b0a151adeb58219c27d3700496df7566843fa9"
+  },
+  "scope": "Official NumPy postprocess functions extracted with AST; neural model not loaded"
+}

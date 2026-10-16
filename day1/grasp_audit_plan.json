@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "dataset": "libero_goal_no_noops_1.0.0_lerobot",
+  "task": "put the bowl on the plate",
+  "seed": 42,
+  "val_fraction": 0.2,
+  "selected_episodes": [
+    0,
+    43,
+    47,
+    52,
+    54,
+    68,
+    69,
+    72,
+    80,
+    87
+  ],
+  "train_episodes": [
+    0,
+    43,
+    47,
+    54,
+    68,
+    69,
+    80,
+    87
+  ],
+  "val_episodes": [
+    52,
+    72
+  ],
+  "samples": [
+    {
+      "tag": "train",
+      "episode": 0,
+      "frame": 45,
+      "event": "close",
+      "event_frame": 48
+    },
+    {
+      "tag": "train_release",
+      "episode": 0,
+      "frame": 96,
+      "event": "open",
+      "event_frame": 99
+    },
+    {
+      "tag": "validation",
+      "episode": 52,
+      "frame": 38,
+      "event": "close",
+      "event_frame": 41
+    },
+    {
+      "tag": "validation_release",
+      "episode": 52,
+      "frame": 89,
+      "event": "open",
+      "event_frame": 92
+    },
+    {
+      "tag": "tail",
+      "episode": 0,
+      "frame": -3,
+      "event": "tail"
+    }
+  ],
+  "gripper_episodes": [
+    {
+      "episode": 0,
+      "length": 112,
+      "open_rows": 61,
+      "closed_rows": 51,
+      "transitions": [
+        {
+          "frame": 48,
+          "before": 1.0,
+          "after": 0.0,
+          "event": "close"
+        },
+        {
+          "frame": 99,
+          "before": 0.0,
+          "after": 1.0,
+          "event": "open"
+        }
+      ]
+    },
+    {
+      "episode": 43,
+      "length": 87,
+      "open_rows": 44,
+      "closed_rows": 43,
+      "transitions": [
+        {
+          "frame": 37,
+          "before": 1.0,
+          "after": 0.0,
+          "event": "close"
+        },
+        {
+          "frame": 80,
+          "before": 0.0,
+          "after": 1.0,
+          "event": "open"
+        }
+      ]
+    },
+    {
+      "episode": 47,
+      "length": 103,
+      "open_rows": 45,
+      "closed_rows": 58,
+      "transitions": [
+        {
+          "frame": 35,
+          "before": 1.0,
+          "after": 0.0,
+          "event": "close"
+        },
+        {
+          "frame": 93,
+          "before": 0.0,
+          "after": 1.0,
+          "event": "open"
+        }
+      ]
+    },
+    {
+      "episode": 52,
+      "length": 106,
+      "open_rows": 55,
+      "closed_rows": 51,
+      "transitions": [
+        {
+          "frame": 41,
+          "before": 1.0,
+          "after": 0.0,
+          "event": "close"
+        },
+        {
+          "frame": 92,
+          "before": 0.0,
+          "after": 1.0,
+          "event": "open"
+        }
+      ]
+    },
+    {
+      "episode": 54,
+      "length": 105,
+      "open_rows": 57,
+      "closed_rows": 48,
+      "transitions": [
+        {
+          "frame": 43,
+          "before": 1.0,
+          "after": 0.0,
+          "event": "close"
+        },
+        {
+          "frame": 91,
+          "before": 0.0,
+          "after": 1.0,
+          "event": "open"
+        }
+      ]
+    },
+    {
+      "episode": 68,
+      "length": 90,
+      "open_rows": 49,
+      "closed_rows": 41,
+      "transitions": [
+        {
+          "frame": 33,
+          "before": 1.0,
+          "after": 0.0,
+          "event": "close"
+        },
+        {
+          "frame": 74,
+          "before": 0.0,
+          "after": 1.0,
+          "event": "open"
+        }
+      ]
+    },
+    {
+      "episode": 69,
+      "length": 92,
+      "open_rows": 48,
+      "closed_rows": 44,
+      "transitions": [
+        {
+          "frame": 42,
+          "before": 1.0,
+          "after": 0.0,
+          "event": "close"
+        },
+        {
+          "frame": 86,
+          "before": 0.0,
+          "after": 1.0,
+          "event": "open"
+        }
+      ]
+    },
+    {
+      "episode": 72,
+      "length": 90,
+      "open_rows": 46,
+      "closed_rows": 44,
+      "transitions": [
+        {
+          "frame": 38,
+          "before": 1.0,
+          "after": 0.0,
+          "event": "close"
+        },
+        {
+          "frame": 82,
+          "before": 0.0,
+          "after": 1.0,
+          "event": "open"
+        }
+      ]
+    },
+    {
+      "episode": 80,
+      "length": 84,
+      "open_rows": 43,
+      "closed_rows": 41,
+      "transitions": [
+        {
+          "frame": 35,
+          "before": 1.0,
+          "after": 0.0,
+          "event": "close"
+        },
+        {
+          "frame": 76,
+          "before": 0.0,
+          "after": 1.0,
+          "event": "open"
+        }
+      ]
+    },
+    {
+      "episode": 87,
+      "length": 93,
+      "open_rows": 46,
+      "closed_rows": 47,
+      "transitions": [
+        {
+          "frame": 34,
+          "before": 1.0,
+          "after": 0.0,
+          "event": "close"
+        },
+        {
+          "frame": 81,
+          "before": 0.0,
+          "after": 1.0,
+          "event": "open"
+        }
+      ]
+    }
+  ]
+}

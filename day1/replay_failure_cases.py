@@ -94,7 +94,8 @@ def main():
                 for _ in range(10):obs,_,_,_=env.step(LIBERO_DUMMY_ACTION)
                 settled=sha(env.sim.get_state().flatten())
                 assert settled==record['post_settle_state_sha256'], 'Initial physical state differs'
-                inner=env.env;ctrl=env.robots[0].controller
+                inner=env.env;ctrl=env.robots[0].controller;grip=env.robots[0].gripper
+                assert {'left_finger','right_finger','left_fingerpad','right_fingerpad'}<=set(grip.important_geoms), 'Gripper model lacks finger groups'
                 bowl=inner.objects_dict['akita_black_bowl_1'];plate=inner.objects_dict['plate_1']
                 bid=inner.obj_body_id['akita_black_bowl_1'];pid=inner.obj_body_id['plate_1']
                 metadata=dict(coordinates='MuJoCo world frame, metres; object body origins, not mesh centre of mass',
@@ -102,13 +103,24 @@ def main():
                     action_index='row k applies from state k to k+1',control_hz=20,
                     success_predicate='bowl body z >= plate body z AND contact AND XY distance < 0.03 m',
                     grasp_proxy='Both left and right fingerpad groups contact bowl at sample time; not a grasp stability guarantee',
+                    contact_groups_note='left_finger/right_finger cover the full finger bodies and include the pads, so pad contact implies finger contact; finger_contact_without_both_pads marks states where only non-pad geometry still touches the bowl',
+                    slip_note='relative_slip_mm is the per-step change of the bowl-origin offset from the EEF origin, expressed in world axes; analysis metrics recompute the same quantity in the EEF frame and log both',
+                    gripper_finger_geoms={k: grip.important_geoms[k] for k in ('left_finger', 'right_finger')},
                     bowl_contact_geoms=bowl.contact_geoms,plate_contact_geoms=plate.contact_geoms)
+                previous_offset = None
                 for step in range(len(actions)+1):
                     bp=env.sim.data.body_xpos[bid].copy();pp=env.sim.data.body_xpos[pid].copy()
                     br=env.sim.data.body_xmat[bid].reshape(3,3).copy()
-                    grip=env.robots[0].gripper
                     left=bool(inner.check_contact(grip.important_geoms['left_fingerpad'],bowl.contact_geoms))
                     right=bool(inner.check_contact(grip.important_geoms['right_fingerpad'],bowl.contact_geoms))
+                    left_finger=bool(inner.check_contact(grip.important_geoms['left_finger'],bowl.contact_geoms))
+                    right_finger=bool(inner.check_contact(grip.important_geoms['right_finger'],bowl.contact_geoms))
+                    assert (not left or left_finger) and (not right or right_finger), 'Pad contact must imply finger contact'
+                    both_pads=left and right
+                    any_finger=left_finger or right_finger
+                    offset=np.asarray(obs['robot0_eef_pos'],dtype=float)
+                    slip=0. if previous_offset is None else float(np.linalg.norm(bp-offset-previous_offset)*1000)
+                    previous_offset=bp-offset
                     contact=bool(inner.check_contact(bowl,plate));xy=float(np.linalg.norm(bp[:2]-pp[:2]));above=bool(bp[2]>=pp[2])
                     success=bool(env.check_success())
                     assert success==(contact and xy<.03 and above)
@@ -120,7 +132,9 @@ def main():
                         **{f'bowl_q{axis}':float(v) for axis,v in zip('wxyz',env.sim.data.body_xquat[bid])},
                         **{f'plate_q{axis}':float(v) for axis,v in zip('wxyz',env.sim.data.body_xquat[pid])},
                         finger_width_m=float(np.abs(obs['robot0_gripper_qpos']).sum()),
-                        left_pad_contact=left,right_pad_contact=right,both_pad_contact=left and right,
+                        left_pad_contact=left,right_pad_contact=right,both_pad_contact=both_pads,
+                        left_finger_contact=left_finger,right_finger_contact=right_finger,any_finger_contact=any_finger,
+                        finger_contact_without_both_pads=any_finger and not both_pads,relative_slip_mm=slip,
                         bowl_plate_contact=contact,xy_distance_m=xy,above_plate=above,xy_within_30mm=xy<.03,
                         bowl_tilt_deg=float(np.degrees(np.arccos(np.clip(br[2,2],-1,1)))),success=success)
                     traces.append(row);states.append(env.sim.get_state().flatten().copy())

@@ -8,8 +8,8 @@
     "sha256": "d66d1e7d84b4f39cae9da6aa657646913b8316f691ffa9230fef147fdec8f51a"
   },
   "README.md": {
-    "bytes": 9730,
-    "sha256": "06c10d95caec6f3377229d2d41aafb89344b97d6813e3641712d82b688825d7b"
+    "bytes": 10528,
+    "sha256": "f9c766bd610c11080c7297c98fa11047e56484fa5b637eda17a856ac7247488b"
   },
   "day1/CPU控制测试说明.md": {
     "bytes": 8041,
@@ -31,13 +31,17 @@
     "bytes": 14179,
     "sha256": "8050fe5e113a5de7ee52459037c69b1835bd0b563de9e9d530c69c9749cd987e"
   },
+  "day1/analyze_contact_transfer.py": {
+    "bytes": 10461,
+    "sha256": "033b074e5b303ded7e45bfe59ce7650c815742bd2b6562cd43673a7c1ddf8d91"
+  },
   "day1/analyze_counterfactual33.py": {
     "bytes": 13457,
     "sha256": "d2bf6635813909757e2dfae608f9eea1868b29cfd8f977f2e81ba4edd34e0409"
   },
   "day1/analyze_failure_replays.py": {
-    "bytes": 11275,
-    "sha256": "8f5d760f5b7cb68ffa91d4a1127999ec82428c95535bd1e81d8f5856d4999d15"
+    "bytes": 16118,
+    "sha256": "c5bf1c4393391160bae20b280a7338e312d33e8fb63611cb069be15f952d52e7"
   },
   "day1/audit_action_checkpoint.py": {
     "bytes": 2265,
@@ -152,8 +156,8 @@
     "sha256": "b4538452d15bbe0339dee3783b539942aee38b3c96ab96e418c186bdffe958c4"
   },
   "day1/replay_failure_cases.py": {
-    "bytes": 11827,
-    "sha256": "59882e2f61ba0a14b023fc8ff452e507812617c1522520f1528ff7c59184c598"
+    "bytes": 13504,
+    "sha256": "7fb53b4ca3f0aa25d68a1a4e2b79d9bd21880aa1b4cc7e859633a8ba10f1a629"
   },
   "day1/replay_matched_grasp_cpu.py": {
     "bytes": 8048,
@@ -618,6 +622,42 @@
   "results/color_holdout/summary.txt": {
     "bytes": 247,
     "sha256": "0ed76b21940357b14cd5117ecc9889ead345ab0dc7d4e82687bf757f6c16cd16"
+  },
+  "results/contact_transfer/SHA256SUMS.json": {
+    "bytes": 817,
+    "sha256": "f5df3caec39d9da8e4d769ad3796e80abeb628cba06032037e4300c03aec47cb"
+  },
+  "results/contact_transfer/contact_transfer_33.csv": {
+    "bytes": 849,
+    "sha256": "dd54415036c6d13ec9e18a22a561e503cf8da26ed5c926822627340bd2946449"
+  },
+  "results/contact_transfer/contact_transfer_33.json": {
+    "bytes": 4881,
+    "sha256": "b68b0b2891f8f5530acfe19f39b79266e92b3c47b5e59029275e6ed2b96c7f0e"
+  },
+  "results/contact_transfer/contact_transfer_33.png": {
+    "bytes": 166869,
+    "sha256": "ac673f4d99aab6abf962936f2a888554436de4bdababd36197d5f521e6a8f0dd"
+  },
+  "results/contact_transfer/contact_transfer_39_32.csv": {
+    "bytes": 1254,
+    "sha256": "25f0f84b29f39e172e398035b9a025294ffc26b68732b70b5a648ff2a2898517"
+  },
+  "results/contact_transfer/contact_transfer_39_32.json": {
+    "bytes": 9786,
+    "sha256": "da85bbed4af2a5bd688db6dc56b177eba38511abf1f9a8ba63d12ef4543c99c9"
+  },
+  "results/contact_transfer/contact_transfer_39_32.png": {
+    "bytes": 243146,
+    "sha256": "acc6d9f839ab7a95f596a38f867e97e1f544f2d63c32a5d74fe9dd2f9dd5324c"
+  },
+  "results/contact_transfer/sources/analyze_contact_transfer.py": {
+    "bytes": 10461,
+    "sha256": "033b074e5b303ded7e45bfe59ce7650c815742bd2b6562cd43673a7c1ddf8d91"
+  },
+  "results/contact_transfer/诊断口径复核.md": {
+    "bytes": 6118,
+    "sha256": "c51be99ca4855a66f4dae2eeefd97640ff371b912e0bb3a2f430a9413634b668"
   },
   "results/control_sensitivity/SHA256SUMS.json": {
     "bytes": 3390,

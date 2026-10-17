@@ -35,12 +35,22 @@ for condition,episode in plan['cases']:
     diagnostics,axes=plt.subplots(2,3,figsize=(13,7))
     action_fig,action_axes=plt.subplots(7,2,figsize=(13,13),sharex='col',constrained_layout=True)
     relative_fig,relative_axes=plt.subplots(2,2,figsize=(11,7),sharex=True,constrained_layout=True)
+    # Newer replays log full finger bodies, not just pads. Older published CSVs
+    # predate the field, so the transfer panel only exists when it is present.
+    probe=case/plan['models'][0]/'states.csv'
+    finger_available=probe.exists() and 'any_finger_contact' in probe.read_text().splitlines()[0].split(',')
+    if finger_available:
+        transfer_fig,transfer_axes=plt.subplots(2,2,figsize=(12,8),sharex=True,constrained_layout=True)
     readers=[];lengths=[]
     for model in COLORS:
         path=case/model
         with (path/'states.csv').open() as f:rows=list(csv.DictReader(f))
         def array(names):return np.asarray([[float(r[n]) for n in names] for r in rows])
         def flags(name):return np.asarray([r[name]=='True' for r in rows])
+        def optional(name,kind='bool'):
+            """Newer logs add finger-level contact and slip; older ones only carry pads."""
+            if name not in rows[0]:return None
+            return flags(name) if kind=='bool' else array([name])[:,0]
         times=array(['time_s'])[:,0];eef=array(['eef_'+a for a in 'xyz'])
         bowl=array(['bowl_'+a for a in 'xyz']);plate=array(['plate_'+a for a in 'xyz'])
         quats=array(['eef_q'+a for a in 'xyzw']);relative=np.einsum('nji,nj->ni',Rotation.from_quat(quats).as_matrix(),bowl-eef)
@@ -48,6 +58,13 @@ for condition,episode in plan['cases']:
         width=array(['finger_width_m'])[:,0];tilt=array(['bowl_tilt_deg'])[:,0]
         contact=flags('bowl_plate_contact');grasp=flags('both_pad_contact');success=flags('success')
         above=flags('above_plate');aligned=xy<.03
+        any_finger=optional('any_finger_contact')
+        left_finger=optional('left_finger_contact');right_finger=optional('right_finger_contact')
+        non_pad_only=optional('finger_contact_without_both_pads')
+        logged_slip=optional('relative_slip_mm','float')
+        assert (left_finger is None)==(any_finger is None)==(logged_slip is None), 'Partial finger-contact logging'
+        # Metrics use the EEF frame, matching the existing relative/drift measures.
+        slip=np.zeros(len(rows));slip[1:]=np.linalg.norm(np.diff(relative,axis=0),axis=1)*1000
         npz=np.load(path/'replay.npz');actions=npz['actions']
         lifted=np.flatnonzero(lift>.02);start=int(lifted[0]) if len(lifted) else None
         candidates=np.arange(start if start is not None else 0,len(rows));closest=int(candidates[np.argmin(xy[candidates])])
@@ -70,6 +87,27 @@ for condition,episode in plan['cases']:
             states_aligned_and_above_without_contact=int((aligned[candidates]&above[candidates]&~contact[candidates]).sum()),
             max_bowl_tilt_deg=float(tilt.max()),
             max_bowl_in_eef_offset_drift_after_lift_mm=float(np.linalg.norm(relative[candidates]-relative[candidates[0]],axis=1).max()*1000) if start is not None else None)
+        if any_finger is not None:
+            pad_loss=np.flatnonzero(grasp[:-1]&~grasp[1:])+1
+            release=np.flatnonzero(any_finger[:-1]&~any_finger[1:])+1
+            # A fingerpad-only rule reports a release here; the full finger bodies
+            # show whether anything still holds the bowl.
+            metric.update(first_any_finger_contact_state=first(any_finger),
+                first_left_finger_contact_state=first(left_finger),first_right_finger_contact_state=first(right_finger),
+                states_with_any_finger_contact=int(any_finger.sum()),
+                first_both_pad_loss_state=int(pad_loss[0]) if len(pad_loss) else None,
+                finger_contact_at_first_both_pad_loss=bool(any_finger[pad_loss[0]]) if len(pad_loss) else None,
+                first_finger_contact_without_both_pads_state=first(non_pad_only),
+                states_finger_contact_without_both_pads=int(non_pad_only.sum()),
+                first_all_finger_contact_loss_state=int(release[0]) if len(release) else None,
+                max_relative_slip_mm=float(slip.max()),mean_relative_slip_mm=float(slip.mean()),
+                logged_world_frame_max_relative_slip_mm=float(logged_slip.max()))
+            if len(pad_loss):
+                after=pad_loss[0]
+                metric['slip_window_around_both_pad_loss_mm']=dict(
+                    state=int(after),previous_step_mm=float(slip[after]),following_step_mm=float(slip[after+1]) if after+1<len(slip) else None,
+                    cumulative_next_three_states_mm=float(slip[after:after+3].sum()))
+                metric['max_relative_slip_after_both_pad_loss_mm']=float(slip[after:].max())
         all_metrics.append(metric)
         metric['first_bowl_plate_contact_state']=first(contact)
         metric['first_close_action']=first(actions[:,6]>0)
@@ -104,6 +142,20 @@ for condition,episode in plan['cases']:
         with (path/'derived.csv').open('w',newline='') as f:
             w=csv.writer(f);w.writerow(['state_step','time_s','xy_mm','lift_mm','bowl_minus_plate_z_mm','bowl_in_eef_x_m','bowl_in_eef_y_m','bowl_in_eef_z_m'])
             for i,t in enumerate(times):w.writerow([i,t,xy[i]*1000,lift[i]*1000,(bowl[i,2]-plate[i,2])*1000,*relative[i]])
+        if finger_available:
+            offset_norm=np.linalg.norm(relative,axis=1)*1000
+            pads=(flags('left_pad_contact').astype(int)+flags('right_pad_contact').astype(int))
+            transfer_axes[0,0].step(times,pads,where='post',color=COLORS[model],label=model)
+            transfer_axes[0,1].step(times,left_finger.astype(int)+right_finger.astype(int),where='post',color=COLORS[model],label=model)
+            transfer_axes[1,0].step(times,non_pad_only.astype(int),where='post',color=COLORS[model],label=model)
+            transfer_axes[1,1].plot(times,slip,color=COLORS[model],label=model)
+            transfer_axes[1,1].set_yscale('symlog')
+            transfer_axes[1,0].plot(times,offset_norm,color=COLORS[model],ls=':',lw=.8)
+            with (path/'contact_and_slip.csv').open('w',newline='') as f:
+                w=csv.writer(f);w.writerow(['state_step','time_s','left_pad','right_pad','left_finger','right_finger',
+                    'any_finger','finger_contact_without_both_pads','bowl_offset_in_eef_mm','relative_slip_mm'])
+                for i,t in enumerate(times):w.writerow([i,t,int(flags('left_pad_contact')[i]),int(flags('right_pad_contact')[i]),
+                    int(left_finger[i]),int(right_finger[i]),int(any_finger[i]),int(non_pad_only[i]),offset_norm[i],slip[i]])
         reader=imageio.get_reader(SOURCE/model/condition/f'task_08_episode_{episode:03d}.mp4',format='FFMPEG')
         readers.append(reader);lengths.append(reader.count_frames())
     paxes[0,0].legend();positions.suptitle(f'{condition}, initial state {episode}: saved-action replay')
@@ -128,6 +180,14 @@ for condition,episode in plan['cases']:
     action_fig.savefig(case/'action_commands.png',dpi=140);plt.close(action_fig)
     for ax in relative_axes.flat:ax.set(xlabel='Simulation seconds',xlim=(0,6));ax.grid(alpha=.2);ax.legend()
     relative_fig.savefig(case/'relative_pose_first120.png',dpi=150);plt.close(relative_fig)
+    if finger_available:
+        for ax,title in zip(transfer_axes.flat,[
+                'Contacting fingerpad groups (0/1/2)','Contacting finger bodies (0/1/2)',
+                'Finger contact without both pads (0/1), dotted: bowl offset in EEF (mm)',
+                'Relative slip per step (mm, symlog)']):
+            ax.set(title=title,xlabel='Simulation seconds');ax.grid(alpha=.2);ax.legend(fontsize=8)
+        transfer_fig.suptitle(f'{condition}, initial state {episode}: fingerpad loss is not object loss')
+        transfer_fig.savefig(case/'contact_transfer.png',dpi=150);plt.close(transfer_fig)
     last=[None]*3
     with imageio.get_writer(case/'original_policy_comparison.mp4',format='FFMPEG',fps=20,
             codec='libx264',ffmpeg_params=['-threads','1']) as writer:

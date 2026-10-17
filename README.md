@@ -2,7 +2,7 @@
 
 面向 GlanceWAM 动作模块后训练的验证工程。先在 **2GiB 内存、无 GPU** 的服务器上完成控制与数据管线验收，再在单张 A100 40GB 上完成动作模块微调和闭环对照。
 
-**最新：完成 C/P 阶段采样各100步训练，以及围绕偏色状态 33 的三轮失败定位。** C/P 正常条件均20/20，强偏色分别16/20与15/20（基线15/20）；P 恢复26条但新增33条失败，未优于 C，阶段重采样暂不推进。状态33 定位显示 P 在抓取接触尚未稳定时于动作56提前张爪，最大抬升仅4.29mm；只保持56–75闭爪的反事实把窗口抬升提到32.51mm、相对漂移从72.89mm降到8.87mm，任务仍失败；进一步只读检查68–80确认72时接触由指垫转移到非指垫手指碰撞体并伴随9.61mm相对滑移，76时碗盘XY误差61.57mm（C为16.52mm）。固定失败动作的开环反事实不能当作新观测下的闭环输出，结论已列出下一步所需的带反馈诊断。详见[阶段记录](results/stage_v1/comparison/实验记录.md)、[33号失败分析](results/failure_replay_33/失败原因分析.md)、[反事实记录](results/counterfactual_33_hold56_75/反事实回放记录.md)、[接触检查与下一步](results/counterfactual33_contact_68_80/阶段68_80分析与最小方案.md)。全部来自单一任务、同一批初始状态，不是跨任务或实机结果。
+**最新：完成 C/P 阶段采样各100步训练，以及围绕偏色状态 33 的三轮失败定位。** C/P 正常条件均20/20，强偏色分别16/20与15/20（基线15/20）；P 恢复26条但新增33条失败，未优于 C，阶段重采样暂不推进。状态33 定位显示 P 在抓取接触尚未稳定时于动作56提前张爪，最大抬升仅4.29mm；只保持56–75闭爪的反事实把窗口抬升提到32.51mm、相对漂移从72.89mm降到8.87mm，任务仍失败；进一步只读检查68–80确认72时接触由指垫转移到非指垫手指碰撞体并伴随9.61mm相对滑移，76时碗盘XY误差61.57mm（C为16.52mm）。固定失败动作的开环反事实不能当作新观测下的闭环输出，结论已列出下一步所需的带反馈诊断。诊断口径复核进一步表明，双侧指垫接触与「首次丢失时刻」都不是可靠的夹持判据。详见[阶段记录](results/stage_v1/comparison/实验记录.md)、[33号失败分析](results/failure_replay_33/失败原因分析.md)、[反事实记录](results/counterfactual_33_hold56_75/反事实回放记录.md)、[接触检查与下一步](results/counterfactual33_contact_68_80/阶段68_80分析与最小方案.md)、[诊断口径复核](results/contact_transfer/诊断口径复核.md)。全部来自单一任务、同一批初始状态，不是跨任务或实机结果。
 
 **此前的120次独立初始状态闭环对照。** 正常/强偏色成功数：base 为20/20、15/20，clean200 为20/20、16/20，aug200 为19/20、15/20。增强微调没有偏色净收益，并出现正常条件退化，不能宣称鲁棒性提升。详见[独立状态实验记录](results/color_holdout/comparison/实验记录.md)、[配对结果与案例编号](results/color_holdout/comparison/overview.json)。
 
@@ -24,6 +24,7 @@
 | P偏色33退化定位 | 2GB CPU无渲染回放三条原动作，成功步数与初态哈希吻合；P夹持未稳定即在56张爪，最大抬升4.29mm，之后未重新抓取；无新增训练 | [失败分析](results/failure_replay_33/失败原因分析.md)、[关键曲线](results/failure_replay_33/color_strong_episode33/grasp_failure_focus.png)、[原录像对照](results/failure_replay_33/color_strong_episode33/original_policy_comparison.mp4) |
 | 33号夹爪反事实 | 仅56–75保持闭爪，6维输入与其余动作不变，状态0–56逐位相同；窗口抬升4.29→32.51mm、相对漂移72.89→8.87mm，任务仍失败 | [记录与结论](results/counterfactual_33_hold56_75/反事实回放记录.md)、[曲线](results/counterfactual_33_hold56_75/grasp_comparison.png)、[末端系位置](results/counterfactual_33_hold56_75/bowl_relative_to_eef.png) |
 | 33号接触几何检查 | 恢复3条轨迹×13个保存状态共39个状态，碗盘位姿1e-9核对通过、接触标志与原日志全一致；72时接触由指垫转移到非指垫手指碰撞体，71→73碗在末端系滑移9.61mm；76时碗盘XY误差61.57mm，未对齐 | [记录与下一步](results/counterfactual33_contact_68_80/阶段68_80分析与最小方案.md)、[接触分组](results/counterfactual33_contact_68_80/contact_groups.json)、[恢复校验](results/counterfactual33_contact_68_80/restore_checks.json)、[对齐分解](results/counterfactual33_contact_68_80/overview.json) |
+| 诊断口径复核 | 复核六条既有轨迹：39/aug双侧指垫接触0个状态却抬升100.03mm、39/base仅6个状态抬升110.12mm，双侧接触不能作为夹持判据；32/base与clean的首次空洞在47随后恢复并成功，首次丢失时刻是瞬态量；新增末端系相对滑移并以共同100状态窗口比较 | [复核说明](results/contact_transfer/诊断口径复核.md)、[33号指标](results/contact_transfer/contact_transfer_33.json)、[39/32指标](results/contact_transfer/contact_transfer_39_32.json)、[接触与滑移曲线](results/contact_transfer/contact_transfer_33.png) |
 
 ### 时序实验
 

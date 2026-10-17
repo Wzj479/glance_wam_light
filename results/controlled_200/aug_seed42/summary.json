@@ -1,0 +1,17 @@
+{
+  "completed_steps": 200,
+  "best_selection_score": 0.023969071644667286,
+  "frozen_unchanged": true,
+  "upstream_commit": "6a51bdc5139e72e8ad525779db0c989e1af5abab",
+  "split_sha256": "d83ea4c02905c34900bff187696e76f3416026d5c43ef21ca8999ed1b2818252",
+  "train_scope": "all",
+  "base_checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/glancewam_bundle/checkpoints/glancewam_libero/checkpoints/steps_15000_pytorch_model_ema.pt",
+  "trainable_parameters": 148094471,
+  "frozen_sha256": "f2912eecf6f4c790b6e9bf05f0602ceb24222b108afd92ba264e064f9b402cf0",
+  "seed": 42,
+  "validation_scope": "hindsight-goal flow matching loss",
+  "allocated_gib": 5.137421607971191,
+  "reserved_gib": 5.90625,
+  "peak_allocated_gib": 5.7599592208862305,
+  "peak_reserved_gib": 5.90625
+}

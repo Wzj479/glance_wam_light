@@ -1,0 +1,20 @@
+{
+  "clean": {
+    "frames": 71,
+    "source_frames": [
+      71,
+      71,
+      70
+    ],
+    "fps": 20
+  },
+  "color_strong": {
+    "frames": 79,
+    "source_frames": [
+      78,
+      79,
+      75
+    ],
+    "fps": 20
+  }
+}

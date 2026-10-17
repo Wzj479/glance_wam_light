@@ -1,0 +1,23 @@
+{
+  "glancewam_commit": "6a51bdc5139e72e8ad525779db0c989e1af5abab",
+  "assessment_commit": "b2ab41a891512bfe34e4a25f2d01eab67801f311",
+  "diffusers_commit": "4ca863323d550842e7d0122efd57d84d9b75d1cf",
+  "base_model_revision": "958acd63685c7e632e4b194549f2a703e34bd98b",
+  "dataset_revision": "0b9208dff852914f94be879f702cd40118255bce",
+  "source_patches": {
+    "finetune_action_head.py": "8799e13298f7daf5ef6437b25eb249348c1b49461b4381285342ba9554e18949",
+    "prepare_checkpoint.py": "99bd3531258a72279e9d35a1a4be2cd40dfcad6163d69e774493f1661a3b1f7f"
+  },
+  "checkpoint_receipts": {
+    "best.pt": {
+      "server_path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/gpu_validation/action_finetune_amp_3steps/checkpoints/best.pt",
+      "bytes": 3467029598,
+      "sha256": "54babb2e52dc889d12d70cc956c43c403fd172d5ba23413737de4bdf3a5d5175"
+    },
+    "last.pt": {
+      "server_path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/gpu_validation/action_finetune_amp_3steps/checkpoints/last.pt",
+      "bytes": 3467029598,
+      "sha256": "5f0e10e4f2027ddbe881f6239cbbd764798885ecafa18cd534481d1c823e7187"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "libero_goal_no_noops_1.0.0_lerobot": {
+    "train_episode_ids": [
+      0,
+      43,
+      47,
+      54,
+      68,
+      69,
+      80,
+      87
+    ],
+    "val_episode_ids": [
+      52,
+      72
+    ],
+    "train_frames": 766,
+    "val_frames": 26,
+    "action_normalization_source": "checkpoint.franka.action",
+    "action_min": [
+      -0.9375,
+      -0.9375,
+      -0.9375,
+      -0.2582142949104309,
+      -0.375,
+      -0.3675000071525574,
+      0.0
+    ],
+    "action_max": [
+      0.9375,
+      0.9375,
+      0.9375,
+      0.3557142913341522,
+      0.375,
+      0.375,
+      1.0
+    ],
+    "action_mask": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false
+    ]
+  },
+  "validation_windows": [
+    {
+      "dataset": "libero_goal_no_noops_1.0.0_lerobot",
+      "episode": 52,
+      "frame": 48
+    },
+    {
+      "dataset": "libero_goal_no_noops_1.0.0_lerobot",
+      "episode": 72,
+      "frame": 32
+    }
+  ],
+  "scope": "Adaptation holdout only; pretrained model may have seen these episodes",
+  "explicit_split_source": {
+    "path": "/root/autodl-tmp/wam_glance_project/glance_wam_light/results/grasp_episode_split.json",
+    "sha256": "d6c51eeb7caf618e831f2c3292c6d08f26a3269066c11bad7482a7d79448ed01"
+  }
+}

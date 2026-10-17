@@ -67,7 +67,8 @@ def main():
             env_seed = stable_seed(protocol['seed'], protocol['suite'], task_id, episode_id) % (2**31)
             env, instruction = _get_libero_env(task, 256, env_seed)
             record = dict(task_id=task_id, episode_id=episode_id, env_seed=env_seed,
-                          instruction=instruction, condition=a.condition, success=False)
+                          instruction=instruction, task_name=task.name,
+                          condition=a.condition, success=False)
             images, actions, query_times = [], [], []
             start_episode = time.perf_counter()
             try:
@@ -79,6 +80,8 @@ def main():
                 obs = env.set_init_state(initial)
                 for _ in range(10):
                     obs, _, _, _ = env.step(LIBERO_DUMMY_ACTION)
+                record['post_settle_state_sha256'] = hashlib.sha256(
+                    np.asarray(env.sim.get_state().flatten()).tobytes()).hexdigest()
                 for step in range(MAX_STEPS[protocol['suite']]):
                     # Preserve official 180-degree camera rotation and 224px resize.
                     pair = [np.ascontiguousarray(obs[key][::-1, ::-1])
@@ -88,7 +91,9 @@ def main():
                                                 corruption['saturation'], corruption['gains'])
                     viewed = [np.asarray(im).copy() for im in viewed]
                     if a.save_videos:
-                        images.append(np.concatenate([pair[0], viewed[0]], axis=1))
+                        images.append(np.concatenate([
+                            np.concatenate([pair[0], viewed[0]], axis=1),
+                            np.concatenate([pair[1], viewed[1]], axis=1)], axis=0))
                     seed = stable_seed(protocol['seed'], task_id, episode_id, step // client.action_chunk_size)
                     example = dict(image=viewed, lang=str(instruction), seed=seed)
                     is_query = step % client.action_chunk_size == 0
@@ -111,8 +116,20 @@ def main():
                     if done:
                         record['success'] = True
                         break
+                if a.save_videos:
+                    # Include the returned terminal state, not just pre-action frames.
+                    pair = [np.ascontiguousarray(obs[key][::-1, ::-1])
+                            for key in ('agentview_image', 'robot0_eye_in_hand_image')]
+                    pair = [client._resize_image(im) for im in pair]
+                    viewed = photometric_window(pair, corruption['brightness'],
+                                                corruption['saturation'], corruption['gains'])
+                    images.append(np.concatenate([
+                        np.concatenate([pair[0], np.asarray(viewed[0])], axis=1),
+                        np.concatenate([pair[1], np.asarray(viewed[1])], axis=1)], axis=0))
                 record.update(steps=len(actions), seconds=time.perf_counter() - start_episode,
-                              query_times=query_times)
+                              query_times=query_times, video_frames=len(images),
+                              video_fps=20, video_time_base='simulation',
+                              video_layout='rows: primary/wrist; columns: original/observed')
             finally:
                 env.close()
             stem = f'task_{task_id:02d}_episode_{episode_id:03d}'

@@ -1,0 +1,42 @@
+{
+  "clean_episode25_comparison.mp4": {
+    "frames": 71,
+    "source_frames": [
+      71,
+      71,
+      71
+    ],
+    "fps": 20,
+    "selection": "Fixed state25; prior failure diagnosis states39/32"
+  },
+  "color_strong_episode25_comparison.mp4": {
+    "frames": 79,
+    "source_frames": [
+      78,
+      79,
+      79
+    ],
+    "fps": 20,
+    "selection": "Fixed state25; prior failure diagnosis states39/32"
+  },
+  "clean_episode39_comparison.mp4": {
+    "frames": 74,
+    "source_frames": [
+      74,
+      73,
+      74
+    ],
+    "fps": 20,
+    "selection": "Fixed state25; prior failure diagnosis states39/32"
+  },
+  "color_strong_episode32_comparison.mp4": {
+    "frames": 80,
+    "source_frames": [
+      79,
+      79,
+      80
+    ],
+    "fps": 20,
+    "selection": "Fixed state25; prior failure diagnosis states39/32"
+  }
+}

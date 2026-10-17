@@ -1,0 +1,43 @@
+{
+  "ckpt": "results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt",
+  "out": "results/gpu_validation/action_finetune_3steps",
+  "data_root": "glancewam_bundle/datasets",
+  "base_model": "models/skyreels-base",
+  "data_mix": "libero_goal",
+  "episode_split": "/root/autodl-tmp/wam_glance_project/glance_wam_light/results/grasp_episode_split.json",
+  "max_steps": 3,
+  "batch_size": 1,
+  "grad_accum": 1,
+  "lr": 1e-05,
+  "weight_decay": 0.0001,
+  "warmup_steps": 1,
+  "eval_every": 3,
+  "save_every": 100,
+  "val_fraction": 0.1,
+  "val_samples": 2,
+  "val_stride": 8,
+  "seed": 42,
+  "workers": 0,
+  "train_scope": "all",
+  "aug_prob": 0.5,
+  "brightness": [
+    0.6,
+    1.4
+  ],
+  "saturation": [
+    0.6,
+    1.4
+  ],
+  "color_gain": [
+    0.9,
+    1.1
+  ],
+  "val_brightness": 0.7,
+  "val_saturation": 0.6,
+  "val_color_gain": [
+    0.9,
+    1.0,
+    1.1
+  ],
+  "allow_different_commit": false
+}

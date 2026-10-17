@@ -1,0 +1,23 @@
+[
+  {
+    "condition": "clean",
+    "outcome": "regressed",
+    "episode_id": 39,
+    "image": "diagnostic_clean_regressed_episode39.png",
+    "selection": "Lowest initial-state ID with this aug-vs-base outcome; post-hoc diagnostic, not representative sample."
+  },
+  {
+    "condition": "color_strong",
+    "outcome": "recovered",
+    "episode_id": 26,
+    "image": "diagnostic_color_strong_recovered_episode26.png",
+    "selection": "Lowest initial-state ID with this aug-vs-base outcome; post-hoc diagnostic, not representative sample."
+  },
+  {
+    "condition": "color_strong",
+    "outcome": "regressed",
+    "episode_id": 32,
+    "image": "diagnostic_color_strong_regressed_episode32.png",
+    "selection": "Lowest initial-state ID with this aug-vs-base outcome; post-hoc diagnostic, not representative sample."
+  }
+]

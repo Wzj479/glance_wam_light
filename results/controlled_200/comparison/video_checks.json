@@ -1,0 +1,44 @@
+[
+  {
+    "condition": "clean",
+    "episode_id": 10,
+    "frames": 74,
+    "fps": 20,
+    "comparison_order": [
+      "base",
+      "clean",
+      "aug"
+    ],
+    "alignment": "simulation step; hold last frame after termination",
+    "source": "policy-observed primary/wrist cameras (right half of raw rollout video)",
+    "sha256": "05c5412f07fb8b37fcb099ab9066cf731799efb95bcaa188d2e56579c7bf1fe3"
+  },
+  {
+    "condition": "dark",
+    "episode_id": 10,
+    "frames": 77,
+    "fps": 20,
+    "comparison_order": [
+      "base",
+      "clean",
+      "aug"
+    ],
+    "alignment": "simulation step; hold last frame after termination",
+    "source": "policy-observed primary/wrist cameras (right half of raw rollout video)",
+    "sha256": "c2a834f113d42deae9efb5e430dacf4a0581f58678f3ec92ad16795787b14101"
+  },
+  {
+    "condition": "color",
+    "episode_id": 10,
+    "frames": 74,
+    "fps": 20,
+    "comparison_order": [
+      "base",
+      "clean",
+      "aug"
+    ],
+    "alignment": "simulation step; hold last frame after termination",
+    "source": "policy-observed primary/wrist cameras (right half of raw rollout video)",
+    "sha256": "ce99b354605e5c94a812243a478d46f8e35749615ba4a976981cc601cbd59dd6"
+  }
+]

@@ -1,0 +1,2 @@
+model	condition	successes	episodes	rate	delta_pp_vs_base
+base	clean	1	1	1.000	0.00

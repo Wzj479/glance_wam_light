@@ -1,0 +1,54 @@
+10/16 [10:51:45] INFO     | >>  Loaded data_config from LIBERO:  registry.py:106
+                          ['libero_franka']                                     
+                 INFO     | >>  Loaded embodiment_tags from      registry.py:111
+                          LIBERO (data_config):                                 
+                          ['libero_franka']                                     
+                 INFO     | >>  Loaded mixtures from LIBERO      registry.py:116
+                          (data_config): ['libero_all',                         
+                          'libero_goal']                                        
+                 INFO     | >>  Loaded data_config from          registry.py:106
+                          Robocasa_kitchen: ['panda_omron']                     
+                 INFO     | >>  Loaded embodiment_tags from      registry.py:111
+                          Robocasa_kitchen (data_config):                       
+                          ['panda_omron']                                       
+                 INFO     | >>  Loaded mixtures from             registry.py:116
+                          Robocasa_kitchen (data_config):                       
+                          ['robocasa_kitchen_all',                              
+                          'robocasa_kitchen_pnp',                               
+                          'robocasa_kitchen_turnoffmicrowave']                  
+10/16 [10:51:46] INFO     | >> [*] Loading from local         share_tools.py:432
+                          checkpoint path                                       
+                          `results/gpu_validation/action_fine                   
+                          tune_amp_3steps/checkpoints/last.pt                   
+                          `                                                     
+                 INFO     | >> [*] Loading SkyReels-V2 DF    SkyReelsV2DF.py:142
+                          from                                                  
+                          /root/autodl-tmp/wam_glance_projec                    
+                          t/GlanceWAM/models/skyreels-base                      
+                 INFO     | >> [*] skip_text_encoder=True;   SkyReelsV2DF.py:150
+                          UMT5 not loaded. build_inputs()                       
+                          requires examples with                                
+                          `lang_embed`.                                         
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.05it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  2.12it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.84it/s]
+Total number of DiT parameters:  144449536
+10/16 [10:51:49] INFO     | >> [*] >> [*] goal_conditioning:    GlanceWAM.py:340
+                          goal-aware 3-class prefix-LM mask on                  
+                          60 attention processors                               
+                          (n_goal_frames=1, dropout_p=0.1,                      
+                          gen_steps=10).                                        
+                 INFO     | >> [*] >> [*] E7.0 multi-tap        GlanceWAM.py:432
+                          conditioning: taps=[5, 12, 19, 26] ->                 
+                          head KV length x4 (4x(obs+goal)                       
+                          tokens), zero-init per-tap embedding.                 
+                 INFO     | >> [*] >> [*]                       GlanceWAM.py:447
+                          resident_text_table=True: caching                     
+                          unique cached-text embeds on GPU (max                 
+                          1024 rows; eager-prefilled 10).                       
+{
+  "official_loader_passed": true,
+  "checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/gpu_validation/action_finetune_amp_3steps/checkpoints/last.pt",
+  "framework": "GlanceWAM",
+  "action_horizon": 8,
+  "action_sha256": "25dbcb99ae507af0fa2d8b96a33fde4a288291eef05cca765062e3c7d5634961",
+  "backbone_parameters": 1435525696
+}

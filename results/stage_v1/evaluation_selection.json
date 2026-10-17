@@ -1,0 +1,27 @@
+{
+  "models": {
+    "C": {
+      "best_step": 100,
+      "primary_source": "C",
+      "rollout_role": "selected_best",
+      "rollout_checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/stage_v1/C_seed42/checkpoints/best.action.pt",
+      "rollout_checkpoint_step": 100
+    },
+    "P": {
+      "best_step": 100,
+      "primary_source": "P",
+      "rollout_role": "selected_best",
+      "rollout_checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/stage_v1/P_seed42/checkpoints/best.action.pt",
+      "rollout_checkpoint_step": 100
+    }
+  },
+  "baseline_reused": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/color_holdout/base",
+  "protocol_sha256": "22b23b3cc4637827857eb0a97d6a9e0f01821c750530033bcfe38e68ab8eef6f",
+  "reserved_initial_states": [
+    45,
+    46,
+    47,
+    48,
+    49
+  ]
+}

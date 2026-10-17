@@ -1,0 +1,36 @@
+{
+  "protocol_sha256": "7d5c687d33d341f4e7b9839d58ea91b9a19d15a2c31cd13c36cecd5ad76ecdfa",
+  "summaries": {
+    "clean": {
+      "successes": 5,
+      "episodes": 5,
+      "median_success_steps": 74.0
+    },
+    "dark_050": {
+      "successes": 5,
+      "episodes": 5,
+      "median_success_steps": 75.0,
+      "paired_losses_vs_clean": 0,
+      "paired_gains_vs_clean": 0
+    },
+    "dark_035": {
+      "successes": 5,
+      "episodes": 5,
+      "median_success_steps": 76.0,
+      "paired_losses_vs_clean": 0,
+      "paired_gains_vs_clean": 0
+    },
+    "color_strong": {
+      "successes": 2,
+      "episodes": 5,
+      "median_success_steps": 82.0,
+      "paired_losses_vs_clean": 3,
+      "paired_gains_vs_clean": 0
+    }
+  },
+  "selected_conditions": [
+    "color_strong"
+  ],
+  "selection_rule": "paired baseline losses exceed gains vs clean; pilot is exploratory",
+  "next_step": "held-out states 25..44, base/clean200/aug200, clean plus selected conditions"
+}

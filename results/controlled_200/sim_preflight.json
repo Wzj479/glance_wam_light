@@ -1,0 +1,15 @@
+{
+  "task_id": 8,
+  "task": "put_the_bowl_on_the_plate",
+  "instruction": "put the bowl on the plate",
+  "mujoco": "3.2.3",
+  "renderer": "egl",
+  "official_textures": true,
+  "source_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+  "source_files_sha256_verified": 1116,
+  "initial_state_count": 50,
+  "episode_id": 10,
+  "env_seed": 1269140809,
+  "initial_success": false,
+  "passed": true
+}

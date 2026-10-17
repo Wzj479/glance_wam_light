@@ -1,0 +1,113 @@
+[
+  {
+    "model": "P",
+    "condition": "color_strong",
+    "episode_id": 33,
+    "steps": 300,
+    "original_success": false,
+    "replayed_success": false,
+    "first_success_state_step": null,
+    "settled_sha256": "fcb8b8a315a62c896845ad0031513b1c0f854c9aacdd646f66ee2b33942e1e1a",
+    "actions_file_sha256": "741253502282df2cf8a246780d51769320693920d6656df9febc33c3bde3d372",
+    "terminal_original_video_mae": null,
+    "trace_directory": "results/counterfactual_33_hold56_75/color_strong_episode33/P",
+    "physics_only": true,
+    "intervention": {
+      "hold_close_inclusive": [
+        56,
+        75
+      ],
+      "forced_command": 1.0,
+      "changed_elements": [
+        [
+          56,
+          6
+        ],
+        [
+          57,
+          6
+        ],
+        [
+          58,
+          6
+        ],
+        [
+          59,
+          6
+        ],
+        [
+          60,
+          6
+        ],
+        [
+          61,
+          6
+        ],
+        [
+          62,
+          6
+        ],
+        [
+          63,
+          6
+        ],
+        [
+          64,
+          6
+        ],
+        [
+          65,
+          6
+        ],
+        [
+          66,
+          6
+        ],
+        [
+          67,
+          6
+        ],
+        [
+          68,
+          6
+        ],
+        [
+          69,
+          6
+        ],
+        [
+          70,
+          6
+        ],
+        [
+          71,
+          6
+        ],
+        [
+          72,
+          6
+        ],
+        [
+          73,
+          6
+        ],
+        [
+          74,
+          6
+        ],
+        [
+          75,
+          6
+        ]
+      ],
+      "six_arm_channels_unchanged": true,
+      "outside_interval_unchanged": true,
+      "original_actions_file_sha256": "741253502282df2cf8a246780d51769320693920d6656df9febc33c3bde3d372",
+      "executed_actions_array_sha256": "c2d1d9d6b8eeb4e4e518197845181adaf7cf32d06b91ce97ce520cc839228e2a",
+      "prefix_states_exactly_equal_through": 56,
+      "prefix_state_count_verified": 57,
+      "reference_replay": "results/failure_replay_33/color_strong_episode33/P/replay.npz"
+    },
+    "final_success": false
+  }
+]

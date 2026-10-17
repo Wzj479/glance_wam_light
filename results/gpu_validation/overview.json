@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-16",
+  "all_passed": true,
+  "downloaded_files": 29,
+  "downloaded_gib": 9.084998195059597,
+  "inference_peak_allocated_gib": 3.450803756713867,
+  "inference_peak_reserved_gib": 3.478515625,
+  "inference_first_seconds": 13.344369746744633,
+  "inference_warm_seconds": [
+    0.9875950664281845,
+    0.9841879345476627
+  ],
+  "train_peak_allocated_gib": 5.208240985870361,
+  "train_peak_reserved_gib": 5.494140625,
+  "train_plus_validation_peak_allocated_gib": 5.7599592208862305,
+  "train_plus_validation_peak_reserved_gib": 5.904296875,
+  "trainable_parameters": 148094471,
+  "completed_steps": 3,
+  "gradient_norms": [
+    1.0786738395690918,
+    0.13390420377254486,
+    0.1342814415693283
+  ],
+  "frozen_unchanged": true,
+  "action_updated": true,
+  "official_loader_passed": true,
+  "inference_after_reload_passed": true,
+  "scope": "GPU feasibility verification only; no closed-loop evaluation or performance improvement claim"
+}

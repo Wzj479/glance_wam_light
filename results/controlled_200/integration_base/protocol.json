@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "suite": "libero_goal",
+  "task_ids": [
+    8
+  ],
+  "episode_ids": [
+    9
+  ],
+  "seed": 42,
+  "conditions": {
+    "clean": {
+      "brightness": 1.0,
+      "saturation": 1.0,
+      "gains": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

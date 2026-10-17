@@ -1,0 +1,7 @@
+{
+  "training_started": false,
+  "real_model_forward_executed": false,
+  "new_gpu_peak_measured": false,
+  "training_run_directories_exist": [],
+  "gpu": "0 MiB, 0 %"
+}

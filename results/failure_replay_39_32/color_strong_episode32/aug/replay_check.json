@@ -1,0 +1,13 @@
+{
+  "model": "aug",
+  "condition": "color_strong",
+  "episode_id": 32,
+  "steps": 300,
+  "original_success": false,
+  "replayed_success": false,
+  "first_success_state_step": null,
+  "settled_sha256": "7b7f338a9f3cfa45603365c1b5c994aad2f5523bdd226b6cfaba8ae3711a3f2a",
+  "actions_file_sha256": "6d383addaf730c56d0e3381545570225e44c47dc651610698a56d7b2e648da12",
+  "terminal_original_video_mae": 2.1467401413690474,
+  "trace_directory": "results/failure_replay_39_32/color_strong_episode32/aug"
+}

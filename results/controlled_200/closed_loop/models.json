@@ -1,0 +1,5 @@
+{
+  "base": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt",
+  "clean": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/controlled_200/clean_seed42/checkpoints/last.pt",
+  "aug": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/controlled_200/aug_seed42/checkpoints/last.pt"
+}

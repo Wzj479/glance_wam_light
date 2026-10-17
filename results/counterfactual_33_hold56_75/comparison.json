@@ -1,0 +1,153 @@
+{
+  "intervention": {
+    "hold_close_inclusive": [
+      56,
+      75
+    ],
+    "forced_command": 1.0,
+    "changed_elements": [
+      [
+        56,
+        6
+      ],
+      [
+        57,
+        6
+      ],
+      [
+        58,
+        6
+      ],
+      [
+        59,
+        6
+      ],
+      [
+        60,
+        6
+      ],
+      [
+        61,
+        6
+      ],
+      [
+        62,
+        6
+      ],
+      [
+        63,
+        6
+      ],
+      [
+        64,
+        6
+      ],
+      [
+        65,
+        6
+      ],
+      [
+        66,
+        6
+      ],
+      [
+        67,
+        6
+      ],
+      [
+        68,
+        6
+      ],
+      [
+        69,
+        6
+      ],
+      [
+        70,
+        6
+      ],
+      [
+        71,
+        6
+      ],
+      [
+        72,
+        6
+      ],
+      [
+        73,
+        6
+      ],
+      [
+        74,
+        6
+      ],
+      [
+        75,
+        6
+      ]
+    ],
+    "six_arm_channels_unchanged": true,
+    "outside_interval_unchanged": true,
+    "original_actions_file_sha256": "741253502282df2cf8a246780d51769320693920d6656df9febc33c3bde3d372",
+    "executed_actions_array_sha256": "c2d1d9d6b8eeb4e4e518197845181adaf7cf32d06b91ce97ce520cc839228e2a",
+    "prefix_states_exactly_equal_through": 56,
+    "prefix_state_count_verified": 57,
+    "reference_replay": "results/failure_replay_33/color_strong_episode33/P/replay.npz"
+  },
+  "metrics": {
+    "original_P": {
+      "max_lift_mm": 4.287165397852566,
+      "max_lift_states56_76_mm": 4.287165397852566,
+      "max_lift_state": 57,
+      "max_lift_states56_76_state": 57,
+      "first_lift20mm_state": null,
+      "first_both_pad_contact_state": null,
+      "any_pad_contact_states56_76": 2,
+      "first_no_pad_contact_state56_76": 58,
+      "both_pad_contact_states56_76": 0,
+      "longest_both_pad_run_states56_76": 0,
+      "relative_position_drift_states60_75_from60_max_mm": 72.8906206587386,
+      "first_bowl_plate_contact_state": null,
+      "first_success_state": null,
+      "final_success": false,
+      "final_xy_mm": 137.73644083617745,
+      "xy_state76_mm": 137.1936903713108,
+      "lift_state76_mm": 0.00027860752438435554,
+      "lift_state80_mm": 0.0002786076398475501
+    },
+    "hold56_75": {
+      "max_lift_mm": 33.887435158531545,
+      "max_lift_states56_76_mm": 32.507843368538516,
+      "max_lift_state": 205,
+      "max_lift_states56_76_state": 68,
+      "first_lift20mm_state": 62,
+      "first_both_pad_contact_state": null,
+      "any_pad_contact_states56_76": 16,
+      "first_no_pad_contact_state56_76": 72,
+      "both_pad_contact_states56_76": 0,
+      "longest_both_pad_run_states56_76": 0,
+      "relative_position_drift_states60_75_from60_max_mm": 8.874190888602225,
+      "first_bowl_plate_contact_state": 74,
+      "first_success_state": null,
+      "final_success": false,
+      "final_xy_mm": 68.08842421429628,
+      "xy_state76_mm": 61.56521513905962,
+      "lift_state76_mm": 19.674411227708855,
+      "lift_state80_mm": 18.697117440293898
+    }
+  },
+  "resource": {
+    "exit_code": 0,
+    "seconds": 53.30045438185334,
+    "max_rss_kib": 1366108
+  },
+  "reserved_initial_states": [
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "interpretation_scope": "One fixed recorded-action sequence; not a re-inferred closed-loop policy or success-rate improvement"
+}

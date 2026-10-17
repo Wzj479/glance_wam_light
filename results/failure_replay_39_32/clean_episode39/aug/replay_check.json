@@ -1,0 +1,13 @@
+{
+  "model": "aug",
+  "condition": "clean",
+  "episode_id": 39,
+  "steps": 300,
+  "original_success": false,
+  "replayed_success": false,
+  "first_success_state_step": null,
+  "settled_sha256": "312c486d567f264fb229dbb7733f431a1b85c0732478cef28ca00ba58ad8218d",
+  "actions_file_sha256": "1f4eca76e3e8f6a72c3ac239ac6b0a5fda668c1331a820a3f0cc80fe15dcc673",
+  "terminal_original_video_mae": 2.1832815157312924,
+  "trace_directory": "results/failure_replay_39_32/clean_episode39/aug"
+}

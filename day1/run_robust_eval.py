@@ -13,6 +13,18 @@ from pathlib import Path
 from eval_protocol import paired_delta, protocol_hash, validate_episode_results
 
 
+def checkpoint_view_path(path):
+    # Config/statistics belong to the caller's run directory, even when the
+    # large weights file is a symlink into the original download bundle.
+    ckpt = Path(os.path.abspath(os.path.expanduser(str(path))))
+    if not ckpt.is_file():
+        raise FileNotFoundError(ckpt)
+    for name in ('config.yaml', 'dataset_statistics.json'):
+        if not (ckpt.parents[1] / name).is_file():
+            raise FileNotFoundError(ckpt.parents[1] / name)
+    return ckpt
+
+
 def port_open(port):
     try:
         with socket.create_connection(('127.0.0.1', port), timeout=1):
@@ -56,6 +68,8 @@ def aggregate(out, protocol, names):
                     b = next(x for x in base if (x['task_id'], x['episode_id']) == (r['task_id'], r['episode_id']))
                     if b['init_state_sha256'] != r['init_state_sha256'] or b['env_seed'] != r['env_seed']:
                         raise ValueError('Physical initial state pairing mismatch')
+                    if b.get('post_settle_state_sha256') != r.get('post_settle_state_sha256'):
+                        raise ValueError('Post-settle state pairing mismatch')
                 row.update(paired_delta(base, candidate))
             row['per_task'] = {str(tid): dict(
                 successes=sum(r['success'] for r in result['episode_results'] if r['task_id'] == tid),
@@ -93,9 +107,7 @@ def main():
         name, path = pair.split('=', 1)
         if not re.fullmatch('[A-Za-z][A-Za-z0-9_]*', name) or name in models:
             raise ValueError('Model names must be unique simple identifiers')
-        ckpt = Path(path).resolve()
-        if not ckpt.is_file():
-            raise FileNotFoundError(ckpt)
+        ckpt = checkpoint_view_path(path)
         models[name] = str(ckpt)
     for python in (a.model_python, a.libero_python):
         if not Path(python).is_file():

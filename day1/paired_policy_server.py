@@ -14,6 +14,7 @@ import torch
 from accelerate import Accelerator
 from deployment.model_server.tools.websocket_policy_server import WebsocketPolicyServer
 from glancewam.model.framework.base_framework import baseframework
+from action_checkpoint import load_policy_checkpoint
 
 
 class PairedPolicy:
@@ -49,7 +50,7 @@ def main():
     a = p.parse_args()
     Accelerator()
     torch.set_num_threads(4)
-    model = baseframework.from_pretrained(a.ckpt).to(device='cuda', dtype=torch.bfloat16).eval()
+    model = load_policy_checkpoint(a.ckpt, baseframework).to(device='cuda', dtype=torch.bfloat16).eval()
     metadata = dict(env='libero', paired_rng=True)
     if getattr(model, 'goal_enabled', False):
         metadata['goal_horizon_rows'] = float(model._default_goal_horizon)

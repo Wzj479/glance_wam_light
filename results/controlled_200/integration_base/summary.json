@@ -1,0 +1,21 @@
+{
+  "protocol_sha256": "fd00bc1543ebd8d50e14cea4d2d62f0540b286e4a48d9f54b762d781f8fa2d38",
+  "rows": [
+    {
+      "model": "base",
+      "condition": "clean",
+      "successes": 1,
+      "episodes": 1,
+      "success_rate": 1.0,
+      "recovered": 0,
+      "regressed": 0,
+      "success_delta_pp": 0.0,
+      "per_task": {
+        "8": {
+          "successes": 1,
+          "episodes": 1
+        }
+      }
+    }
+  ]
+}

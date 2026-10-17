@@ -1,0 +1,149 @@
+{
+  "protocol_sha256": "9560ad753a06c867a3c24bf3cab6180b41fedc71103b90795728ed7cfc4f3a74",
+  "rows": [
+    {
+      "model": "base",
+      "condition": "clean",
+      "successes": 10,
+      "episodes": 10,
+      "success_rate": 1.0,
+      "recovered": 0,
+      "regressed": 0,
+      "success_delta_pp": 0.0,
+      "per_task": {
+        "8": {
+          "successes": 10,
+          "episodes": 10
+        }
+      }
+    },
+    {
+      "model": "base",
+      "condition": "dark",
+      "successes": 10,
+      "episodes": 10,
+      "success_rate": 1.0,
+      "recovered": 0,
+      "regressed": 0,
+      "success_delta_pp": 0.0,
+      "per_task": {
+        "8": {
+          "successes": 10,
+          "episodes": 10
+        }
+      }
+    },
+    {
+      "model": "base",
+      "condition": "color",
+      "successes": 10,
+      "episodes": 10,
+      "success_rate": 1.0,
+      "recovered": 0,
+      "regressed": 0,
+      "success_delta_pp": 0.0,
+      "per_task": {
+        "8": {
+          "successes": 10,
+          "episodes": 10
+        }
+      }
+    },
+    {
+      "model": "clean",
+      "condition": "clean",
+      "successes": 10,
+      "episodes": 10,
+      "success_rate": 1.0,
+      "recovered": 0,
+      "regressed": 0,
+      "success_delta_pp": 0.0,
+      "per_task": {
+        "8": {
+          "successes": 10,
+          "episodes": 10
+        }
+      }
+    },
+    {
+      "model": "clean",
+      "condition": "dark",
+      "successes": 10,
+      "episodes": 10,
+      "success_rate": 1.0,
+      "recovered": 0,
+      "regressed": 0,
+      "success_delta_pp": 0.0,
+      "per_task": {
+        "8": {
+          "successes": 10,
+          "episodes": 10
+        }
+      }
+    },
+    {
+      "model": "clean",
+      "condition": "color",
+      "successes": 10,
+      "episodes": 10,
+      "success_rate": 1.0,
+      "recovered": 0,
+      "regressed": 0,
+      "success_delta_pp": 0.0,
+      "per_task": {
+        "8": {
+          "successes": 10,
+          "episodes": 10
+        }
+      }
+    },
+    {
+      "model": "aug",
+      "condition": "clean",
+      "successes": 10,
+      "episodes": 10,
+      "success_rate": 1.0,
+      "recovered": 0,
+      "regressed": 0,
+      "success_delta_pp": 0.0,
+      "per_task": {
+        "8": {
+          "successes": 10,
+          "episodes": 10
+        }
+      }
+    },
+    {
+      "model": "aug",
+      "condition": "dark",
+      "successes": 10,
+      "episodes": 10,
+      "success_rate": 1.0,
+      "recovered": 0,
+      "regressed": 0,
+      "success_delta_pp": 0.0,
+      "per_task": {
+        "8": {
+          "successes": 10,
+          "episodes": 10
+        }
+      }
+    },
+    {
+      "model": "aug",
+      "condition": "color",
+      "successes": 10,
+      "episodes": 10,
+      "success_rate": 1.0,
+      "recovered": 0,
+      "regressed": 0,
+      "success_delta_pp": 0.0,
+      "per_task": {
+        "8": {
+          "successes": 10,
+          "episodes": 10
+        }
+      }
+    }
+  ]
+}

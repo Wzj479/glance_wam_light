@@ -1,0 +1,205 @@
+{
+  "training": {
+    "clean": {
+      "completed_steps": 200,
+      "trainable_parameters": 148094471,
+      "frozen_sha256": "f2912eecf6f4c790b6e9bf05f0602ceb24222b108afd92ba264e064f9b402cf0",
+      "split_sha256": "d83ea4c02905c34900bff187696e76f3416026d5c43ef21ca8999ed1b2818252",
+      "final_validation": {
+        "event": "validation",
+        "step": 200,
+        "clean_fm_loss": 0.016361468019357953,
+        "corrupt_fm_loss": 0.03394368480076082,
+        "allocated_gib": 5.137421607971191,
+        "reserved_gib": 5.90625,
+        "peak_allocated_gib": 5.7599592208862305,
+        "peak_reserved_gib": 5.90625
+      },
+      "initial_validation": {
+        "event": "validation",
+        "step": 0,
+        "clean_fm_loss": 0.014549307396429447,
+        "corrupt_fm_loss": 0.033388835892905123,
+        "allocated_gib": 3.4743776321411133,
+        "reserved_gib": 4.240234375,
+        "peak_allocated_gib": 4.1193461418151855,
+        "peak_reserved_gib": 4.240234375
+      },
+      "step_seconds_mean": 2.2760720493644477,
+      "step_seconds_median": 2.254324922338128,
+      "summed_train_step_seconds": 455.2144098728895,
+      "process_start_to_summary_seconds": 580.6350476741791,
+      "peak_allocated_gib": 5.7599592208862305,
+      "peak_reserved_gib": 5.90625
+    },
+    "aug": {
+      "completed_steps": 200,
+      "trainable_parameters": 148094471,
+      "frozen_sha256": "f2912eecf6f4c790b6e9bf05f0602ceb24222b108afd92ba264e064f9b402cf0",
+      "split_sha256": "d83ea4c02905c34900bff187696e76f3416026d5c43ef21ca8999ed1b2818252",
+      "final_validation": {
+        "event": "validation",
+        "step": 200,
+        "clean_fm_loss": 0.017682159050869253,
+        "corrupt_fm_loss": 0.032151414694873474,
+        "allocated_gib": 5.137421607971191,
+        "reserved_gib": 5.90625,
+        "peak_allocated_gib": 5.7599592208862305,
+        "peak_reserved_gib": 5.90625
+      },
+      "initial_validation": {
+        "event": "validation",
+        "step": 0,
+        "clean_fm_loss": 0.014549307396429447,
+        "corrupt_fm_loss": 0.033388835892905123,
+        "allocated_gib": 3.4743776321411133,
+        "reserved_gib": 4.240234375,
+        "peak_allocated_gib": 4.1193461418151855,
+        "peak_reserved_gib": 4.240234375
+      },
+      "step_seconds_mean": 2.5273180024884643,
+      "step_seconds_median": 2.302931796759367,
+      "summed_train_step_seconds": 505.4636004976928,
+      "process_start_to_summary_seconds": 676.6285047531128,
+      "peak_allocated_gib": 5.7599592208862305,
+      "peak_reserved_gib": 5.90625
+    }
+  },
+  "closed_loop": {
+    "base": {
+      "clean": {
+        "successes": 10,
+        "episodes": 10
+      },
+      "dark": {
+        "successes": 10,
+        "episodes": 10
+      },
+      "color": {
+        "successes": 10,
+        "episodes": 10
+      }
+    },
+    "clean": {
+      "clean": {
+        "successes": 10,
+        "episodes": 10
+      },
+      "dark": {
+        "successes": 10,
+        "episodes": 10
+      },
+      "color": {
+        "successes": 10,
+        "episodes": 10
+      }
+    },
+    "aug": {
+      "clean": {
+        "successes": 10,
+        "episodes": 10
+      },
+      "dark": {
+        "successes": 10,
+        "episodes": 10
+      },
+      "color": {
+        "successes": 10,
+        "episodes": 10
+      }
+    }
+  },
+  "aug_vs_clean": {
+    "clean": {
+      "episodes": 10,
+      "recovered": 0,
+      "regressed": 0,
+      "success_delta_pp": 0.0
+    },
+    "dark": {
+      "episodes": 10,
+      "recovered": 0,
+      "regressed": 0,
+      "success_delta_pp": 0.0
+    },
+    "color": {
+      "episodes": 10,
+      "recovered": 0,
+      "regressed": 0,
+      "success_delta_pp": 0.0
+    }
+  },
+  "protocol_sha256": "9560ad753a06c867a3c24bf3cab6180b41fedc71103b90795728ed7cfc4f3a74",
+  "total_evaluation_episodes": 90,
+  "unique_initial_states": 10,
+  "same_data_split_and_seed_verified": true,
+  "physical_state_pairing_verified": true,
+  "checkpoint_records": {
+    "clean/best.pt": {
+      "server_path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/controlled_200/clean_seed42/checkpoints/best.pt",
+      "bytes": 3467029598,
+      "sha256": "54babb2e52dc889d12d70cc956c43c403fd172d5ba23413737de4bdf3a5d5175",
+      "export_metadata": {
+        "step": 0,
+        "selection_score": 0.023969071644667286,
+        "upstream_commit": "6a51bdc5139e72e8ad525779db0c989e1af5abab",
+        "split_sha256": "d83ea4c02905c34900bff187696e76f3416026d5c43ef21ca8999ed1b2818252",
+        "train_scope": "all",
+        "base_checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/glancewam_bundle/checkpoints/glancewam_libero/checkpoints/steps_15000_pytorch_model_ema.pt",
+        "trainable_parameters": 148094471,
+        "frozen_sha256": "f2912eecf6f4c790b6e9bf05f0602ceb24222b108afd92ba264e064f9b402cf0",
+        "seed": 42,
+        "validation_scope": "hindsight-goal flow matching loss"
+      }
+    },
+    "clean/last.pt": {
+      "server_path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/controlled_200/clean_seed42/checkpoints/last.pt",
+      "bytes": 3467029598,
+      "sha256": "e750473bccb870eeea5de1a8f2ae2e2640ee6e517185c30821a3476b11364189",
+      "export_metadata": {
+        "step": 200,
+        "upstream_commit": "6a51bdc5139e72e8ad525779db0c989e1af5abab",
+        "split_sha256": "d83ea4c02905c34900bff187696e76f3416026d5c43ef21ca8999ed1b2818252",
+        "train_scope": "all",
+        "base_checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/glancewam_bundle/checkpoints/glancewam_libero/checkpoints/steps_15000_pytorch_model_ema.pt",
+        "trainable_parameters": 148094471,
+        "frozen_sha256": "f2912eecf6f4c790b6e9bf05f0602ceb24222b108afd92ba264e064f9b402cf0",
+        "seed": 42,
+        "validation_scope": "hindsight-goal flow matching loss"
+      }
+    },
+    "aug/best.pt": {
+      "server_path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/controlled_200/aug_seed42/checkpoints/best.pt",
+      "bytes": 3467029598,
+      "sha256": "54babb2e52dc889d12d70cc956c43c403fd172d5ba23413737de4bdf3a5d5175",
+      "export_metadata": {
+        "step": 0,
+        "selection_score": 0.023969071644667286,
+        "upstream_commit": "6a51bdc5139e72e8ad525779db0c989e1af5abab",
+        "split_sha256": "d83ea4c02905c34900bff187696e76f3416026d5c43ef21ca8999ed1b2818252",
+        "train_scope": "all",
+        "base_checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/glancewam_bundle/checkpoints/glancewam_libero/checkpoints/steps_15000_pytorch_model_ema.pt",
+        "trainable_parameters": 148094471,
+        "frozen_sha256": "f2912eecf6f4c790b6e9bf05f0602ceb24222b108afd92ba264e064f9b402cf0",
+        "seed": 42,
+        "validation_scope": "hindsight-goal flow matching loss"
+      }
+    },
+    "aug/last.pt": {
+      "server_path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/controlled_200/aug_seed42/checkpoints/last.pt",
+      "bytes": 3467029598,
+      "sha256": "47563cea3024184fca46751e217952f549d1e2290aeef0a8d45df8a2d226828b",
+      "export_metadata": {
+        "step": 200,
+        "upstream_commit": "6a51bdc5139e72e8ad525779db0c989e1af5abab",
+        "split_sha256": "d83ea4c02905c34900bff187696e76f3416026d5c43ef21ca8999ed1b2818252",
+        "train_scope": "all",
+        "base_checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/glancewam_bundle/checkpoints/glancewam_libero/checkpoints/steps_15000_pytorch_model_ema.pt",
+        "trainable_parameters": 148094471,
+        "frozen_sha256": "f2912eecf6f4c790b6e9bf05f0602ceb24222b108afd92ba264e064f9b402cf0",
+        "seed": 42,
+        "validation_scope": "hindsight-goal flow matching loss"
+      }
+    }
+  }
+}

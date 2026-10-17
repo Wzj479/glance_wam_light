@@ -1,0 +1,26 @@
+{
+  "starts": {
+    "clean": {
+      "pid": 4448,
+      "process_start_unix": 1792120400.49
+    },
+    "aug": {
+      "pid": 5582,
+      "process_start_unix": 1792120984.04
+    }
+  },
+  "completed": {
+    "clean": {
+      "pid": 4448,
+      "process_start_unix": 1792120400.49,
+      "summary_written_unix": 1792120981.1250477,
+      "process_start_to_summary_seconds": 580.6350476741791
+    },
+    "aug": {
+      "pid": 5582,
+      "process_start_unix": 1792120984.04,
+      "summary_written_unix": 1792121660.6685047,
+      "process_start_to_summary_seconds": 676.6285047531128
+    }
+  }
+}

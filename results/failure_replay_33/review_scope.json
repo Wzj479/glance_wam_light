@@ -1,0 +1,12 @@
+{
+  "review_omits": [
+    ".npz",
+    "grasp_keyframes.png",
+    "placement_diagnostics.png",
+    "placement_diagnostics_first120.png",
+    "terminal_original_decoded.png",
+    "world_positions.png"
+  ],
+  "retained": "All numeric CSVs, original-action comparison video, focus/action/first120 world/relative plots, JPEG keyframes, sources and checks",
+  "full_archive": "/root/autodl-tmp/wam_glance_project/wam_failure_replay_33_full.zip"
+}

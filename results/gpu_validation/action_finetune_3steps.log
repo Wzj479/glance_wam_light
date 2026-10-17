@@ -1,0 +1,52 @@
+/root/autodl-tmp/wam_glance_project/GlanceWAM/.venv/lib/python3.11/site-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 2.0.8 (you have 1.4.18). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+10/16 [10:49:14] INFO     | >> [*] Loading from local         share_tools.py:432
+                          checkpoint path                                       
+                          `results/day1_base/checkpoints/step                   
+                          s_15000_pytorch_model_ema.pt`                         
+                 INFO     | >> [*]  normalised config from    share_tools.py:584
+                          version_id=None to '0.21'                             
+  preloaded 1 chunk parquet(s) for libero_goal_no_noops_1.0.0_lerobot in 0.1s
+Initialized dataset libero_goal_no_noops_1.0.0_lerobot with EmbodimentTag.FRANKA
+10/16 [10:49:15] INFO     | >> [*] Loading SkyReels-V2 DF    SkyReelsV2DF.py:142
+                          from                                                  
+                          /root/autodl-tmp/wam_glance_projec                    
+                          t/GlanceWAM/models/skyreels-base                      
+                 INFO     | >> [*] skip_text_encoder=True;   SkyReelsV2DF.py:150
+                          UMT5 not loaded. build_inputs()                       
+                          requires examples with                                
+                          `lang_embed`.                                         
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.53s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.24s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.44s/it]
+Total number of DiT parameters:  144449536
+10/16 [10:49:20] INFO     | >> [*] >> [*] goal_conditioning:    GlanceWAM.py:340
+                          goal-aware 3-class prefix-LM mask on                  
+                          60 attention processors                               
+                          (n_goal_frames=1, dropout_p=0.1,                      
+                          gen_steps=10).                                        
+                 INFO     | >> [*] >> [*] E7.0 multi-tap        GlanceWAM.py:432
+                          conditioning: taps=[5, 12, 19, 26] ->                 
+                          head KV length x4 (4x(obs+goal)                       
+                          tokens), zero-init per-tap embedding.                 
+                 INFO     | >> [*] >> [*]                       GlanceWAM.py:447
+                          resident_text_table=True: caching                     
+                          unique cached-text embeds on GPU (max                 
+                          1024 rows; eager-prefilled 10).                       
+{"event": "start", "total_parameters": 1711340346, "train_windows": 766, "val_windows": 2, "upstream_commit": "6a51bdc5139e72e8ad525779db0c989e1af5abab", "split_sha256": "935625eee324195e3aaa54bcb6e2b27197deaf52979df896ac19fa43bc99840a", "train_scope": "all", "base_checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/glancewam_bundle/checkpoints/glancewam_libero/checkpoints/steps_15000_pytorch_model_ema.pt", "trainable_parameters": 148094471, "frozen_sha256": "f2912eecf6f4c790b6e9bf05f0602ceb24222b108afd92ba264e064f9b402cf0", "seed": 42, "validation_scope": "hindsight-goal flow matching loss"}
+Traceback (most recent call last):
+  File "/root/autodl-tmp/wam_glance_project/GlanceWAM/day1/finetune_action_head.py", line 493, in <module>
+    main()
+  File "/root/autodl-tmp/wam_glance_project/GlanceWAM/day1/finetune_action_head.py", line 432, in main
+    parity = verify_feature_parity(model, [val_ds[0]])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/wam_glance_project/GlanceWAM/.venv/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/wam_glance_project/GlanceWAM/day1/finetune_action_head.py", line 220, in verify_feature_parity
+    torch.testing.assert_close(actual, captured['cond'], atol=1e-3, rtol=1e-3)
+  File "/root/autodl-tmp/wam_glance_project/GlanceWAM/.venv/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 3848046 / 4816896 (79.9%)
+Greatest absolute difference: 0.5 at index (0, 392, 1188) (up to 0.001 allowed)
+Greatest relative difference: inf at index (0, 37, 1532) (up to 0.001 allowed)

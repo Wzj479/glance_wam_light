@@ -1,0 +1,188 @@
+datasets:
+  vla_data:
+    action_conditioning: false
+    action_horizon: 8
+    data_mix: libero_goal
+    data_root_dir: /root/autodl-tmp/wam_glance_project/GlanceWAM/glancewam_bundle/datasets
+    dataset_py: lerobot_datasets
+    eval_holdout_episodes: 0
+    future_frame_idx: 48
+    goal_frame_range:
+    - 1
+    - 48
+    image_aug: false
+    image_size:
+    - 224
+    - 224
+    lerobot_version: v3.0
+    num_history_frames: 1
+    num_workers: 1
+    per_device_batch_size: 1
+    t5_cache:
+      enabled: true
+      attach_embeds: true
+      model_id: Skywork/SkyReels-V2-DF-1.3B-540P-Diffusers
+      max_length: 512
+    vae_cache:
+      enabled: false
+    video_backend: torchcodec
+    camera_concat: side_by_side
+    include_state: false
+framework:
+  action_model:
+    action_dim: 7
+    action_horizon: 8
+    action_model_type: DiT-B
+    add_pos_embed: true
+    diffusion_model_cfg:
+      cross_attention_dim: 1536
+      dropout: 0.2
+      final_dropout: true
+      interleave_self_attention: true
+      norm_type: ada_norm
+      num_layers: 16
+      output_dim: 1024
+      positional_embeddings: null
+    hidden_size: 1024
+    max_seq_len: 1024
+    noise_beta_alpha: 1.5
+    noise_beta_beta: 1.0
+    noise_s: 0.999
+    num_inference_timesteps: 4
+    num_target_vision_tokens: 32
+    num_timestep_buckets: 1000
+    repeated_diffusion_steps: 1
+    state_dim: 7
+    t_loss_weighting: false
+    future_action_window_size: 7
+    action_hidden_dim: 1024
+    past_action_window_size: 0
+  depth_supervision:
+    enabled: false
+  goal_conditioning:
+    dropout_p: 0.1
+    enabled: true
+    goal_gen_steps: 10
+    h_embed_dim: 16
+  name: GlanceWAM
+  obs_image_size: null
+  qwenvl:
+    base_vlm: Skywork/SkyReels-V2-DF-1.3B-540P-Diffusers
+  video_cotrain:
+    clean_prefix_isolation: true
+    enabled: true
+    lambda: 1.0
+    sigma_sampling: logitnormal
+  world_model:
+    base_wm: /root/autodl-tmp/wam_glance_project/GlanceWAM/models/skyreels-base
+    camera_concat: side_by_side
+    combine_layers: concat_tokens
+    compile_dit: false
+    compile_dit_dynamic: true
+    compile_dit_mode: null
+    compile_vae: false
+    compile_vae_mode: null
+    dit_lora: false
+    extract_layers:
+    - 5
+    - 12
+    - 19
+    - 26
+    fps: 24
+    num_history_frames: 1
+    resident_text_table: true
+    resident_text_table_max_rows: 1024
+    skip_text_encoder: true
+    skip_vae: false
+    text_max_length: 512
+    truncate_at_extract: false
+    vae_input_size:
+    - 224
+    - 448
+output_dir: /root/autodl-tmp/wam_glance_project/GlanceWAM/results/stage_v1/C_seed42
+run_id: C_seed42
+run_root_dir: ./results/Checkpoints
+seed: 42
+trainer:
+  ema:
+    decay: 0.999
+    device: cuda
+    enabled: false
+    start_step: 0
+    warmup: true
+  eval_interval: 500
+  freeze_modules: ''
+  gc_interval: 500
+  is_resume: false
+  learning_rate:
+    action_model: 0.0001
+    base: 0.0001
+  logging_frequency: 100
+  lr_scheduler_type: cosine_with_min_lr
+  max_train_steps: 20000
+  num_warmup_steps: 1000
+  optimizer:
+    betas:
+    - 0.9
+    - 0.95
+    eps: 1.0e-08
+    weight_decay: 1.0e-08
+  save_interval: 5000
+  scheduler_specific_kwargs:
+    min_lr: 5.0e-07
+  scheduler_total_steps: 20000
+  sdpa_backend: auto
+  step_timing: false
+  pretrained_checkpoint: null
+wandb_dir: ./results/wandb_local
+wandb_entity: linhan2-virginia-tech
+wandb_project: starVLA_Libero
+version_id: '0.21'
+finetune_recipe:
+  name: frozen_wam_action_sft
+  seed: 42
+  split_sha256: d83ea4c02905c34900bff187696e76f3416026d5c43ef21ca8999ed1b2818252
+  upstream_commit: 6a51bdc5139e72e8ad525779db0c989e1af5abab
+  train_args:
+    ckpt: results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt
+    out: results/stage_v1/C_seed42
+    data_root: glancewam_bundle/datasets
+    base_model: models/skyreels-base
+    data_mix: libero_goal
+    episode_split: ../glance_wam_light/results/grasp_episode_split.json
+    max_steps: 100
+    batch_size: 1
+    grad_accum: 8
+    lr: 3.0e-06
+    weight_decay: 0.0001
+    warmup_steps: 10
+    eval_every: 25
+    save_every: 1000
+    val_fraction: 0.1
+    val_samples: 1000
+    val_stride: 8
+    seed: 42
+    workers: 0
+    train_scope: crossattn_decoder
+    sampling_mode: uniform
+    selection_mode: phases
+    normal_loss_tolerance: 0.05
+    checkpoint_format: action
+    audit_only: false
+    aug_prob: 0.0
+    brightness:
+    - 0.6
+    - 1.4
+    saturation:
+    - 0.6
+    - 1.4
+    color_gain:
+    - 0.9
+    - 1.1
+    val_brightness: 1.0
+    val_saturation: 1.0
+    val_color_gain:
+    - 0.7
+    - 1.0
+    - 1.3
+    allow_different_commit: false

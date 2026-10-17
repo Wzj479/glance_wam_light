@@ -1,0 +1,10 @@
+model	condition	successes	episodes	rate	delta_pp_vs_base
+base	clean	10	10	1.000	0.00
+base	dark	10	10	1.000	0.00
+base	color	10	10	1.000	0.00
+clean	clean	10	10	1.000	0.00
+clean	dark	10	10	1.000	0.00
+clean	color	10	10	1.000	0.00
+aug	clean	10	10	1.000	0.00
+aug	dark	10	10	1.000	0.00
+aug	color	10	10	1.000	0.00

@@ -1,0 +1,16 @@
+test_changed_stats_and_wrong_architecture_rejected (test_stage_recipe.CheckpointTests.test_changed_stats_and_wrong_architecture_rejected) ... ok
+test_legacy_full_checkpoint_keeps_original_loader (test_stage_recipe.CheckpointTests.test_legacy_full_checkpoint_keeps_original_loader) ... ok
+test_strict_roundtrip_and_real_loader_branch (test_stage_recipe.CheckpointTests.test_strict_roundtrip_and_real_loader_branch) ... ok
+test_symlink_uses_view_sidecars (test_stage_recipe.CheckpointTests.test_symlink_uses_view_sidecars) ... ok
+test_wrong_base_and_corrupt_checkpoint_rejected (test_stage_recipe.CheckpointTests.test_wrong_base_and_corrupt_checkpoint_rejected) ... ok
+test_balanced_draws_overlap_and_determinism (test_stage_recipe.StageTests.test_balanced_draws_overlap_and_determinism) ... ok
+test_phase_boundaries_and_binary_label_rejection (test_stage_recipe.StageTests.test_phase_boundaries_and_binary_label_rejection) ... ok
+test_pool_builder_uses_only_train_entries (test_stage_recipe.StageTests.test_pool_builder_uses_only_train_entries) ... ok
+test_validation_gate_and_step_zero_fallback (test_stage_recipe.StageTests.test_validation_gate_and_step_zero_fallback) ... ok
+test_actual_upstream_velocity_mse_and_frozen_gradient_scope (test_stage_recipe.UpstreamFlowTests.test_actual_upstream_velocity_mse_and_frozen_gradient_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 2.439s
+
+OK
+Total number of DiT parameters:  40800

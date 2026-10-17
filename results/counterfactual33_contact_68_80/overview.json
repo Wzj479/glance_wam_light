@@ -1,0 +1,102 @@
+{
+  "metrics": {
+    "base": {
+      "first_negative_z_after56": 73,
+      "bowl_lift68_mm": 61.94733544722044,
+      "bowl_lift72_mm": 73.64812781197998,
+      "bowl_plate_xy72_mm": 24.29666946186734,
+      "bowl_plate_xy76_mm": 15.0143271482234,
+      "bowl_minus_plate_xy76_mm": [
+        4.813840768966358,
+        14.22170723805393
+      ],
+      "eef_xyz76_mm": [
+        59.11814516391947,
+        32.59912056380029,
+        1027.6957922165614
+      ],
+      "first_no_whole_gripper_contact_in68_80": 80
+    },
+    "C": {
+      "first_negative_z_after56": 73,
+      "bowl_lift68_mm": 61.81814257237363,
+      "bowl_lift72_mm": 72.9949249688375,
+      "bowl_plate_xy72_mm": 25.02220043515087,
+      "bowl_plate_xy76_mm": 16.52013433172563,
+      "bowl_minus_plate_xy76_mm": [
+        4.449997055133927,
+        15.909505477781487
+      ],
+      "eef_xyz76_mm": [
+        58.2938867803806,
+        34.18701319703902,
+        1027.1367303143595
+      ],
+      "first_no_whole_gripper_contact_in68_80": 78
+    },
+    "hold56_75": {
+      "first_negative_z_after56": 64,
+      "bowl_lift68_mm": 32.50784336853849,
+      "bowl_lift72_mm": 26.160642332450834,
+      "bowl_plate_xy72_mm": 71.31995237140013,
+      "bowl_plate_xy76_mm": 61.565215139059625,
+      "bowl_minus_plate_xy76_mm": [
+        -52.424843196814344,
+        32.278654416008806
+      ],
+      "eef_xyz76_mm": [
+        11.831766541578487,
+        46.225490523759476,
+        979.5543435096703
+      ],
+      "first_no_whole_gripper_contact_in68_80": 78
+    }
+  },
+  "state76_decomposition": {
+    "base": {
+      "state": 76,
+      "bowl_world_difference_mm": [
+        -57.22448435801688,
+        18.08149292280808,
+        -53.327671768633536
+      ],
+      "eef_world_difference_mm": [
+        -47.28637862234098,
+        13.626369959959185,
+        -48.14144870689108
+      ],
+      "bowl_minus_eef_world_offset_difference_mm": [
+        -9.938105735675897,
+        4.455122962848897,
+        -5.186223061742453
+      ]
+    },
+    "C": {
+      "state": 76,
+      "bowl_world_difference_mm": [
+        -56.86064064418445,
+        16.393694683080525,
+        -52.98961964824889
+      ],
+      "eef_world_difference_mm": [
+        -46.462120238802115,
+        12.038477326720454,
+        -47.582386804689236
+      ],
+      "bowl_minus_eef_world_offset_difference_mm": [
+        -10.398520405382335,
+        4.355217356360072,
+        -5.407232843559655
+      ]
+    }
+  },
+  "cf_relative_delta71_73_mm": [
+    6.91755976436518,
+    1.620241302057885,
+    6.463842255128462
+  ],
+  "cf_relative_delta71_73_norm_mm": 9.605158596797997,
+  "restore_flags_verified": 39,
+  "maximum_logged_eef_sensor_vs_geometry_mm": 0.3966912514441406,
+  "scope": "Read-only inspection of existing state33 trajectories; no action replay, policy inference, training or states45-49"
+}

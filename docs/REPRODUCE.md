@@ -58,4 +58,4 @@ cpu_sim_env/bin/python day1/match_grasp_source.py \
 
 ## 后续 GPU 工作
 
-`finetune_action_head.py`、`run_finetune_a100_40g.sh` 为后训练实现与待验证启动入口。需先验证官方数据 loader、前向/反向、显存、冻结参数梯度、检查点重载和闭环策略评测。本仓库 CPU 成果不证明这些步骤已经跑通。
+2026-10-16 已在 A100 40GB 上通过真实视频 loader、预训练推理、动作模块三步更新、官方特征一致性、冻结参数哈希、显存及检查点重载检查，见 [GPU 部署验证记录](../results/gpu_validation/GPU部署验证记录.md)。随后完成 clean/aug 各200步和单一抓取任务的90回合配对闭环评测，见 [200步实验记录](../results/controlled_200/comparison/实验记录.md)。三模型在三个条件下均为10/10成功，未观察到成功率提升；尚未评测其他任务或实机。

@@ -1,0 +1,99 @@
+10/16 [10:52:03] INFO     | >> [*] Loading from local         share_tools.py:432
+                          checkpoint path                                       
+                          `results/gpu_validation/action_fine                   
+                          tune_amp_3steps/checkpoints/last.pt                   
+                          `                                                     
+                 INFO     | >> [*] Loading SkyReels-V2 DF    SkyReelsV2DF.py:142
+                          from                                                  
+                          /root/autodl-tmp/wam_glance_projec                    
+                          t/GlanceWAM/models/skyreels-base                      
+                 INFO     | >> [*] skip_text_encoder=True;   SkyReelsV2DF.py:150
+                          UMT5 not loaded. build_inputs()                       
+                          requires examples with                                
+                          `lang_embed`.                                         
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.08s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.90it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.64it/s]
+Total number of DiT parameters:  144449536
+10/16 [10:52:06] INFO     | >> [*] >> [*] goal_conditioning:    GlanceWAM.py:340
+                          goal-aware 3-class prefix-LM mask on                  
+                          60 attention processors                               
+                          (n_goal_frames=1, dropout_p=0.1,                      
+                          gen_steps=10).                                        
+                 INFO     | >> [*] >> [*] E7.0 multi-tap        GlanceWAM.py:432
+                          conditioning: taps=[5, 12, 19, 26] ->                 
+                          head KV length x4 (4x(obs+goal)                       
+                          tokens), zero-init per-tap embedding.                 
+                 INFO     | >> [*] >> [*]                       GlanceWAM.py:447
+                          resident_text_table=True: caching                     
+                          unique cached-text embeds on GPU (max                 
+                          1024 rows; eager-prefilled 10).                       
+  preloaded 1 chunk parquet(s) for libero_goal_no_noops_1.0.0_lerobot in 0.0s
+Initialized dataset libero_goal_no_noops_1.0.0_lerobot with EmbodimentTag.FRANKA
+Dataset lengths: [52042]
+{
+  "mode": "infer",
+  "commit": "6a51bdc5139e72e8ad525779db0c989e1af5abab",
+  "checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/gpu_validation/action_finetune_amp_3steps/checkpoints/last.pt",
+  "gpu": "NVIDIA A100-PCIE-40GB",
+  "torch": "2.10.0+cu128",
+  "cuda": "12.8",
+  "instruction": "open the middle drawer of the cabinet",
+  "action_target_shape": [
+    8,
+    7
+  ],
+  "load_memory": {
+    "allocated_gib": 3.1881375312805176,
+    "reserved_gib": 3.201171875,
+    "peak_allocated_gib": 3.1881375312805176,
+    "peak_reserved_gib": 3.201171875
+  },
+  "batch_size": 1,
+  "repeated_diffusion_steps": 1,
+  "learning_rate": 1e-05,
+  "rows": [
+    {
+      "iteration": 0,
+      "seconds": 4.803963631391525,
+      "allocated_gib": 3.2495694160461426,
+      "reserved_gib": 3.439453125,
+      "peak_allocated_gib": 3.428434371948242,
+      "peak_reserved_gib": 3.439453125
+    },
+    {
+      "iteration": 1,
+      "seconds": 0.8922483175992966,
+      "allocated_gib": 3.2495694160461426,
+      "reserved_gib": 3.478515625,
+      "peak_allocated_gib": 3.450803756713867,
+      "peak_reserved_gib": 3.478515625
+    },
+    {
+      "iteration": 2,
+      "seconds": 0.9021149352192879,
+      "allocated_gib": 3.2495694160461426,
+      "reserved_gib": 3.478515625,
+      "peak_allocated_gib": 3.450803756713867,
+      "peak_reserved_gib": 3.478515625
+    }
+  ],
+  "action_shape": [
+    1,
+    8,
+    7
+  ],
+  "generated_goal_shape": [
+    1,
+    16,
+    1,
+    28,
+    56
+  ],
+  "timing_scope": "observation encoding + new goal generation + action sampling",
+  "final_memory": {
+    "allocated_gib": 3.2495694160461426,
+    "reserved_gib": 3.478515625,
+    "peak_allocated_gib": 3.450803756713867,
+    "peak_reserved_gib": 3.478515625
+  },
+  "passed": true
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "model": "base",
+    "condition": "color_strong",
+    "episode_id": 33,
+    "steps": 81,
+    "original_success": true,
+    "replayed_success": true,
+    "first_success_state_step": 81,
+    "settled_sha256": "fcb8b8a315a62c896845ad0031513b1c0f854c9aacdd646f66ee2b33942e1e1a",
+    "actions_file_sha256": "46d2f5256ad7d419a1f82ae8498c0bebfb6912174c9856bd7bde7a69bf223312",
+    "terminal_original_video_mae": null,
+    "trace_directory": "results/failure_replay_33/color_strong_episode33/base",
+    "physics_only": true
+  },
+  {
+    "model": "C",
+    "condition": "color_strong",
+    "episode_id": 33,
+    "steps": 80,
+    "original_success": true,
+    "replayed_success": true,
+    "first_success_state_step": 80,
+    "settled_sha256": "fcb8b8a315a62c896845ad0031513b1c0f854c9aacdd646f66ee2b33942e1e1a",
+    "actions_file_sha256": "2b043323c7646bef4568007e8c59a038df031dc9dc146abf24bf1b0d6eee02be",
+    "terminal_original_video_mae": null,
+    "trace_directory": "results/failure_replay_33/color_strong_episode33/C",
+    "physics_only": true
+  },
+  {
+    "model": "P",
+    "condition": "color_strong",
+    "episode_id": 33,
+    "steps": 300,
+    "original_success": false,
+    "replayed_success": false,
+    "first_success_state_step": null,
+    "settled_sha256": "fcb8b8a315a62c896845ad0031513b1c0f854c9aacdd646f66ee2b33942e1e1a",
+    "actions_file_sha256": "741253502282df2cf8a246780d51769320693920d6656df9febc33c3bde3d372",
+    "terminal_original_video_mae": null,
+    "trace_directory": "results/failure_replay_33/color_strong_episode33/P",
+    "physics_only": true
+  }
+]

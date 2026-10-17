@@ -1,0 +1,37 @@
+Using Python 3.11.17 environment at: GlanceWAM/.venv
+Resolved 1 package in 1.01s
+   Building diffusers @ file:///root/autodl-tmp/wam_glance_project/diffusers-pinned
+      Built diffusers @ file:///root/autodl-tmp/wam_glance_project/diffusers-pinned
+Prepared 1 package in 1.84s
+warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+         If the cache and target directories are on different filesystems, hardlinking may not be supported.
+         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+Installed 1 package in 174ms
+ + diffusers==0.39.0.dev0 (from file:///root/autodl-tmp/wam_glance_project/diffusers-pinned)
+Using Python 3.11.17 environment at: GlanceWAM/.venv
+Resolved 1 package in 15ms
+   Building glancewam @ file:///root/autodl-tmp/wam_glance_project/GlanceWAM
+      Built glancewam @ file:///root/autodl-tmp/wam_glance_project/GlanceWAM
+Prepared 1 package in 606ms
+warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+         If the cache and target directories are on different filesystems, hardlinking may not be supported.
+         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+Installed 1 package in 39ms
+ + glancewam==0.1.0 (from file:///root/autodl-tmp/wam_glance_project/GlanceWAM)
+Using Python 3.11.17 environment at: GlanceWAM/.venv
+Resolved 5 packages in 1.14s
+Prepared 3 packages in 506ms
+warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+         If the cache and target directories are on different filesystems, hardlinking may not be supported.
+         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+Installed 3 packages in 23ms
+ + iniconfig==2.3.1
+ + pluggy==1.7.0
+ + pytest==9.1.1
+ffmpeg6 shim ready at /root/autodl-tmp/wam_glance_project/GlanceWAM/.venv/lib/ffmpeg6_shim
+/root/autodl-tmp/wam_glance_project/GlanceWAM/.venv/lib/python3.11/site-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 2.0.8 (you have 1.4.18). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+{"python": "3.11.17 (main, Oct  1 2026, 20:17:42) [GCC 14.3.0]", "torch": "2.10.0+cu128", "cuda": "12.8", "gpu": "NVIDIA A100-PCIE-40GB", "bf16": true, "diffusers": "0.39.0.dev0", "av": "12.3.0", "imports_passed": true}
+...........................                                         [100%]
+27 passed, 5 subtests passed in 0.43s
+ENVIRONMENT_READY

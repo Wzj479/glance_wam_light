@@ -1,0 +1,17 @@
+{
+  "training_started": false,
+  "forward_executed": false,
+  "backward_executed": false,
+  "optimizer_constructed": false,
+  "real_base_action_weights_loaded_strictly": true,
+  "full_action_state_roundtrip_bitwise_equal": true,
+  "temporary_checkpoint_removed": true,
+  "checkpoint_bytes": 595642047,
+  "action_tensor_count": 248,
+  "base_fingerprint": {
+    "path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt",
+    "sha256": "70e6cfe8085bf9cb5752eedcb5b128e0c527e396e67d58e5ad8282dc13329e11",
+    "config_sha256": "f3eb9d2ed066c75802f06d7531e9f39d3b7d04c9b3b4e0a596ddace877cd37e4",
+    "statistics_sha256": "553c1603b46983126318d467d2d6f1c93876cd531ba8ab3485005fb4b1fe75fe"
+  }
+}

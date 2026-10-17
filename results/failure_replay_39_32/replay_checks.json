@@ -1,0 +1,80 @@
+[
+  {
+    "model": "base",
+    "condition": "clean",
+    "episode_id": 39,
+    "steps": 73,
+    "original_success": true,
+    "replayed_success": true,
+    "first_success_state_step": 73,
+    "settled_sha256": "312c486d567f264fb229dbb7733f431a1b85c0732478cef28ca00ba58ad8218d",
+    "actions_file_sha256": "c8ffd099e529cc1d1819362222ed3181be58c35d2d20540026e271294d49a72e",
+    "terminal_original_video_mae": 2.711615114795918,
+    "trace_directory": "results/failure_replay_39_32/clean_episode39/base"
+  },
+  {
+    "model": "clean",
+    "condition": "clean",
+    "episode_id": 39,
+    "steps": 189,
+    "original_success": true,
+    "replayed_success": true,
+    "first_success_state_step": 189,
+    "settled_sha256": "312c486d567f264fb229dbb7733f431a1b85c0732478cef28ca00ba58ad8218d",
+    "actions_file_sha256": "6cdb3a2f029d693d4ef401e8219e0682547fe671a117261ceef66fbc027f3b01",
+    "terminal_original_video_mae": 2.66959303252551,
+    "trace_directory": "results/failure_replay_39_32/clean_episode39/clean"
+  },
+  {
+    "model": "aug",
+    "condition": "clean",
+    "episode_id": 39,
+    "steps": 300,
+    "original_success": false,
+    "replayed_success": false,
+    "first_success_state_step": null,
+    "settled_sha256": "312c486d567f264fb229dbb7733f431a1b85c0732478cef28ca00ba58ad8218d",
+    "actions_file_sha256": "1f4eca76e3e8f6a72c3ac239ac6b0a5fda668c1331a820a3f0cc80fe15dcc673",
+    "terminal_original_video_mae": 2.1832815157312924,
+    "trace_directory": "results/failure_replay_39_32/clean_episode39/aug"
+  },
+  {
+    "model": "base",
+    "condition": "color_strong",
+    "episode_id": 32,
+    "steps": 78,
+    "original_success": true,
+    "replayed_success": true,
+    "first_success_state_step": 78,
+    "settled_sha256": "7b7f338a9f3cfa45603365c1b5c994aad2f5523bdd226b6cfaba8ae3711a3f2a",
+    "actions_file_sha256": "d71a9509223a1f01aa1868ebb389cbef4e38efbd046ce0d03d6001398fbdde40",
+    "terminal_original_video_mae": 2.4825049160289114,
+    "trace_directory": "results/failure_replay_39_32/color_strong_episode32/base"
+  },
+  {
+    "model": "clean",
+    "condition": "color_strong",
+    "episode_id": 32,
+    "steps": 79,
+    "original_success": true,
+    "replayed_success": true,
+    "first_success_state_step": 79,
+    "settled_sha256": "7b7f338a9f3cfa45603365c1b5c994aad2f5523bdd226b6cfaba8ae3711a3f2a",
+    "actions_file_sha256": "f326bc405b5acf020721c189c6da58c71e26cc543bb390014aa0fc1b03275d89",
+    "terminal_original_video_mae": 2.495412813562925,
+    "trace_directory": "results/failure_replay_39_32/color_strong_episode32/clean"
+  },
+  {
+    "model": "aug",
+    "condition": "color_strong",
+    "episode_id": 32,
+    "steps": 300,
+    "original_success": false,
+    "replayed_success": false,
+    "first_success_state_step": null,
+    "settled_sha256": "7b7f338a9f3cfa45603365c1b5c994aad2f5523bdd226b6cfaba8ae3711a3f2a",
+    "actions_file_sha256": "6d383addaf730c56d0e3381545570225e44c47dc651610698a56d7b2e648da12",
+    "terminal_original_video_mae": 2.1467401413690474,
+    "trace_directory": "results/failure_replay_39_32/color_strong_episode32/aug"
+  }
+]

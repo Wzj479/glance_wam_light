@@ -1,0 +1,15 @@
+{
+  "training_started": false,
+  "train_windows": 766,
+  "validation_windows": 26,
+  "split_sha256": "d83ea4c02905c34900bff187696e76f3416026d5c43ef21ca8999ed1b2818252",
+  "sampling_preview": {
+    "draws": 800,
+    "source_counts": {
+      "uniform": 800,
+      "grasp": 0,
+      "place": 0
+    },
+    "all_draws_from_training": true
+  }
+}

@@ -1,0 +1,278 @@
+[
+  {
+    "repo": "Skywork/SkyReels-V2-DF-1.3B-540P-Diffusers",
+    "revision": "958acd63685c7e632e4b194549f2a703e34bd98b",
+    "path": "model_index.json",
+    "bytes": 429,
+    "lfs": null,
+    "destination": "models/skyreels-base/model_index.json"
+  },
+  {
+    "repo": "Skywork/SkyReels-V2-DF-1.3B-540P-Diffusers",
+    "revision": "958acd63685c7e632e4b194549f2a703e34bd98b",
+    "path": "scheduler/scheduler_config.json",
+    "bytes": 525,
+    "lfs": null,
+    "destination": "models/skyreels-base/scheduler/scheduler_config.json"
+  },
+  {
+    "repo": "Skywork/SkyReels-V2-DF-1.3B-540P-Diffusers",
+    "revision": "958acd63685c7e632e4b194549f2a703e34bd98b",
+    "path": "transformer/config.json",
+    "bytes": 559,
+    "lfs": null,
+    "destination": "models/skyreels-base/transformer/config.json"
+  },
+  {
+    "repo": "Skywork/SkyReels-V2-DF-1.3B-540P-Diffusers",
+    "revision": "958acd63685c7e632e4b194549f2a703e34bd98b",
+    "path": "transformer/diffusion_pytorch_model-00001-of-00002.safetensors",
+    "bytes": 4998781576,
+    "lfs": {
+      "oid": "d935cb601d7ade892cc3c6669bb84299183fb41513980980bf6de10f474a69af",
+      "size": 4998781576,
+      "pointerSize": 135
+    },
+    "destination": "models/skyreels-base/transformer/diffusion_pytorch_model-00001-of-00002.safetensors"
+  },
+  {
+    "repo": "Skywork/SkyReels-V2-DF-1.3B-540P-Diffusers",
+    "revision": "958acd63685c7e632e4b194549f2a703e34bd98b",
+    "path": "transformer/diffusion_pytorch_model-00002-of-00002.safetensors",
+    "bytes": 743405160,
+    "lfs": {
+      "oid": "b068c1060ee48277148202b7086eebf88012de8ee397fe36db7ad608cfc4a2d5",
+      "size": 743405160,
+      "pointerSize": 134
+    },
+    "destination": "models/skyreels-base/transformer/diffusion_pytorch_model-00002-of-00002.safetensors"
+  },
+  {
+    "repo": "Skywork/SkyReels-V2-DF-1.3B-540P-Diffusers",
+    "revision": "958acd63685c7e632e4b194549f2a703e34bd98b",
+    "path": "transformer/diffusion_pytorch_model.safetensors.index.json",
+    "bytes": 73740,
+    "lfs": null,
+    "destination": "models/skyreels-base/transformer/diffusion_pytorch_model.safetensors.index.json"
+  },
+  {
+    "repo": "Skywork/SkyReels-V2-DF-1.3B-540P-Diffusers",
+    "revision": "958acd63685c7e632e4b194549f2a703e34bd98b",
+    "path": "vae/config.json",
+    "bytes": 724,
+    "lfs": null,
+    "destination": "models/skyreels-base/vae/config.json"
+  },
+  {
+    "repo": "Skywork/SkyReels-V2-DF-1.3B-540P-Diffusers",
+    "revision": "958acd63685c7e632e4b194549f2a703e34bd98b",
+    "path": "vae/diffusion_pytorch_model.safetensors",
+    "bytes": 507591892,
+    "lfs": {
+      "oid": "d6e524b3fffede1787a74e81b30976dce5400c4439ba64222168e607ed19e793",
+      "size": 507591892,
+      "pointerSize": 134
+    },
+    "destination": "models/skyreels-base/vae/diffusion_pytorch_model.safetensors"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "checkpoints/glancewam_libero/checkpoints/steps_15000_pytorch_model_ema.pt",
+    "bytes": 3169273736,
+    "lfs": {
+      "oid": "70e6cfe8085bf9cb5752eedcb5b128e0c527e396e67d58e5ad8282dc13329e11",
+      "size": 3169273736,
+      "pointerSize": 135
+    },
+    "destination": "glancewam_bundle/checkpoints/glancewam_libero/checkpoints/steps_15000_pytorch_model_ema.pt"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "checkpoints/glancewam_libero/config.full.yaml",
+    "bytes": 3857,
+    "lfs": null,
+    "destination": "glancewam_bundle/checkpoints/glancewam_libero/config.full.yaml"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "checkpoints/glancewam_libero/config.yaml",
+    "bytes": 3023,
+    "lfs": null,
+    "destination": "glancewam_bundle/checkpoints/glancewam_libero/config.yaml"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "checkpoints/glancewam_libero/dataset_statistics.json",
+    "bytes": 2905,
+    "lfs": null,
+    "destination": "glancewam_bundle/checkpoints/glancewam_libero/dataset_statistics.json"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/data/chunk-000/file-000.parquet",
+    "bytes": 3122591,
+    "lfs": {
+      "oid": "2d8d4559706f4359a1d4a8e70d920e12869f398d10f20c0e017a7d3055161b9a",
+      "size": 3122591,
+      "pointerSize": 132
+    },
+    "destination": "glancewam_bundle/datasets/libero_goal_no_noops_1.0.0_lerobot/data/chunk-000/file-000.parquet"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/glancewam_cache/t5/Skywork_SkyReels-V2-DF-1.3B-540P-Diffusers_L512/embeddings/c/0/0/0",
+    "bytes": 1338808,
+    "lfs": {
+      "oid": "19a315fd85ab2baf482f106e060c24d5ad14ca4ff2b9c96348b237b18f8c2324",
+      "size": 1338808,
+      "pointerSize": 132
+    },
+    "destination": "glancewam_bundle/datasets/libero_goal_no_noops_1.0.0_lerobot/glancewam_cache/t5/Skywork_SkyReels-V2-DF-1.3B-540P-Diffusers_L512/embeddings/c/0/0/0"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/glancewam_cache/t5/Skywork_SkyReels-V2-DF-1.3B-540P-Diffusers_L512/embeddings/zarr.json",
+    "bytes": 1285,
+    "lfs": null,
+    "destination": "glancewam_bundle/datasets/libero_goal_no_noops_1.0.0_lerobot/glancewam_cache/t5/Skywork_SkyReels-V2-DF-1.3B-540P-Diffusers_L512/embeddings/zarr.json"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/glancewam_cache/t5/Skywork_SkyReels-V2-DF-1.3B-540P-Diffusers_L512/manifest.json",
+    "bytes": 659,
+    "lfs": null,
+    "destination": "glancewam_bundle/datasets/libero_goal_no_noops_1.0.0_lerobot/glancewam_cache/t5/Skywork_SkyReels-V2-DF-1.3B-540P-Diffusers_L512/manifest.json"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/glancewam_cache/t5/Skywork_SkyReels-V2-DF-1.3B-540P-Diffusers_L512/n_tokens/c/0",
+    "bytes": 61,
+    "lfs": null,
+    "destination": "glancewam_bundle/datasets/libero_goal_no_noops_1.0.0_lerobot/glancewam_cache/t5/Skywork_SkyReels-V2-DF-1.3B-540P-Diffusers_L512/n_tokens/c/0"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/glancewam_cache/t5/Skywork_SkyReels-V2-DF-1.3B-540P-Diffusers_L512/n_tokens/zarr.json",
+    "bytes": 1106,
+    "lfs": null,
+    "destination": "glancewam_bundle/datasets/libero_goal_no_noops_1.0.0_lerobot/glancewam_cache/t5/Skywork_SkyReels-V2-DF-1.3B-540P-Diffusers_L512/n_tokens/zarr.json"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/glancewam_cache/t5/Skywork_SkyReels-V2-DF-1.3B-540P-Diffusers_L512/prompts.json",
+    "bytes": 365,
+    "lfs": null,
+    "destination": "glancewam_bundle/datasets/libero_goal_no_noops_1.0.0_lerobot/glancewam_cache/t5/Skywork_SkyReels-V2-DF-1.3B-540P-Diffusers_L512/prompts.json"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/glancewam_cache/t5/Skywork_SkyReels-V2-DF-1.3B-540P-Diffusers_L512/zarr.json",
+    "bytes": 66,
+    "lfs": null,
+    "destination": "glancewam_bundle/datasets/libero_goal_no_noops_1.0.0_lerobot/glancewam_cache/t5/Skywork_SkyReels-V2-DF-1.3B-540P-Diffusers_L512/zarr.json"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/meta/episodes/chunk-000/file-000.parquet",
+    "bytes": 470170,
+    "lfs": {
+      "oid": "d78752a1c90a4f11e180479ba70452539cd146a0d1136dc23aede6593290e5d7",
+      "size": 470170,
+      "pointerSize": 131
+    },
+    "destination": "glancewam_bundle/datasets/libero_goal_no_noops_1.0.0_lerobot/meta/episodes/chunk-000/file-000.parquet"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/meta/info.json",
+    "bytes": 3515,
+    "lfs": null,
+    "destination": "glancewam_bundle/datasets/libero_goal_no_noops_1.0.0_lerobot/meta/info.json"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/meta/modality.json",
+    "bytes": 1452,
+    "lfs": null,
+    "destination": "glancewam_bundle/datasets/libero_goal_no_noops_1.0.0_lerobot/meta/modality.json"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/meta/stats.json",
+    "bytes": 6309,
+    "lfs": null,
+    "destination": "glancewam_bundle/datasets/libero_goal_no_noops_1.0.0_lerobot/meta/stats.json"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/meta/stats_gr00t.json",
+    "bytes": 5756,
+    "lfs": null,
+    "destination": "glancewam_bundle/datasets/libero_goal_no_noops_1.0.0_lerobot/meta/stats_gr00t.json"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/meta/steps_data_index.pkl",
+    "bytes": 474008,
+    "lfs": {
+      "oid": "ca4399704cce4ee6193e601a8e6322aec33a835b9172f4d88522891a5a9662fb",
+      "size": 474008,
+      "pointerSize": 131
+    },
+    "destination": "glancewam_bundle/datasets/libero_goal_no_noops_1.0.0_lerobot/meta/steps_data_index.pkl"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/meta/tasks.parquet",
+    "bytes": 2367,
+    "lfs": {
+      "oid": "3ffe58848555d373038facfefcd5addd8c786381a40913e857fbf1b6eb304929",
+      "size": 2367,
+      "pointerSize": 129
+    },
+    "destination": "glancewam_bundle/datasets/libero_goal_no_noops_1.0.0_lerobot/meta/tasks.parquet"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/videos/observation.images.image/chunk-000/file-000.mp4",
+    "bytes": 177125809,
+    "lfs": {
+      "oid": "477f644fa3d9103c4bb6ee2383155fce7bd8159c85fa2593b49ef4dfe39cc478",
+      "size": 177125809,
+      "pointerSize": 134
+    },
+    "destination": "glancewam_bundle/datasets/libero_goal_no_noops_1.0.0_lerobot/videos/observation.images.image/chunk-000/file-000.mp4"
+  },
+  {
+    "repo": "LinhanWang/GlanceWAM",
+    "revision": "0b9208dff852914f94be879f702cd40118255bce",
+    "path": "datasets/libero_goal_no_noops_1.0.0_lerobot/videos/observation.images.wrist_image/chunk-000/file-000.mp4",
+    "bytes": 153250080,
+    "lfs": {
+      "oid": "b9e7c3e75f027348a3b3accb91066fb91ed79b557b2f27d1bf8caef7266213fd",
+      "size": 153250080,
+      "pointerSize": 134
+    },
+    "destination": "glancewam_bundle/datasets/libero_goal_no_noops_1.0.0_lerobot/videos/observation.images.wrist_image/chunk-000/file-000.mp4"
+  }
+]

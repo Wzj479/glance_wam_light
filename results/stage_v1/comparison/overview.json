@@ -1,0 +1,481 @@
+{
+  "training": {
+    "C": {
+      "steps": 100,
+      "best_step": 100,
+      "best_score": 0.9569971254414545,
+      "trainable_parameters": 29392903,
+      "frozen_sha256": "be46a675026f53e780d7744692777245366e60f303067442042cf38590eac30c",
+      "split_sha256": "d83ea4c02905c34900bff187696e76f3416026d5c43ef21ca8999ed1b2818252",
+      "phase_manifest_sha256": "bec5745a0c2b36b8ad55a8c4a4e7633b1af484aedce6e57d52f7e60bf321c882",
+      "process_seconds": 348.9906384386122,
+      "update_seconds": 205.27466928586364,
+      "mean_update_seconds": 2.052746692858636,
+      "peak_allocated_gib": 4.433342933654785,
+      "peak_reserved_gib": 4.6796875,
+      "sampling_counts": {
+        "uniform": 800
+      },
+      "initial_validation": {
+        "event": "validation",
+        "step": 0,
+        "clean_fm_loss": 0.014549307396429447,
+        "corrupt_fm_loss": 0.13280029302964416,
+        "clean_grasp_fm_loss": 0.009192696670652367,
+        "clean_grasp_windows": 8,
+        "clean_place_fm_loss": 0.030282360676210374,
+        "clean_place_windows": 8,
+        "corrupt_grasp_fm_loss": 0.0585237352643162,
+        "corrupt_grasp_windows": 8,
+        "corrupt_place_fm_loss": 0.3353419800987467,
+        "corrupt_place_windows": 8,
+        "allocated_gib": 3.4743776321411133,
+        "reserved_gib": 4.240234375,
+        "peak_allocated_gib": 4.1193461418151855,
+        "peak_reserved_gib": 4.240234375
+      },
+      "final_validation": {
+        "event": "validation",
+        "step": 100,
+        "clean_fm_loss": 0.013988754218399454,
+        "corrupt_fm_loss": 0.1331577118521986,
+        "clean_grasp_fm_loss": 0.008542048337403685,
+        "clean_grasp_windows": 8,
+        "clean_place_fm_loss": 0.029821253679983784,
+        "clean_place_windows": 8,
+        "corrupt_grasp_fm_loss": 0.059945865999907255,
+        "corrupt_grasp_windows": 8,
+        "corrupt_place_fm_loss": 0.33419328049058095,
+        "corrupt_place_windows": 8,
+        "allocated_gib": 3.810805320739746,
+        "reserved_gib": 4.6796875,
+        "peak_allocated_gib": 4.433342933654785,
+        "peak_reserved_gib": 4.6796875
+      },
+      "selection": [
+        {
+          "event": "selection",
+          "step": 25,
+          "selection_score": 0.9860940115718165,
+          "eligible": true
+        },
+        {
+          "event": "selection",
+          "step": 50,
+          "selection_score": 0.9639371377574675,
+          "eligible": true
+        },
+        {
+          "event": "selection",
+          "step": 75,
+          "selection_score": 0.9600048450363159,
+          "eligible": true
+        },
+        {
+          "event": "selection",
+          "step": 100,
+          "selection_score": 0.9569971254414545,
+          "eligible": true
+        }
+      ]
+    },
+    "P": {
+      "steps": 100,
+      "best_step": 100,
+      "best_score": 0.9495038582294308,
+      "trainable_parameters": 29392903,
+      "frozen_sha256": "be46a675026f53e780d7744692777245366e60f303067442042cf38590eac30c",
+      "split_sha256": "d83ea4c02905c34900bff187696e76f3416026d5c43ef21ca8999ed1b2818252",
+      "phase_manifest_sha256": "bec5745a0c2b36b8ad55a8c4a4e7633b1af484aedce6e57d52f7e60bf321c882",
+      "process_seconds": 363.09478714317083,
+      "update_seconds": 223.02024333924055,
+      "mean_update_seconds": 2.2302024333924053,
+      "peak_allocated_gib": 4.433342933654785,
+      "peak_reserved_gib": 4.6796875,
+      "sampling_counts": {
+        "uniform": 400,
+        "grasp": 200,
+        "place": 200
+      },
+      "initial_validation": {
+        "event": "validation",
+        "step": 0,
+        "clean_fm_loss": 0.014549307396429447,
+        "corrupt_fm_loss": 0.13280029302964416,
+        "clean_grasp_fm_loss": 0.009192696670652367,
+        "clean_grasp_windows": 8,
+        "clean_place_fm_loss": 0.030282360676210374,
+        "clean_place_windows": 8,
+        "corrupt_grasp_fm_loss": 0.0585237352643162,
+        "corrupt_grasp_windows": 8,
+        "corrupt_place_fm_loss": 0.3353419800987467,
+        "corrupt_place_windows": 8,
+        "allocated_gib": 3.4743776321411133,
+        "reserved_gib": 4.240234375,
+        "peak_allocated_gib": 4.1193461418151855,
+        "peak_reserved_gib": 4.240234375
+      },
+      "final_validation": {
+        "event": "validation",
+        "step": 100,
+        "clean_fm_loss": 0.01384457862653877,
+        "corrupt_fm_loss": 0.13380407020807839,
+        "clean_grasp_fm_loss": 0.008418524375883862,
+        "clean_grasp_windows": 8,
+        "clean_place_fm_loss": 0.02977433570777066,
+        "clean_place_windows": 8,
+        "corrupt_grasp_fm_loss": 0.06090496387332678,
+        "corrupt_grasp_windows": 8,
+        "corrupt_place_fm_loss": 0.33492651052074507,
+        "corrupt_place_windows": 8,
+        "allocated_gib": 3.810805320739746,
+        "reserved_gib": 4.6796875,
+        "peak_allocated_gib": 4.433342933654785,
+        "peak_reserved_gib": 4.6796875
+      },
+      "selection": [
+        {
+          "event": "selection",
+          "step": 25,
+          "selection_score": 0.9863597911145641,
+          "eligible": true
+        },
+        {
+          "event": "selection",
+          "step": 50,
+          "selection_score": 0.9582748389779798,
+          "eligible": true
+        },
+        {
+          "event": "selection",
+          "step": 75,
+          "selection_score": 0.9520528251340101,
+          "eligible": true
+        },
+        {
+          "event": "selection",
+          "step": 100,
+          "selection_score": 0.9495038582294308,
+          "eligible": true
+        }
+      ]
+    }
+  },
+  "checkpoint_records": {
+    "C/best": {
+      "server_path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/stage_v1/C_seed42/checkpoints/best.action.pt",
+      "bytes": 595642625,
+      "sha256": "27f33a751c4cd3ca3efa43fb968105b8906e618c393c6a5d7ce6b997020dbcfb",
+      "metadata": {
+        "step": 100,
+        "selection_score": 0.9569971254414545,
+        "upstream_commit": "6a51bdc5139e72e8ad525779db0c989e1af5abab",
+        "split_sha256": "d83ea4c02905c34900bff187696e76f3416026d5c43ef21ca8999ed1b2818252",
+        "train_scope": "crossattn_decoder",
+        "base_checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt",
+        "trainable_parameters": 29392903,
+        "frozen_sha256": "be46a675026f53e780d7744692777245366e60f303067442042cf38590eac30c",
+        "seed": 42,
+        "validation_scope": "hindsight-goal flow matching loss",
+        "checkpoint_format": "glancewam_action_v1",
+        "sampling_mode": "uniform",
+        "selection_mode": "phases",
+        "normal_loss_tolerance": 0.05,
+        "phase_manifest_sha256": "bec5745a0c2b36b8ad55a8c4a4e7633b1af484aedce6e57d52f7e60bf321c882",
+        "base_fingerprint": {
+          "path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt",
+          "sha256": "70e6cfe8085bf9cb5752eedcb5b128e0c527e396e67d58e5ad8282dc13329e11",
+          "config_sha256": "f3eb9d2ed066c75802f06d7531e9f39d3b7d04c9b3b4e0a596ddace877cd37e4",
+          "statistics_sha256": "553c1603b46983126318d467d2d6f1c93876cd531ba8ab3485005fb4b1fe75fe"
+        },
+        "checkpoint_sha256": "27f33a751c4cd3ca3efa43fb968105b8906e618c393c6a5d7ce6b997020dbcfb",
+        "base": {
+          "path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt",
+          "sha256": "70e6cfe8085bf9cb5752eedcb5b128e0c527e396e67d58e5ad8282dc13329e11",
+          "config_sha256": "f3eb9d2ed066c75802f06d7531e9f39d3b7d04c9b3b4e0a596ddace877cd37e4",
+          "statistics_sha256": "553c1603b46983126318d467d2d6f1c93876cd531ba8ab3485005fb4b1fe75fe"
+        }
+      }
+    },
+    "C/last": {
+      "server_path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/stage_v1/C_seed42/checkpoints/last.action.pt",
+      "bytes": 595642625,
+      "sha256": "2aa7262d9791c466dc35b6ebcc4ef0bc8a79e20beabc7483d6cc51f57171e055",
+      "metadata": {
+        "step": 100,
+        "upstream_commit": "6a51bdc5139e72e8ad525779db0c989e1af5abab",
+        "split_sha256": "d83ea4c02905c34900bff187696e76f3416026d5c43ef21ca8999ed1b2818252",
+        "train_scope": "crossattn_decoder",
+        "base_checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt",
+        "trainable_parameters": 29392903,
+        "frozen_sha256": "be46a675026f53e780d7744692777245366e60f303067442042cf38590eac30c",
+        "seed": 42,
+        "validation_scope": "hindsight-goal flow matching loss",
+        "checkpoint_format": "glancewam_action_v1",
+        "sampling_mode": "uniform",
+        "selection_mode": "phases",
+        "normal_loss_tolerance": 0.05,
+        "phase_manifest_sha256": "bec5745a0c2b36b8ad55a8c4a4e7633b1af484aedce6e57d52f7e60bf321c882",
+        "base_fingerprint": {
+          "path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt",
+          "sha256": "70e6cfe8085bf9cb5752eedcb5b128e0c527e396e67d58e5ad8282dc13329e11",
+          "config_sha256": "f3eb9d2ed066c75802f06d7531e9f39d3b7d04c9b3b4e0a596ddace877cd37e4",
+          "statistics_sha256": "553c1603b46983126318d467d2d6f1c93876cd531ba8ab3485005fb4b1fe75fe"
+        },
+        "checkpoint_sha256": "2aa7262d9791c466dc35b6ebcc4ef0bc8a79e20beabc7483d6cc51f57171e055",
+        "base": {
+          "path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt",
+          "sha256": "70e6cfe8085bf9cb5752eedcb5b128e0c527e396e67d58e5ad8282dc13329e11",
+          "config_sha256": "f3eb9d2ed066c75802f06d7531e9f39d3b7d04c9b3b4e0a596ddace877cd37e4",
+          "statistics_sha256": "553c1603b46983126318d467d2d6f1c93876cd531ba8ab3485005fb4b1fe75fe"
+        }
+      }
+    },
+    "P/best": {
+      "server_path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/stage_v1/P_seed42/checkpoints/best.action.pt",
+      "bytes": 595642625,
+      "sha256": "b9c9f5da51ea2e784ad923ca24b6df9dcc167a97ed955ae3668fb9ac058ea97e",
+      "metadata": {
+        "step": 100,
+        "selection_score": 0.9495038582294308,
+        "upstream_commit": "6a51bdc5139e72e8ad525779db0c989e1af5abab",
+        "split_sha256": "d83ea4c02905c34900bff187696e76f3416026d5c43ef21ca8999ed1b2818252",
+        "train_scope": "crossattn_decoder",
+        "base_checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt",
+        "trainable_parameters": 29392903,
+        "frozen_sha256": "be46a675026f53e780d7744692777245366e60f303067442042cf38590eac30c",
+        "seed": 42,
+        "validation_scope": "hindsight-goal flow matching loss",
+        "checkpoint_format": "glancewam_action_v1",
+        "sampling_mode": "phase",
+        "selection_mode": "phases",
+        "normal_loss_tolerance": 0.05,
+        "phase_manifest_sha256": "bec5745a0c2b36b8ad55a8c4a4e7633b1af484aedce6e57d52f7e60bf321c882",
+        "base_fingerprint": {
+          "path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt",
+          "sha256": "70e6cfe8085bf9cb5752eedcb5b128e0c527e396e67d58e5ad8282dc13329e11",
+          "config_sha256": "f3eb9d2ed066c75802f06d7531e9f39d3b7d04c9b3b4e0a596ddace877cd37e4",
+          "statistics_sha256": "553c1603b46983126318d467d2d6f1c93876cd531ba8ab3485005fb4b1fe75fe"
+        },
+        "checkpoint_sha256": "b9c9f5da51ea2e784ad923ca24b6df9dcc167a97ed955ae3668fb9ac058ea97e",
+        "base": {
+          "path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt",
+          "sha256": "70e6cfe8085bf9cb5752eedcb5b128e0c527e396e67d58e5ad8282dc13329e11",
+          "config_sha256": "f3eb9d2ed066c75802f06d7531e9f39d3b7d04c9b3b4e0a596ddace877cd37e4",
+          "statistics_sha256": "553c1603b46983126318d467d2d6f1c93876cd531ba8ab3485005fb4b1fe75fe"
+        }
+      }
+    },
+    "P/last": {
+      "server_path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/stage_v1/P_seed42/checkpoints/last.action.pt",
+      "bytes": 595642625,
+      "sha256": "59e2be2587032ce5ef95c44e8203e69a9389ca1bd179c8ab040342869c0b349a",
+      "metadata": {
+        "step": 100,
+        "upstream_commit": "6a51bdc5139e72e8ad525779db0c989e1af5abab",
+        "split_sha256": "d83ea4c02905c34900bff187696e76f3416026d5c43ef21ca8999ed1b2818252",
+        "train_scope": "crossattn_decoder",
+        "base_checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt",
+        "trainable_parameters": 29392903,
+        "frozen_sha256": "be46a675026f53e780d7744692777245366e60f303067442042cf38590eac30c",
+        "seed": 42,
+        "validation_scope": "hindsight-goal flow matching loss",
+        "checkpoint_format": "glancewam_action_v1",
+        "sampling_mode": "phase",
+        "selection_mode": "phases",
+        "normal_loss_tolerance": 0.05,
+        "phase_manifest_sha256": "bec5745a0c2b36b8ad55a8c4a4e7633b1af484aedce6e57d52f7e60bf321c882",
+        "base_fingerprint": {
+          "path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt",
+          "sha256": "70e6cfe8085bf9cb5752eedcb5b128e0c527e396e67d58e5ad8282dc13329e11",
+          "config_sha256": "f3eb9d2ed066c75802f06d7531e9f39d3b7d04c9b3b4e0a596ddace877cd37e4",
+          "statistics_sha256": "553c1603b46983126318d467d2d6f1c93876cd531ba8ab3485005fb4b1fe75fe"
+        },
+        "checkpoint_sha256": "59e2be2587032ce5ef95c44e8203e69a9389ca1bd179c8ab040342869c0b349a",
+        "base": {
+          "path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt",
+          "sha256": "70e6cfe8085bf9cb5752eedcb5b128e0c527e396e67d58e5ad8282dc13329e11",
+          "config_sha256": "f3eb9d2ed066c75802f06d7531e9f39d3b7d04c9b3b4e0a596ddace877cd37e4",
+          "statistics_sha256": "553c1603b46983126318d467d2d6f1c93876cd531ba8ab3485005fb4b1fe75fe"
+        }
+      }
+    }
+  },
+  "evaluation_selection": {
+    "models": {
+      "C": {
+        "best_step": 100,
+        "primary_source": "C",
+        "rollout_role": "selected_best",
+        "rollout_checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/stage_v1/C_seed42/checkpoints/best.action.pt",
+        "rollout_checkpoint_step": 100
+      },
+      "P": {
+        "best_step": 100,
+        "primary_source": "P",
+        "rollout_role": "selected_best",
+        "rollout_checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/stage_v1/P_seed42/checkpoints/best.action.pt",
+        "rollout_checkpoint_step": 100
+      }
+    },
+    "baseline_reused": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/color_holdout/base",
+    "protocol_sha256": "22b23b3cc4637827857eb0a97d6a9e0f01821c750530033bcfe38e68ab8eef6f",
+    "reserved_initial_states": [
+      45,
+      46,
+      47,
+      48,
+      49
+    ]
+  },
+  "rollout_results": {
+    "base": {
+      "clean": {
+        "successes": 20,
+        "episodes": 20
+      },
+      "color_strong": {
+        "successes": 15,
+        "episodes": 20
+      }
+    },
+    "C": {
+      "clean": {
+        "successes": 20,
+        "episodes": 20
+      },
+      "color_strong": {
+        "successes": 16,
+        "episodes": 20
+      }
+    },
+    "P": {
+      "clean": {
+        "successes": 20,
+        "episodes": 20
+      },
+      "color_strong": {
+        "successes": 15,
+        "episodes": 20
+      }
+    }
+  },
+  "selected_best_results": {
+    "C": {
+      "clean": {
+        "successes": 20,
+        "episodes": 20
+      },
+      "color_strong": {
+        "successes": 16,
+        "episodes": 20
+      }
+    },
+    "P": {
+      "clean": {
+        "successes": 20,
+        "episodes": 20
+      },
+      "color_strong": {
+        "successes": 15,
+        "episodes": 20
+      }
+    }
+  },
+  "paired_rollout_comparisons": {
+    "clean": {
+      "C_vs_base": {
+        "episodes": 20,
+        "recovered": 0,
+        "regressed": 0,
+        "success_delta_pp": 0.0
+      },
+      "P_vs_base": {
+        "episodes": 20,
+        "recovered": 0,
+        "regressed": 0,
+        "success_delta_pp": 0.0
+      },
+      "P_vs_C": {
+        "episodes": 20,
+        "recovered": 0,
+        "regressed": 0,
+        "success_delta_pp": 0.0
+      }
+    },
+    "color_strong": {
+      "C_vs_base": {
+        "episodes": 20,
+        "recovered": 1,
+        "regressed": 0,
+        "success_delta_pp": 5.0
+      },
+      "P_vs_base": {
+        "episodes": 20,
+        "recovered": 1,
+        "regressed": 1,
+        "success_delta_pp": 0.0
+      },
+      "P_vs_C": {
+        "episodes": 20,
+        "recovered": 0,
+        "regressed": 1,
+        "success_delta_pp": -5.0
+      }
+    }
+  },
+  "paired_cases": {
+    "clean": {
+      "C_vs_base": {
+        "recovered": [],
+        "regressed": []
+      },
+      "P_vs_base": {
+        "recovered": [],
+        "regressed": []
+      },
+      "P_vs_C": {
+        "recovered": [],
+        "regressed": []
+      }
+    },
+    "color_strong": {
+      "C_vs_base": {
+        "recovered": [
+          26
+        ],
+        "regressed": []
+      },
+      "P_vs_base": {
+        "recovered": [
+          26
+        ],
+        "regressed": [
+          33
+        ]
+      },
+      "P_vs_C": {
+        "recovered": [],
+        "regressed": [
+          33
+        ]
+      }
+    }
+  },
+  "protocol_sha256": "22b23b3cc4637827857eb0a97d6a9e0f01821c750530033bcfe38e68ab8eef6f",
+  "physical_state_pairing_verified": true,
+  "new_rollouts": 80,
+  "reused_baseline_rollouts": 40,
+  "reserved_initial_states": [
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "evaluation_wall_time": {
+    "seconds": 1011.573699567467,
+    "new_policy_rollouts": 80,
+    "reused_baseline_rollouts": 40
+  }
+}

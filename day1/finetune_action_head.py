@@ -31,6 +31,9 @@ from torch.utils.data import DataLoader, Dataset, get_worker_info
 from finetune_utils import (augment_sample, checkpoint_action_metadata, deployment_keys, load_episode_partition, photometric_window,
                             split_episodes, split_step_indices, stable_seed)
 from smoke_action_head import digest, mem
+from stage_finetune_utils import build_phase_index, draw_schedule, phase_selection
+from action_checkpoint import base_fingerprint, save_action_checkpoint
+from action_training_scope import configure_action_scope, set_action_training_modes
 from glancewam.dataloader.gr00t_lerobot.registry import DATASET_NAMED_MIXTURES
 from glancewam.dataloader.lerobot_datasets import collate_fn, make_LeRobotSingleDataset
 from glancewam.model.framework.share_tools import read_mode_config
@@ -62,8 +65,9 @@ def log(out, row):
 
 class EpisodeFrames(Dataset):
     """Index actual single datasets; never use the random mixture __getitem__."""
-    def __init__(self, datasets, entries, seed, epoch=0):
+    def __init__(self, datasets, entries, seed, epoch=0, phase_tags=None, sources=None):
         self.datasets, self.entries, self.seed, self.epoch = datasets, entries, seed, epoch
+        self.phase_tags, self.sources = phase_tags, sources
 
     def __len__(self):
         return len(self.entries)
@@ -75,6 +79,8 @@ class EpisodeFrames(Dataset):
         # Upstream goal offsets use a private per-worker RNG: seed per sample to
         # reproduce validation goals and resumed training with different worker timing.
         seed = stable_seed(self.seed, self.epoch, ds.dataset_name, int(episode), int(frame))
+        if self.sources is not None:
+            seed = stable_seed(seed, 'draw', index)
         info = get_worker_info()
         ds._future_rng_worker = info.id if info else -1
         ds._future_rng = np.random.default_rng(seed)
@@ -82,6 +88,9 @@ class EpisodeFrames(Dataset):
         if 'lang_embed' not in sample or 'state' in sample:
             raise RuntimeError('Expected real cached UMT5 embeddings and stateless LIBERO samples')
         sample['_sample_seed'] = seed
+        sample['_phase_tags'] = self.phase_tags[di, local_index] if self.phase_tags is not None else []
+        sample['_sampling_source'] = self.sources[index] if self.sources is not None else 'legacy'
+        sample['_window_id'] = [ds.dataset_name, int(episode), int(frame)]
         return sample
 
 
@@ -137,11 +146,14 @@ def build_splits(cfg, a, checkpoint_stats):
 
 
 @torch.no_grad()
+@torch.autocast('cuda', dtype=torch.bfloat16)
 def extract_frozen_features(model, batch, goal_dropout=0.):
     """Explicit frozen feature path, matching upstream single-horizon attention contract.
 
     Keep original three-slot window and time embeddings, but omit video loss and
     action-head computation. No hook, exception, or graph through the video DiT.
+    Match the official caller's autocast scope for VAE and goal projection too;
+    autocasting only the DiT changes the VAE features before the frozen backbone.
     """
     if model.n_future_frames != 1 or model.n_goal_frames != 1:
         raise ValueError('This recipe supports the released single-horizon LIBERO checkpoint only')
@@ -226,6 +238,7 @@ def verify_feature_parity(model, batch):
 def validate(model, ds, a):
     model.eval()
     sums = {'clean': 0., 'corrupt': 0.}
+    phase_sums = {f'{kind}_{phase}': [] for kind in sums for phase in ('grasp', 'place')}
     # Isolate validation RNG; identical samples, goal offsets and FM noise every evaluation.
     with torch.random.fork_rng(devices=[torch.cuda.current_device()]):
         for index in range(len(ds)):
@@ -235,11 +248,22 @@ def validate(model, ds, a):
                 a.val_saturation, tuple(a.val_color_gain))
             for key, item in [('clean', sample), ('corrupt', altered)]:
                 torch.manual_seed(stable_seed(a.seed, 'val_noise', index))
-                sums[key] += action_loss(model, [item]).item()
-    return {k + '_fm_loss': v / len(ds) for k, v in sums.items()}
+                loss = action_loss(model, [item]).item()
+                sums[key] += loss
+                for phase in sample.get('_phase_tags', []):
+                    phase_sums[f'{key}_{phase}'].append(loss)
+    scores = {k + '_fm_loss': v / len(ds) for k, v in sums.items()}
+    for key, values in phase_sums.items():
+        if values:
+            scores[key+'_fm_loss'] = float(np.mean(values))
+            scores[key+'_windows'] = len(values)
+    return scores
 
 
 def save_checkpoint(model, out, step, label, metadata):
+    if metadata.get('checkpoint_format') == 'action':
+        return save_action_checkpoint(model.action_model,
+            out/'checkpoints'/f'{label}.action.pt', metadata['base_fingerprint'], dict(step=step, **metadata))
     state = model.state_dict()
     keys = deployment_keys(list(state), tuple(model._save_include_prefixes),
                            tuple(model._reconstructable_prefixes))
@@ -314,6 +338,11 @@ def parse_args():
     p.add_argument('--seed', type=int, default=42)
     p.add_argument('--workers', type=int, default=0)
     p.add_argument('--train-scope', choices=['all', 'crossattn_decoder'], default='all')
+    p.add_argument('--sampling-mode', choices=['legacy', 'uniform', 'phase'], default='legacy')
+    p.add_argument('--selection-mode', choices=['legacy', 'phases'], default='legacy')
+    p.add_argument('--normal-loss-tolerance', type=float, default=.05)
+    p.add_argument('--checkpoint-format', choices=['full', 'action'], default='full')
+    p.add_argument('--audit-only', action='store_true', help='CPU data/phase audit; no model or optimizer construction')
     p.add_argument('--aug-prob', type=float, default=.5)
     p.add_argument('--brightness', nargs=2, type=float, default=[.6, 1.4])
     p.add_argument('--saturation', nargs=2, type=float, default=[.6, 1.4])
@@ -336,6 +365,10 @@ def parse_args():
         p.error('val-fraction must be between 0 and 1')
     if a.val_brightness <= 0 or a.val_saturation < 0 or min(a.val_color_gain) <= 0:
         p.error('Invalid validation corruption')
+    if not math.isfinite(a.normal_loss_tolerance) or a.normal_loss_tolerance < 0:
+        p.error('Invalid normal-loss tolerance')
+    if a.sampling_mode != 'legacy' and a.batch_size*a.grad_accum % 4:
+        p.error('Uniform/phase recipe needs effective batch divisible by four')
     return a
 
 
@@ -346,14 +379,15 @@ def main():
         raise FileExistsError('Use a new --out directory; existing experiments will not be overwritten')
     out.mkdir(parents=True, exist_ok=True)
     (out / 'checkpoints').mkdir()
-    if not torch.cuda.is_available() or not torch.cuda.is_bf16_supported():
+    if not a.audit_only and (not torch.cuda.is_available() or not torch.cuda.is_bf16_supported()):
         raise RuntimeError('A CUDA GPU with BF16 support is required')
     if int(os.environ.get('WORLD_SIZE', '1')) != 1:
         raise RuntimeError('This script is single-GPU; use python, not multi-process torchrun')
     commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
     if commit != PIN and not a.allow_different_commit:
         raise RuntimeError(f'Expected upstream {PIN}, got {commit}')
-    Accelerator()
+    if not a.audit_only:
+        Accelerator()
     random.seed(a.seed)
     np.random.seed(a.seed)
     torch.manual_seed(a.seed)
@@ -365,6 +399,21 @@ def main():
     split_hash = hashlib.sha256(json.dumps(manifest, sort_keys=True).encode()).hexdigest()
     atomic_json(out / 'split_manifest.json', manifest)
     atomic_json(out / 'train_args.json', vars(a))
+    phase_tags, pools = None, None
+    if a.sampling_mode != 'legacy' or a.selection_mode == 'phases':
+        phase_tags, pools, phases = build_phase_index(datasets, train_entries, val_entries)
+        atomic_json(out/'phase_manifest.json', phases)
+    if a.audit_only:
+        preview = None
+        if a.sampling_mode != 'legacy':
+            n = a.max_steps*a.batch_size*a.grad_accum
+            indices, sources = draw_schedule(pools, a.sampling_mode, n, stable_seed(a.seed, 'audit'))
+            preview = dict(draws=n, source_counts={name:sources.count(name) for name in pools},
+                all_draws_from_training=all(0 <= i < len(train_entries) for i in indices))
+        atomic_json(out/'audit.json', dict(training_started=False, train_windows=len(train_entries),
+            validation_windows=len(val_entries), split_sha256=split_hash, sampling_preview=preview))
+        print((out/'audit.json').read_text(), flush=True)
+        return
     atomic_json(out / 'dataset_statistics.json', stats)  # preserve pretrained action scale exactly
     cfg.finetune_recipe = dict(name='frozen_wam_action_sft', seed=a.seed,
         split_sha256=split_hash, upstream_commit=commit, train_args=vars(a))
@@ -378,30 +427,15 @@ def main():
     del weights
     model.norm_stats = stats
     model.requires_grad_(False).to(device='cuda', dtype=torch.bfloat16).eval()
-    model.action_model.float().requires_grad_(True)
-    if a.train_scope == 'crossattn_decoder':
-        model.action_model.requires_grad_(False)
-        count = 0
-        for block in model.action_model.model.transformer_blocks:
-            # GlanceWAM alternates cross/self-attention blocks; both are named attn1.
-            if block.cross_attention_dim is not None:
-                block.attn1.requires_grad_(True)
-                count += 1
-        if not count:
-            raise RuntimeError('No cross-attention blocks found; inspect the action-head version')
-        model.action_model.action_decoder.requires_grad_(True)
-    # The published stateless LIBERO head owns a state encoder but never uses it.
-    if model.action_model.state_encoder is not None:
-        model.action_model.state_encoder.requires_grad_(False)
-    trainable = [(n, p) for n, p in model.named_parameters() if p.requires_grad]
-    frozen = [(n, p) for n, p in model.named_parameters() if not p.requires_grad]
-    if not trainable or any(not n.startswith('action_model.') for n, _ in trainable):
-        raise RuntimeError('Unexpected trainable parameter set')
+    model.action_model.float()
+    trainable, frozen = configure_action_scope(model, a.train_scope)
     frozen_before = digest(frozen)
     action_before = digest(model.action_model.named_parameters())
     optimizer = torch.optim.AdamW([p for _, p in trainable], lr=a.lr,
                                  weight_decay=a.weight_decay, foreach=False)
-    val_ds = EpisodeFrames(datasets, val_entries, a.seed, epoch=-1)
+    atomic_json(out/'parameter_manifest.json', dict(trainable=[dict(name=n,shape=list(p.shape),numel=p.numel())
+        for n,p in trainable], frozen=[dict(name=n,shape=list(p.shape),numel=p.numel()) for n,p in frozen]))
+    val_ds = EpisodeFrames(datasets, val_entries, a.seed, epoch=-1, phase_tags=phase_tags)
     epoch, batch_position, iterator = 0, 0, None
     train_ds = None
 
@@ -409,9 +443,15 @@ def main():
         nonlocal epoch, batch_position, iterator, train_ds
         while True:
             if iterator is None:
-                train_ds = EpisodeFrames(datasets, train_entries, a.seed, epoch)
+                entries, sources = train_entries, None
+                if a.sampling_mode != 'legacy':
+                    quantum = math.lcm(4, a.batch_size)
+                    n = math.ceil(len(train_entries)/quantum)*quantum
+                    order, sources = draw_schedule(pools, a.sampling_mode, n, stable_seed(a.seed, 'order', epoch))
+                    entries = [train_entries[i] for i in order]
+                train_ds = EpisodeFrames(datasets, entries, a.seed, epoch, phase_tags, sources)
                 generator = torch.Generator().manual_seed(stable_seed(a.seed, 'order', epoch))
-                loader = DataLoader(train_ds, batch_size=a.batch_size, shuffle=True, generator=generator,
+                loader = DataLoader(train_ds, batch_size=a.batch_size, shuffle=(sources is None), generator=generator,
                     num_workers=a.workers, collate_fn=collate_fn, persistent_workers=False, drop_last=True)
                 iterator = iter(loader)
                 batch_position = 0
@@ -425,15 +465,22 @@ def main():
 
     metadata = dict(upstream_commit=commit, split_sha256=split_hash,
         train_scope=a.train_scope,
-        base_checkpoint=str(Path(a.ckpt).resolve()), trainable_parameters=sum(p.numel() for _, p in trainable),
+        base_checkpoint=os.path.abspath(a.ckpt), trainable_parameters=sum(p.numel() for _, p in trainable),
         frozen_sha256=frozen_before, seed=a.seed, validation_scope='hindsight-goal flow matching loss')
+    metadata.update(checkpoint_format=a.checkpoint_format, sampling_mode=a.sampling_mode,
+        selection_mode=a.selection_mode, normal_loss_tolerance=a.normal_loss_tolerance)
+    if phase_tags is not None:
+        metadata['phase_manifest_sha256'] = hashlib.sha256((out/'phase_manifest.json').read_bytes()).hexdigest()
+    if a.checkpoint_format == 'action':
+        metadata['base_fingerprint'] = base_fingerprint(a.ckpt)
     log(out, dict(event='start', total_parameters=sum(p.numel() for p in model.parameters()),
                   train_windows=len(train_entries), val_windows=len(val_entries), **metadata))
     parity = verify_feature_parity(model, [val_ds[0]])
     log(out, dict(event='official_feature_parity', **parity))
     baseline = validate(model, val_ds, a)
     log(out, dict(event='validation', step=0, **baseline, **mem()))
-    best = .5 * (baseline['clean_fm_loss'] + baseline['corrupt_fm_loss'])
+    best = 1. if a.selection_mode == 'phases' else .5 * (baseline['clean_fm_loss'] + baseline['corrupt_fm_loss'])
+    best_step = 0
     # Best starts at the unmodified base, so a failed adaptation does not silently
     # replace the baseline with a worse checkpoint. Last always contains final updates.
     save_checkpoint(model, out, 0, 'best', dict(selection_score=best, **metadata))
@@ -442,12 +489,15 @@ def main():
     for step in range(1, a.max_steps + 1):
         torch.cuda.synchronize()
         start = time.perf_counter()
-        model.eval()
-        model.action_model.train()
+        set_action_training_modes(model, a.train_scope)
         optimizer.zero_grad(set_to_none=True)
         losses = []
+        sample_sources = []
+        window_ids = []
         for micro in range(a.grad_accum):
             batch = next_batch()
+            sample_sources.extend(e['_sampling_source'] for e in batch)
+            window_ids.extend(e['_window_id'] for e in batch)
             batch = [augment_sample(e, np.random.default_rng(stable_seed(a.seed, step, micro, j)),
                 a.aug_prob, a.brightness, a.saturation, a.color_gain) for j, e in enumerate(batch)]
             loss = action_loss(model, batch, train=True)
@@ -467,6 +517,8 @@ def main():
         torch.cuda.synchronize()
         log(out, dict(event='train', step=step, epoch=epoch, batch_position=batch_position,
             action_fm_loss=float(np.mean(losses)), grad_norm=norm.item(), lr=lr,
+            sampling_source_counts={name:sample_sources.count(name) for name in set(sample_sources)},
+            window_ids=window_ids,
             seconds=time.perf_counter() - start, **mem()))
         if first_check:
             if digest(frozen) != frozen_before or digest(model.action_model.named_parameters()) == action_before:
@@ -476,16 +528,21 @@ def main():
         if step % a.eval_every == 0 or step == a.max_steps:
             scores = validate(model, val_ds, a)
             log(out, dict(event='validation', step=step, **scores, **mem()))
-            score = .5 * (scores['clean_fm_loss'] + scores['corrupt_fm_loss'])
-            if score < best:
+            if a.selection_mode == 'phases':
+                score, eligible = phase_selection(scores, baseline, a.normal_loss_tolerance)
+            else:
+                score, eligible = .5 * (scores['clean_fm_loss'] + scores['corrupt_fm_loss']), True
+            log(out, dict(event='selection', step=step, selection_score=score, eligible=eligible))
+            if eligible and score < best:
                 best = score
+                best_step = step
                 save_checkpoint(model, out, step, 'best', dict(selection_score=score, **metadata))
         if step % a.save_every == 0:
             save_checkpoint(model, out, step, f'step_{step:06d}', metadata)
     if digest(frozen) != frozen_before:
         raise RuntimeError('Frozen parameters changed during training')
     save_checkpoint(model, out, a.max_steps, 'last', metadata)
-    atomic_json(out / 'summary.json', dict(completed_steps=a.max_steps, best_selection_score=best,
+    atomic_json(out / 'summary.json', dict(completed_steps=a.max_steps, best_selection_score=best, best_step=best_step,
         frozen_unchanged=True, **metadata, **mem()))
 
 

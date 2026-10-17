@@ -1,0 +1,146 @@
+{
+  "protocol_sha256": "22b23b3cc4637827857eb0a97d6a9e0f01821c750530033bcfe38e68ab8eef6f",
+  "unique_initial_states": 20,
+  "episodes": 120,
+  "results": {
+    "base": {
+      "clean": {
+        "successes": 20,
+        "episodes": 20
+      },
+      "color_strong": {
+        "successes": 15,
+        "episodes": 20
+      }
+    },
+    "clean": {
+      "clean": {
+        "successes": 20,
+        "episodes": 20
+      },
+      "color_strong": {
+        "successes": 16,
+        "episodes": 20
+      }
+    },
+    "aug": {
+      "clean": {
+        "successes": 19,
+        "episodes": 20
+      },
+      "color_strong": {
+        "successes": 15,
+        "episodes": 20
+      }
+    }
+  },
+  "paired": {
+    "clean": {
+      "clean_vs_base": {
+        "episodes": 20,
+        "recovered": 0,
+        "regressed": 0,
+        "success_delta_pp": 0.0
+      },
+      "aug_vs_base": {
+        "episodes": 20,
+        "recovered": 0,
+        "regressed": 1,
+        "success_delta_pp": -5.0
+      },
+      "aug_vs_clean": {
+        "episodes": 20,
+        "recovered": 0,
+        "regressed": 1,
+        "success_delta_pp": -5.0
+      }
+    },
+    "color_strong": {
+      "clean_vs_base": {
+        "episodes": 20,
+        "recovered": 1,
+        "regressed": 0,
+        "success_delta_pp": 5.0
+      },
+      "aug_vs_base": {
+        "episodes": 20,
+        "recovered": 1,
+        "regressed": 1,
+        "success_delta_pp": 0.0
+      },
+      "aug_vs_clean": {
+        "episodes": 20,
+        "recovered": 0,
+        "regressed": 1,
+        "success_delta_pp": -5.0
+      }
+    }
+  },
+  "paired_cases": {
+    "clean": {
+      "clean_vs_base": {
+        "recovered": [],
+        "regressed": []
+      },
+      "aug_vs_base": {
+        "recovered": [],
+        "regressed": [
+          39
+        ]
+      },
+      "aug_vs_clean": {
+        "recovered": [],
+        "regressed": [
+          39
+        ]
+      }
+    },
+    "color_strong": {
+      "clean_vs_base": {
+        "recovered": [
+          26
+        ],
+        "regressed": []
+      },
+      "aug_vs_base": {
+        "recovered": [
+          26
+        ],
+        "regressed": [
+          32
+        ]
+      },
+      "aug_vs_clean": {
+        "recovered": [],
+        "regressed": [
+          32
+        ]
+      }
+    }
+  },
+  "resources": {
+    "base": {
+      "queries": 544,
+      "peak_allocated_gib": 3.450803756713867,
+      "peak_reserved_gib": 3.478515625,
+      "median_request_seconds": 0.16287544928491116,
+      "goal_refresh_median_seconds": 0.9419549126178026
+    },
+    "clean": {
+      "queries": 524,
+      "peak_allocated_gib": 3.450803756713867,
+      "peak_reserved_gib": 3.478515625,
+      "median_request_seconds": 0.16043784655630589,
+      "goal_refresh_median_seconds": 0.9242113158106804
+    },
+    "aug": {
+      "queries": 563,
+      "peak_allocated_gib": 3.450803756713867,
+      "peak_reserved_gib": 3.478515625,
+      "median_request_seconds": 0.1618831418454647,
+      "goal_refresh_median_seconds": 0.9343197233974934
+    }
+  },
+  "scope": "One pretrained LIBERO goal task; visual OOD test. Synchronous inference, not hardware real-time.",
+  "example_selection": "Initial state 25 was selected before held-out results; failures run to 300-step cap."
+}

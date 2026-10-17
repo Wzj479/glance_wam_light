@@ -1,0 +1,43 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python /root/wam_sim_env/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+/root/wam_sim_env/lib/python3.10/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+  ParserElement.enablePackrat()
+WARNING:matplotlib.style.core:In /root/wam_sim_env/lib/python3.10/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'parseString' deprecated - use 'parse_string'
+WARNING:matplotlib.style.core:In /root/wam_sim_env/lib/python3.10/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'
+/root/autodl-tmp/wam_glance_project/LIBERO/libero/libero/benchmark/__init__.py:164: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  init_states = torch.load(init_states_path)
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+10/16 [11:34:48] INFO     | >> Waiting for server  websocket_policy_client.py:38
+                          at                                                    
+                          ws://127.0.0.1:6694...                                
+*** policy_setup: franka, unnorm_key: None ***
+                 INFO     | >> [*] Loading from local         share_tools.py:432
+                          checkpoint path                                       
+                          `/root/autodl-tmp/wam_glance_projec                   
+                          t/GlanceWAM/results/day1_base/check                   
+                          points/steps_15000_pytorch_model_em                   
+                          a.pt`                                                 
+                 INFO     | >> [*]  normalised config from    share_tools.py:584
+                          version_id=None to '0.21'                             
+                 INFO     | >> [*] Loading from local         share_tools.py:432
+                          checkpoint path                                       
+                          `/root/autodl-tmp/wam_glance_projec                   
+                          t/GlanceWAM/results/day1_base/check                   
+                          points/steps_15000_pytorch_model_em                   
+                          a.pt`                                                 
+                 INFO     | >> [*]  normalised config from    share_tools.py:584
+                          version_id=None to '0.21'                             
+                 INFO     | >> [*] Loading from local         share_tools.py:432
+                          checkpoint path                                       
+                          `/root/autodl-tmp/wam_glance_projec                   
+                          t/GlanceWAM/results/day1_base/check                   
+                          points/steps_15000_pytorch_model_em                   
+                          a.pt`                                                 
+                 INFO     | >> [*]  normalised config from    share_tools.py:584
+                          version_id=None to '0.21'                             
+*** goal cadence ON: goal_horizon_rows=48.0 ***
+{"task_id": 8, "episode_id": 9, "env_seed": 541358938, "instruction": "put the bowl on the plate", "task_name": "put_the_bowl_on_the_plate", "condition": "clean", "success": true, "init_state_sha256": "511083ce2369f1adead2b041ca54f270b1d7fd989c35df019d252af75bed6ece", "post_settle_state_sha256": "53228301183f3563b19097447671639f9cdb4d2ca037490a8b34100868b28b37", "steps": 78, "seconds": 13.220288049429655, "query_times": [{"step": 0, "refresh": true, "seconds": 5.917828664183617}, {"step": 8, "refresh": false, "seconds": 0.16420075669884682}, {"step": 16, "refresh": false, "seconds": 0.18513833731412888}, {"step": 24, "refresh": false, "seconds": 0.18553727120161057}, {"step": 32, "refresh": false, "seconds": 0.17551029473543167}, {"step": 40, "refresh": false, "seconds": 0.17688393592834473}, {"step": 48, "refresh": true, "seconds": 1.0221100747585297}, {"step": 56, "refresh": false, "seconds": 0.17732812464237213}, {"step": 64, "refresh": false, "seconds": 0.18544089049100876}, {"step": 72, "refresh": false, "seconds": 0.18075202405452728}], "video_frames": 79, "video_fps": 20, "video_time_base": "simulation", "video_layout": "rows: primary/wrist; columns: original/observed"}

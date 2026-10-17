@@ -11,6 +11,9 @@ checkpoints/
 *.zip
 *.part
 *.log
+# Run logs under results/ are the primary evidence for training and serving,
+# and publication_manifest.json covers them, so they stay tracked.
+!results/**/*.log
 .env
 .env.*
 *.pem

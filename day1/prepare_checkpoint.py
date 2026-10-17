@@ -12,6 +12,8 @@ def main():
     p.add_argument('--bundle', default='glancewam_bundle')
     p.add_argument('--base-model', default='models/skyreels-base')
     p.add_argument('--output', default='results/day1_base')
+    p.add_argument('--data-mix', default='libero_goal',
+                   help='Use only the downloaded suite for the first GPU validation')
     a = p.parse_args()
     bundle = Path(a.bundle).resolve()
     source = bundle / 'checkpoints/glancewam_libero'
@@ -28,6 +30,7 @@ def main():
     cfg.framework.world_model.skip_text_encoder = True
     cfg.framework.world_model.resident_text_table = True
     cfg.datasets.vla_data.data_root_dir = str(bundle / 'datasets')
+    cfg.datasets.vla_data.data_mix = a.data_mix
     cfg.datasets.vla_data.camera_concat = cfg.framework.world_model.camera_concat
     cfg.datasets.vla_data.include_state = False
     cfg.datasets.vla_data.per_device_batch_size = 1

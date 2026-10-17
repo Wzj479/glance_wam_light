@@ -1,0 +1,74 @@
+{
+  "training_started": false,
+  "model_forward_executed": false,
+  "optimizer_constructed": false,
+  "c_p_split_identical": true,
+  "c_p_phase_manifest_identical": true,
+  "train_windows": 766,
+  "validation_windows": 26,
+  "train_pool_counts": {
+    "uniform": 766,
+    "grasp": 264,
+    "place": 258
+  },
+  "validation_phase_counts": {
+    "grasp": 8,
+    "place": 8
+  },
+  "sample_action_shape": [
+    8,
+    7
+  ],
+  "sample_image_slots": 3,
+  "checkpoint_normalization": {
+    "train_episode_ids": [
+      0,
+      43,
+      47,
+      54,
+      68,
+      69,
+      80,
+      87
+    ],
+    "val_episode_ids": [
+      52,
+      72
+    ],
+    "train_frames": 766,
+    "val_frames": 26,
+    "action_normalization_source": "checkpoint.franka.action",
+    "action_min": [
+      -0.9375,
+      -0.9375,
+      -0.9375,
+      -0.2582142949104309,
+      -0.375,
+      -0.3675000071525574,
+      0.0
+    ],
+    "action_max": [
+      0.9375,
+      0.9375,
+      0.9375,
+      0.3557142913341522,
+      0.375,
+      0.375,
+      1.0
+    ],
+    "action_mask": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false
+    ]
+  },
+  "trainable_parameters": 29392903,
+  "action_state_bytes": 595559452,
+  "loss": "Unmodified upstream seven-dimensional joint FM MSE; no extra channel/phase multiplier",
+  "loss_selection": "Macro normalized clean grasp/place FM, clean global <= 1.05x step0, strict improvement over step0",
+  "phase_manifest_sha256": "bec5745a0c2b36b8ad55a8c4a4e7633b1af484aedce6e57d52f7e60bf321c882"
+}

@@ -1,0 +1,5 @@
+model	condition	successes	episodes	rate	delta_pp_vs_base
+base	clean	5	5	1.000	0.00
+base	dark_050	5	5	1.000	0.00
+base	dark_035	5	5	1.000	0.00
+base	color_strong	2	5	0.400	0.00

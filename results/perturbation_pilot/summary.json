@@ -1,0 +1,69 @@
+{
+  "protocol_sha256": "7d5c687d33d341f4e7b9839d58ea91b9a19d15a2c31cd13c36cecd5ad76ecdfa",
+  "rows": [
+    {
+      "model": "base",
+      "condition": "clean",
+      "successes": 5,
+      "episodes": 5,
+      "success_rate": 1.0,
+      "recovered": 0,
+      "regressed": 0,
+      "success_delta_pp": 0.0,
+      "per_task": {
+        "8": {
+          "successes": 5,
+          "episodes": 5
+        }
+      }
+    },
+    {
+      "model": "base",
+      "condition": "dark_050",
+      "successes": 5,
+      "episodes": 5,
+      "success_rate": 1.0,
+      "recovered": 0,
+      "regressed": 0,
+      "success_delta_pp": 0.0,
+      "per_task": {
+        "8": {
+          "successes": 5,
+          "episodes": 5
+        }
+      }
+    },
+    {
+      "model": "base",
+      "condition": "dark_035",
+      "successes": 5,
+      "episodes": 5,
+      "success_rate": 1.0,
+      "recovered": 0,
+      "regressed": 0,
+      "success_delta_pp": 0.0,
+      "per_task": {
+        "8": {
+          "successes": 5,
+          "episodes": 5
+        }
+      }
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "successes": 2,
+      "episodes": 5,
+      "success_rate": 0.4,
+      "recovered": 0,
+      "regressed": 0,
+      "success_delta_pp": 0.0,
+      "per_task": {
+        "8": {
+          "successes": 2,
+          "episodes": 5
+        }
+      }
+    }
+  ]
+}

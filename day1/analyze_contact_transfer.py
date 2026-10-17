@@ -66,6 +66,13 @@ def contact_regions(flags):
     return int(np.count_nonzero(flags[1:] & ~flags[:-1]) + (1 if flags[0] else 0))
 
 
+def contact_tail(flags):
+    """Last contact plus the trailing contact-free run. Positive-run lengths do
+    not depend on where the first gap fell, so they survive chattering."""
+    idx = np.flatnonzero(flags)
+    return (int(idx.min()), int(idx.max()), len(flags) - 1 - int(idx.max())) if len(idx) else (None, None, None)
+
+
 def analyze(path):
     rows = read_states(path)
     offsets = eef_relative_offset(rows)
@@ -77,17 +84,18 @@ def analyze(path):
     any_pad = column(rows, 'left_pad_contact') | column(rows, 'right_pad_contact')
     lift = np.asarray([float(row['bowl_z']) for row in rows])
     lift = (lift - lift[0]) * 1000
+    pad_first, pad_last, pad_gap_tail = contact_tail(any_pad)
+    both_first, both_last, both_gap_tail = contact_tail(both_pads)
     metrics = dict(trace=str(path.parent), states=len(rows), model=path.parent.name,
                    max_lift_mm=float(lift.max()),
                    max_relative_slip_mm=float(slip.max()),
                    mean_relative_slip_mm=float(slip.mean()),
                    max_relative_slip_state=int(np.argmax(slip)),
-                   first_any_pad_contact_state=first_true(any_pad),
-                   last_any_pad_contact_state=int(np.flatnonzero(any_pad)[-1]) if np.any(any_pad) else None,
+                   first_any_pad_contact_state=pad_first, last_any_pad_contact_state=pad_last,
+                   trailing_contact_free_states_after_pad=pad_gap_tail,
                    states_with_any_pad_contact=int(any_pad.sum()),
                    any_pad_contact_regions=contact_regions(any_pad),
-                   first_both_pad_contact_state=first_true(both_pads),
-                   last_both_pad_contact_state=int(np.flatnonzero(both_pads)[-1]) if np.any(both_pads) else None,
+                   first_both_pad_contact_state=both_first, last_both_pad_contact_state=both_last,
                    states_with_both_pad_contact=int(both_pads.sum()),
                    both_pad_contact_regions=contact_regions(both_pads),
                    first_both_pad_contact_gap_state=first_falling_edge(both_pads))
@@ -127,17 +135,23 @@ def analyze(path):
 
     any_finger = column(rows, 'any_finger_contact')
     non_pad_only = column(rows, 'finger_contact_without_both_pads')
-    release = first_falling_edge(any_finger)
+    finger_first, finger_last, finger_gap_tail = contact_tail(any_finger)
     metrics.update(states_with_any_finger_contact=int(any_finger.sum()),
                    states_finger_contact_without_both_pads=int(non_pad_only.sum()),
                    first_finger_contact_without_both_pads_state=first_true(non_pad_only),
-                   first_all_finger_contact_loss_state=release,
+                   first_any_finger_contact_state=finger_first, last_any_finger_contact_state=finger_last,
+                   trailing_contact_free_states_after_finger=finger_gap_tail,
                    any_finger_contact_regions=contact_regions(any_finger))
+    # A held bowl travels with the gripper; an abandoned one stays behind. Both
+    # the lift reached by the last contact state and the contact-free tail are
+    # free of the chattering that makes first-edge times unusable.
+    lifted = np.flatnonzero(lift > 20)
+    metrics['lift_at_last_finger_contact_mm'] = float(lift[finger_last]) if finger_last is not None else None
+    metrics['reached_20mm_lift_before_last_finger_contact'] = (
+        bool(len(lifted) and int(lifted[0]) <= finger_last) if finger_last is not None else None)
     if gap is not None:
         metrics['finger_contact_at_first_both_pad_gap'] = bool(any_finger[gap])
         metrics['finger_body_contact_kept_after_pad_gap'] = bool(any_finger[gap:].any())
-    if release is not None:
-        metrics['finger_contact_ends_before_last_state'] = release < len(rows) - 1
     return metrics
 
 
@@ -162,8 +176,10 @@ def main():
     columns = ['model', 'states', 'first_any_pad_contact_state', 'last_any_pad_contact_state',
                'states_with_any_pad_contact', 'any_pad_contact_regions',
                'states_with_both_pad_contact', 'both_pad_contact_regions',
-               'first_both_pad_contact_gap_state', 'window_states_with_both_pad_contact',
-               'first_finger_contact_without_both_pads_state', 'first_all_finger_contact_loss_state',
+               'first_both_pad_contact_gap_state',
+               'first_any_finger_contact_state', 'last_any_finger_contact_state',
+               'trailing_contact_free_states_after_finger', 'any_finger_contact_regions',
+               'lift_at_last_finger_contact_mm', 'reached_20mm_lift_before_last_finger_contact',
                'window_max_relative_slip_mm', 'window_mean_relative_slip_mm',
                'max_relative_slip_mm', 'mean_relative_slip_mm', 'max_lift_mm',
                'finger_contact_columns_present']
@@ -174,7 +190,7 @@ def main():
     print(out.with_suffix('.csv').read_text(encoding='utf-8'))
 
     if args.figure:
-        figure, panels = plt.subplots(3, 1, figsize=(11, 10), sharex=True)
+        figure, panels = plt.subplots(4, 1, figsize=(11, 13), sharex=True)
         for entry, name in zip(metrics, args.replay):
             rows = read_states(Path(name) / 'states.csv')
             offsets = eef_relative_offset(rows)
@@ -183,24 +199,27 @@ def main():
             steps = np.arange(len(rows))
             pads = column(rows, 'left_pad_contact').astype(int) + column(rows, 'right_pad_contact').astype(int)
             line, = panels[0].step(steps, pads, where='post', label=entry['model'])
-            panels[1].plot(steps, np.linalg.norm(offsets, axis=1) * 1000, color=line.get_color(), label=entry['model'])
-            panels[2].plot(steps, slip, color=line.get_color(), label=entry['model'])
-            if entry['first_both_pad_contact_gap_state'] is not None:
-                for panel in panels:
-                    panel.axvline(entry['first_both_pad_contact_gap_state'], color=line.get_color(), ls=':', lw=.8)
+            finger = column(rows, 'any_finger_contact')
+            if finger is not None:
+                panels[1].step(steps, finger.astype(int), where='post', color=line.get_color(), label=entry['model'])
+            else:
+                panels[1].step(steps, (pads > 0).astype(int), where='post', color=line.get_color(), ls='--',
+                               label=f"{entry['model']} (pads only)")
+            panels[2].plot(steps, np.linalg.norm(offsets, axis=1) * 1000, color=line.get_color(), label=entry['model'])
+            panels[3].plot(steps, slip, color=line.get_color(), label=entry['model'])
         for panel, title, ylabel in zip(panels,
                 ['Contacting fingerpad groups (0/1/2)',
+                 'Any finger-body contact with the bowl (0/1)',
                  'Bowl origin offset from EEF (mm)',
                  'Relative slip per step, EEF frame (mm)'],
-                ['count', 'mm', 'mm']):
+                ['count', 'flag', 'mm', 'mm']):
             panel.set(title=title, ylabel=ylabel)
             panel.grid(alpha=.2)
-        panels[2].set_xlabel('State/action index (20Hz)')
+        panels[3].set_xlabel('State/action index (20Hz)')
         panels[0].set_yticks([0, 1, 2])
-        panels[2].set_yscale('symlog')
+        panels[3].set_yscale('symlog')
         panels[0].legend(fontsize=8, loc='lower left')
-        panels[0].text(.01, .04, 'Dotted vertical: first lost fingerpad pair, which later returns',
-                          transform=panels[0].transAxes, fontsize=8)
+        panels[1].legend(fontsize=8, loc='lower left')
         figure.suptitle(args.title)
         figure.savefig(args.figure, dpi=140, bbox_inches='tight')
         plt.close(figure)

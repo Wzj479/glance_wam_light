@@ -1,0 +1,14 @@
+{
+  "model": "base",
+  "condition": "clean",
+  "episode_id": 39,
+  "steps": 73,
+  "original_success": true,
+  "replayed_success": true,
+  "first_success_state_step": 73,
+  "settled_sha256": "312c486d567f264fb229dbb7733f431a1b85c0732478cef28ca00ba58ad8218d",
+  "actions_file_sha256": "c8ffd099e529cc1d1819362222ed3181be58c35d2d20540026e271294d49a72e",
+  "terminal_original_video_mae": null,
+  "trace_directory": "results/failure_replay_39_32_contact/clean_episode39/base",
+  "physics_only": true
+}

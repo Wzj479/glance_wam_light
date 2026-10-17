@@ -1,6 +1,6 @@
 [
   {
-    "trace": "results/failure_replay_39_32/clean_episode39/base",
+    "trace": "results/failure_replay_39_32_contact/clean_episode39/base",
     "states": 74,
     "model": "base",
     "max_lift_mm": 110.12098468262299,
@@ -9,6 +9,7 @@
     "max_relative_slip_state": 16,
     "first_any_pad_contact_state": 44,
     "last_any_pad_contact_state": 73,
+    "trailing_contact_free_states_after_pad": 0,
     "states_with_any_pad_contact": 30,
     "any_pad_contact_regions": 1,
     "first_both_pad_contact_state": 68,
@@ -16,6 +17,7 @@
     "states_with_both_pad_contact": 6,
     "both_pad_contact_regions": 1,
     "first_both_pad_contact_gap_state": null,
+    "logged_world_frame_max_relative_slip_mm": 12.759882816969288,
     "both_pad_contact_is_adequate_grasp_proxy": true,
     "window_states": 74,
     "window_max_relative_slip_mm": 12.723907181069869,
@@ -23,17 +25,19 @@
     "window_max_lift_mm": 110.12098468262299,
     "window_states_with_any_pad_contact": 30,
     "window_states_with_both_pad_contact": 6,
-    "finger_contact_columns_present": false,
-    "finger_contact_columns_missing": [
-      "left_finger_contact",
-      "right_finger_contact",
-      "any_finger_contact",
-      "finger_contact_without_both_pads"
-    ],
-    "finger_contact_interpretation": "This replay predates finger-level logging, so contact with the non-pad finger geometry cannot be read here. A lost fingerpad pair therefore cannot be called an object release from these columns alone."
+    "finger_contact_columns_present": true,
+    "states_with_any_finger_contact": 31,
+    "states_finger_contact_without_both_pads": 25,
+    "first_finger_contact_without_both_pads_state": 43,
+    "first_any_finger_contact_state": 43,
+    "last_any_finger_contact_state": 73,
+    "trailing_contact_free_states_after_finger": 0,
+    "any_finger_contact_regions": 1,
+    "lift_at_last_finger_contact_mm": 7.519807942389711,
+    "reached_20mm_lift_before_last_finger_contact": true
   },
   {
-    "trace": "results/failure_replay_39_32/clean_episode39/clean",
+    "trace": "results/failure_replay_39_32_contact/clean_episode39/clean",
     "states": 190,
     "model": "clean",
     "max_lift_mm": 63.794594651698674,
@@ -42,6 +46,7 @@
     "max_relative_slip_state": 56,
     "first_any_pad_contact_state": 44,
     "last_any_pad_contact_state": 189,
+    "trailing_contact_free_states_after_pad": 0,
     "states_with_any_pad_contact": 45,
     "any_pad_contact_regions": 7,
     "first_both_pad_contact_state": 128,
@@ -49,6 +54,7 @@
     "states_with_both_pad_contact": 20,
     "both_pad_contact_regions": 4,
     "first_both_pad_contact_gap_state": 131,
+    "logged_world_frame_max_relative_slip_mm": 39.1770893936118,
     "both_pad_contact_is_adequate_grasp_proxy": true,
     "window_states": 100,
     "window_max_relative_slip_mm": 39.208030348776916,
@@ -64,17 +70,21 @@
       "max_from_gap_on_mm": 7.096439083596286,
       "both_pad_contact_resumed_at_state": 38
     },
-    "finger_contact_columns_present": false,
-    "finger_contact_columns_missing": [
-      "left_finger_contact",
-      "right_finger_contact",
-      "any_finger_contact",
-      "finger_contact_without_both_pads"
-    ],
-    "finger_contact_interpretation": "This replay predates finger-level logging, so contact with the non-pad finger geometry cannot be read here. A lost fingerpad pair therefore cannot be called an object release from these columns alone."
+    "finger_contact_columns_present": true,
+    "states_with_any_finger_contact": 69,
+    "states_finger_contact_without_both_pads": 49,
+    "first_finger_contact_without_both_pads_state": 43,
+    "first_any_finger_contact_state": 43,
+    "last_any_finger_contact_state": 189,
+    "trailing_contact_free_states_after_finger": 0,
+    "any_finger_contact_regions": 6,
+    "lift_at_last_finger_contact_mm": 12.785607647590735,
+    "reached_20mm_lift_before_last_finger_contact": true,
+    "finger_contact_at_first_both_pad_gap": true,
+    "finger_body_contact_kept_after_pad_gap": true
   },
   {
-    "trace": "results/failure_replay_39_32/clean_episode39/aug",
+    "trace": "results/failure_replay_39_32_contact/clean_episode39/aug",
     "states": 301,
     "model": "aug",
     "max_lift_mm": 100.02670637423728,
@@ -83,6 +93,7 @@
     "max_relative_slip_state": 60,
     "first_any_pad_contact_state": 44,
     "last_any_pad_contact_state": 249,
+    "trailing_contact_free_states_after_pad": 51,
     "states_with_any_pad_contact": 16,
     "any_pad_contact_regions": 3,
     "first_both_pad_contact_state": null,
@@ -90,6 +101,7 @@
     "states_with_both_pad_contact": 0,
     "both_pad_contact_regions": 0,
     "first_both_pad_contact_gap_state": null,
+    "logged_world_frame_max_relative_slip_mm": 36.81830385696833,
     "both_pad_contact_is_adequate_grasp_proxy": false,
     "window_states": 100,
     "window_max_relative_slip_mm": 36.85206758360052,
@@ -97,17 +109,19 @@
     "window_max_lift_mm": 100.02670637423728,
     "window_states_with_any_pad_contact": 15,
     "window_states_with_both_pad_contact": 0,
-    "finger_contact_columns_present": false,
-    "finger_contact_columns_missing": [
-      "left_finger_contact",
-      "right_finger_contact",
-      "any_finger_contact",
-      "finger_contact_without_both_pads"
-    ],
-    "finger_contact_interpretation": "This replay predates finger-level logging, so contact with the non-pad finger geometry cannot be read here. A lost fingerpad pair therefore cannot be called an object release from these columns alone."
+    "finger_contact_columns_present": true,
+    "states_with_any_finger_contact": 23,
+    "states_finger_contact_without_both_pads": 23,
+    "first_finger_contact_without_both_pads_state": 43,
+    "first_any_finger_contact_state": 43,
+    "last_any_finger_contact_state": 249,
+    "trailing_contact_free_states_after_finger": 51,
+    "any_finger_contact_regions": 4,
+    "lift_at_last_finger_contact_mm": 17.068981716969468,
+    "reached_20mm_lift_before_last_finger_contact": true
   },
   {
-    "trace": "results/failure_replay_39_32/color_strong_episode32/base",
+    "trace": "results/failure_replay_39_32_contact/color_strong_episode32/base",
     "states": 79,
     "model": "base",
     "max_lift_mm": 93.72832889311344,
@@ -116,6 +130,7 @@
     "max_relative_slip_state": 78,
     "first_any_pad_contact_state": 44,
     "last_any_pad_contact_state": 77,
+    "trailing_contact_free_states_after_pad": 1,
     "states_with_any_pad_contact": 34,
     "any_pad_contact_regions": 1,
     "first_both_pad_contact_state": 45,
@@ -123,6 +138,7 @@
     "states_with_both_pad_contact": 32,
     "both_pad_contact_regions": 2,
     "first_both_pad_contact_gap_state": 47,
+    "logged_world_frame_max_relative_slip_mm": 12.122800972577679,
     "both_pad_contact_is_adequate_grasp_proxy": true,
     "window_states": 79,
     "window_max_relative_slip_mm": 12.130391412605988,
@@ -138,17 +154,21 @@
       "max_from_gap_on_mm": 12.130391412605988,
       "both_pad_contact_resumed_at_state": 1
     },
-    "finger_contact_columns_present": false,
-    "finger_contact_columns_missing": [
-      "left_finger_contact",
-      "right_finger_contact",
-      "any_finger_contact",
-      "finger_contact_without_both_pads"
-    ],
-    "finger_contact_interpretation": "This replay predates finger-level logging, so contact with the non-pad finger geometry cannot be read here. A lost fingerpad pair therefore cannot be called an object release from these columns alone."
+    "finger_contact_columns_present": true,
+    "states_with_any_finger_contact": 35,
+    "states_finger_contact_without_both_pads": 3,
+    "first_finger_contact_without_both_pads_state": 41,
+    "first_any_finger_contact_state": 41,
+    "last_any_finger_contact_state": 77,
+    "trailing_contact_free_states_after_finger": 1,
+    "any_finger_contact_regions": 2,
+    "lift_at_last_finger_contact_mm": 22.83168805037694,
+    "reached_20mm_lift_before_last_finger_contact": true,
+    "finger_contact_at_first_both_pad_gap": true,
+    "finger_body_contact_kept_after_pad_gap": true
   },
   {
-    "trace": "results/failure_replay_39_32/color_strong_episode32/clean",
+    "trace": "results/failure_replay_39_32_contact/color_strong_episode32/clean",
     "states": 80,
     "model": "clean",
     "max_lift_mm": 99.25867136893818,
@@ -157,6 +177,7 @@
     "max_relative_slip_state": 78,
     "first_any_pad_contact_state": 45,
     "last_any_pad_contact_state": 77,
+    "trailing_contact_free_states_after_pad": 2,
     "states_with_any_pad_contact": 33,
     "any_pad_contact_regions": 1,
     "first_both_pad_contact_state": 46,
@@ -164,6 +185,7 @@
     "states_with_both_pad_contact": 31,
     "both_pad_contact_regions": 2,
     "first_both_pad_contact_gap_state": 47,
+    "logged_world_frame_max_relative_slip_mm": 12.496926350551385,
     "both_pad_contact_is_adequate_grasp_proxy": true,
     "window_states": 80,
     "window_max_relative_slip_mm": 12.498917086100318,
@@ -179,17 +201,21 @@
       "max_from_gap_on_mm": 12.498917086100318,
       "both_pad_contact_resumed_at_state": 1
     },
-    "finger_contact_columns_present": false,
-    "finger_contact_columns_missing": [
-      "left_finger_contact",
-      "right_finger_contact",
-      "any_finger_contact",
-      "finger_contact_without_both_pads"
-    ],
-    "finger_contact_interpretation": "This replay predates finger-level logging, so contact with the non-pad finger geometry cannot be read here. A lost fingerpad pair therefore cannot be called an object release from these columns alone."
+    "finger_contact_columns_present": true,
+    "states_with_any_finger_contact": 36,
+    "states_finger_contact_without_both_pads": 5,
+    "first_finger_contact_without_both_pads_state": 41,
+    "first_any_finger_contact_state": 41,
+    "last_any_finger_contact_state": 77,
+    "trailing_contact_free_states_after_finger": 2,
+    "any_finger_contact_regions": 2,
+    "lift_at_last_finger_contact_mm": 23.411939083309296,
+    "reached_20mm_lift_before_last_finger_contact": true,
+    "finger_contact_at_first_both_pad_gap": true,
+    "finger_body_contact_kept_after_pad_gap": true
   },
   {
-    "trace": "results/failure_replay_39_32/color_strong_episode32/aug",
+    "trace": "results/failure_replay_39_32_contact/color_strong_episode32/aug",
     "states": 301,
     "model": "aug",
     "max_lift_mm": 102.31387849266294,
@@ -198,6 +224,7 @@
     "max_relative_slip_state": 81,
     "first_any_pad_contact_state": 45,
     "last_any_pad_contact_state": 298,
+    "trailing_contact_free_states_after_pad": 2,
     "states_with_any_pad_contact": 121,
     "any_pad_contact_regions": 13,
     "first_both_pad_contact_state": 45,
@@ -205,6 +232,7 @@
     "states_with_both_pad_contact": 33,
     "both_pad_contact_regions": 1,
     "first_both_pad_contact_gap_state": 78,
+    "logged_world_frame_max_relative_slip_mm": 44.96258037365501,
     "both_pad_contact_is_adequate_grasp_proxy": true,
     "window_states": 100,
     "window_max_relative_slip_mm": 44.99254369237649,
@@ -220,13 +248,17 @@
       "max_from_gap_on_mm": 44.99254369237649,
       "both_pad_contact_resumed_at_state": null
     },
-    "finger_contact_columns_present": false,
-    "finger_contact_columns_missing": [
-      "left_finger_contact",
-      "right_finger_contact",
-      "any_finger_contact",
-      "finger_contact_without_both_pads"
-    ],
-    "finger_contact_interpretation": "This replay predates finger-level logging, so contact with the non-pad finger geometry cannot be read here. A lost fingerpad pair therefore cannot be called an object release from these columns alone."
+    "finger_contact_columns_present": true,
+    "states_with_any_finger_contact": 191,
+    "states_finger_contact_without_both_pads": 158,
+    "first_finger_contact_without_both_pads_state": 41,
+    "first_any_finger_contact_state": 41,
+    "last_any_finger_contact_state": 300,
+    "trailing_contact_free_states_after_finger": 0,
+    "any_finger_contact_regions": 4,
+    "lift_at_last_finger_contact_mm": -1.215975467030117,
+    "reached_20mm_lift_before_last_finger_contact": true,
+    "finger_contact_at_first_both_pad_gap": true,
+    "finger_body_contact_kept_after_pad_gap": true
   }
 ]

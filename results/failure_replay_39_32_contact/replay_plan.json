@@ -1,0 +1,79 @@
+{
+  "source": "results/color_holdout",
+  "cases": [
+    [
+      "clean",
+      39
+    ],
+    [
+      "color_strong",
+      32
+    ]
+  ],
+  "models": [
+    "base",
+    "clean",
+    "aug"
+  ],
+  "protocol": {
+    "seed": 42,
+    "episode_ids": [
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "task_ids": [
+      8
+    ],
+    "conditions": {
+      "clean": {
+        "saturation": 1.0,
+        "brightness": 1.0,
+        "gains": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "color_strong": {
+        "saturation": 1.0,
+        "brightness": 1.0,
+        "gains": [
+          0.7,
+          1.0,
+          1.3
+        ]
+      }
+    },
+    "schema_version": 1,
+    "suite": "libero_goal"
+  },
+  "reserved_initial_states": [
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "physics_only": true,
+  "hold_close_inclusive": null,
+  "reference_replay": null,
+  "mode": "Saved actions only; no policy inference or training"
+}

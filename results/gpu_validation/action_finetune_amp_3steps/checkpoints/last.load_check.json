@@ -1,0 +1,8 @@
+{
+  "official_loader_passed": true,
+  "checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/gpu_validation/action_finetune_amp_3steps/checkpoints/last.pt",
+  "framework": "GlanceWAM",
+  "action_horizon": 8,
+  "action_sha256": "25dbcb99ae507af0fa2d8b96a33fde4a288291eef05cca765062e3c7d5634961",
+  "backbone_parameters": 1435525696
+}

@@ -1,0 +1,29 @@
+{
+  "step": 100,
+  "upstream_commit": "6a51bdc5139e72e8ad525779db0c989e1af5abab",
+  "split_sha256": "d83ea4c02905c34900bff187696e76f3416026d5c43ef21ca8999ed1b2818252",
+  "train_scope": "crossattn_decoder",
+  "base_checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt",
+  "trainable_parameters": 29392903,
+  "frozen_sha256": "be46a675026f53e780d7744692777245366e60f303067442042cf38590eac30c",
+  "seed": 42,
+  "validation_scope": "hindsight-goal flow matching loss",
+  "checkpoint_format": "glancewam_action_v1",
+  "sampling_mode": "phase",
+  "selection_mode": "phases",
+  "normal_loss_tolerance": 0.05,
+  "phase_manifest_sha256": "bec5745a0c2b36b8ad55a8c4a4e7633b1af484aedce6e57d52f7e60bf321c882",
+  "base_fingerprint": {
+    "path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt",
+    "sha256": "70e6cfe8085bf9cb5752eedcb5b128e0c527e396e67d58e5ad8282dc13329e11",
+    "config_sha256": "f3eb9d2ed066c75802f06d7531e9f39d3b7d04c9b3b4e0a596ddace877cd37e4",
+    "statistics_sha256": "553c1603b46983126318d467d2d6f1c93876cd531ba8ab3485005fb4b1fe75fe"
+  },
+  "checkpoint_sha256": "59e2be2587032ce5ef95c44e8203e69a9389ca1bd179c8ab040342869c0b349a",
+  "base": {
+    "path": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/day1_base/checkpoints/steps_15000_pytorch_model_ema.pt",
+    "sha256": "70e6cfe8085bf9cb5752eedcb5b128e0c527e396e67d58e5ad8282dc13329e11",
+    "config_sha256": "f3eb9d2ed066c75802f06d7531e9f39d3b7d04c9b3b4e0a596ddace877cd37e4",
+    "statistics_sha256": "553c1603b46983126318d467d2d6f1c93876cd531ba8ab3485005fb4b1fe75fe"
+  }
+}

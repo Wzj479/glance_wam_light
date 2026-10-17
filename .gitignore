@@ -7,9 +7,15 @@ LIBERO_CPU/
 LIBERO_CPU_DIAG/
 GlanceWAM/
 data/
-checkpoints/
+# Weights never enter this repository. Only checkpoint metadata JSON is
+# published, so the ignore rules target weight extensions rather than the
+# whole checkpoints/ directory.
 *.zip
 *.part
+*.pt
+*.pth
+*.safetensors
+*.ckpt
 *.log
 # Run logs under results/ are the primary evidence for training and serving,
 # and publication_manifest.json covers them, so they stay tracked.

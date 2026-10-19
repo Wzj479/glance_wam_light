@@ -10,6 +10,18 @@ CONDITIONS = {
 }
 MAX_STEPS = dict(libero_spatial=220, libero_object=280, libero_goal=300, libero_10=520)
 
+# Held back so a later evaluation can use them unexposed. Enforced in validate_protocol
+# so every entry point inherits it; recording the note in a JSON file is not enforcement.
+RESERVED_STATES = {('libero_goal', 8): frozenset(range(45, 50))}
+
+
+def reserved_states(protocol):
+    """Initial states this protocol may not touch, for the tasks it selects."""
+    held = set()
+    for task_id in protocol['task_ids']:
+        held |= RESERVED_STATES.get((protocol['suite'], task_id), frozenset())
+    return held
+
 
 def validate_protocol(p):
     if p.get('schema_version') != 1 or p.get('suite') not in MAX_STEPS:
@@ -18,6 +30,10 @@ def validate_protocol(p):
         values = p.get(key, [])
         if not values or len(set(values)) != len(values) or any(type(v) is not int or v < 0 for v in values):
             raise ValueError(f'Invalid {key}')
+    sealed = reserved_states(p)
+    clash = sealed.intersection(p['episode_ids'])
+    if clash:
+        raise ValueError(f'Initial states {sorted(clash)} are held back and must not be evaluated')
     if type(p.get('seed')) is not int or p['seed'] < 0:
         raise ValueError('Invalid seed')
     if not p.get('conditions'):

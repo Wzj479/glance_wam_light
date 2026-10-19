@@ -103,4 +103,15 @@ COMMON="--protocol day1/protocol_state33_color_strong.json --condition color_str
 
 滑移口径有一处刻意的差异需要记住：回放脚本日志列记的是世界系，`analyze_contact_transfer.py` 重算的是末端系，两者都被记录并在元数据中注明。闭环驱动跟随分析口径，使离线复核与闭环结果可直接比较；`test_slip_column_matches_the_frozen_analysis_convention` 锁定了这一点。
 
-结果解读受 [失败结构清单](../results/failure_structure/失败结构清单.md) 约束：状态 28、34、35、42 在两个实验族中均为三模型共有失败，属基座策略脆弱性，微调不在其中。状态 33 是全集中唯一与被评模型相关的失败，因此干预轮结果只能对照这一属性解读，不能推广到共有失败状态。若判定为搬运未恢复，第三段应同时覆盖 32 与 39（aug 特有）以判断特有失败是否同型。
+结果解读受 [失败结构清单](../results/failure_structure/失败结构清单.md) 约束：状态 28、34、35、42 在两个实验族中均为三模型共有失败，属基座策略脆弱性，微调不在其中。状态 33 是全集中唯一与被评模型相关的失败，因此干预轮结果只能对照这一属性解读，不能推广到共有失败状态。
+
+第三段的分流写成规格，判定完直接落规格，不需要临场决定：
+
+```bash
+.venv/bin/python day1/plan_stage3.py --verdict results/gf33_hold56_75/verdict.json \
+  --out results/gf33_hold56_75/stage3_plan.json
+```
+
+按搬运与放置两个轴分三条支路：`transported_and_placed` → 追问释放决策哪部分值得保留；`transported_not_placed` → 搬运恢复但放置仍坏，与 39/aug 同型，改攻放置阶段；`not_transported` → 约束在释放之前，改做可达性探针。任一前置条件不满足则输出 `branch=BLOCKED` 并以退出码 2 停止：零干预对照未复现存档、两个成功判据不一致、或窗口未真正覆写任何一步，都不允许进入第三段。
+
+封存初态的强制点在 `eval_protocol.validate_protocol`，`RESERVED_STATES` 声明 `(libero_goal, 8)` 保留 45–49。任务 8 实际有 50 个初态，所以 45–49 是可达的，仅把注记写进 JSON 不算强制；所有入口都经由该校验，五个归档协议复验全部通过。

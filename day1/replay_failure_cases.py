@@ -18,6 +18,7 @@ import imageio.v2 as imageio
 import numpy as np
 
 sys.path.insert(0,str(Path.cwd()))
+from eval_protocol import RESERVED_STATES, reserved_states, validate_protocol
 from examples.LIBERO.eval_files.eval_libero import LIBERO_DUMMY_ACTION, _get_libero_env, benchmark
 
 def sha(array):return hashlib.sha256(np.asarray(array).tobytes()).hexdigest()
@@ -39,18 +40,19 @@ def main():
     if out.exists():raise FileExistsError(out)
     out.mkdir(parents=True)
     protocol=json.loads((source/'protocol.json').read_text())
+    validate_protocol(protocol)
     cases=[(s.rsplit(':',1)[0],int(s.rsplit(':',1)[1])) for s in args.case] if args.case else [('clean',39),('color_strong',32)]
     if len(set(args.models))!=len(args.models) or not all(re.fullmatch('[A-Za-z][A-Za-z0-9_]*',m) for m in args.models):
         raise ValueError('Expected unique model directory names')
     assert protocol['task_ids']==[8]
     for condition,episode in cases:
         assert condition in protocol['conditions'] and episode in protocol['episode_ids']
-        assert episode not in range(45,50), 'States45-49 remain reserved'
+        assert episode not in reserved_states(protocol), 'Held-back states must not be replayed'
     if args.hold_close:
         assert args.physics_only and len(cases)==1 and len(args.models)==1 and args.reference_replay
         assert 0<=args.hold_close[0]<=args.hold_close[1]
     (out/'replay_plan.json').write_text(json.dumps(dict(source=str(source),cases=cases,models=args.models,
-        protocol=protocol,reserved_initial_states=list(range(45,50)),physics_only=args.physics_only,
+        protocol=protocol,reserved_initial_states=sorted(reserved_states(protocol)),physics_only=args.physics_only,
         hold_close_inclusive=args.hold_close,reference_replay=args.reference_replay,
         mode='Saved actions only; no policy inference or training'),indent=2))
     suite=benchmark.get_benchmark_dict()[protocol['suite']]()

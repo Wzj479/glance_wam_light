@@ -96,8 +96,8 @@
     "sha256": "e8093bf3125501c134bb529c37db7ee2b0f91cd3a992c6bdcb664b28c389a123"
   },
   "day1/eval_protocol.py": {
-    "bytes": 2727,
-    "sha256": "a183550da7992170920c283dcf8d5a8ce480e91846049b658ddfc14f2a553fa5"
+    "bytes": 3433,
+    "sha256": "2c02f0c9b171c2f5bfffe07b758898d413c6f492424ca00ed52728d0e1e56df0"
   },
   "day1/eval_robust_libero.py": {
     "bytes": 8385,
@@ -147,6 +147,10 @@
     "bytes": 2607,
     "sha256": "44f08325e29318ef5f2abc2f31193f1c24748570809c06487cb6511746c97484"
   },
+  "day1/plan_stage3.py": {
+    "bytes": 8113,
+    "sha256": "5f7d3468e01b6a1e0f26c19f12bc7023302dc90206082715f6a7e64b6a09792f"
+  },
   "day1/preflight.py": {
     "bytes": 1997,
     "sha256": "dea7104c3bbcfdd1ce3c25762f37d1e386c021699d8336e420c9bb01b9e12155"
@@ -172,8 +176,8 @@
     "sha256": "b4538452d15bbe0339dee3783b539942aee38b3c96ab96e418c186bdffe958c4"
   },
   "day1/replay_failure_cases.py": {
-    "bytes": 13504,
-    "sha256": "7fb53b4ca3f0aa25d68a1a4e2b79d9bd21880aa1b4cc7e859633a8ba10f1a629"
+    "bytes": 13652,
+    "sha256": "ed77ca8ca3d32900e9e2b7e54959997c60ddbafd611d584cc7b5bbcc45210d4e"
   },
   "day1/replay_matched_grasp_cpu.py": {
     "bytes": 8048,
@@ -255,9 +259,17 @@
     "bytes": 14574,
     "sha256": "79165d756556e66e4f729e614c1b2f89102d3b2c31f80eec935505cea327751c"
   },
+  "day1/test_reserved_states.py": {
+    "bytes": 2195,
+    "sha256": "5d687e2312db013b4670e159d66c218565b17cec83d90260898de057d723d9e7"
+  },
   "day1/test_robust_pipeline.py": {
     "bytes": 4790,
     "sha256": "6e3e735cf48bbe2eae0c82c34596bafcd0f755a010d4ba9692f2ca35dbcaa133"
+  },
+  "day1/test_stage3_plan.py": {
+    "bytes": 5490,
+    "sha256": "7070f403bb18275b92c4a263d6e116618794f02501aabc7ae7fa248f3100b4a1"
   },
   "day1/test_stage_recipe.py": {
     "bytes": 8839,
@@ -312,8 +324,8 @@
     "sha256": "91eba162c0aa4be23df3789a193a5b09ea64ac28133cdcab46e3bd093da4dddf"
   },
   "docs/REPRODUCE.md": {
-    "bytes": 8874,
-    "sha256": "f7e0927879d5726bc63e701308a0a4e0b290f9cd50151398297a6a39a4182295"
+    "bytes": 9793,
+    "sha256": "1ed1998607b1ae17d79bb30fcde2e8e23dee2e7855e61796625fceab1ae8d01a"
   },
   "docs/STAGE_FINETUNE.md": {
     "bytes": 9487,
@@ -2304,8 +2316,8 @@
     "sha256": "2a22602acc2b2eddaf412848bc61ea37aaea8eac6dab2c4ddd5e7f6c840fbdf4"
   },
   "results/failure_structure/SHA256SUMS.json": {
-    "bytes": 513,
-    "sha256": "7dd123fe6c27587949b06d2d4448da73be705ae54fbb1b9789b47e8529e43bdd"
+    "bytes": 710,
+    "sha256": "39af9c90a7d8b1dd8e03c572164334020e902130304c3dc009ee45f0538280b7"
   },
   "results/failure_structure/color_holdout.json": {
     "bytes": 45168,
@@ -2315,17 +2327,25 @@
     "bytes": 7134,
     "sha256": "bfbaf9a61decee1373edbaf4a898188afa7781658130d1ddd0fcdf23775b66d8"
   },
+  "results/failure_structure/sources/plan_stage3.py": {
+    "bytes": 8113,
+    "sha256": "5f7d3468e01b6a1e0f26c19f12bc7023302dc90206082715f6a7e64b6a09792f"
+  },
   "results/failure_structure/sources/test_failure_structure.py": {
     "bytes": 5317,
     "sha256": "4f2f1f17bc52dcc599fc6460bf2f888fb798c0d30f76f4bfa2d602c21a43c9e3"
+  },
+  "results/failure_structure/sources/test_stage3_plan.py": {
+    "bytes": 5490,
+    "sha256": "7070f403bb18275b92c4a263d6e116618794f02501aabc7ae7fa248f3100b4a1"
   },
   "results/failure_structure/stage_v1.json": {
     "bytes": 43855,
     "sha256": "10965f70932aa61f1ceb7c6e5d17dff28afec2c9c97dac6b74a2f12ed07b1938"
   },
   "results/failure_structure/失败结构清单.md": {
-    "bytes": 5809,
-    "sha256": "664508798c0b96078801c710f5a9084317cd7acbdfd6fed1554119455e4e7baf"
+    "bytes": 6080,
+    "sha256": "7cdf396be912bb3b3b0b2ffaa3caf38ffcefc82ff47a1a92366cae2b27b32555"
   },
   "results/gpu_validation/ALL_PASSED": {
     "bytes": 0,

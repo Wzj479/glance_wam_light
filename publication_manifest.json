@@ -328,8 +328,8 @@
     "sha256": "91eba162c0aa4be23df3789a193a5b09ea64ac28133cdcab46e3bd093da4dddf"
   },
   "docs/REPRODUCE.md": {
-    "bytes": 11987,
-    "sha256": "311d1ae437a588648be8f5cdea1f317b00c25d351f65e86d54b495701075c273"
+    "bytes": 12135,
+    "sha256": "f7bae674411c51254fe50007b34d204af334a1261d0dc2a53cd460acc3df8907"
   },
   "docs/STAGE_FINETUNE.md": {
     "bytes": 9487,
@@ -346,6 +346,10 @@
   "docs/test_validation.json": {
     "bytes": 409,
     "sha256": "972dbbdc0f0f79b4d5d068185e8a87466ebdc2e1812623ac95e5fe14c49cfbd7"
+  },
+  "docs/不可重建资产取回.md": {
+    "bytes": 4315,
+    "sha256": "d839f86bf030f5a6aea20a627bd551702b04c86a68ba6b1d4b26763cbe45b644"
   },
   "requirements-cpu-observed.txt": {
     "bytes": 406,

@@ -73,6 +73,8 @@ cpu_sim_env/bin/python day1/match_grasp_source.py \
 
 打包与校验（无 GPU，约 15 秒）：
 
+完整取回步骤与「为什么这台容器不能被直接拉取」的实测依据见 [不可重建资产取回](不可重建资产取回.md)。
+
 ```bash
 cd /root/autodl-tmp/wam_glance_project/GlanceWAM
 .venv/bin/python /root/autodl-tmp/wam_glance_project/glance_wam_light/day1/package_irreproducible_assets.py \

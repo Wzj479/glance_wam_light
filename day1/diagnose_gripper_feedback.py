@@ -136,7 +136,13 @@ def write_csv(path, rows):
 
 
 def state_record(step, obs, env, inner, bowl, plate, bid, pid, grip, offset, slip):
-    """One post-settle-indexed state: poses, contact groups, offset and slip."""
+    """One post-settle-indexed state: poses, contact groups, offset and slip.
+
+    The EEF quaternion is logged even though bowl_in_eef_* is already derived from
+    it, so analyze_contact_transfer.py can read this log unchanged. That keeps one
+    set of metric definitions for the offline replays and the closed-loop runs,
+    and the redundancy lets the rotation be cross-checked instead of trusted.
+    """
     bowl_pos = env.sim.data.body_xpos[bid].copy()
     plate_pos = env.sim.data.body_xpos[pid].copy()
     eef_pos = np.asarray(obs['robot0_eef_pos'], dtype=float)
@@ -149,6 +155,7 @@ def state_record(step, obs, env, inner, bowl, plate, bid, pid, grip, offset, sli
     above = bool(bowl_pos[2] >= plate_pos[2])
     return dict(state_step=int(step), time_s=step / 20,
                 **{f'eef_{a}': float(v) for a, v in zip('xyz', eef_pos)},
+                **{f'eef_q{a}': float(v) for a, v in zip('xyzw', np.asarray(obs['robot0_eef_quat'], dtype=float))},
                 **{f'bowl_{a}': float(v) for a, v in zip('xyz', bowl_pos)},
                 **{f'plate_{a}': float(v) for a, v in zip('xyz', plate_pos)},
                 finger_width_m=float(np.abs(np.asarray(obs['robot0_gripper_qpos'], dtype=float)).sum()),
@@ -316,7 +323,9 @@ def main():
                 success_predicate='bowl body z >= plate body z AND contact AND XY distance < 0.03 m',
                 grasp_proxy='Both fingerpad groups contact the bowl; not a stability guarantee',
                 contact_groups={name: grip.important_geoms[name] for name in FINGER_GROUPS},
-                slip_note='per-step change of the bowl offset from the EEF origin, world axes',
+                slip_note='per-step change of the bowl offset from the EEF origin, expressed in the EEF '
+                          'frame, matching the column analyze_contact_transfer.py recomputes so the '
+                          'closed-loop and offline metrics are directly comparable',
                 hold_close_inclusive=list(window) if window else None,
                 intervention_rule='only action[6] inside the window; the six arm channels are never modified',
                 post_window_rule='no gripper override and no added release gate after the window',

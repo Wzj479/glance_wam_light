@@ -90,3 +90,15 @@ COMMON="--protocol day1/protocol_state33_color_strong.json --condition color_str
 单回合协议 `day1/protocol_state33_color_strong.json` 由父协议推导而来。每回合输入只取决于 seed、suite、task、episode 与条件，与 episode 列表无关，因此该子集复现存档回合；其 env_seed 为 474245375，与存档一致。协议哈希有意不同，子集结果不与整批结果混放。
 
 两轮的判定顺序固定：先看第0步是否复现存档动作（未复现则停手并排查确定性），再在干预轮读动作块来源、覆写前夹爪输出、接触与位姿，按「搬运/对齐是否恢复」二分。45–49 保持封存。夹爪符号为 `+1` 闭、`-1` 开，与官方客户端二值化一致；写反符号会静默变成「保持张开」，因此 `override_gripper` 对非二值输入直接报错。
+
+判定在无 GPU 环境下执行，只读日志：
+
+```bash
+.venv/bin/python day1/analyze_gripper_feedback.py --run results/gf33_hold56_75 \
+  --control-run results/gf33_control \
+  --reference-actions $REF --out results/gf33_hold56_75/verdict.json
+```
+
+报告把搬运与放置分成两个轴：`verdict` 只回答干预是否让碗被搬起（越过 20mm 抬升标记时夹爪几何仍有接触），`outcome` 才把两者合并。**`transport_restored` 不等于成功**——39/aug 曾把碗抬起 100mm 仍然失败。`control.reproduced` 为 false 时，任何差异都不能归因于夹爪覆写。
+
+滑移口径有一处刻意的差异需要记住：回放脚本日志列记的是世界系，`analyze_contact_transfer.py` 重算的是末端系，两者都被记录并在元数据中注明。闭环驱动跟随分析口径，使离线复核与闭环结果可直接比较；`test_slip_column_matches_the_frozen_analysis_convention` 锁定了这一点。

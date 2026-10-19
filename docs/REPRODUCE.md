@@ -102,3 +102,5 @@ COMMON="--protocol day1/protocol_state33_color_strong.json --condition color_str
 报告把搬运与放置分成两个轴：`verdict` 只回答干预是否让碗被搬起（越过 20mm 抬升标记时夹爪几何仍有接触），`outcome` 才把两者合并。**`transport_restored` 不等于成功**——39/aug 曾把碗抬起 100mm 仍然失败。`control.reproduced` 为 false 时，任何差异都不能归因于夹爪覆写。
 
 滑移口径有一处刻意的差异需要记住：回放脚本日志列记的是世界系，`analyze_contact_transfer.py` 重算的是末端系，两者都被记录并在元数据中注明。闭环驱动跟随分析口径，使离线复核与闭环结果可直接比较；`test_slip_column_matches_the_frozen_analysis_convention` 锁定了这一点。
+
+结果解读受 [失败结构清单](../results/failure_structure/失败结构清单.md) 约束：状态 28、34、35、42 在两个实验族中均为三模型共有失败，属基座策略脆弱性，微调不在其中。状态 33 是全集中唯一与被评模型相关的失败，因此干预轮结果只能对照这一属性解读，不能推广到共有失败状态。若判定为搬运未恢复，第三段应同时覆盖 32 与 39（aug 特有）以判断特有失败是否同型。

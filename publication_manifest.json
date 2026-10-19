@@ -8,8 +8,8 @@
     "sha256": "d66d1e7d84b4f39cae9da6aa657646913b8316f691ffa9230fef147fdec8f51a"
   },
   "README.md": {
-    "bytes": 10797,
-    "sha256": "2b0f0289818f9ef78fdbda560fceb662295d35285f21b6ff61815489104309fb"
+    "bytes": 11538,
+    "sha256": "67392d50557810608273eded58fda3ed9d528fa74bd0c9b6057b09677c3607c3"
   },
   "day1/CPU控制测试说明.md": {
     "bytes": 8041,
@@ -123,6 +123,10 @@
     "bytes": 2262,
     "sha256": "9ce289609e7ab42f54e0501b82aac67ac431b286a0c352e6ffec8ffe09f1d18a"
   },
+  "day1/inventory_failure_structure.py": {
+    "bytes": 7134,
+    "sha256": "bfbaf9a61decee1373edbaf4a898188afa7781658130d1ddd0fcdf23775b66d8"
+  },
   "day1/make_eval_protocol.py": {
     "bytes": 1398,
     "sha256": "2873c36e71b10e6bbf1570d1882bd8824c115f2a361ff36b0ef2d4d59010cc39"
@@ -235,6 +239,10 @@
     "bytes": 2300,
     "sha256": "af99a5c0117912259be3b5932cea863977343211c289abf1a3d7b87a4b47c294"
   },
+  "day1/test_failure_structure.py": {
+    "bytes": 5317,
+    "sha256": "4f2f1f17bc52dcc599fc6460bf2f888fb798c0d30f76f4bfa2d602c21a43c9e3"
+  },
   "day1/test_finetune_utils.py": {
     "bytes": 6577,
     "sha256": "42be1fd715922df10b642f309640be5b39d313e43ef675850ff104983ed844f5"
@@ -304,8 +312,8 @@
     "sha256": "91eba162c0aa4be23df3789a193a5b09ea64ac28133cdcab46e3bd093da4dddf"
   },
   "docs/REPRODUCE.md": {
-    "bytes": 8383,
-    "sha256": "5955e2269c141925d67d02e4535ba47b3cb8d96a13298840d53a8ad5e122b56c"
+    "bytes": 8874,
+    "sha256": "f7e0927879d5726bc63e701308a0a4e0b290f9cd50151398297a6a39a4182295"
   },
   "docs/STAGE_FINETUNE.md": {
     "bytes": 9487,
@@ -2294,6 +2302,30 @@
   "results/failure_replay_39_32_contact/replay_plan.json": {
     "bytes": 1103,
     "sha256": "2a22602acc2b2eddaf412848bc61ea37aaea8eac6dab2c4ddd5e7f6c840fbdf4"
+  },
+  "results/failure_structure/SHA256SUMS.json": {
+    "bytes": 513,
+    "sha256": "7dd123fe6c27587949b06d2d4448da73be705ae54fbb1b9789b47e8529e43bdd"
+  },
+  "results/failure_structure/color_holdout.json": {
+    "bytes": 45168,
+    "sha256": "d18038b848f6cc049d6dbe02adec6289df1424110b443f01559c6fd8b7f7dc6d"
+  },
+  "results/failure_structure/sources/inventory_failure_structure.py": {
+    "bytes": 7134,
+    "sha256": "bfbaf9a61decee1373edbaf4a898188afa7781658130d1ddd0fcdf23775b66d8"
+  },
+  "results/failure_structure/sources/test_failure_structure.py": {
+    "bytes": 5317,
+    "sha256": "4f2f1f17bc52dcc599fc6460bf2f888fb798c0d30f76f4bfa2d602c21a43c9e3"
+  },
+  "results/failure_structure/stage_v1.json": {
+    "bytes": 43855,
+    "sha256": "10965f70932aa61f1ceb7c6e5d17dff28afec2c9c97dac6b74a2f12ed07b1938"
+  },
+  "results/failure_structure/失败结构清单.md": {
+    "bytes": 5809,
+    "sha256": "664508798c0b96078801c710f5a9084317cd7acbdfd6fed1554119455e4e7baf"
   },
   "results/gpu_validation/ALL_PASSED": {
     "bytes": 0,

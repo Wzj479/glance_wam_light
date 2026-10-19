@@ -1,0 +1,2000 @@
+{
+  "label": "stage_v1 action-module fine-tuning",
+  "source": "/root/autodl-tmp/wam_glance_project/GlanceWAM/results/stage_v1/development",
+  "models": [
+    "base",
+    "C",
+    "P"
+  ],
+  "conditions": [
+    "clean",
+    "color_strong"
+  ],
+  "unit_note": "Magnitudes are in the action parameterisation of world_vector, not a verified physical distance; only relative comparisons are meaningful.",
+  "episodes": [
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 25,
+      "success": true,
+      "steps": 70,
+      "gripper_close_steps": [
+        34
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 119.19096857309341,
+      "peak_command_mag": 293.6217486858368
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 26,
+      "success": true,
+      "steps": 82,
+      "gripper_close_steps": [
+        42
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 91.65595471858978,
+      "peak_command_mag": 328.43834161758423
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 27,
+      "success": true,
+      "steps": 71,
+      "gripper_close_steps": [
+        33
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 108.55273902416229,
+      "peak_command_mag": 306.9537580013275
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 28,
+      "success": true,
+      "steps": 77,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 96.41118347644806,
+      "peak_command_mag": 337.0147943496704
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 29,
+      "success": true,
+      "steps": 75,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 92.37072616815567,
+      "peak_command_mag": 498.6576437950134
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 30,
+      "success": true,
+      "steps": 73,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 107.3068305850029,
+      "peak_command_mag": 413.5207533836365
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 31,
+      "success": true,
+      "steps": 74,
+      "gripper_close_steps": [
+        34
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 107.60951787233353,
+      "peak_command_mag": 302.76697874069214
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 32,
+      "success": true,
+      "steps": 69,
+      "gripper_close_steps": [
+        32
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 115.10291695594788,
+      "peak_command_mag": 300.4492521286011
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 33,
+      "success": true,
+      "steps": 74,
+      "gripper_close_steps": [
+        36
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 126.80962681770325,
+      "peak_command_mag": 287.1459126472473
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 34,
+      "success": true,
+      "steps": 74,
+      "gripper_close_steps": [
+        38
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 125.38379430770874,
+      "peak_command_mag": 306.79354071617126
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 35,
+      "success": true,
+      "steps": 77,
+      "gripper_close_steps": [
+        33
+      ],
+      "gripper_open_steps": [
+        74
+      ],
+      "median_command_mag": 107.63489454984665,
+      "peak_command_mag": 466.1256968975067
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 36,
+      "success": true,
+      "steps": 72,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 110.7381284236908,
+      "peak_command_mag": 310.343861579895
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 37,
+      "success": true,
+      "steps": 79,
+      "gripper_close_steps": [
+        38
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 104.07505929470062,
+      "peak_command_mag": 300.8524179458618
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 38,
+      "success": true,
+      "steps": 75,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 97.61296212673187,
+      "peak_command_mag": 378.14825773239136
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 39,
+      "success": true,
+      "steps": 73,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 102.3431122303009,
+      "peak_command_mag": 438.50821256637573
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 40,
+      "success": true,
+      "steps": 75,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 107.44529962539673,
+      "peak_command_mag": 368.07844042778015
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 41,
+      "success": true,
+      "steps": 73,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 103.5240963101387,
+      "peak_command_mag": 550.1527190208435
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 42,
+      "success": true,
+      "steps": 79,
+      "gripper_close_steps": [
+        41
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 82.19460397958755,
+      "peak_command_mag": 271.88581228256226
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 43,
+      "success": true,
+      "steps": 69,
+      "gripper_close_steps": [
+        31
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 116.07047915458679,
+      "peak_command_mag": 288.3547842502594
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 44,
+      "success": true,
+      "steps": 76,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 104.98767346143723,
+      "peak_command_mag": 343.4435725212097
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 25,
+      "success": true,
+      "steps": 77,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [
+        76
+      ],
+      "median_command_mag": 91.79554879665375,
+      "peak_command_mag": 561.7832541465759
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 26,
+      "success": false,
+      "steps": 300,
+      "gripper_close_steps": [
+        37,
+        54,
+        58
+      ],
+      "gripper_open_steps": [
+        53,
+        56,
+        64
+      ],
+      "median_command_mag": 71.86160981655121,
+      "peak_command_mag": 792.122483253479
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 27,
+      "success": true,
+      "steps": 77,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [
+        75
+      ],
+      "median_command_mag": 82.77124166488647,
+      "peak_command_mag": 392.18780398368835
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 28,
+      "success": false,
+      "steps": 300,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [
+        48
+      ],
+      "median_command_mag": 77.03497260808945,
+      "peak_command_mag": 960.358202457428
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 29,
+      "success": true,
+      "steps": 78,
+      "gripper_close_steps": [
+        31,
+        33
+      ],
+      "gripper_open_steps": [
+        32,
+        76
+      ],
+      "median_command_mag": 92.39571541547775,
+      "peak_command_mag": 381.02906942367554
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 30,
+      "success": true,
+      "steps": 78,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [
+        75
+      ],
+      "median_command_mag": 85.44652909040451,
+      "peak_command_mag": 502.25669145584106
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 31,
+      "success": true,
+      "steps": 114,
+      "gripper_close_steps": [
+        36
+      ],
+      "gripper_open_steps": [
+        78
+      ],
+      "median_command_mag": 75.5462646484375,
+      "peak_command_mag": 488.08449506759644
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 32,
+      "success": true,
+      "steps": 78,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [
+        76
+      ],
+      "median_command_mag": 87.7963975071907,
+      "peak_command_mag": 511.30211353302
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 33,
+      "success": true,
+      "steps": 81,
+      "gripper_close_steps": [
+        44,
+        79
+      ],
+      "gripper_open_steps": [
+        78,
+        80
+      ],
+      "median_command_mag": 84.99797433614731,
+      "peak_command_mag": 543.0702567100525
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 34,
+      "success": false,
+      "steps": 300,
+      "gripper_close_steps": [
+        39
+      ],
+      "gripper_open_steps": [
+        48
+      ],
+      "median_command_mag": 85.33118665218353,
+      "peak_command_mag": 850.4141569137573
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 35,
+      "success": false,
+      "steps": 300,
+      "gripper_close_steps": [
+        31,
+        33,
+        35
+      ],
+      "gripper_open_steps": [
+        32,
+        34,
+        48
+      ],
+      "median_command_mag": 78.63015681505203,
+      "peak_command_mag": 912.1758937835693
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 36,
+      "success": true,
+      "steps": 80,
+      "gripper_close_steps": [
+        36
+      ],
+      "gripper_open_steps": [
+        78
+      ],
+      "median_command_mag": 85.96973121166229,
+      "peak_command_mag": 406.5034091472626
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 37,
+      "success": true,
+      "steps": 79,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [
+        77
+      ],
+      "median_command_mag": 86.02221310138702,
+      "peak_command_mag": 378.8027763366699
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 38,
+      "success": true,
+      "steps": 79,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [
+        77
+      ],
+      "median_command_mag": 87.0925784111023,
+      "peak_command_mag": 490.73633551597595
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 39,
+      "success": true,
+      "steps": 79,
+      "gripper_close_steps": [
+        36
+      ],
+      "gripper_open_steps": [
+        77
+      ],
+      "median_command_mag": 92.0889750123024,
+      "peak_command_mag": 567.7821636199951
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 40,
+      "success": true,
+      "steps": 79,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [
+        76
+      ],
+      "median_command_mag": 76.75963640213013,
+      "peak_command_mag": 565.039873123169
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 41,
+      "success": true,
+      "steps": 79,
+      "gripper_close_steps": [
+        36
+      ],
+      "gripper_open_steps": [
+        76
+      ],
+      "median_command_mag": 95.49267590045929,
+      "peak_command_mag": 300.3445863723755
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 42,
+      "success": false,
+      "steps": 300,
+      "gripper_close_steps": [
+        37,
+        103
+      ],
+      "gripper_open_steps": [
+        48,
+        104
+      ],
+      "median_command_mag": 80.55079728364944,
+      "peak_command_mag": 939.7009611129761
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 43,
+      "success": true,
+      "steps": 93,
+      "gripper_close_steps": [
+        37,
+        49
+      ],
+      "gripper_open_steps": [
+        40,
+        91
+      ],
+      "median_command_mag": 77.92691886425018,
+      "peak_command_mag": 536.6278886795044
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 44,
+      "success": true,
+      "steps": 78,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [
+        76
+      ],
+      "median_command_mag": 93.95647794008255,
+      "peak_command_mag": 389.3432915210724
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 25,
+      "success": true,
+      "steps": 70,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 118.08883398771286,
+      "peak_command_mag": 383.60702991485596
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 26,
+      "success": true,
+      "steps": 82,
+      "gripper_close_steps": [
+        42
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 92.06855297088623,
+      "peak_command_mag": 329.85422015190125
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 27,
+      "success": true,
+      "steps": 71,
+      "gripper_close_steps": [
+        33
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 112.89594322443008,
+      "peak_command_mag": 316.69339537620544
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 28,
+      "success": true,
+      "steps": 78,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 94.12693977355957,
+      "peak_command_mag": 391.33867621421814
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 29,
+      "success": true,
+      "steps": 76,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 91.84979647397995,
+      "peak_command_mag": 474.2166996002197
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 30,
+      "success": true,
+      "steps": 75,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 111.49527132511139,
+      "peak_command_mag": 330.9302031993866
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 31,
+      "success": true,
+      "steps": 74,
+      "gripper_close_steps": [
+        34
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 107.4136421084404,
+      "peak_command_mag": 336.78093552589417
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 32,
+      "success": true,
+      "steps": 71,
+      "gripper_close_steps": [
+        33
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 108.77101123332977,
+      "peak_command_mag": 271.34227752685547
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 33,
+      "success": true,
+      "steps": 76,
+      "gripper_close_steps": [
+        36
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 119.25160884857178,
+      "peak_command_mag": 310.8697235584259
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 34,
+      "success": true,
+      "steps": 76,
+      "gripper_close_steps": [
+        38
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 122.27004021406174,
+      "peak_command_mag": 325.0947296619415
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 35,
+      "success": true,
+      "steps": 75,
+      "gripper_close_steps": [
+        33
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 95.97759693861008,
+      "peak_command_mag": 371.0179626941681
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 36,
+      "success": true,
+      "steps": 71,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 114.3346056342125,
+      "peak_command_mag": 308.29763412475586
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 37,
+      "success": true,
+      "steps": 79,
+      "gripper_close_steps": [
+        38
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 92.75573492050171,
+      "peak_command_mag": 216.13475680351257
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 38,
+      "success": true,
+      "steps": 75,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 102.24217176437378,
+      "peak_command_mag": 371.10379338264465
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 39,
+      "success": true,
+      "steps": 72,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 107.0433109998703,
+      "peak_command_mag": 424.0937829017639
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 40,
+      "success": true,
+      "steps": 75,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 103.15397381782532,
+      "peak_command_mag": 359.8569929599762
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 41,
+      "success": true,
+      "steps": 79,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [
+        75
+      ],
+      "median_command_mag": 104.24269735813141,
+      "peak_command_mag": 539.2510294914246
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 42,
+      "success": true,
+      "steps": 80,
+      "gripper_close_steps": [
+        41
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 88.20128440856934,
+      "peak_command_mag": 286.2718105316162
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 43,
+      "success": true,
+      "steps": 70,
+      "gripper_close_steps": [
+        31
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 109.97861623764038,
+      "peak_command_mag": 317.75063276290894
+    },
+    {
+      "model": "C",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 44,
+      "success": true,
+      "steps": 77,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 106.2358170747757,
+      "peak_command_mag": 353.3935546875
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 25,
+      "success": true,
+      "steps": 78,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [
+        76
+      ],
+      "median_command_mag": 94.49715912342072,
+      "peak_command_mag": 515.9546732902527
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 26,
+      "success": true,
+      "steps": 84,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [
+        82
+      ],
+      "median_command_mag": 87.3369425535202,
+      "peak_command_mag": 424.67936873435974
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 27,
+      "success": true,
+      "steps": 77,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [
+        75
+      ],
+      "median_command_mag": 85.04778146743774,
+      "peak_command_mag": 353.07082533836365
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 28,
+      "success": false,
+      "steps": 300,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [
+        48
+      ],
+      "median_command_mag": 78.80052924156189,
+      "peak_command_mag": 926.2165427207947
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 29,
+      "success": true,
+      "steps": 79,
+      "gripper_close_steps": [
+        31,
+        33
+      ],
+      "gripper_open_steps": [
+        32,
+        76
+      ],
+      "median_command_mag": 93.38286519050598,
+      "peak_command_mag": 375.16748905181885
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 30,
+      "success": true,
+      "steps": 78,
+      "gripper_close_steps": [
+        36
+      ],
+      "gripper_open_steps": [
+        75
+      ],
+      "median_command_mag": 96.98110073804855,
+      "peak_command_mag": 433.2456886768341
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 31,
+      "success": true,
+      "steps": 81,
+      "gripper_close_steps": [
+        36
+      ],
+      "gripper_open_steps": [
+        78
+      ],
+      "median_command_mag": 78.38708162307739,
+      "peak_command_mag": 431.3681125640869
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 32,
+      "success": true,
+      "steps": 78,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [
+        76
+      ],
+      "median_command_mag": 84.57733690738678,
+      "peak_command_mag": 428.1458556652069
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 33,
+      "success": true,
+      "steps": 80,
+      "gripper_close_steps": [
+        44,
+        79
+      ],
+      "gripper_open_steps": [
+        76
+      ],
+      "median_command_mag": 79.74027842283249,
+      "peak_command_mag": 563.6067986488342
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 34,
+      "success": false,
+      "steps": 300,
+      "gripper_close_steps": [
+        39
+      ],
+      "gripper_open_steps": [
+        48
+      ],
+      "median_command_mag": 81.38447254896164,
+      "peak_command_mag": 868.7635064125061
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 35,
+      "success": false,
+      "steps": 300,
+      "gripper_close_steps": [
+        31,
+        33,
+        55
+      ],
+      "gripper_open_steps": [
+        32,
+        53,
+        56
+      ],
+      "median_command_mag": 71.15832716226578,
+      "peak_command_mag": 792.4744486808777
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 36,
+      "success": true,
+      "steps": 78,
+      "gripper_close_steps": [
+        37,
+        51,
+        53,
+        56,
+        76
+      ],
+      "gripper_open_steps": [
+        50,
+        52,
+        55,
+        75,
+        77
+      ],
+      "median_command_mag": 90.59558063745499,
+      "peak_command_mag": 474.34213757514954
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 37,
+      "success": true,
+      "steps": 81,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [
+        78
+      ],
+      "median_command_mag": 87.39622682332993,
+      "peak_command_mag": 355.3951382637024
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 38,
+      "success": true,
+      "steps": 79,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [
+        77
+      ],
+      "median_command_mag": 81.41547441482544,
+      "peak_command_mag": 464.3312394618988
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 39,
+      "success": true,
+      "steps": 79,
+      "gripper_close_steps": [
+        36
+      ],
+      "gripper_open_steps": [
+        77
+      ],
+      "median_command_mag": 85.6168121099472,
+      "peak_command_mag": 595.8535671234131
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 40,
+      "success": true,
+      "steps": 79,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [
+        76
+      ],
+      "median_command_mag": 78.60659807920456,
+      "peak_command_mag": 569.9876546859741
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 41,
+      "success": true,
+      "steps": 80,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [
+        77
+      ],
+      "median_command_mag": 101.21547430753708,
+      "peak_command_mag": 318.7350332736969
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 42,
+      "success": false,
+      "steps": 300,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [
+        48
+      ],
+      "median_command_mag": 77.81982421875,
+      "peak_command_mag": 801.3842105865479
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 43,
+      "success": true,
+      "steps": 93,
+      "gripper_close_steps": [
+        37,
+        49
+      ],
+      "gripper_open_steps": [
+        40,
+        91
+      ],
+      "median_command_mag": 72.15680181980133,
+      "peak_command_mag": 673.9183068275452
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 44,
+      "success": true,
+      "steps": 80,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [
+        77
+      ],
+      "median_command_mag": 93.52728724479675,
+      "peak_command_mag": 350.70791840553284
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 25,
+      "success": true,
+      "steps": 70,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 118.07907372713089,
+      "peak_command_mag": 356.2730848789215
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 26,
+      "success": true,
+      "steps": 85,
+      "gripper_close_steps": [
+        43
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 85.88296175003052,
+      "peak_command_mag": 281.40220046043396
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 27,
+      "success": true,
+      "steps": 71,
+      "gripper_close_steps": [
+        33
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 112.07671463489532,
+      "peak_command_mag": 311.82578206062317
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 28,
+      "success": true,
+      "steps": 78,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 95.57070583105087,
+      "peak_command_mag": 360.659658908844
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 29,
+      "success": true,
+      "steps": 76,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 95.83891928195953,
+      "peak_command_mag": 479.37825322151184
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 30,
+      "success": true,
+      "steps": 75,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 112.78043687343597,
+      "peak_command_mag": 326.34055614471436
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 31,
+      "success": true,
+      "steps": 75,
+      "gripper_close_steps": [
+        34
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 106.21771961450577,
+      "peak_command_mag": 405.8585464954376
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 32,
+      "success": true,
+      "steps": 71,
+      "gripper_close_steps": [
+        33
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 108.96965861320496,
+      "peak_command_mag": 273.3643651008606
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 33,
+      "success": true,
+      "steps": 76,
+      "gripper_close_steps": [
+        36
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 115.65963178873062,
+      "peak_command_mag": 297.516793012619
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 34,
+      "success": true,
+      "steps": 76,
+      "gripper_close_steps": [
+        38
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 123.37898463010788,
+      "peak_command_mag": 313.28296661376953
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 35,
+      "success": true,
+      "steps": 76,
+      "gripper_close_steps": [
+        33
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 99.16475415229797,
+      "peak_command_mag": 407.48268365859985
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 36,
+      "success": true,
+      "steps": 72,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 103.27213257551193,
+      "peak_command_mag": 296.9079911708832
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 37,
+      "success": true,
+      "steps": 79,
+      "gripper_close_steps": [
+        38
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 94.42880004644394,
+      "peak_command_mag": 277.7791917324066
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 38,
+      "success": true,
+      "steps": 76,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 100.44132173061371,
+      "peak_command_mag": 375.66640973091125
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 39,
+      "success": true,
+      "steps": 73,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 104.22229766845703,
+      "peak_command_mag": 404.0974974632263
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 40,
+      "success": true,
+      "steps": 77,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 102.66149044036865,
+      "peak_command_mag": 339.4174873828888
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 41,
+      "success": true,
+      "steps": 77,
+      "gripper_close_steps": [
+        36
+      ],
+      "gripper_open_steps": [
+        74
+      ],
+      "median_command_mag": 100.9921282529831,
+      "peak_command_mag": 474.821001291275
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 42,
+      "success": true,
+      "steps": 80,
+      "gripper_close_steps": [
+        42
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 80.33719658851624,
+      "peak_command_mag": 302.2519648075104
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 43,
+      "success": true,
+      "steps": 69,
+      "gripper_close_steps": [
+        31
+      ],
+      "gripper_open_steps": [],
+      "median_command_mag": 112.07978427410126,
+      "peak_command_mag": 294.5883572101593
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "task_id": 8,
+      "episode_id": 44,
+      "success": true,
+      "steps": 79,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [
+        75
+      ],
+      "median_command_mag": 102.76366770267487,
+      "peak_command_mag": 532.0340394973755
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 25,
+      "success": true,
+      "steps": 78,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [
+        76
+      ],
+      "median_command_mag": 93.07811409235,
+      "peak_command_mag": 474.6088683605194
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 26,
+      "success": true,
+      "steps": 83,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [
+        81
+      ],
+      "median_command_mag": 88.63760530948639,
+      "peak_command_mag": 451.0124623775482
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 27,
+      "success": true,
+      "steps": 77,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [
+        75
+      ],
+      "median_command_mag": 83.56231451034546,
+      "peak_command_mag": 363.6341094970703
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 28,
+      "success": false,
+      "steps": 300,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [
+        48
+      ],
+      "median_command_mag": 79.21428233385086,
+      "peak_command_mag": 883.3491802215576
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 29,
+      "success": true,
+      "steps": 78,
+      "gripper_close_steps": [
+        31,
+        33
+      ],
+      "gripper_open_steps": [
+        32,
+        76
+      ],
+      "median_command_mag": 91.27766638994217,
+      "peak_command_mag": 373.78421425819397
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 30,
+      "success": true,
+      "steps": 78,
+      "gripper_close_steps": [
+        36
+      ],
+      "gripper_open_steps": [
+        75
+      ],
+      "median_command_mag": 91.48404747247696,
+      "peak_command_mag": 469.6880578994751
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 31,
+      "success": true,
+      "steps": 81,
+      "gripper_close_steps": [
+        36
+      ],
+      "gripper_open_steps": [
+        78
+      ],
+      "median_command_mag": 80.91887086629868,
+      "peak_command_mag": 425.7194697856903
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 32,
+      "success": true,
+      "steps": 79,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [
+        76
+      ],
+      "median_command_mag": 84.2585414648056,
+      "peak_command_mag": 415.7603085041046
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 33,
+      "success": false,
+      "steps": 300,
+      "gripper_close_steps": [
+        44
+      ],
+      "gripper_open_steps": [
+        56
+      ],
+      "median_command_mag": 71.524016559124,
+      "peak_command_mag": 877.4492740631104
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 34,
+      "success": false,
+      "steps": 300,
+      "gripper_close_steps": [
+        39
+      ],
+      "gripper_open_steps": [
+        48
+      ],
+      "median_command_mag": 76.46846026182175,
+      "peak_command_mag": 842.5011038780212
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 35,
+      "success": false,
+      "steps": 300,
+      "gripper_close_steps": [
+        35,
+        55
+      ],
+      "gripper_open_steps": [
+        48,
+        56
+      ],
+      "median_command_mag": 77.82015949487686,
+      "peak_command_mag": 953.3694982528687
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 36,
+      "success": true,
+      "steps": 77,
+      "gripper_close_steps": [
+        37,
+        51,
+        53,
+        56,
+        76
+      ],
+      "gripper_open_steps": [
+        50,
+        52,
+        55,
+        74
+      ],
+      "median_command_mag": 91.37921035289764,
+      "peak_command_mag": 540.1450395584106
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 37,
+      "success": true,
+      "steps": 80,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [
+        78
+      ],
+      "median_command_mag": 88.20002526044846,
+      "peak_command_mag": 373.37249517440796
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 38,
+      "success": true,
+      "steps": 79,
+      "gripper_close_steps": [
+        38
+      ],
+      "gripper_open_steps": [
+        77
+      ],
+      "median_command_mag": 82.52963423728943,
+      "peak_command_mag": 464.84723687171936
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 39,
+      "success": true,
+      "steps": 80,
+      "gripper_close_steps": [
+        36
+      ],
+      "gripper_open_steps": [
+        77
+      ],
+      "median_command_mag": 84.88770574331284,
+      "peak_command_mag": 587.3576998710632
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 40,
+      "success": true,
+      "steps": 79,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [
+        76
+      ],
+      "median_command_mag": 81.75639808177948,
+      "peak_command_mag": 588.4484052658081
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 41,
+      "success": true,
+      "steps": 80,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [
+        77
+      ],
+      "median_command_mag": 102.53088921308517,
+      "peak_command_mag": 305.66275119781494
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 42,
+      "success": false,
+      "steps": 300,
+      "gripper_close_steps": [
+        37
+      ],
+      "gripper_open_steps": [
+        48
+      ],
+      "median_command_mag": 75.99428296089172,
+      "peak_command_mag": 845.8686470985413
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 43,
+      "success": true,
+      "steps": 93,
+      "gripper_close_steps": [
+        37,
+        49
+      ],
+      "gripper_open_steps": [
+        40,
+        91
+      ],
+      "median_command_mag": 77.92775332927704,
+      "peak_command_mag": 618.4501051902771
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "task_id": 8,
+      "episode_id": 44,
+      "success": true,
+      "steps": 78,
+      "gripper_close_steps": [
+        35
+      ],
+      "gripper_open_steps": [
+        76
+      ],
+      "median_command_mag": 89.55804258584976,
+      "peak_command_mag": 361.4856004714966
+    }
+  ],
+  "failures_by_state": {
+    "color_strong:26": [
+      "base"
+    ],
+    "color_strong:28": [
+      "base",
+      "C",
+      "P"
+    ],
+    "color_strong:33": [
+      "P"
+    ],
+    "color_strong:34": [
+      "base",
+      "C",
+      "P"
+    ],
+    "color_strong:35": [
+      "base",
+      "C",
+      "P"
+    ],
+    "color_strong:42": [
+      "base",
+      "C",
+      "P"
+    ]
+  },
+  "shared_failures": [
+    {
+      "condition": "color_strong",
+      "episode_id": 28,
+      "models": [
+        "base",
+        "C",
+        "P"
+      ]
+    },
+    {
+      "condition": "color_strong",
+      "episode_id": 34,
+      "models": [
+        "base",
+        "C",
+        "P"
+      ]
+    },
+    {
+      "condition": "color_strong",
+      "episode_id": 35,
+      "models": [
+        "base",
+        "C",
+        "P"
+      ]
+    },
+    {
+      "condition": "color_strong",
+      "episode_id": 42,
+      "models": [
+        "base",
+        "C",
+        "P"
+      ]
+    }
+  ],
+  "model_specific_failures": {
+    "color_strong:26": [
+      "base"
+    ],
+    "color_strong:33": [
+      "P"
+    ]
+  },
+  "motion_cells": [
+    {
+      "model": "C",
+      "condition": "clean",
+      "successes": 20,
+      "failures": 0,
+      "separated": null,
+      "undecided_because": "fewer than two episodes on one side"
+    },
+    {
+      "model": "C",
+      "condition": "color_strong",
+      "successes": 16,
+      "failures": 4,
+      "separated": true
+    },
+    {
+      "model": "P",
+      "condition": "clean",
+      "successes": 20,
+      "failures": 0,
+      "separated": null,
+      "undecided_because": "fewer than two episodes on one side"
+    },
+    {
+      "model": "P",
+      "condition": "color_strong",
+      "successes": 15,
+      "failures": 5,
+      "separated": true
+    },
+    {
+      "model": "base",
+      "condition": "clean",
+      "successes": 20,
+      "failures": 0,
+      "separated": null,
+      "undecided_because": "fewer than two episodes on one side"
+    },
+    {
+      "model": "base",
+      "condition": "color_strong",
+      "successes": 15,
+      "failures": 5,
+      "separated": true
+    }
+  ],
+  "motion_overall": {
+    "successes": 106,
+    "failures": 14,
+    "success_median_command_mag": 97.1958763756842,
+    "failure_median_command_mag": 77.39950556840215,
+    "success_peak_command_mag": 399.78760199726753,
+    "failure_peak_command_mag": 874.7248649597168
+  },
+  "unattributed_note": "A state failing for every model is base-policy fragility, not a fine-tuning effect. A state failing for one model is the only candidate regression, and each is a single episode."
+}

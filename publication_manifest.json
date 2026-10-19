@@ -83,6 +83,10 @@
     "bytes": 3288,
     "sha256": "1571c9cec3321a485ca996effc9f781eb3098ebc694005a932842830f055fbdf"
   },
+  "day1/diagnose_gripper_feedback.py": {
+    "bytes": 19607,
+    "sha256": "2bd3b2d4a11b7ed24c343cafbf39da12bdecab453e2bba5a4c7d2f9b0b408a8c"
+  },
   "day1/download_demo_data.py": {
     "bytes": 2586,
     "sha256": "e8093bf3125501c134bb529c37db7ee2b0f91cd3a992c6bdcb664b28c389a123"
@@ -151,6 +155,10 @@
     "bytes": 4200,
     "sha256": "d7bdebaef4b69f32b50e6fb81cd516062e1e1b83b121d007349e79376e9ab153"
   },
+  "day1/protocol_state33_color_strong.json": {
+    "bytes": 711,
+    "sha256": "bf0cbb26b14254333c1b5aa9f5b272893a13508837d33a3f9a877180fa88727c"
+  },
   "day1/provenance.json": {
     "bytes": 1782,
     "sha256": "b4538452d15bbe0339dee3783b539942aee38b3c96ab96e418c186bdffe958c4"
@@ -191,6 +199,10 @@
     "bytes": 665,
     "sha256": "8eca3a163a9f72ed2ddec26e3ef28bc16289ca89fc92751aa3edc0b1abcb3c6c"
   },
+  "day1/run_gripper_feedback.py": {
+    "bytes": 6476,
+    "sha256": "0c81ef4c674121728ef66b3281f129cb43e00a1e3c8d6837c11888fa114093c7"
+  },
   "day1/run_phase_finetune_a100_40g.sh": {
     "bytes": 857,
     "sha256": "42caf2cda933c220c0d9a5cc3e474abb5e8e0882a8ac17b06c20d79ed8b0d446"
@@ -222,6 +234,10 @@
   "day1/test_finetune_utils.py": {
     "bytes": 6577,
     "sha256": "42be1fd715922df10b642f309640be5b39d313e43ef675850ff104983ed844f5"
+  },
+  "day1/test_gripper_feedback.py": {
+    "bytes": 7554,
+    "sha256": "0fb71b427a884c984ea75f33415e6f8a7bc91a63c9816d1db61b0f453132ffd0"
   },
   "day1/test_robust_pipeline.py": {
     "bytes": 4790,
@@ -280,8 +296,8 @@
     "sha256": "91eba162c0aa4be23df3789a193a5b09ea64ac28133cdcab46e3bd093da4dddf"
   },
   "docs/REPRODUCE.md": {
-    "bytes": 4643,
-    "sha256": "036fbb401ef98536723dfab337da836be6249de7cac51ce86af7c939d4576eb8"
+    "bytes": 7422,
+    "sha256": "fadda7dbf237336a4830ad7e8c095cc1bd7900ed2c1dc3588d2c64da6b04b3b1"
   },
   "docs/STAGE_FINETUNE.md": {
     "bytes": 9487,

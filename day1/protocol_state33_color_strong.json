@@ -1,0 +1,24 @@
+{
+  "seed": 42,
+  "episode_ids": [
+    33
+  ],
+  "task_ids": [
+    8
+  ],
+  "conditions": {
+    "color_strong": {
+      "saturation": 1.0,
+      "brightness": 1.0,
+      "gains": [
+        0.7,
+        1.0,
+        1.3
+      ]
+    }
+  },
+  "schema_version": 1,
+  "suite": "libero_goal",
+  "parent_protocol_sha256": "22b23b3cc4637827857eb0a97d6a9e0f01821c750530033bcfe38e68ab8eef6f",
+  "purpose": "Single-state diagnostic protocol for the state33 gripper-intervention closed-loop run. Every per-episode input is a function of seed, suite, task, episode and condition, so this reproduces the archived episode exactly; the protocol hash differs on purpose so a subset run cannot be mistaken for a suite result."
+}

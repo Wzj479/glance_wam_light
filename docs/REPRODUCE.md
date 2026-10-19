@@ -59,3 +59,34 @@ cpu_sim_env/bin/python day1/match_grasp_source.py \
 ## 后续 GPU 工作
 
 2026-10-16 已在 A100 40GB 上通过真实视频 loader、预训练推理、动作模块三步更新、官方特征一致性、冻结参数哈希、显存及检查点重载检查，见 [GPU 部署验证记录](../results/gpu_validation/GPU部署验证记录.md)。随后完成 clean/aug 各200步和单一抓取任务的90回合配对闭环评测，见 [200步实验记录](../results/controlled_200/comparison/实验记录.md)。三模型在三个条件下均为10/10成功，未观察到成功率提升；尚未评测其他任务或实机。
+
+## 状态33夹爪干预闭环诊断
+
+固定失败动作的开环反事实无法区分「搬运规划有问题」与「回放受限」，因为干预之后的六维动作仍来自原始观测。为此需要一次带反馈的闭环诊断：只覆写夹爪通道，六维动作在干预开始后按当前观测重新查询策略。
+
+推理节奏以部署实现为准并被记录，不做假设。官方客户端每 `action_chunk_size` 步查询一次服务器，其间重放该动作块，因此一个块的六维来自一次推理。窗口前的动作未被改动，进入窗口后第一次查询的观测与存档一致，该次查询复现存档动作块；**分歧步由记录的动作块推导，不写死**。
+
+```bash
+cd /root/autodl-tmp/wam_glance_project/GlanceWAM
+export OMP_NUM_THREADS=8 MKL_NUM_THREADS=8 OPENBLAS_NUM_THREADS=8
+export PYTHONPATH="$PWD:/root/autodl-tmp/wam_glance_project/LIBERO"
+export LIBERO_CONFIG_PATH=/root/autodl-tmp/wam_glance_project/LIBERO/libero
+export MUJOCO_GL=egl PYOPENGL_PLATFORM=egl
+CKPT=results/stage_v1/P_seed42/checkpoints/best.action.pt
+REF=results/stage_v1/development/P/color_strong/task_08_episode_033_actions.npy
+COMMON="--protocol day1/protocol_state33_color_strong.json --condition color_strong \
+  --ckpt $CKPT --model-name P --libero-python /root/wam_sim_env/bin/python --port 6694"
+
+# 第0步：零干预对照。这轮必须复现存档的300步动作，否则整轮实验作废。
+.venv/bin/python day1/run_gripper_feedback.py $COMMON --out results/gf33_control \
+  --reference-actions $REF --expect-init-sha256 240751828fcffe67789db1c374549b80c4f8427335183d585d6662be054878e0 \
+  --expect-post-settle-sha256 fcb8b8a315a62c896845ad0031513b1c0f854c9aacdd646f66ee2b33942e1e1a --save-videos
+
+# 第1步：干预轮。仅覆写动作56–75的夹爪通道；76起不覆写，也不加新的释放门控。
+.venv/bin/python day1/run_gripper_feedback.py $COMMON --out results/gf33_hold56_75 \
+  --hold-close 56 75 --reference-actions $REF --save-videos
+```
+
+单回合协议 `day1/protocol_state33_color_strong.json` 由父协议推导而来。每回合输入只取决于 seed、suite、task、episode 与条件，与 episode 列表无关，因此该子集复现存档回合；其 env_seed 为 474245375，与存档一致。协议哈希有意不同，子集结果不与整批结果混放。
+
+两轮的判定顺序固定：先看第0步是否复现存档动作（未复现则停手并排查确定性），再在干预轮读动作块来源、覆写前夹爪输出、接触与位姿，按「搬运/对齐是否恢复」二分。45–49 保持封存。夹爪符号为 `+1` 闭、`-1` 开，与官方客户端二值化一致；写反符号会静默变成「保持张开」，因此 `override_gripper` 对非二值输入直接报错。

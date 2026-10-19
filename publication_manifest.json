@@ -143,6 +143,10 @@
     "bytes": 8191,
     "sha256": "90980b579ef20e0c2871758af7f165065af08ecdb49d7c86a23a088f3557e86c"
   },
+  "day1/package_irreproducible_assets.py": {
+    "bytes": 4746,
+    "sha256": "a98edc4f04a6ecf0c52c64f7ccb011ae125f6b469b2c08c46cb434da96bc55ee"
+  },
   "day1/paired_policy_server.py": {
     "bytes": 2607,
     "sha256": "44f08325e29318ef5f2abc2f31193f1c24748570809c06487cb6511746c97484"
@@ -324,8 +328,8 @@
     "sha256": "91eba162c0aa4be23df3789a193a5b09ea64ac28133cdcab46e3bd093da4dddf"
   },
   "docs/REPRODUCE.md": {
-    "bytes": 9793,
-    "sha256": "1ed1998607b1ae17d79bb30fcde2e8e23dee2e7855e61796625fceab1ae8d01a"
+    "bytes": 11987,
+    "sha256": "311d1ae437a588648be8f5cdea1f317b00c25d351f65e86d54b495701075c273"
   },
   "docs/STAGE_FINETUNE.md": {
     "bytes": 9487,
@@ -2618,6 +2622,18 @@
   "results/grasp_split_check.json": {
     "bytes": 350,
     "sha256": "282dd371f84de353607b6387325301f5cd43ed4ebe47d85d5a1ca5526c74ca13"
+  },
+  "results/irreproducible_assets/SHA256SUMS.json": {
+    "bytes": 302,
+    "sha256": "148ec47f46ddae7fd022bf980783d6f7aa6ad8d6b33c1cd18758a10018180d62"
+  },
+  "results/irreproducible_assets/irreproducible_SHA256.json": {
+    "bytes": 26480,
+    "sha256": "6aa70b50ceae636db315b5d39b8cae8395c8d9c4d7d2827181eb71dde7045f29"
+  },
+  "results/irreproducible_assets/package_irreproducible_assets.py": {
+    "bytes": 4746,
+    "sha256": "a98edc4f04a6ecf0c52c64f7ccb011ae125f6b469b2c08c46cb434da96bc55ee"
   },
   "results/matched_grasp_replay/eef_reference.png": {
     "bytes": 96415,

@@ -4159,6 +4159,554 @@
     "bytes": 35754,
     "sha256": "5bb35543b0610535ad3487908a8a70f2317a77d0f5673ddcf3c7ef58081fda6c"
   },
+  "results/multitask/protocols/protocol_task4.json": {
+    "bytes": 505,
+    "sha256": "928319fe3821a05330ab75d1bde77b0637d14039bfb821b5d39ecb6c385ac258"
+  },
+  "results/multitask/protocols/protocol_task6.json": {
+    "bytes": 510,
+    "sha256": "52123356cc263fd50aa6ccf99515c7b31b3a061b02f2fd28afe0272bea0d3e6a"
+  },
+  "results/multitask/protocols/protocol_task9.json": {
+    "bytes": 509,
+    "sha256": "131d18fb636b4b43f84c48f4458cc8ce574876aa385f7ca5f021f98660390e43"
+  },
+  "results/multitask/run_taskN.sh": {
+    "bytes": 1279,
+    "sha256": "476b926ecf71eb6362452e7740af571160d793872a0e83276143691687868e71"
+  },
+  "results/multitask/runs/t4_base/episodes.jsonl": {
+    "bytes": 23538,
+    "sha256": "ae7ac584b4773fd1194c64b3a601d7ee06b33f53cfdc5afd0642d3482561fcf5"
+  },
+  "results/multitask/runs/t4_base/results.json": {
+    "bytes": 37642,
+    "sha256": "3de9ab95c5cf4a350c262719ac3f0f6e491b5bbc2f467ccad2206da5e0755ede"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_000_override_log.csv": {
+    "bytes": 1796,
+    "sha256": "5e35d672fb0863709077ae13defd83da465c5c0d88e19a4388c77df2fd3c0795"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_000_state_log.csv": {
+    "bytes": 40912,
+    "sha256": "494b663e8373722920d3fd8b7a26800e8d6d6eb91ba5230269cdbc40773ce33c"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_001_override_log.csv": {
+    "bytes": 6216,
+    "sha256": "664a003a6a9ffbe3d6a27d36ee1cdc67965035ed236517dc28bca180ad557e9b"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_001_state_log.csv": {
+    "bytes": 131476,
+    "sha256": "5ca4e6ebd03178bde487a71c994f0f8abf74a8521c84d51934db3edfcc41c347"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_002_override_log.csv": {
+    "bytes": 6180,
+    "sha256": "db457f6ba659a0dbbd8eee3449a268edaaf69b7fc911c381cac166c8033ae966"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_002_state_log.csv": {
+    "bytes": 130800,
+    "sha256": "8a2bf964cea8896f8404d20df421dc897fa8819428ed45b951449db908af5a69"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_003_override_log.csv": {
+    "bytes": 6224,
+    "sha256": "ca7c1e7c1cfa69f9bffab7cd903395b7bc87e8f7230bf0878d5359bc5d301e93"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_003_state_log.csv": {
+    "bytes": 131716,
+    "sha256": "bb7d8f1d72ab65af534047c11602b86e35fdf42b04711f13d48b2cbd51f20004"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_004_override_log.csv": {
+    "bytes": 1983,
+    "sha256": "358db7f12392a67b1f634c08da81366c6a8c9675e9b8f8002762eb9b1e4d0dfa"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_004_state_log.csv": {
+    "bytes": 45402,
+    "sha256": "2a7a2cf45b884ded5d7290afbaedb97530b8452b3828ed20ffdfca57ab784138"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_005_override_log.csv": {
+    "bytes": 2006,
+    "sha256": "bfa373ef7a2fca043234e632804ddcb4150c2b7ae4221a7cbf2c871cc001c588"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_005_state_log.csv": {
+    "bytes": 45914,
+    "sha256": "3301426f5ea9f790df199184d0549c0632738a2bbc6d494b219fea8fd7d5bdb8"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_006_override_log.csv": {
+    "bytes": 1906,
+    "sha256": "0496ad92a47c27d5c00ce7e08e384c14cb4389c04a3e609567504066c99d47cd"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_006_state_log.csv": {
+    "bytes": 43675,
+    "sha256": "18e3595a9dfdcfbdd1bc638668a40b99fd436130ae3962202785920317847a04"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_007_override_log.csv": {
+    "bytes": 6194,
+    "sha256": "6e89d816ae2cceaa6e02b102fa7b12501dfbb261ed44e3814891f2003b27b127"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_007_state_log.csv": {
+    "bytes": 132045,
+    "sha256": "0c8c53ea6e800496a5f112321d83d9af644b16997f101031acf307147e5f18d7"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_008_override_log.csv": {
+    "bytes": 1832,
+    "sha256": "2769b239f62249fe4741c7319200e3e1698e3d0ed5dd3d6dce9b3eba3adcbf04"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_008_state_log.csv": {
+    "bytes": 41976,
+    "sha256": "ef33dbe1c419708f4b6bfcf7fe8f40b31273b6516758d8dafe24b80f801752b4"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_009_override_log.csv": {
+    "bytes": 6236,
+    "sha256": "dcff57a99e3553f627886c44279b92794aec75736a7d2b5afb641d9c99cd8fbd"
+  },
+  "results/multitask/runs/t4_base/task_04_episode_009_state_log.csv": {
+    "bytes": 131859,
+    "sha256": "ce1f00366ba445d7222849644b0e31bf2cb94b452f1c274c98219f42b2e4b10c"
+  },
+  "results/multitask/runs/t4_rule/episodes.jsonl": {
+    "bytes": 21938,
+    "sha256": "9466925a25064a144cf038fded6a76b454d19668214e8a7328777d09aceafb1a"
+  },
+  "results/multitask/runs/t4_rule/results.json": {
+    "bytes": 34842,
+    "sha256": "ff2b298fb4b63784965a534ee4cf75592c3ca56554bf4f10a685d7fe479d4d7c"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_000_override_log.csv": {
+    "bytes": 1834,
+    "sha256": "03aaeab162e1525f67f01c1cde56b7af02d68e7c75efc6b2dc757be3352c6d7f"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_000_state_log.csv": {
+    "bytes": 41794,
+    "sha256": "1b193ae27c2a6e5cf2bb4edba80bcc3e3ea7d48673f64ba0887b36dcf38634a7"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_001_override_log.csv": {
+    "bytes": 1989,
+    "sha256": "c6472606e710fb878a1e0341ce155beb88a4c555c8c0db5b73fed62d86002b51"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_001_state_log.csv": {
+    "bytes": 45307,
+    "sha256": "3430e416bef8e2a17baa497e423d6fbd77270a545535ddc2029414383585c857"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_002_override_log.csv": {
+    "bytes": 6110,
+    "sha256": "777723d91fcdf15ee189918c8065525b53d706ab536b1039bc018ba14c2b85ef"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_002_state_log.csv": {
+    "bytes": 131000,
+    "sha256": "ca83290b8db676a86f588e8cdc7fb592587e375634f581f53bf814c8d0052e95"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_003_override_log.csv": {
+    "bytes": 6058,
+    "sha256": "ad375cb95e7ca8af6987056c4e8d055b2372e459f348754a6516df9d7aa1478a"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_003_state_log.csv": {
+    "bytes": 131376,
+    "sha256": "21cd602411d0f4e08a1892ab5bae582a17ab3b87bbdf7b12ce134f84f64c61a7"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_004_override_log.csv": {
+    "bytes": 1945,
+    "sha256": "fb41be48127626369832d990f6c66e7739ba60822dfcf821366ea6ac1e3216f3"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_004_state_log.csv": {
+    "bytes": 44563,
+    "sha256": "dfe2207a641c75095fff7749c0a201a7b5ee7067fe5153765ca7045216886277"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_005_override_log.csv": {
+    "bytes": 1983,
+    "sha256": "ff34666dd4f589066f71d774ec1d74b6d6c0754ea6c07524fbf3b9881f945371"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_005_state_log.csv": {
+    "bytes": 45471,
+    "sha256": "d2fa1349b911d243531e478dfe9711b1737755f0150d60cdb4c009aa61f8317b"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_006_override_log.csv": {
+    "bytes": 1904,
+    "sha256": "471f4415906155cd708b728a28c65d5bdb6837aec68b845e712e80b53051b35c"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_006_state_log.csv": {
+    "bytes": 43648,
+    "sha256": "db9087676d08ba9edcaf4757b6808dddbd310aea29ac6e7732c3595a20cf756f"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_007_override_log.csv": {
+    "bytes": 6162,
+    "sha256": "fb741de3d2275039954e136b1af87754645a5fa881f688bbef94e3ce6597fb68"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_007_state_log.csv": {
+    "bytes": 131745,
+    "sha256": "8e19ba6a3fa6232d8202995751b8b35e098da4f3699d1161542c7975029397c8"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_008_override_log.csv": {
+    "bytes": 1854,
+    "sha256": "9499ae6d04b69bd58a9121e08582a35d618437813a97b1d7ba6ef2747ee51762"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_008_state_log.csv": {
+    "bytes": 42387,
+    "sha256": "52dae80e9ca35f434546a60adfe05ae40978b2a646684e344a3e0a4fbce84ae3"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_009_override_log.csv": {
+    "bytes": 6158,
+    "sha256": "d4f28c838a44858037338f465c62c28f45b34a4cf50551bf5b8622e715a4068f"
+  },
+  "results/multitask/runs/t4_rule/task_04_episode_009_state_log.csv": {
+    "bytes": 131611,
+    "sha256": "f5b48f7b0ff9a31812b29a892e3c645e60ecefb23f8dc8283ea8d58ba5ba39f7"
+  },
+  "results/multitask/runs/t6_base/episodes.jsonl": {
+    "bytes": 31656,
+    "sha256": "5704d47f644501cfe0a33323a8b9e70f101048d562401d85452afefb1789b79f"
+  },
+  "results/multitask/runs/t6_base/results.json": {
+    "bytes": 51856,
+    "sha256": "884f795190efb3422f71eb18603431feba3f8b7fb0e28eb24f176390024a6e71"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_000_override_log.csv": {
+    "bytes": 6226,
+    "sha256": "004dfbabbd17e18adf700dbf322bb286202e71721a57f0f89581e2ef69944ff5"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_000_state_log.csv": {
+    "bytes": 136953,
+    "sha256": "bf408430d55be74eb9bbc9043fc9e924c0352685e6594c6c9c1e1a993a873c78"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_001_override_log.csv": {
+    "bytes": 6238,
+    "sha256": "5fb6b274926a7b4083c20eaebf71c830962b2eb3cc8408c538374cfaca9368bd"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_001_state_log.csv": {
+    "bytes": 137197,
+    "sha256": "3c4da212061414e74751d82e5c9826703ebcbe7466b4e40c8380afaf43bed492"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_002_override_log.csv": {
+    "bytes": 6242,
+    "sha256": "a8c633a9db72434b36bc048404136461df2bc34fbd123d5f41a13e296d8c34d1"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_002_state_log.csv": {
+    "bytes": 137210,
+    "sha256": "fdec984768fc4327f70d6e505f931a643300bf69d3214a44f1bbfb7f9753864f"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_003_override_log.csv": {
+    "bytes": 6236,
+    "sha256": "3be0c97a1d41a4c89c4f7710166b12d1be1e48a65c995c98edee68c03fef9b85"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_003_state_log.csv": {
+    "bytes": 136493,
+    "sha256": "6d92c8173566a13325f989aae8baf07a83a66d265472331499ed27b50a00784f"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_004_override_log.csv": {
+    "bytes": 6240,
+    "sha256": "6aca659ce6cdc55b32597b2f436926adce03bb27806616a4210ab60c3a97c298"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_004_state_log.csv": {
+    "bytes": 137540,
+    "sha256": "5008b6f3a6162670d8069ce5c2c6d4ee77b344f293fc2d944a6cc4f142dcc210"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_005_override_log.csv": {
+    "bytes": 6238,
+    "sha256": "970cfd1f8297593b80f96141dba3b806256c21c37612c825fad39d15c0f5499c"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_005_state_log.csv": {
+    "bytes": 137120,
+    "sha256": "700875c76b11fec04ccaa11084a34d1e5367908a86e116c7201a37dbc855312e"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_006_override_log.csv": {
+    "bytes": 6226,
+    "sha256": "739d954efa9e5bc4838528ef2b367ca87e44306fbe34c152235f9bc486df8047"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_006_state_log.csv": {
+    "bytes": 137217,
+    "sha256": "8ff5b90cd4bc9bb3a87fa8a22ea1717b54443de89eb517e7d3610ff2ac2a1cc9"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_007_override_log.csv": {
+    "bytes": 6248,
+    "sha256": "2a33b2233683aaacd0350434b3d3085bdcada87f3e99dee45101fa4c6b0b80d7"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_007_state_log.csv": {
+    "bytes": 137053,
+    "sha256": "3a84c54d36b70123969febc387151f806a17841cdbea6bc5667b0145ac213af0"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_008_override_log.csv": {
+    "bytes": 6248,
+    "sha256": "f748434fd65ac4e979a36a35eb9e9b954b284ae2d460b95b0600912d62a15708"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_008_state_log.csv": {
+    "bytes": 137241,
+    "sha256": "f2bb06f2e9e7db4c7615e54f68245533455b39f544d9d3b569e46fbbe89eeeed"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_009_override_log.csv": {
+    "bytes": 6258,
+    "sha256": "b17dc91221a154e616e600f57c109d2ef1e8a925520c591d0374dafe9b1d8642"
+  },
+  "results/multitask/runs/t6_base/task_06_episode_009_state_log.csv": {
+    "bytes": 136888,
+    "sha256": "01115916bd7464b1a4546660e2655ad53e3102145f934c344b5e50996f7d1f4d"
+  },
+  "results/multitask/runs/t6_rule/episodes.jsonl": {
+    "bytes": 31677,
+    "sha256": "021a1e5f06194890a73e655e6ce0e3fe655ffa92b1ae09a980767b663faad68c"
+  },
+  "results/multitask/runs/t6_rule/results.json": {
+    "bytes": 51877,
+    "sha256": "ff2e7caaee3dc9adeaefec9df91611f63a1688009c529c3a3daf67f4ca54c1df"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_000_override_log.csv": {
+    "bytes": 6160,
+    "sha256": "b979d01d0bedb43038457be08d933e7b5b195046c76d161c0d66298d682d2138"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_000_state_log.csv": {
+    "bytes": 136631,
+    "sha256": "86316138e7152a6efc27e3cfc94507318b0e023a3e067335d6bef6697a5b67aa"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_001_override_log.csv": {
+    "bytes": 6162,
+    "sha256": "410867f5a126c4ac460ae986176b1b96912349633c3640a463fd6fc4c6b30ed8"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_001_state_log.csv": {
+    "bytes": 136940,
+    "sha256": "ee5bbe0346616cdb74875681c5f8c2b92b54b5c3c6b18dd87597d704b94bf2ef"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_002_override_log.csv": {
+    "bytes": 6162,
+    "sha256": "f55b1a7c6f316dcf787f16dbe038bea5fe3be3aec84dff37def5e8ef488dd12c"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_002_state_log.csv": {
+    "bytes": 136973,
+    "sha256": "47b78fba2e95ad06cc23c83ecb91379adc3250718a10107b4e2ecc9264f6d5cc"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_003_override_log.csv": {
+    "bytes": 6156,
+    "sha256": "22722c6e84655cf1c845aedd6a9ddb64f0c8068ec52b318d51929a79d665267b"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_003_state_log.csv": {
+    "bytes": 136739,
+    "sha256": "0f756c28325c07a3d70e4b2c8176812d16fe6fa0994cbdf95e2a435be2848c7e"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_004_override_log.csv": {
+    "bytes": 6162,
+    "sha256": "881f643dd27adfd0ef8f748bf72beeaaf17a2edbb843682c10af0e58798d18c5"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_004_state_log.csv": {
+    "bytes": 137003,
+    "sha256": "1225c7fd7a5439511db3646e390140d2b566bdcbee614c5d4db33d4ce8eca64c"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_005_override_log.csv": {
+    "bytes": 6162,
+    "sha256": "eb0f69b02c8557c8577405e563dcbe426ace3a906eb7c66a77ff79f79323dab8"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_005_state_log.csv": {
+    "bytes": 136432,
+    "sha256": "19861b42a0e4d05b2b31af9f77f4ed518c3ec192d139a31f09cb3a16d39ae96a"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_006_override_log.csv": {
+    "bytes": 6152,
+    "sha256": "39a6ec109d7bfb6194951a71a59e39d6f379404ec2e0979dd9d2971c5db7a1b5"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_006_state_log.csv": {
+    "bytes": 136596,
+    "sha256": "e455353f5d08f55cbdf55a36d256c06f259f2f8a244f070071c9287936407166"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_007_override_log.csv": {
+    "bytes": 6162,
+    "sha256": "c107d52eb081744d34cf4376bccccc363d07ce46401bb99451c563c6bbc17f27"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_007_state_log.csv": {
+    "bytes": 136936,
+    "sha256": "21999074be88d016cd389309f1a84a3d062c6aeb8e5f4f405d205714be7edab0"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_008_override_log.csv": {
+    "bytes": 6162,
+    "sha256": "843d46b6242045405410a026d2727e56bc1fc71cd8c25951e1f6dffbf6d12cb1"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_008_state_log.csv": {
+    "bytes": 137254,
+    "sha256": "a5b06d6df32464499178a2b3f4a10b65ed1c1e9657f9d6b0d6b98c64d6a361b6"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_009_override_log.csv": {
+    "bytes": 6160,
+    "sha256": "5d5de8ee1609d84877a6f29dbf2ac12054b9be569c0ab43ebfee3e1030c2357d"
+  },
+  "results/multitask/runs/t6_rule/task_06_episode_009_state_log.csv": {
+    "bytes": 136573,
+    "sha256": "d2571ac0276c911fb0060e6d3b21d037537ea30d8662b6d3353dbfdeaf1e54ab"
+  },
+  "results/multitask/runs/t9_base/episodes.jsonl": {
+    "bytes": 27556,
+    "sha256": "b8eac8b89d0a735f3dbc1cca1757f194e8ddaf240dc044f3bb800fe0105c327f"
+  },
+  "results/multitask/runs/t9_base/results.json": {
+    "bytes": 44684,
+    "sha256": "72486cc52508f0e94ab36275f818499fcc36fa0752343753e86d6e164e4a61cf"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_000_override_log.csv": {
+    "bytes": 6262,
+    "sha256": "7178a252eea7d53d61ff973657d2efea0d22b614a69a52c59809a241da8108bb"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_000_state_log.csv": {
+    "bytes": 134716,
+    "sha256": "7f5abe47112abd65a30ed5501ec1a04d4622614fdbbb9f563be735ad30c1daf8"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_001_override_log.csv": {
+    "bytes": 3832,
+    "sha256": "a795740f1b42ff7b27d37a38da79a93661b851e71104ca7a842836f9aa5856c8"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_001_state_log.csv": {
+    "bytes": 86150,
+    "sha256": "6f5f39a7fa50e464485099a6dd60f870446c76b76f85ff0e51fdb40ee7faf197"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_002_override_log.csv": {
+    "bytes": 6262,
+    "sha256": "7178a252eea7d53d61ff973657d2efea0d22b614a69a52c59809a241da8108bb"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_002_state_log.csv": {
+    "bytes": 135399,
+    "sha256": "9e4c2aecea5e656e27a24e3cd6791517e9b04ec9bf60b229be3eddac55cb8c4a"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_003_override_log.csv": {
+    "bytes": 6066,
+    "sha256": "a886d0878fbef55fea2ad08ec09a12f7b102bd686e171b6da7b221c9744aeb82"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_003_state_log.csv": {
+    "bytes": 134835,
+    "sha256": "3d31029cf791b417f16674f478b8489118df1cf92bcb5c439dcf2f1af3ecb18e"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_004_override_log.csv": {
+    "bytes": 3825,
+    "sha256": "157d6cebbb8359d4fa95d493892c2ce5aab7918aefa6452f45808aaf0bc76e54"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_004_state_log.csv": {
+    "bytes": 87099,
+    "sha256": "227bbf558bbf75dae27eebfef9409a8363b943b36e32497a57e565a33e76006b"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_005_override_log.csv": {
+    "bytes": 6118,
+    "sha256": "8c2e11cc04c7cadf8c9779804c7b5ea4a16656e582f3c10b20798721cc2c2651"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_005_state_log.csv": {
+    "bytes": 134016,
+    "sha256": "e0811fb23cf27955572f7c88438122ab80942628d010cd064b1471ebb15c1564"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_006_override_log.csv": {
+    "bytes": 4040,
+    "sha256": "b3a713d515fdb6c5e463b6a35be9180dbac2b7b1bd7e28d1a27e7ada906a97ac"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_006_state_log.csv": {
+    "bytes": 90955,
+    "sha256": "6c9332b12c5c746a5cf2cab6d71fa29426b1adf1feb822d41af6246f351cfe34"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_007_override_log.csv": {
+    "bytes": 3734,
+    "sha256": "bbe49542e1e7c5b7eca2e9ef59dfb822dde8778e0d149462e9ea83b645f874cc"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_007_state_log.csv": {
+    "bytes": 84667,
+    "sha256": "566b6cb8126d5fae24c52d401aaebb6e6f4c7aaef61db7a74d826dd83a21b166"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_008_override_log.csv": {
+    "bytes": 4221,
+    "sha256": "32effb49f1d018bbeebb53efae46ced9a77fd9f4fb6a3afd922c7d090030f042"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_008_state_log.csv": {
+    "bytes": 95759,
+    "sha256": "6074bcff679c13fc25ab14b975db6a713129745075eb752071ed000ad723ead3"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_009_override_log.csv": {
+    "bytes": 6128,
+    "sha256": "a8638a5ceb122773455281f08084e1570c1bc4ab9959b19270e4973300e79d8d"
+  },
+  "results/multitask/runs/t9_base/task_09_episode_009_state_log.csv": {
+    "bytes": 134687,
+    "sha256": "04b12de0497861b6a01c5219ea05352dcfc2a6410ac7bf4224dd234a0de33369"
+  },
+  "results/multitask/runs/t9_rule/episodes.jsonl": {
+    "bytes": 26969,
+    "sha256": "56ab168553e9930167bbd39a05064b6c1f3938e27c9e103f3af68d29fefb25b7"
+  },
+  "results/multitask/runs/t9_rule/results.json": {
+    "bytes": 43665,
+    "sha256": "65d06be8866a4fbbc791d0740a356f0a8a8f08f7598bef07e5e622e4e0deb8d6"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_000_override_log.csv": {
+    "bytes": 6162,
+    "sha256": "6644c12f7e95ad4185c4cfa1bfadd0534a0a909944733e50dd508deba418de38"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_000_state_log.csv": {
+    "bytes": 134552,
+    "sha256": "fba207e834f1d69d9f885a760113499f250919005a2e9e7734c2a43e3236510c"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_001_override_log.csv": {
+    "bytes": 3854,
+    "sha256": "4add26beae9b0f0f45e13b737e8664edf2cce6257fd88a9755642ae2ecee5053"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_001_state_log.csv": {
+    "bytes": 86940,
+    "sha256": "9abac9fa1f39aa589e7bb3065b5254912e5e8d7b6f5b5d0e63e3ddaf7eccb126"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_002_override_log.csv": {
+    "bytes": 6262,
+    "sha256": "7178a252eea7d53d61ff973657d2efea0d22b614a69a52c59809a241da8108bb"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_002_state_log.csv": {
+    "bytes": 135377,
+    "sha256": "f8db334935cc4469d474a5c6238ae29abf989b9f1dbcde8f5c4f3981bbea2526"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_003_override_log.csv": {
+    "bytes": 6076,
+    "sha256": "9b3aa1e757fece0c544f1585c1eaf1eb5a07183d584202a751cc89135b45f5f7"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_003_state_log.csv": {
+    "bytes": 134666,
+    "sha256": "0cfb384305c9583773348d58341e0a627407172aac6acb185c16e59f8d70aea8"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_004_override_log.csv": {
+    "bytes": 4082,
+    "sha256": "c7b0ff65448bb844963d5fd2f5f56e7a7d2b2bc3523ccedc86c57a443810f9c5"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_004_state_log.csv": {
+    "bytes": 92932,
+    "sha256": "1dc5a9efaf6c084663a9e30914e93cffc5bf965a028caa50cd423b6bc8f35b27"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_005_override_log.csv": {
+    "bytes": 6132,
+    "sha256": "61f60e25c997505291abf9d8aeee6e7ccea3ab1cea51daefc441a83d9d57aece"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_005_state_log.csv": {
+    "bytes": 134199,
+    "sha256": "02721e03d1d327f5425a8166e68719f6ef9671cd57d58fafe74a60b68084640a"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_006_override_log.csv": {
+    "bytes": 3990,
+    "sha256": "47481762b0f56e085fa2fb6f39f1d37c2150738d8cf01f382e39244900ba68c2"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_006_state_log.csv": {
+    "bytes": 89908,
+    "sha256": "6e9d6ea51e2371563066a151289bdb466f8773c50140342b2369dae88a80902a"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_007_override_log.csv": {
+    "bytes": 3755,
+    "sha256": "b54f4272fb6628be49aa719da6421e65730688c6a3a5ced735b2ce4f03da085d"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_007_state_log.csv": {
+    "bytes": 85119,
+    "sha256": "861f9fa45f9cf94c116997602b3ce598f2184a2af647da765c06270d4a0ff05f"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_008_override_log.csv": {
+    "bytes": 4461,
+    "sha256": "437ff9d9cf074322a4910b1c185634a495653ce2931b2e8dd8433038563fd90f"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_008_state_log.csv": {
+    "bytes": 101207,
+    "sha256": "5326b14b542dcd50a46cbbbc456b201f6e2b89eec5a22afacdab4f535184e54d"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_009_override_log.csv": {
+    "bytes": 4093,
+    "sha256": "f1d013109a14c598d75dfc2d007cef9bf91b1554119e0295cb6b86ba1c6bd04c"
+  },
+  "results/multitask/runs/t9_rule/task_09_episode_009_state_log.csv": {
+    "bytes": 93036,
+    "sha256": "e71360c6000f548a8bb929bc0d1e8687cde85ccd692857eba894895bafb080a3"
+  },
+  "results/multitask/多任务迁移检验.md": {
+    "bytes": 3978,
+    "sha256": "54bf77a4202bf0f5a94fe6da8dcf4570432e2a95c5f1b909b24288a22069e66a"
+  },
   "results/p1/intervention_reps.json": {
     "bytes": 2318,
     "sha256": "7f6e364622535cab192244444a5f65f15c6e731e2e319e4acde395a6024b386e"

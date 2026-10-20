@@ -1,0 +1,1508 @@
+{
+  "schema_version": 1,
+  "model": "base",
+  "checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/glancewam_bundle/checkpoints/glancewam_libero/checkpoints/steps_15000_pytorch_model_ema.pt",
+  "protocol_sha256": "a1481816b3f9658027d2bc08f10a8c23f3c7359b083ef17be5040f086c227d54",
+  "condition": "color_strong",
+  "corruption": {
+    "brightness": 1.0,
+    "saturation": 1.0,
+    "gains": [
+      0.7,
+      1.0,
+      1.3
+    ]
+  },
+  "successes": 5,
+  "episodes": 10,
+  "success_rate": 0.5,
+  "hold_close_inclusive": null,
+  "episode_results": [
+    {
+      "task_id": 4,
+      "episode_id": 0,
+      "env_seed": 101918736,
+      "instruction": "put the bowl on top of the cabinet",
+      "task_name": "put_the_bowl_on_top_of_the_cabinet",
+      "condition": "color_strong",
+      "success": true,
+      "init_state_sha256": "ed35dbd746e6efe630908bc93ea0659cc4c4cd10cd9c1c1ccc336fb2012cb5dd",
+      "post_settle_state_sha256": "fa06d974d457a2ce79045babcccc44837b0dd55f37ac38e818edcb6ec1a1149c",
+      "steps": 93,
+      "seconds": 14.733248200966045,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 6.602266862057149,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.2595522659830749,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.22204236802645028,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.21713705000001937,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.21558222896419466,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.20282310398761183,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 1.3928464440396056,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.21661321492865682,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.20599479996599257,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.17942230904009193,
+          "refresh": false
+        },
+        {
+          "step": 80,
+          "seconds": 0.16341785702388734,
+          "refresh": false
+        },
+        {
+          "step": 88,
+          "seconds": 0.2152430780697614,
+          "refresh": false
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "8555f908cfa5c117e3ed75344e306a843b6ed577e2216abbc25761d9502d60cf"
+    },
+    {
+      "task_id": 4,
+      "episode_id": 1,
+      "env_seed": 457691855,
+      "instruction": "put the bowl on top of the cabinet",
+      "task_name": "put_the_bowl_on_top_of_the_cabinet",
+      "condition": "color_strong",
+      "success": false,
+      "init_state_sha256": "a24dd942d9f6deb711a6954ba2dbccbfc86fa8b5b573ae8a376087b051fe62a0",
+      "post_settle_state_sha256": "5b049ba850d4153e576dd4ddab0e0862b83ceb7769e45fece842b6027cedc642",
+      "steps": 300,
+      "seconds": 25.051810969016515,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 1.0785175829660147,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.28224115003831685,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.17977903003338724,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.17841272696387023,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.17971171298995614,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.1563237289665267,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 1.0782139340881258,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.27991337003186345,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.15528327599167824,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.15514728496782482,
+          "refresh": false
+        },
+        {
+          "step": 80,
+          "seconds": 0.18523991899564862,
+          "refresh": false
+        },
+        {
+          "step": 88,
+          "seconds": 0.18377155007328838,
+          "refresh": false
+        },
+        {
+          "step": 96,
+          "seconds": 1.0247865749988705,
+          "refresh": true
+        },
+        {
+          "step": 104,
+          "seconds": 0.2741290449630469,
+          "refresh": false
+        },
+        {
+          "step": 112,
+          "seconds": 0.2139759879792109,
+          "refresh": false
+        },
+        {
+          "step": 120,
+          "seconds": 0.15299973904620856,
+          "refresh": false
+        },
+        {
+          "step": 128,
+          "seconds": 0.15485589299350977,
+          "refresh": false
+        },
+        {
+          "step": 136,
+          "seconds": 0.16271525097545236,
+          "refresh": false
+        },
+        {
+          "step": 144,
+          "seconds": 1.022669143974781,
+          "refresh": true
+        },
+        {
+          "step": 152,
+          "seconds": 0.26854025200009346,
+          "refresh": false
+        },
+        {
+          "step": 160,
+          "seconds": 0.21803499292582273,
+          "refresh": false
+        },
+        {
+          "step": 168,
+          "seconds": 0.15934483602177352,
+          "refresh": false
+        },
+        {
+          "step": 176,
+          "seconds": 0.16236970492172986,
+          "refresh": false
+        },
+        {
+          "step": 184,
+          "seconds": 0.1656141170533374,
+          "refresh": false
+        },
+        {
+          "step": 192,
+          "seconds": 0.9101810130523518,
+          "refresh": true
+        },
+        {
+          "step": 200,
+          "seconds": 0.15669728897046298,
+          "refresh": false
+        },
+        {
+          "step": 208,
+          "seconds": 0.23022030608262867,
+          "refresh": false
+        },
+        {
+          "step": 216,
+          "seconds": 0.2641165779205039,
+          "refresh": false
+        },
+        {
+          "step": 224,
+          "seconds": 0.2140586570603773,
+          "refresh": false
+        },
+        {
+          "step": 232,
+          "seconds": 0.15890221006702632,
+          "refresh": false
+        },
+        {
+          "step": 240,
+          "seconds": 1.0588588760001585,
+          "refresh": true
+        },
+        {
+          "step": 248,
+          "seconds": 0.20081658998969942,
+          "refresh": false
+        },
+        {
+          "step": 256,
+          "seconds": 0.24968211411032826,
+          "refresh": false
+        },
+        {
+          "step": 264,
+          "seconds": 0.22233676293399185,
+          "refresh": false
+        },
+        {
+          "step": 272,
+          "seconds": 0.2099643520778045,
+          "refresh": false
+        },
+        {
+          "step": 280,
+          "seconds": 0.1994166129734367,
+          "refresh": false
+        },
+        {
+          "step": 288,
+          "seconds": 1.0129562360234559,
+          "refresh": true
+        },
+        {
+          "step": 296,
+          "seconds": 0.3116771701024845,
+          "refresh": false
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "8525d0afcc32a83873b6af58c9a1d5b227ffe3b6f8364d460b53efb082773649"
+    },
+    {
+      "task_id": 4,
+      "episode_id": 2,
+      "env_seed": 796304538,
+      "instruction": "put the bowl on top of the cabinet",
+      "task_name": "put_the_bowl_on_top_of_the_cabinet",
+      "condition": "color_strong",
+      "success": false,
+      "init_state_sha256": "c8e451ca23a16e21ded4cc462a3d2f820bf591a69454ad67e5d325a4cbc5e4b1",
+      "post_settle_state_sha256": "c634d6a2dd0188fad1df0a68e2bef26cc18b71658055cf41735802c34d95a1f7",
+      "steps": 300,
+      "seconds": 26.03968581999652,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 1.0350604220293462,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.20463658694643527,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.2156211620895192,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.21241191204171628,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.15783422195818275,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.15916378691326827,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 0.9537982739275321,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.15775693499017507,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.23356421303469688,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.20443454303313047,
+          "refresh": false
+        },
+        {
+          "step": 80,
+          "seconds": 0.15964702400378883,
+          "refresh": false
+        },
+        {
+          "step": 88,
+          "seconds": 0.17502506508026272,
+          "refresh": false
+        },
+        {
+          "step": 96,
+          "seconds": 1.2056155649479479,
+          "refresh": true
+        },
+        {
+          "step": 104,
+          "seconds": 0.21029704494867474,
+          "refresh": false
+        },
+        {
+          "step": 112,
+          "seconds": 0.26642251305747777,
+          "refresh": false
+        },
+        {
+          "step": 120,
+          "seconds": 0.23782004590611905,
+          "refresh": false
+        },
+        {
+          "step": 128,
+          "seconds": 0.17672990798018873,
+          "refresh": false
+        },
+        {
+          "step": 136,
+          "seconds": 0.18787260202225298,
+          "refresh": false
+        },
+        {
+          "step": 144,
+          "seconds": 1.1631106990389526,
+          "refresh": true
+        },
+        {
+          "step": 152,
+          "seconds": 0.22134465398266912,
+          "refresh": false
+        },
+        {
+          "step": 160,
+          "seconds": 0.26432966999709606,
+          "refresh": false
+        },
+        {
+          "step": 168,
+          "seconds": 0.19761395698878914,
+          "refresh": false
+        },
+        {
+          "step": 176,
+          "seconds": 0.17227190302219242,
+          "refresh": false
+        },
+        {
+          "step": 184,
+          "seconds": 0.2104568830691278,
+          "refresh": false
+        },
+        {
+          "step": 192,
+          "seconds": 0.9943766810465604,
+          "refresh": true
+        },
+        {
+          "step": 200,
+          "seconds": 0.18270482495427132,
+          "refresh": false
+        },
+        {
+          "step": 208,
+          "seconds": 0.17741465906146914,
+          "refresh": false
+        },
+        {
+          "step": 216,
+          "seconds": 0.20973680401220918,
+          "refresh": false
+        },
+        {
+          "step": 224,
+          "seconds": 0.18933731701690704,
+          "refresh": false
+        },
+        {
+          "step": 232,
+          "seconds": 0.2395167410140857,
+          "refresh": false
+        },
+        {
+          "step": 240,
+          "seconds": 1.0457197249634191,
+          "refresh": true
+        },
+        {
+          "step": 248,
+          "seconds": 0.211284653050825,
+          "refresh": false
+        },
+        {
+          "step": 256,
+          "seconds": 0.2571801149751991,
+          "refresh": false
+        },
+        {
+          "step": 264,
+          "seconds": 0.25219148700125515,
+          "refresh": false
+        },
+        {
+          "step": 272,
+          "seconds": 0.19695330504328012,
+          "refresh": false
+        },
+        {
+          "step": 280,
+          "seconds": 0.22367253503762186,
+          "refresh": false
+        },
+        {
+          "step": 288,
+          "seconds": 0.9873827879782766,
+          "refresh": true
+        },
+        {
+          "step": 296,
+          "seconds": 0.19118272000923753,
+          "refresh": false
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "2bb7795d3b1d2dee25d0d152561a807e651f15f4e00d25bde98729b9d995ed20"
+    },
+    {
+      "task_id": 4,
+      "episode_id": 3,
+      "env_seed": 1630779523,
+      "instruction": "put the bowl on top of the cabinet",
+      "task_name": "put_the_bowl_on_top_of_the_cabinet",
+      "condition": "color_strong",
+      "success": false,
+      "init_state_sha256": "0d44d8c1a8245d107a8d5035f64d3e7c854538cb7e70d1c45c7724f8b743369b",
+      "post_settle_state_sha256": "9f3ea780f12f00b96cf6cb920f19b3836f071817d1ebadbaf15fe5c8273c5fdb",
+      "steps": 300,
+      "seconds": 24.614884809940122,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 0.9817563369870186,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.2523277070140466,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.23033751198090613,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.1512381990905851,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.21566912101116031,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.18047598004341125,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 0.9159412329318002,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.23523383389692754,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.2055293080629781,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.15748072997666895,
+          "refresh": false
+        },
+        {
+          "step": 80,
+          "seconds": 0.15920842299237847,
+          "refresh": false
+        },
+        {
+          "step": 88,
+          "seconds": 0.2567326599964872,
+          "refresh": false
+        },
+        {
+          "step": 96,
+          "seconds": 1.0134357130154967,
+          "refresh": true
+        },
+        {
+          "step": 104,
+          "seconds": 0.15025525097735226,
+          "refresh": false
+        },
+        {
+          "step": 112,
+          "seconds": 0.196093300008215,
+          "refresh": false
+        },
+        {
+          "step": 120,
+          "seconds": 0.202596491901204,
+          "refresh": false
+        },
+        {
+          "step": 128,
+          "seconds": 0.17429805698338896,
+          "refresh": false
+        },
+        {
+          "step": 136,
+          "seconds": 0.2072448009857908,
+          "refresh": false
+        },
+        {
+          "step": 144,
+          "seconds": 0.9987274459563196,
+          "refresh": true
+        },
+        {
+          "step": 152,
+          "seconds": 0.18897571309935302,
+          "refresh": false
+        },
+        {
+          "step": 160,
+          "seconds": 0.15768449602182955,
+          "refresh": false
+        },
+        {
+          "step": 168,
+          "seconds": 0.20927217206917703,
+          "refresh": false
+        },
+        {
+          "step": 176,
+          "seconds": 0.18835578893776983,
+          "refresh": false
+        },
+        {
+          "step": 184,
+          "seconds": 0.26695672096684575,
+          "refresh": false
+        },
+        {
+          "step": 192,
+          "seconds": 0.9432192109525204,
+          "refresh": true
+        },
+        {
+          "step": 200,
+          "seconds": 0.15160367090720683,
+          "refresh": false
+        },
+        {
+          "step": 208,
+          "seconds": 0.15128183702472597,
+          "refresh": false
+        },
+        {
+          "step": 216,
+          "seconds": 0.16041964606847614,
+          "refresh": false
+        },
+        {
+          "step": 224,
+          "seconds": 0.19972637598402798,
+          "refresh": false
+        },
+        {
+          "step": 232,
+          "seconds": 0.2691831439733505,
+          "refresh": false
+        },
+        {
+          "step": 240,
+          "seconds": 1.0509324519662187,
+          "refresh": true
+        },
+        {
+          "step": 248,
+          "seconds": 0.19304380100220442,
+          "refresh": false
+        },
+        {
+          "step": 256,
+          "seconds": 0.21034948900341988,
+          "refresh": false
+        },
+        {
+          "step": 264,
+          "seconds": 0.21907284599728882,
+          "refresh": false
+        },
+        {
+          "step": 272,
+          "seconds": 0.21730894094798714,
+          "refresh": false
+        },
+        {
+          "step": 280,
+          "seconds": 0.27948566002305597,
+          "refresh": false
+        },
+        {
+          "step": 288,
+          "seconds": 1.073200584971346,
+          "refresh": true
+        },
+        {
+          "step": 296,
+          "seconds": 0.18474061496090144,
+          "refresh": false
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "3f4519975b736256b3dc3e3850b2b7ef200d2ed00f2280f9ffdb84e9aeeeddc9"
+    },
+    {
+      "task_id": 4,
+      "episode_id": 4,
+      "env_seed": 1568730067,
+      "instruction": "put the bowl on top of the cabinet",
+      "task_name": "put_the_bowl_on_top_of_the_cabinet",
+      "condition": "color_strong",
+      "success": true,
+      "init_state_sha256": "9398eff6c3c84a1f1ca9eacabc431c412599ae44bf98619a791ad8bb7e7615f3",
+      "post_settle_state_sha256": "64a3b597d8de31596605ef4c95d4e210002130b66245937fa753fdb10598feac",
+      "steps": 103,
+      "seconds": 35.09689955797512,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 0.9937209620838985,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.1734865850303322,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.15689645998645574,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.16129951702896506,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.2602866729721427,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 18.252305908943526,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 6.304092788952403,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.2142280020052567,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.2132802939740941,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.212234599981457,
+          "refresh": false
+        },
+        {
+          "step": 80,
+          "seconds": 0.1630860019940883,
+          "refresh": false
+        },
+        {
+          "step": 88,
+          "seconds": 0.17328888201154768,
+          "refresh": false
+        },
+        {
+          "step": 96,
+          "seconds": 1.1311457919655368,
+          "refresh": true
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "4780a0f4dcf12dd1569c81740c8c6efb2b318a39d1fd9909ad491de36b8b8733"
+    },
+    {
+      "task_id": 4,
+      "episode_id": 5,
+      "env_seed": 481858906,
+      "instruction": "put the bowl on top of the cabinet",
+      "task_name": "put_the_bowl_on_top_of_the_cabinet",
+      "condition": "color_strong",
+      "success": true,
+      "init_state_sha256": "8cbf12310e015b1274797946cfe192df1f9ffa37b50ba7c5436d90166b534968",
+      "post_settle_state_sha256": "df094d48500a49753a148ade419d38b51f90107d3f3945fc4c56f5b41db97574",
+      "steps": 104,
+      "seconds": 10.248240843066014,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 1.154097167076543,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.1549262769985944,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.1615745899034664,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.15154982707463205,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.1505442790221423,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.23403875005897135,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 1.0476751870010048,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.22157254605554044,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.21464428503531963,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.1610264009796083,
+          "refresh": false
+        },
+        {
+          "step": 80,
+          "seconds": 0.15308877197094262,
+          "refresh": false
+        },
+        {
+          "step": 88,
+          "seconds": 0.19320977304596454,
+          "refresh": false
+        },
+        {
+          "step": 96,
+          "seconds": 1.0161102919373661,
+          "refresh": true
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "8b165acf48b009c3a170c87cff465ccf28e40b06cc603f8883d6a8731f760d18"
+    },
+    {
+      "task_id": 4,
+      "episode_id": 6,
+      "env_seed": 687943688,
+      "instruction": "put the bowl on top of the cabinet",
+      "task_name": "put_the_bowl_on_top_of_the_cabinet",
+      "condition": "color_strong",
+      "success": true,
+      "init_state_sha256": "e3380f027a7e3daa941450a3bfec2977875c4fb7fe8b99f312ec0b58c2218cb4",
+      "post_settle_state_sha256": "b97241c117e189d53a412376309c245f7ddc50782030ccce0426e8521a0c100f",
+      "steps": 99,
+      "seconds": 9.92775363207329,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 0.9837950060609728,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.266295472974889,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.24867764895316213,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.22733405500184745,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.1939053429523483,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.2221377439564094,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 0.9309171780478209,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.21531784301623702,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.15514713001903147,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.18222805100958794,
+          "refresh": false
+        },
+        {
+          "step": 80,
+          "seconds": 0.15567704301793128,
+          "refresh": false
+        },
+        {
+          "step": 88,
+          "seconds": 0.2216175829526037,
+          "refresh": false
+        },
+        {
+          "step": 96,
+          "seconds": 0.9936630519805476,
+          "refresh": true
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "28414c4d431304c27d7bd1c3928e342f7ea99fa342f44184a7f75fe87d6c51f6"
+    },
+    {
+      "task_id": 4,
+      "episode_id": 7,
+      "env_seed": 1666608804,
+      "instruction": "put the bowl on top of the cabinet",
+      "task_name": "put_the_bowl_on_top_of_the_cabinet",
+      "condition": "color_strong",
+      "success": false,
+      "init_state_sha256": "de576b13e6001d65e245a3325018724fc835e059e13053d23131f86f149b5cd4",
+      "post_settle_state_sha256": "ddaa623e95ddbb8d67acac6ca843ddb43aba9129aa3c91f953a00f3eb4ac6149",
+      "steps": 300,
+      "seconds": 25.978022980038077,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 1.0831021369667724,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.22193673090077937,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.2180925270076841,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.1542993918992579,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.15845019207336009,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.2148129780543968,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 1.046105087036267,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.20461675198748708,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.19663304893765599,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.15333092492073774,
+          "refresh": false
+        },
+        {
+          "step": 80,
+          "seconds": 0.16273089800961316,
+          "refresh": false
+        },
+        {
+          "step": 88,
+          "seconds": 0.21129463403485715,
+          "refresh": false
+        },
+        {
+          "step": 96,
+          "seconds": 1.0030027671018615,
+          "refresh": true
+        },
+        {
+          "step": 104,
+          "seconds": 0.17756981495767832,
+          "refresh": false
+        },
+        {
+          "step": 112,
+          "seconds": 0.21022162900771946,
+          "refresh": false
+        },
+        {
+          "step": 120,
+          "seconds": 0.2728968459414318,
+          "refresh": false
+        },
+        {
+          "step": 128,
+          "seconds": 0.24991386395413429,
+          "refresh": false
+        },
+        {
+          "step": 136,
+          "seconds": 0.21933742496185005,
+          "refresh": false
+        },
+        {
+          "step": 144,
+          "seconds": 1.052926964010112,
+          "refresh": true
+        },
+        {
+          "step": 152,
+          "seconds": 0.16263252298813313,
+          "refresh": false
+        },
+        {
+          "step": 160,
+          "seconds": 0.15856377698946744,
+          "refresh": false
+        },
+        {
+          "step": 168,
+          "seconds": 0.23533138493075967,
+          "refresh": false
+        },
+        {
+          "step": 176,
+          "seconds": 0.22463378601241857,
+          "refresh": false
+        },
+        {
+          "step": 184,
+          "seconds": 0.2116768709383905,
+          "refresh": false
+        },
+        {
+          "step": 192,
+          "seconds": 1.0784477640409023,
+          "refresh": true
+        },
+        {
+          "step": 200,
+          "seconds": 0.16776876104995608,
+          "refresh": false
+        },
+        {
+          "step": 208,
+          "seconds": 0.16442830697633326,
+          "refresh": false
+        },
+        {
+          "step": 216,
+          "seconds": 0.20856554503552616,
+          "refresh": false
+        },
+        {
+          "step": 224,
+          "seconds": 0.21549170301295817,
+          "refresh": false
+        },
+        {
+          "step": 232,
+          "seconds": 0.2230426649330184,
+          "refresh": false
+        },
+        {
+          "step": 240,
+          "seconds": 1.0524161600042135,
+          "refresh": true
+        },
+        {
+          "step": 248,
+          "seconds": 0.1578159029595554,
+          "refresh": false
+        },
+        {
+          "step": 256,
+          "seconds": 0.17637030093465,
+          "refresh": false
+        },
+        {
+          "step": 264,
+          "seconds": 0.21483155502937734,
+          "refresh": false
+        },
+        {
+          "step": 272,
+          "seconds": 0.181266003055498,
+          "refresh": false
+        },
+        {
+          "step": 280,
+          "seconds": 0.20760111405979842,
+          "refresh": false
+        },
+        {
+          "step": 288,
+          "seconds": 1.1089180270209908,
+          "refresh": true
+        },
+        {
+          "step": 296,
+          "seconds": 0.1602289390284568,
+          "refresh": false
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "a9efe5d51f7f09277d93d0bcb2833bc51cca2b6052e0b72471dba8f0c114e34f"
+    },
+    {
+      "task_id": 4,
+      "episode_id": 8,
+      "env_seed": 1191268232,
+      "instruction": "put the bowl on top of the cabinet",
+      "task_name": "put_the_bowl_on_top_of_the_cabinet",
+      "condition": "color_strong",
+      "success": true,
+      "init_state_sha256": "266efdb299bf2d89fd9fc41d0059c352b7605845278a99dfd571baa038e948db",
+      "post_settle_state_sha256": "a250d9aa0ad5ce3841e1391ded8018d47a845b28207836f8c066507d0ffd1672",
+      "steps": 95,
+      "seconds": 8.672478636028245,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 1.0341283669695258,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.2168722569476813,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.21088787901680917,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.15450639906339347,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.2111645779805258,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.21185084898024797,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 0.9902484740596265,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.20557533402461559,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.201544793904759,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.15271630906499922,
+          "refresh": false
+        },
+        {
+          "step": 80,
+          "seconds": 0.21688505401834846,
+          "refresh": false
+        },
+        {
+          "step": 88,
+          "seconds": 0.218854954931885,
+          "refresh": false
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "a5ae4aa20b0fb43db11a3b552917e144e11b758596240e146ce750b44326fa26"
+    },
+    {
+      "task_id": 4,
+      "episode_id": 9,
+      "env_seed": 1022063127,
+      "instruction": "put the bowl on top of the cabinet",
+      "task_name": "put_the_bowl_on_top_of_the_cabinet",
+      "condition": "color_strong",
+      "success": false,
+      "init_state_sha256": "387c75f46b37e770286fb427cab290e04cf0efe4d16101ed76f96eb3832e7e64",
+      "post_settle_state_sha256": "f1c651afc9212ed3a978562ea9ea997cf239e8937291e4dd4eb2bc9be65c6ca7",
+      "steps": 300,
+      "seconds": 25.461447216919623,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 1.3174463940085843,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.19932495197281241,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.18283723411150277,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.19548453798051924,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.1568363350816071,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.21155520004685968,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 1.0974648349219933,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.203948887065053,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.19044263300020248,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.1668772150296718,
+          "refresh": false
+        },
+        {
+          "step": 80,
+          "seconds": 0.1658381859306246,
+          "refresh": false
+        },
+        {
+          "step": 88,
+          "seconds": 0.2243939699837938,
+          "refresh": false
+        },
+        {
+          "step": 96,
+          "seconds": 1.1027839109301567,
+          "refresh": true
+        },
+        {
+          "step": 104,
+          "seconds": 0.1530131750041619,
+          "refresh": false
+        },
+        {
+          "step": 112,
+          "seconds": 0.1527780561009422,
+          "refresh": false
+        },
+        {
+          "step": 120,
+          "seconds": 0.1532216490013525,
+          "refresh": false
+        },
+        {
+          "step": 128,
+          "seconds": 0.1577683020150289,
+          "refresh": false
+        },
+        {
+          "step": 136,
+          "seconds": 0.20378640701528639,
+          "refresh": false
+        },
+        {
+          "step": 144,
+          "seconds": 1.1901491159806028,
+          "refresh": true
+        },
+        {
+          "step": 152,
+          "seconds": 0.1551065460080281,
+          "refresh": false
+        },
+        {
+          "step": 160,
+          "seconds": 0.15397253492847085,
+          "refresh": false
+        },
+        {
+          "step": 168,
+          "seconds": 0.1540397210046649,
+          "refresh": false
+        },
+        {
+          "step": 176,
+          "seconds": 0.15654223901219666,
+          "refresh": false
+        },
+        {
+          "step": 184,
+          "seconds": 0.19848014798481017,
+          "refresh": false
+        },
+        {
+          "step": 192,
+          "seconds": 1.1274280389770865,
+          "refresh": true
+        },
+        {
+          "step": 200,
+          "seconds": 0.15142781706526875,
+          "refresh": false
+        },
+        {
+          "step": 208,
+          "seconds": 0.15735527803190053,
+          "refresh": false
+        },
+        {
+          "step": 216,
+          "seconds": 0.15582542307674885,
+          "refresh": false
+        },
+        {
+          "step": 224,
+          "seconds": 0.15853289898950607,
+          "refresh": false
+        },
+        {
+          "step": 232,
+          "seconds": 0.23841516801621765,
+          "refresh": false
+        },
+        {
+          "step": 240,
+          "seconds": 0.9880377399967983,
+          "refresh": true
+        },
+        {
+          "step": 248,
+          "seconds": 0.1602167560486123,
+          "refresh": false
+        },
+        {
+          "step": 256,
+          "seconds": 0.15812945400830358,
+          "refresh": false
+        },
+        {
+          "step": 264,
+          "seconds": 0.19641191593836993,
+          "refresh": false
+        },
+        {
+          "step": 272,
+          "seconds": 0.1570790580008179,
+          "refresh": false
+        },
+        {
+          "step": 280,
+          "seconds": 0.2794470159569755,
+          "refresh": false
+        },
+        {
+          "step": 288,
+          "seconds": 1.0466580860083923,
+          "refresh": true
+        },
+        {
+          "step": 296,
+          "seconds": 0.15404614200815558,
+          "refresh": false
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "0fe354d291a30b410b3c1255f77c463c3daf90136392c5d6373610273af394c9"
+    }
+  ],
+  "timing_scope": "synchronous official client, cached goal cadence"
+}

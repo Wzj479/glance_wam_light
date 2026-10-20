@@ -1,0 +1,28 @@
+{
+ "schema_version": 1,
+ "suite": "libero_goal",
+ "seed": 42,
+ "task_ids": [
+  1
+ ],
+ "episode_ids": [
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "conditions": {
+  "color_strong": {
+   "brightness": 1.0,
+   "saturation": 1.0,
+   "gains": [
+    0.7,
+    1.0,
+    1.3
+   ]
+  }
+ },
+ "parent_protocol_sha256": "57bb8bc78b0fb982be93ae2dd1388992ed8d9c65f52a0caef67ce3c7277759e4",
+ "purpose": "Second-task transfer test for the premature-release mechanism and the online grasp-hold rule (task 1 = put_the_bowl_on_the_stove)."
+}

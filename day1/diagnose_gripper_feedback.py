@@ -257,6 +257,10 @@ def main():
     p.add_argument('--expect-init-sha256')
     p.add_argument('--expect-post-settle-sha256')
     p.add_argument('--save-videos', action='store_true')
+    p.add_argument('--grasp-body', default='akita_black_bowl_1',
+                   help='MuJoCo object name of the grasped object (task-specific)')
+    p.add_argument('--target-body', default='plate_1',
+                   help='MuJoCo object name of the placement target (e.g. flat_stove_1)')
     p.add_argument('--force-goal', metavar='NPY', default=None,
                    help='Inject this goal latent (oracle goal) on every query instead of letting the '
                         'world model generate one; a planning upper bound on the goal channel')
@@ -331,10 +335,10 @@ def main():
                     if expected and record[key] != expected:
                         raise ValueError(f'{key} differs from the archived run; pairing is broken')
                 inner = env.env
-                bowl = inner.objects_dict['akita_black_bowl_1']
-                plate = inner.objects_dict['plate_1']
-                bid = inner.obj_body_id['akita_black_bowl_1']
-                pid = inner.obj_body_id['plate_1']
+                bowl = inner.objects_dict[a.grasp_body]
+                plate = inner.objects_dict[a.target_body]
+                bid = inner.obj_body_id[a.grasp_body]
+                pid = inner.obj_body_id[a.target_body]
                 grip = env.robots[0].gripper
                 if not set(FINGER_GROUPS) <= set(grip.important_geoms):
                     raise ValueError('Gripper model lacks finger groups')

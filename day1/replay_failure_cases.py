@@ -155,10 +155,17 @@ def main():
                 else:
                     assert bool(success_steps)==record['success']
                     assert first==(len(actions) if record['success'] else None), 'Original stop time not reproduced'
-                # Compare raw-camera terminal frame to the original lossy MP4.
+                # Compare raw-camera terminal frame to the original lossy MP4. The
+                # archived development runs shipped actions and logs but no videos, so
+                # the camera cross-check is only possible when an MP4 is actually
+                # present. Its absence is recorded rather than silently skipped, and
+                # the physics-level checks above (initial state hash, settled state
+                # hash, success reproduction, first success step) always run.
                 mae=None
-                if not args.hold_close:
-                    reader=imageio.get_reader(src/(stem+'.mp4'),format='FFMPEG')
+                video=src/(stem+'.mp4')
+                terminal_video_available=video.is_file()
+                if not args.hold_close and terminal_video_available:
+                    reader=imageio.get_reader(video,format='FFMPEG')
                     frame=reader.get_data(len(actions));reader.close()
                     prior=frame[:,0:224]
                     if not args.physics_only:
@@ -176,7 +183,8 @@ def main():
             summary=dict(model=model,condition=condition,episode_id=episode,steps=len(actions),
                 original_success=record['success'],replayed_success=bool(success_steps),first_success_state_step=first,
                 settled_sha256=settled,actions_file_sha256=hashlib.sha256((src/(stem+'_actions.npy')).read_bytes()).hexdigest(),
-                terminal_original_video_mae=mae,trace_directory=str(dest))
+                terminal_original_video_mae=mae,terminal_video_available=terminal_video_available,
+                trace_directory=str(dest))
             summary['physics_only']=args.physics_only
             if intervention_audit is not None:
                 summary['intervention']=intervention_audit

@@ -50,6 +50,25 @@ def numbers(rows, name):
     return np.asarray([float(row[name]) for row in rows])
 
 
+def gripper_commands(rows, name):
+    """Gripper channel as integers, from CSV text or native numbers.
+
+    The writer stores the channel as a float, so a round trip through the CSV
+    turns -1 into the text '-1.0'; int() on that text raises. The channel is
+    binary by construction -- override_gripper rejects anything else -- so
+    rounding recovers the intended value and a value outside {-1, 1} means the
+    log and the run disagree.
+    """
+    values = []
+    for row in rows:
+        raw = row[name]
+        value = int(round(float(raw)))
+        if value not in (-1, 1):
+            raise ValueError(f'{name} must be -1 or +1, got {raw!r}')
+        values.append(value)
+    return values
+
+
 def contact_tail(flags):
     """(first, last, trailing contact-free states). Independent of where an early gap fell."""
     index = np.flatnonzero(flags)
@@ -68,7 +87,7 @@ def analyse_run(run_dir):
     chunk = read_csv(run_dir / f'{stem}_chunk_log.csv')
     flagged = booleans(override, 'overridden')
     overridden = [int(r['action_index']) for r, flag in zip(override, flagged) if flag]
-    model_commands = {int(r['model_gripper_command']) for r in override}
+    model_commands = set(gripper_commands(override, 'model_gripper_command'))
     grasp = grasp_profile(rows)
     overlay = overlay_profile(rows)
     transported = grasp['reached_lift_marker_before_last_finger_contact']
@@ -117,10 +136,6 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(report, indent=2), encoding='utf-8')
     print(json.dumps(report, indent=2))
-
-
-if __name__ == '__main__':
-    main()
 
 
 def grasp_profile(rows):
@@ -191,3 +206,7 @@ def first_divergence_step(actions, reference):
         if not np.array_equal(actions[step], reference[step]):
             return int(step)
     return None
+
+
+if __name__ == '__main__':
+    main()

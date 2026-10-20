@@ -5,8 +5,8 @@ import unittest
 import numpy as np
 
 from diagnose_gripper_feedback import (
-    GRIPPER_CLOSE, chunk_records, first_divergence_step, override_gripper, parse_window, slip_series,
-    subset_protocol)
+    GRIPPER_CLOSE, GraspHold, chunk_records, first_divergence_step, override_gripper, parse_window,
+    slip_series, subset_protocol)
 from eval_protocol import protocol_hash
 from finetune_utils import stable_seed
 
@@ -77,6 +77,65 @@ class OverrideTests(unittest.TestCase):
         executed, overridden = override_gripper(action, 60, None)
         self.assertFalse(overridden)
         np.testing.assert_array_equal(executed, action)
+
+
+def closed_action():
+    action = np.zeros(7); action[6] = GRIPPER_CLOSE; return action
+
+
+def open_action():
+    action = np.zeros(7); action[6] = -GRIPPER_CLOSE; return action
+
+
+class GraspHoldTests(unittest.TestCase):
+    def test_an_open_run_is_never_altered_before_any_close(self):
+        rule = GraspHold(min_closed_steps=30)
+        for _ in range(40):
+            executed, overridden = rule.apply(open_action(), eef_z=1.2)
+            self.assertFalse(overridden)
+            self.assertEqual(executed[6], -GRIPPER_CLOSE)
+
+    def test_release_is_blocked_until_the_grasp_has_lasted_long_enough(self):
+        rule = GraspHold(min_closed_steps=3)
+        # Each blocked release still executes a close, so it accrues toward the count.
+        self.assertEqual(rule.apply(closed_action(), eef_z=0.95)[1], False)   # closed_steps 1
+        self.assertEqual(rule.apply(open_action(), eef_z=0.95)[1], True)      # 1 < 3, blocked -> 2
+        self.assertEqual(rule.apply(open_action(), eef_z=0.95)[1], True)      # 2 < 3, blocked -> 3
+        executed, overridden = rule.apply(open_action(), eef_z=0.95)          # 3 >= 3, released
+        self.assertEqual(overridden, False)
+        self.assertEqual(executed[6], -GRIPPER_CLOSE)
+
+    def test_lifting_the_bowl_allows_release_even_if_short(self):
+        rule = GraspHold(min_closed_steps=30, min_lift_mm=20)
+        rule.apply(closed_action(), eef_z=0.90)          # grasp start at 0.90
+        executed, overridden = rule.apply(open_action(), eef_z=0.93)  # +30 mm lift
+        self.assertFalse(overridden)
+        self.assertEqual(executed[6], -GRIPPER_CLOSE)
+
+    def test_without_the_lift_condition_a_short_grasp_stays_blocked(self):
+        rule = GraspHold(min_closed_steps=30)
+        rule.apply(closed_action(), eef_z=0.90)
+        executed, overridden = rule.apply(open_action(), eef_z=0.93)
+        self.assertTrue(overridden)
+        self.assertEqual(executed[6], GRIPPER_CLOSE)
+
+    def test_an_action_that_is_not_binarised_is_rejected(self):
+        rule = GraspHold(min_closed_steps=5)
+        bad = np.zeros(7); bad[6] = 0.3
+        with self.assertRaises(ValueError):
+            rule.apply(bad, eef_z=0.9)
+
+    def test_reset_clears_the_grasp_state(self):
+        rule = GraspHold(min_closed_steps=5)
+        rule.apply(closed_action(), eef_z=0.9)
+        rule.reset()
+        self.assertFalse(rule.grasp_started)
+        self.assertEqual(rule.closed_steps, 0)
+        self.assertIsNone(rule.origin_z)
+
+    def test_zero_threshold_rejected(self):
+        with self.assertRaises(ValueError):
+            GraspHold(min_closed_steps=0)
 
 
 class DivergenceTests(unittest.TestCase):

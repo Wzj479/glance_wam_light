@@ -17,7 +17,11 @@ out_dir="${OUT_DIR:-results/finetune/goal_aug_seed42}"
 mkdir -p "$(dirname "${out_dir}")"
 split_args=()
 audit_args=()
+init_args=()
 if [[ "${AUDIT_ONLY:-0}" == 1 ]]; then audit_args+=(--audit-only); fi
+if [[ -n "${INIT_ACTION_CHECKPOINT:-}" ]]; then
+    init_args+=(--init-action-checkpoint "${INIT_ACTION_CHECKPOINT}")
+fi
 read -r -a val_color <<< "${VAL_COLOR_GAIN:-0.9 1.0 1.1}"
 if [[ -n "${EPISODE_SPLIT:-}" ]]; then
     split_args+=(--episode-split "${EPISODE_SPLIT}")
@@ -29,6 +33,7 @@ fi
     --base-model "${BASE_MODEL:-models/skyreels-base}" \
     --data-mix "${DATA_MIX:-libero_goal}" \
     "${split_args[@]}" \
+    "${init_args[@]}" \
     "${audit_args[@]}" \
     --max-steps "${MAX_STEPS:-2000}" \
     --batch-size 1 --grad-accum "${GRAD_ACCUM:-8}" \

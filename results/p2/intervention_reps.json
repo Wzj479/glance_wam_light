@@ -1,0 +1,244 @@
+{
+  "runs_root": "results/p2",
+  "baseline": "results/flip20/flip_map.json",
+  "results": {
+    "25:base": {
+      "episode_id": 25,
+      "model": "base",
+      "runs": 2,
+      "successes": 2,
+      "success_rate": 1.0,
+      "steps": [
+        76,
+        76
+      ],
+      "overridden_steps": [
+        0
+      ],
+      "baseline_successes": 5,
+      "baseline_runs": 5,
+      "verdict": "unchanged"
+    },
+    "26:base": {
+      "episode_id": 26,
+      "model": "base",
+      "runs": 5,
+      "successes": 5,
+      "success_rate": 1.0,
+      "steps": [
+        84,
+        84,
+        84,
+        84,
+        84
+      ],
+      "overridden_steps": [
+        0
+      ],
+      "baseline_successes": 5,
+      "baseline_runs": 5,
+      "verdict": "unchanged"
+    },
+    "28:base": {
+      "episode_id": 28,
+      "model": "base",
+      "runs": 5,
+      "successes": 5,
+      "success_rate": 1.0,
+      "steps": [
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "overridden_steps": [
+        19
+      ],
+      "baseline_successes": 0,
+      "baseline_runs": 5,
+      "verdict": "recovered"
+    },
+    "29:base": {
+      "episode_id": 29,
+      "model": "base",
+      "runs": 2,
+      "successes": 2,
+      "success_rate": 1.0,
+      "steps": [
+        77,
+        77
+      ],
+      "overridden_steps": [
+        1
+      ],
+      "baseline_successes": 5,
+      "baseline_runs": 5,
+      "verdict": "unchanged"
+    },
+    "30:base": {
+      "episode_id": 30,
+      "model": "base",
+      "runs": 2,
+      "successes": 2,
+      "success_rate": 1.0,
+      "steps": [
+        78,
+        78
+      ],
+      "overridden_steps": [
+        0
+      ],
+      "baseline_successes": 5,
+      "baseline_runs": 5,
+      "verdict": "unchanged"
+    },
+    "31:base": {
+      "episode_id": 31,
+      "model": "base",
+      "runs": 5,
+      "successes": 5,
+      "success_rate": 1.0,
+      "steps": [
+        81,
+        81,
+        81,
+        80,
+        81
+      ],
+      "overridden_steps": [
+        0
+      ],
+      "baseline_successes": 5,
+      "baseline_runs": 5,
+      "verdict": "unchanged"
+    },
+    "33:base": {
+      "episode_id": 33,
+      "model": "base",
+      "runs": 5,
+      "successes": 5,
+      "success_rate": 1.0,
+      "steps": [
+        80,
+        80,
+        81,
+        84,
+        80
+      ],
+      "overridden_steps": [
+        0
+      ],
+      "baseline_successes": 5,
+      "baseline_runs": 5,
+      "verdict": "unchanged"
+    },
+    "34:base": {
+      "episode_id": 34,
+      "model": "base",
+      "runs": 5,
+      "successes": 5,
+      "success_rate": 1.0,
+      "steps": [
+        78,
+        77,
+        81,
+        77,
+        78
+      ],
+      "overridden_steps": [
+        14,
+        15,
+        16
+      ],
+      "baseline_successes": 0,
+      "baseline_runs": 5,
+      "verdict": "recovered"
+    },
+    "35:base": {
+      "episode_id": 35,
+      "model": "base",
+      "runs": 5,
+      "successes": 0,
+      "success_rate": 0.0,
+      "steps": [
+        300,
+        300,
+        300,
+        300,
+        300
+      ],
+      "overridden_steps": [
+        1,
+        2
+      ],
+      "baseline_successes": 0,
+      "baseline_runs": 5,
+      "verdict": "still_failing"
+    },
+    "36:C": {
+      "episode_id": 36,
+      "model": "C",
+      "runs": 3,
+      "successes": 3,
+      "success_rate": 1.0,
+      "steps": [
+        81,
+        81,
+        81
+      ],
+      "overridden_steps": [
+        1,
+        3
+      ],
+      "baseline_successes": 5,
+      "baseline_runs": 5,
+      "verdict": "unchanged"
+    },
+    "36:P": {
+      "episode_id": 36,
+      "model": "P",
+      "runs": 3,
+      "successes": 3,
+      "success_rate": 1.0,
+      "steps": [
+        81,
+        81,
+        81
+      ],
+      "overridden_steps": [
+        1,
+        2,
+        3
+      ],
+      "baseline_successes": 5,
+      "baseline_runs": 5,
+      "verdict": "unchanged"
+    },
+    "42:base": {
+      "episode_id": 42,
+      "model": "base",
+      "runs": 5,
+      "successes": 5,
+      "success_rate": 1.0,
+      "steps": [
+        77,
+        79,
+        78,
+        78,
+        73
+      ],
+      "overridden_steps": [
+        16
+      ],
+      "baseline_successes": 0,
+      "baseline_runs": 5,
+      "verdict": "recovered"
+    }
+  },
+  "verdict_counts": {
+    "unchanged": 8,
+    "recovered": 3,
+    "still_failing": 1
+  }
+}

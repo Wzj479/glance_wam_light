@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "model": "base",
+  "checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/glancewam_bundle/checkpoints/glancewam_libero/checkpoints/steps_15000_pytorch_model_ema.pt",
+  "protocol_sha256": "1a4edf5b6e38dfa76d0af6274100c6b8333306f33f574c623753d2ee476c091b",
+  "condition": "color_strong",
+  "corruption": {
+    "brightness": 1.0,
+    "saturation": 1.0,
+    "gains": [
+      0.7,
+      1.0,
+      1.3
+    ]
+  },
+  "successes": 1,
+  "episodes": 1,
+  "success_rate": 1.0,
+  "hold_close_inclusive": null,
+  "episode_results": [
+    {
+      "task_id": 8,
+      "episode_id": 29,
+      "env_seed": 356717622,
+      "instruction": "put the bowl on the plate",
+      "task_name": "put_the_bowl_on_the_plate",
+      "condition": "color_strong",
+      "success": true,
+      "init_state_sha256": "4b116fa82d160bef7fc9d8c1823715ce9c3925ca558782bab66e701ff0f63c53",
+      "post_settle_state_sha256": "289b4b0e1b99af802ccec5a4a049c3fdd1edea8afe6328aca57441aecfd2d4fd",
+      "steps": 77,
+      "seconds": 11.668260260019451,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 5.356263433001004,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.16421752597671002,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.15530768397729844,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.1566272049676627,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.15466938295867294,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.1522600830066949,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 1.0250981920398772,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.16790799295995384,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.16628511901944876,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.15672647790051997,
+          "refresh": false
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 1,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "e7e98afa4aaaaa9d9d2afadec9aadf8cc4da3a38df2e226f0175dfc98e77d486"
+    }
+  ],
+  "timing_scope": "synchronous official client, cached goal cadence"
+}

@@ -1,0 +1,15 @@
+{
+  "model": "C",
+  "condition": "color_strong",
+  "episode_id": 35,
+  "steps": 300,
+  "original_success": false,
+  "replayed_success": false,
+  "first_success_state_step": null,
+  "settled_sha256": "8a9fbb621b1903b27e0f93b6c679eaa7399dc836f3d1adb154d0faeb9ed23241",
+  "actions_file_sha256": "06850a56da8c033fdead15a1ef133fa4a9f336b70a8103bd608253cf06270147",
+  "terminal_original_video_mae": null,
+  "terminal_video_available": false,
+  "trace_directory": "/root/autodl-tmp/wam_glance_project/glance_wam_light/results/failure_mechanism_28_34_35_42/color_strong_episode35/C",
+  "physics_only": true
+}

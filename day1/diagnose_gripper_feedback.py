@@ -67,6 +67,71 @@ def override_gripper(action, step, window):
     return executed, True
 
 
+class GraspHold:
+    """Suppress the gripper's release until the grasp looks established.
+
+    This replaces the oracle window (which read the release action out of the
+    archived trajectory) with a rule that uses only what the policy has online: the
+    gripper command it has issued and the end-effector height. Once the model first
+    commands a close, a release is blocked until *either* the grasp has been held
+    closed for ``min_closed_steps`` executed steps *or* the end effector has risen
+    ``min_lift_mm`` above where the grasp started.
+
+    Both conditions are earned, not tuned per state: ``min_closed_steps`` is set from
+    the length successful episodes actually hold, and ``min_lift_mm`` is the lift the
+    successful episodes already show. A release that satisfies either one is treated
+    as a genuine placement and passes through untouched.
+    """
+
+    def __init__(self, min_closed_steps, min_lift_mm=None):
+        if int(min_closed_steps) <= 0:
+            raise ValueError('min_closed_steps must be positive')
+        self.min_closed_steps = int(min_closed_steps)
+        self.min_lift_mm = None if min_lift_mm is None else float(min_lift_mm)
+        self.reset()
+
+    def reset(self):
+        self.grasp_started = False
+        self.closed_steps = 0
+        self.origin_z = None
+
+    def allows_release(self, eef_z):
+        if not self.grasp_started:
+            return True
+        if self.min_lift_mm is not None and self.origin_z is not None \
+                and (float(eef_z) - self.origin_z) * 1000.0 >= self.min_lift_mm:
+            return True
+        return self.closed_steps >= self.min_closed_steps
+
+    def apply(self, action, eef_z):
+        """Return (executed_action, overridden) and update the grasp state."""
+        action = np.asarray(action, dtype=np.float64)
+        if action.shape != (7,):
+            raise ValueError('Expected a 7-dim action')
+        if action[6] not in (GRIPPER_CLOSE, -GRIPPER_CLOSE):
+            raise ValueError(f'Unexpected gripper command {action[6]}; the official client binarises to +/-1')
+        executed = action.copy()
+        overridden = False
+        if action[6] > 0:
+            if not self.grasp_started:
+                self.grasp_started = True
+                self.origin_z = float(eef_z)
+        elif self.grasp_started and not self.allows_release(eef_z):
+            executed[6] = GRIPPER_CLOSE
+            overridden = True
+        if executed[6] > 0:
+            self.closed_steps += 1
+        return executed, overridden
+
+    def summary(self):
+        return dict(rule='min_closed_steps_or_min_lift',
+                    min_closed_steps=self.min_closed_steps,
+                    min_lift_mm=self.min_lift_mm,
+                    grasp_started=self.grasp_started,
+                    closed_steps=self.closed_steps,
+                    origin_z=self.origin_z)
+
+
 def first_divergence_step(actions, reference):
     """First action index whose arm channels differ from the archived trajectory.
 
@@ -181,6 +246,12 @@ def main():
     p.add_argument('--hold-close', nargs=2, type=int, metavar=('START', 'END'),
                    help='Inclusive action interval whose gripper is forced closed; '
                         'omit for a zero-intervention control run')
+    p.add_argument('--min-closed-steps', type=int,
+                   help='Online rule: once the gripper first closes, suppress release until '
+                        'this many executed closed steps have accrued. Needs no archived data.')
+    p.add_argument('--min-lift-mm', type=float,
+                   help='Online rule companion: also allow release once the end effector has '
+                        'risen this far above the grasp start')
     p.add_argument('--reference-actions',
                    help='Archived actions.npy for the same state, enabling the divergence check')
     p.add_argument('--expect-init-sha256')
@@ -192,6 +263,11 @@ def main():
     from finetune_utils import photometric_window, stable_seed
 
     window = parse_window(a.hold_close)
+    if window is not None and a.min_closed_steps is not None:
+        raise ValueError('--hold-close and --min-closed-steps are different interventions; use one')
+    if a.min_lift_mm is not None and a.min_closed_steps is None:
+        raise ValueError('--min-lift-mm only modifies the online rule; pass --min-closed-steps too')
+    hold_rule = None if a.min_closed_steps is None else GraspHold(a.min_closed_steps, a.min_lift_mm)
     protocol = json.loads(Path(a.protocol).read_text())
     fingerprint = protocol_hash(protocol)
     corruption = protocol['conditions'][a.condition]
@@ -224,6 +300,8 @@ def main():
                           instruction=instruction, task_name=task.name,
                           condition=a.condition, success=False)
             images, actions, override_log = [], [], []
+            if hold_rule is not None:
+                hold_rule.reset()
             state_rows, chunks, query_times, offsets = [], [], [], []
             start_episode = time.perf_counter()
             try:
@@ -294,7 +372,12 @@ def main():
                     if action.shape != (7,) or not np.isfinite(action).all():
                         raise ValueError('Invalid robot action')
                     model_gripper = float(action[6])
-                    action, overridden = override_gripper(action, step, window)
+                    if window is not None:
+                        action, overridden = override_gripper(action, step, window)
+                    elif hold_rule is not None:
+                        action, overridden = hold_rule.apply(action, eef_pos[2])
+                    else:
+                        overridden = False
                     actions.append(action)
                     override_log.append(dict(action_index=step, overridden=overridden,
                                              model_gripper_command=model_gripper,
@@ -327,6 +410,7 @@ def main():
                           'frame, matching the column analyze_contact_transfer.py recomputes so the '
                           'closed-loop and offline metrics are directly comparable',
                 hold_close_inclusive=list(window) if window else None,
+                grasp_hold_rule=hold_rule.summary() if hold_rule else None,
                 intervention_rule='only action[6] inside the window; the six arm channels are never modified',
                 post_window_rule='no gripper override and no added release gate after the window',
                 inference_cadence=f'action_chunk_size={client.action_chunk_size}, '

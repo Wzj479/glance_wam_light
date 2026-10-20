@@ -32,7 +32,8 @@ from finetune_utils import (augment_sample, checkpoint_action_metadata, deployme
                             split_episodes, split_step_indices, stable_seed)
 from smoke_action_head import digest, mem
 from stage_finetune_utils import build_phase_index, draw_schedule, phase_selection
-from action_checkpoint import base_fingerprint, save_action_checkpoint
+from action_checkpoint import (apply_action_checkpoint, base_fingerprint, read_action_checkpoint,
+                                save_action_checkpoint)
 from action_training_scope import configure_action_scope, set_action_training_modes
 from glancewam.dataloader.gr00t_lerobot.registry import DATASET_NAMED_MIXTURES
 from glancewam.dataloader.lerobot_datasets import collate_fn, make_LeRobotSingleDataset
@@ -260,6 +261,31 @@ def validate(model, ds, a):
     return scores
 
 
+def resolve_upstream_commit():
+    """Upstream commit of the GlanceWAM checkout this run trains against.
+
+    A git checkout answers directly. A tarball export has no .git, and the commit is
+    then recorded in UPSTREAM_COMMIT (or $WAM_UPSTREAM_COMMIT) instead of inventing a
+    new hash -- the recorded value has to stay the real upstream SHA because the exported
+    checkpoints carry it as their provenance.
+    """
+    try:
+        return subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True,
+                                       stderr=subprocess.DEVNULL).strip()
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        pass
+    for candidate in (os.environ.get('WAM_UPSTREAM_COMMIT'),
+                      Path.cwd() / 'UPSTREAM_COMMIT',
+                      Path(__file__).resolve().parents[1] / 'UPSTREAM_COMMIT'):
+        if not candidate:
+            continue
+        path = Path(candidate)
+        text = path.read_text(encoding='utf-8').strip() if path.is_file() else str(candidate).strip()
+        if text:
+            return text
+    raise RuntimeError('Cannot determine the upstream commit: no git checkout, no UPSTREAM_COMMIT')
+
+
 def save_checkpoint(model, out, step, label, metadata):
     if metadata.get('checkpoint_format') == 'action':
         return save_action_checkpoint(model.action_model,
@@ -319,6 +345,10 @@ def configure(a):
 def parse_args():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--ckpt', required=True)
+    p.add_argument('--init-action-checkpoint',
+                   help='Existing .action.pt whose action module initialises the trainable scope. '
+                        'Its recorded base fingerprint is verified against --ckpt, so a checkpoint '
+                        'trained on a different base is rejected instead of silently mixed in.')
     p.add_argument('--out', required=True)
     p.add_argument('--data-root')
     p.add_argument('--base-model')
@@ -383,7 +413,7 @@ def main():
         raise RuntimeError('A CUDA GPU with BF16 support is required')
     if int(os.environ.get('WORLD_SIZE', '1')) != 1:
         raise RuntimeError('This script is single-GPU; use python, not multi-process torchrun')
-    commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
+    commit = resolve_upstream_commit()
     if commit != PIN and not a.allow_different_commit:
         raise RuntimeError(f'Expected upstream {PIN}, got {commit}')
     if not a.audit_only:
@@ -425,6 +455,16 @@ def main():
     if any(not k.startswith(recon) for k in result.missing_keys + result.unexpected_keys):
         raise RuntimeError(f'Checkpoint mismatch: {result}')
     del weights
+    init_action_from = None
+    if a.init_action_checkpoint:
+        # read_action_checkpoint re-hashes the base weights, the base config view and the
+        # base statistics, so a checkpoint trained against a different base is refused
+        # rather than silently grafted onto this one.
+        init_base, init_payload = read_action_checkpoint(a.init_action_checkpoint)
+        apply_action_checkpoint(model.action_model, init_payload)
+        init_action_from = dict(checkpoint=str(Path(a.init_action_checkpoint).resolve()),
+                                base=init_base, tensors=len(init_payload['action_state_dict']))
+        print(json.dumps(dict(init_action_from=init_action_from)), flush=True)
     model.norm_stats = stats
     model.requires_grad_(False).to(device='cuda', dtype=torch.bfloat16).eval()
     model.action_model.float()
@@ -473,6 +513,12 @@ def main():
         metadata['phase_manifest_sha256'] = hashlib.sha256((out/'phase_manifest.json').read_bytes()).hexdigest()
     if a.checkpoint_format == 'action':
         metadata['base_fingerprint'] = base_fingerprint(a.ckpt)
+    if init_action_from is not None:
+        # Recorded so the exported action checkpoint states which action module it started
+        # from; a reader can tell an inherited run from one that began at the base head.
+        metadata['init_action_checkpoint'] = init_action_from['checkpoint']
+        metadata['init_action_base'] = init_action_from['base']
+        metadata['init_action_tensors'] = init_action_from['tensors']
     log(out, dict(event='start', total_parameters=sum(p.numel() for p in model.parameters()),
                   train_windows=len(train_entries), val_windows=len(val_entries), **metadata))
     parity = verify_feature_parity(model, [val_ds[0]])

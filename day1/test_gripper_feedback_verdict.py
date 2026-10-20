@@ -231,6 +231,34 @@ class EndToEndReportTests(unittest.TestCase):
         self.assertEqual(report['model_gripper_commands_seen'], [-1, 1])
         self.assertEqual(report['verdict'], 'transport_restored')
 
+    def test_float_gripper_channel_survives_a_csv_round_trip(self):
+        # The real writer stores the channel as a float, so a round trip through
+        # the CSV yields the text '-1.0'. Reading it back must not raise.
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            driver = root / 'run' / 'driver'
+            driver.mkdir(parents=True)
+            rows = state_rows([0] * 5 + [45] * 8, [False] + [True] * 10 + [False] * 2)
+            write_csv(driver / 'task_08_episode_033_state_log.csv', rows)
+            write_csv(driver / 'task_08_episode_033_override_log.csv', [
+                dict(action_index=k, overridden=(56 <= k <= 75),
+                     model_gripper_command=float(-1 if 56 <= k <= 75 else 1),
+                     executed_gripper_command=float(1)) for k in range(80)])
+            write_csv(driver / 'task_08_episode_033_chunk_log.csv', [
+                dict(query_index=i, query_step=i * 8, goal_source='generate' if i == 0 else 'cached',
+                     goal_horizon_rows=48.0, seed=1, chunk_position=0, chunk_actions='[]')
+                for i in range(2)])
+            episode = dict(task_id=8, episode_id=33, steps=13, success=False,
+                           action_sha256='x', init_state_sha256='y', post_settle_state_sha256='z',
+                           divergence_step_vs_reference=64)
+            (driver / 'results.json').write_text(json.dumps(dict(
+                model='P', condition='color_strong', hold_close_inclusive=[56, 75],
+                protocol_sha256='p', successes=0, episodes=1, success_rate=0.0,
+                episode_results=[episode])))
+            report = analyse_run(root / 'run')
+        self.assertEqual(report['model_gripper_commands_seen'], [-1, 1])
+        self.assertEqual(report['gripper_override_first_step'], 56)
+
 
 class OutcomeAxisTests(unittest.TestCase):
     def test_lifting_the_bowl_is_not_the_same_as_placing_it(self):

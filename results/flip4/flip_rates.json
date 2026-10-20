@@ -1,0 +1,396 @@
+{
+  "repetitions": 5,
+  "models": [
+    "C",
+    "P",
+    "P33_initC",
+    "base"
+  ],
+  "episodes": {
+    "base": {
+      "26": {
+        "runs": 5,
+        "successes": 4,
+        "failures": 1,
+        "success_rate": 0.8,
+        "step_min": 84,
+        "step_max": 300,
+        "distinct_step_values": 2,
+        "distinct_action_sha256": 5,
+        "archived_success": false,
+        "archived_steps": 300,
+        "matches_archive": 1,
+        "archive_agreement_rate": 0.2
+      },
+      "28": {
+        "runs": 5,
+        "successes": 0,
+        "failures": 5,
+        "success_rate": 0.0,
+        "step_min": 300,
+        "step_max": 300,
+        "distinct_step_values": 1,
+        "distinct_action_sha256": 5,
+        "archived_success": false,
+        "archived_steps": 300,
+        "matches_archive": 5,
+        "archive_agreement_rate": 1.0
+      },
+      "33": {
+        "runs": 5,
+        "successes": 5,
+        "failures": 0,
+        "success_rate": 1.0,
+        "step_min": 80,
+        "step_max": 81,
+        "distinct_step_values": 2,
+        "distinct_action_sha256": 5,
+        "archived_success": true,
+        "archived_steps": 81,
+        "matches_archive": 5,
+        "archive_agreement_rate": 1.0
+      },
+      "34": {
+        "runs": 5,
+        "successes": 0,
+        "failures": 5,
+        "success_rate": 0.0,
+        "step_min": 300,
+        "step_max": 300,
+        "distinct_step_values": 1,
+        "distinct_action_sha256": 5,
+        "archived_success": false,
+        "archived_steps": 300,
+        "matches_archive": 5,
+        "archive_agreement_rate": 1.0
+      },
+      "35": {
+        "runs": 5,
+        "successes": 0,
+        "failures": 5,
+        "success_rate": 0.0,
+        "step_min": 300,
+        "step_max": 300,
+        "distinct_step_values": 1,
+        "distinct_action_sha256": 5,
+        "archived_success": false,
+        "archived_steps": 300,
+        "matches_archive": 5,
+        "archive_agreement_rate": 1.0
+      },
+      "42": {
+        "runs": 5,
+        "successes": 0,
+        "failures": 5,
+        "success_rate": 0.0,
+        "step_min": 300,
+        "step_max": 300,
+        "distinct_step_values": 1,
+        "distinct_action_sha256": 5,
+        "archived_success": false,
+        "archived_steps": 300,
+        "matches_archive": 5,
+        "archive_agreement_rate": 1.0
+      }
+    },
+    "C": {
+      "26": {
+        "runs": 5,
+        "successes": 5,
+        "failures": 0,
+        "success_rate": 1.0,
+        "step_min": 83,
+        "step_max": 84,
+        "distinct_step_values": 2,
+        "distinct_action_sha256": 5,
+        "archived_success": true,
+        "archived_steps": 84,
+        "matches_archive": 5,
+        "archive_agreement_rate": 1.0
+      },
+      "28": {
+        "runs": 5,
+        "successes": 0,
+        "failures": 5,
+        "success_rate": 0.0,
+        "step_min": 300,
+        "step_max": 300,
+        "distinct_step_values": 1,
+        "distinct_action_sha256": 5,
+        "archived_success": false,
+        "archived_steps": 300,
+        "matches_archive": 5,
+        "archive_agreement_rate": 1.0
+      },
+      "33": {
+        "runs": 5,
+        "successes": 3,
+        "failures": 2,
+        "success_rate": 0.6,
+        "step_min": 79,
+        "step_max": 300,
+        "distinct_step_values": 3,
+        "distinct_action_sha256": 5,
+        "archived_success": true,
+        "archived_steps": 80,
+        "matches_archive": 3,
+        "archive_agreement_rate": 0.6
+      },
+      "34": {
+        "runs": 5,
+        "successes": 0,
+        "failures": 5,
+        "success_rate": 0.0,
+        "step_min": 300,
+        "step_max": 300,
+        "distinct_step_values": 1,
+        "distinct_action_sha256": 5,
+        "archived_success": false,
+        "archived_steps": 300,
+        "matches_archive": 5,
+        "archive_agreement_rate": 1.0
+      },
+      "35": {
+        "runs": 5,
+        "successes": 0,
+        "failures": 5,
+        "success_rate": 0.0,
+        "step_min": 300,
+        "step_max": 300,
+        "distinct_step_values": 1,
+        "distinct_action_sha256": 5,
+        "archived_success": false,
+        "archived_steps": 300,
+        "matches_archive": 5,
+        "archive_agreement_rate": 1.0
+      },
+      "42": {
+        "runs": 5,
+        "successes": 0,
+        "failures": 5,
+        "success_rate": 0.0,
+        "step_min": 300,
+        "step_max": 300,
+        "distinct_step_values": 1,
+        "distinct_action_sha256": 5,
+        "archived_success": false,
+        "archived_steps": 300,
+        "matches_archive": 5,
+        "archive_agreement_rate": 1.0
+      }
+    },
+    "P": {
+      "26": {
+        "runs": 5,
+        "successes": 5,
+        "failures": 0,
+        "success_rate": 1.0,
+        "step_min": 83,
+        "step_max": 84,
+        "distinct_step_values": 2,
+        "distinct_action_sha256": 5,
+        "archived_success": true,
+        "archived_steps": 83,
+        "matches_archive": 5,
+        "archive_agreement_rate": 1.0
+      },
+      "28": {
+        "runs": 5,
+        "successes": 0,
+        "failures": 5,
+        "success_rate": 0.0,
+        "step_min": 300,
+        "step_max": 300,
+        "distinct_step_values": 1,
+        "distinct_action_sha256": 5,
+        "archived_success": false,
+        "archived_steps": 300,
+        "matches_archive": 5,
+        "archive_agreement_rate": 1.0
+      },
+      "33": {
+        "runs": 5,
+        "successes": 5,
+        "failures": 0,
+        "success_rate": 1.0,
+        "step_min": 79,
+        "step_max": 110,
+        "distinct_step_values": 3,
+        "distinct_action_sha256": 5,
+        "archived_success": false,
+        "archived_steps": 300,
+        "matches_archive": 0,
+        "archive_agreement_rate": 0.0
+      },
+      "34": {
+        "runs": 5,
+        "successes": 0,
+        "failures": 5,
+        "success_rate": 0.0,
+        "step_min": 300,
+        "step_max": 300,
+        "distinct_step_values": 1,
+        "distinct_action_sha256": 5,
+        "archived_success": false,
+        "archived_steps": 300,
+        "matches_archive": 5,
+        "archive_agreement_rate": 1.0
+      },
+      "35": {
+        "runs": 5,
+        "successes": 0,
+        "failures": 5,
+        "success_rate": 0.0,
+        "step_min": 300,
+        "step_max": 300,
+        "distinct_step_values": 1,
+        "distinct_action_sha256": 5,
+        "archived_success": false,
+        "archived_steps": 300,
+        "matches_archive": 5,
+        "archive_agreement_rate": 1.0
+      },
+      "42": {
+        "runs": 5,
+        "successes": 0,
+        "failures": 5,
+        "success_rate": 0.0,
+        "step_min": 300,
+        "step_max": 300,
+        "distinct_step_values": 1,
+        "distinct_action_sha256": 5,
+        "archived_success": false,
+        "archived_steps": 300,
+        "matches_archive": 5,
+        "archive_agreement_rate": 1.0
+      }
+    },
+    "P33_initC": {
+      "26": {
+        "runs": 5,
+        "successes": 4,
+        "failures": 1,
+        "success_rate": 0.8,
+        "step_min": 84,
+        "step_max": 300,
+        "distinct_step_values": 2,
+        "distinct_action_sha256": 5
+      },
+      "28": {
+        "runs": 5,
+        "successes": 0,
+        "failures": 5,
+        "success_rate": 0.0,
+        "step_min": 300,
+        "step_max": 300,
+        "distinct_step_values": 1,
+        "distinct_action_sha256": 5
+      },
+      "33": {
+        "runs": 5,
+        "successes": 5,
+        "failures": 0,
+        "success_rate": 1.0,
+        "step_min": 80,
+        "step_max": 80,
+        "distinct_step_values": 1,
+        "distinct_action_sha256": 5
+      },
+      "34": {
+        "runs": 5,
+        "successes": 0,
+        "failures": 5,
+        "success_rate": 0.0,
+        "step_min": 300,
+        "step_max": 300,
+        "distinct_step_values": 1,
+        "distinct_action_sha256": 5
+      },
+      "35": {
+        "runs": 5,
+        "successes": 0,
+        "failures": 5,
+        "success_rate": 0.0,
+        "step_min": 300,
+        "step_max": 300,
+        "distinct_step_values": 1,
+        "distinct_action_sha256": 5
+      },
+      "42": {
+        "runs": 5,
+        "successes": 0,
+        "failures": 5,
+        "success_rate": 0.0,
+        "step_min": 300,
+        "step_max": 300,
+        "distinct_step_values": 1,
+        "distinct_action_sha256": 5
+      }
+    }
+  },
+  "attribution": {
+    "base": {
+      "stable_failure_episodes": [
+        28,
+        34,
+        35,
+        42
+      ],
+      "stable_success_episodes": [
+        33
+      ],
+      "flipping_episodes": [
+        26
+      ],
+      "stable_failure_count": 4,
+      "flipping_count": 1
+    },
+    "C": {
+      "stable_failure_episodes": [
+        28,
+        34,
+        35,
+        42
+      ],
+      "stable_success_episodes": [
+        26
+      ],
+      "flipping_episodes": [
+        33
+      ],
+      "stable_failure_count": 4,
+      "flipping_count": 1
+    },
+    "P": {
+      "stable_failure_episodes": [
+        28,
+        34,
+        35,
+        42
+      ],
+      "stable_success_episodes": [
+        26,
+        33
+      ],
+      "flipping_episodes": [],
+      "stable_failure_count": 4,
+      "flipping_count": 0
+    },
+    "P33_initC": {
+      "stable_failure_episodes": [
+        28,
+        34,
+        35,
+        42
+      ],
+      "stable_success_episodes": [
+        33
+      ],
+      "flipping_episodes": [
+        26
+      ],
+      "stable_failure_count": 4,
+      "flipping_count": 1
+    }
+  }
+}

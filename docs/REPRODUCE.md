@@ -64,6 +64,36 @@ test -f results/stage_v1/development/P/color_strong/task_08_episode_033_actions.
 
 若已丢失，可用只含该回合的协议经 `run_robust_eval.py` 重新生成，代价是一次服务器启动。
 
+## 不可从公开来源重建的资产
+
+大部分依赖都能重建：GlanceWAM 代码 `linhanwang/GlanceWAM@6a51bdc5`、LIBERO 代码 `Lifelong-Robot-Learning/LIBERO@8f1084e3`（`day1/provenance.json` 记录了完整 commit）、base 权重 `LinhanWang/GlanceWAM`、LIBERO 数据集 `yifengzhu-hf/LIBERO-datasets@f13aa24a3da8c43c7225569f28c562979fa0e35a`，两套 Python 环境的配方在 `day1/install_libero_env.sh`。仿真栈是 mujoco 3.2.3 + robosuite 1.4.0 + bddl 1.0.1，不需要 dm_control；客户端 torch 2.5.1 CPU 版足够。世界模型底座是 `Skywork/SkyReels-V2-DF-1.3B-540P-Diffusers`。
+
+**两项不能重建，因此不进 Git：**
+
+| 资产 | 体量 | 为什么不能重建 |
+|---|---|---|
+| `results/stage_v1/{P,C}_seed42/checkpoints/best.action.pt` | 每个 595 MB | 本项目自己采样训练的产物，上游没有 |
+| `results/stage_v1/development/**/*_actions.npy` | 120 个，共 0.35 MB | 只能由那个检查点在归档协议下重跑产生 |
+
+归档动作数组不是可有可无的附件：状态 33 诊断第 0 步的门禁就是「复现归档的 300 步动作」，缺了它整轮诊断作废。发布仓库的 862 条清单里没有任何文件能替代它们。
+
+`last.action.pt` 被有意排除：只评估 best，多出的 595MB 没有用处。`base_seed42` 无需打包，可从 Hugging Face 下载。
+
+打包与校验（无 GPU，约 15 秒）：
+
+完整取回步骤与「为什么这台容器不能被直接拉取」的实测依据见 [不可重建资产取回](不可重建资产取回.md)。
+
+```bash
+cd /root/autodl-tmp/wam_glance_project/GlanceWAM
+.venv/bin/python /root/autodl-tmp/wam_glance_project/glance_wam_light/day1/package_irreproducible_assets.py \
+  --root . --out /root/autodl-tmp/wam_glance_project/irreproducible_assets.tar
+# 传到新机器后校验，退出码 0 表示 138 个文件全部一致
+.venv/bin/python /root/autodl-tmp/wam_glance_project/glance_wam_light/day1/package_irreproducible_assets.py \
+  --root . --out irreproducible_assets.tar --verify
+```
+
+预期 SHA256 清单随包内 `irreproducible_SHA256.json` 一并写出，也归档在 [irreproducible_assets](../results/irreproducible_assets/irreproducible_SHA256.json)，可在传输前先行比对。解包时保持 `results/` 相对路径，`paired_policy_server.py` 与评测脚本依赖该布局。
+
 ## 后续 GPU 工作
 
 2026-10-16 已在 A100 40GB 上通过真实视频 loader、预训练推理、动作模块三步更新、官方特征一致性、冻结参数哈希、显存及检查点重载检查，见 [GPU 部署验证记录](../results/gpu_validation/GPU部署验证记录.md)。随后完成 clean/aug 各200步和单一抓取任务的90回合配对闭环评测，见 [200步实验记录](../results/controlled_200/comparison/实验记录.md)。三模型在三个条件下均为10/10成功，未观察到成功率提升；尚未评测其他任务或实机。

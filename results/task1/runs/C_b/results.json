@@ -1,0 +1,1083 @@
+{
+  "schema_version": 1,
+  "model": "C",
+  "checkpoint": "/root/autodl-tmp/wam_glance_project/glance_wam_light/results/stage_v1/C_seed42/checkpoints/best.action.pt",
+  "protocol_sha256": "f674f48642f62f033acd2effbb27eaf2f513abeb6d842a6fd6f6cfe1114ca7b4",
+  "condition": "color_strong",
+  "corruption": {
+    "brightness": 1.0,
+    "saturation": 1.0,
+    "gains": [
+      0.7,
+      1.0,
+      1.3
+    ]
+  },
+  "successes": 0,
+  "episodes": 5,
+  "success_rate": 0.0,
+  "hold_close_inclusive": null,
+  "episode_results": [
+    {
+      "task_id": 1,
+      "episode_id": 5,
+      "env_seed": 1685664614,
+      "instruction": "put the bowl on the stove",
+      "task_name": "put_the_bowl_on_the_stove",
+      "condition": "color_strong",
+      "success": false,
+      "init_state_sha256": "c138a3b16a953e122528df3d49f5add9935022819eac3f889f2d9ceaf50f0b45",
+      "post_settle_state_sha256": "669522cc1a24cc34dba9fcc21b6fd73a2f5fa59d8c0cfb01f7d706135d0acc36",
+      "steps": 300,
+      "seconds": 38.52487599209417,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 9.645466588903219,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.34577897598501295,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.31096900103148073,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.27409829990938306,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.25518312491476536,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.24526764906477183,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 1.7735584119800478,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.24283882707823068,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.20502116403076798,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.19834678806364536,
+          "refresh": false
+        },
+        {
+          "step": 80,
+          "seconds": 0.17113746306858957,
+          "refresh": false
+        },
+        {
+          "step": 88,
+          "seconds": 0.16680600703693926,
+          "refresh": false
+        },
+        {
+          "step": 96,
+          "seconds": 1.6794245180208236,
+          "refresh": true
+        },
+        {
+          "step": 104,
+          "seconds": 0.1699761130148545,
+          "refresh": false
+        },
+        {
+          "step": 112,
+          "seconds": 0.21417505398858339,
+          "refresh": false
+        },
+        {
+          "step": 120,
+          "seconds": 0.15962811699137092,
+          "refresh": false
+        },
+        {
+          "step": 128,
+          "seconds": 0.16152886603958905,
+          "refresh": false
+        },
+        {
+          "step": 136,
+          "seconds": 0.21224826190155,
+          "refresh": false
+        },
+        {
+          "step": 144,
+          "seconds": 1.7783695650286973,
+          "refresh": true
+        },
+        {
+          "step": 152,
+          "seconds": 0.2714122640900314,
+          "refresh": false
+        },
+        {
+          "step": 160,
+          "seconds": 0.23075906408485025,
+          "refresh": false
+        },
+        {
+          "step": 168,
+          "seconds": 0.23713120794855058,
+          "refresh": false
+        },
+        {
+          "step": 176,
+          "seconds": 0.22798671701457351,
+          "refresh": false
+        },
+        {
+          "step": 184,
+          "seconds": 0.21852763497736305,
+          "refresh": false
+        },
+        {
+          "step": 192,
+          "seconds": 1.6664045440265909,
+          "refresh": true
+        },
+        {
+          "step": 200,
+          "seconds": 0.1629199319286272,
+          "refresh": false
+        },
+        {
+          "step": 208,
+          "seconds": 0.16535196697805077,
+          "refresh": false
+        },
+        {
+          "step": 216,
+          "seconds": 0.190120366984047,
+          "refresh": false
+        },
+        {
+          "step": 224,
+          "seconds": 0.1800973330391571,
+          "refresh": false
+        },
+        {
+          "step": 232,
+          "seconds": 0.19630854099523276,
+          "refresh": false
+        },
+        {
+          "step": 240,
+          "seconds": 1.5990321069257334,
+          "refresh": true
+        },
+        {
+          "step": 248,
+          "seconds": 0.1542646080488339,
+          "refresh": false
+        },
+        {
+          "step": 256,
+          "seconds": 0.16024868306703866,
+          "refresh": false
+        },
+        {
+          "step": 264,
+          "seconds": 0.16255943104624748,
+          "refresh": false
+        },
+        {
+          "step": 272,
+          "seconds": 0.17871378094423562,
+          "refresh": false
+        },
+        {
+          "step": 280,
+          "seconds": 0.21186101401690394,
+          "refresh": false
+        },
+        {
+          "step": 288,
+          "seconds": 1.5683600889751688,
+          "refresh": true
+        },
+        {
+          "step": 296,
+          "seconds": 0.15657379000913352,
+          "refresh": false
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "5565d30e7a431c219c62a9e8c6cf1c341f733128ed48d0a38f72c5211f6fab17"
+    },
+    {
+      "task_id": 1,
+      "episode_id": 6,
+      "env_seed": 2146783827,
+      "instruction": "put the bowl on the stove",
+      "task_name": "put_the_bowl_on_the_stove",
+      "condition": "color_strong",
+      "success": false,
+      "init_state_sha256": "8797c5dd5a6d190cf48c67f4eaf66ca5b32aa3cd775a8f7a578622375865cb0c",
+      "post_settle_state_sha256": "7def5408967d241a96dc68cb727a6d77ba656294679c500030a192d2d1185407",
+      "steps": 300,
+      "seconds": 28.988255242002197,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 1.5511974060209468,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.23718730499967933,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.20301345898769796,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.1676227889256552,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.15815103298518807,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.22700258600525558,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 1.5628754440695047,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.15970460092648864,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.1646183090051636,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.18003835692070425,
+          "refresh": false
+        },
+        {
+          "step": 80,
+          "seconds": 0.17524722800590098,
+          "refresh": false
+        },
+        {
+          "step": 88,
+          "seconds": 0.20706029806751758,
+          "refresh": false
+        },
+        {
+          "step": 96,
+          "seconds": 1.6282481959788129,
+          "refresh": true
+        },
+        {
+          "step": 104,
+          "seconds": 0.21756298001855612,
+          "refresh": false
+        },
+        {
+          "step": 112,
+          "seconds": 0.16187995008658618,
+          "refresh": false
+        },
+        {
+          "step": 120,
+          "seconds": 0.18030810600612313,
+          "refresh": false
+        },
+        {
+          "step": 128,
+          "seconds": 0.17517348402179778,
+          "refresh": false
+        },
+        {
+          "step": 136,
+          "seconds": 0.20273143704980612,
+          "refresh": false
+        },
+        {
+          "step": 144,
+          "seconds": 1.3915959200821817,
+          "refresh": true
+        },
+        {
+          "step": 152,
+          "seconds": 0.2729230800177902,
+          "refresh": false
+        },
+        {
+          "step": 160,
+          "seconds": 0.16867341403849423,
+          "refresh": false
+        },
+        {
+          "step": 168,
+          "seconds": 0.18311565706972033,
+          "refresh": false
+        },
+        {
+          "step": 176,
+          "seconds": 0.17350843991152942,
+          "refresh": false
+        },
+        {
+          "step": 184,
+          "seconds": 0.23272799199912697,
+          "refresh": false
+        },
+        {
+          "step": 192,
+          "seconds": 1.3819633170496672,
+          "refresh": true
+        },
+        {
+          "step": 200,
+          "seconds": 0.2913125930353999,
+          "refresh": false
+        },
+        {
+          "step": 208,
+          "seconds": 0.16149445704650134,
+          "refresh": false
+        },
+        {
+          "step": 216,
+          "seconds": 0.17389422899577767,
+          "refresh": false
+        },
+        {
+          "step": 224,
+          "seconds": 0.22675336501561105,
+          "refresh": false
+        },
+        {
+          "step": 232,
+          "seconds": 0.2753492130432278,
+          "refresh": false
+        },
+        {
+          "step": 240,
+          "seconds": 1.2932699129451066,
+          "refresh": true
+        },
+        {
+          "step": 248,
+          "seconds": 0.29868950904347,
+          "refresh": false
+        },
+        {
+          "step": 256,
+          "seconds": 0.21027398901060224,
+          "refresh": false
+        },
+        {
+          "step": 264,
+          "seconds": 0.205804473021999,
+          "refresh": false
+        },
+        {
+          "step": 272,
+          "seconds": 0.2013645350234583,
+          "refresh": false
+        },
+        {
+          "step": 280,
+          "seconds": 0.29154363891575485,
+          "refresh": false
+        },
+        {
+          "step": 288,
+          "seconds": 1.247169747017324,
+          "refresh": true
+        },
+        {
+          "step": 296,
+          "seconds": 0.37340071599464864,
+          "refresh": false
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "3bd462a61020cd140fbbd06a8389fce2d1d3c8d446b8a201d7aeaa2109f6e2f3"
+    },
+    {
+      "task_id": 1,
+      "episode_id": 7,
+      "env_seed": 304000296,
+      "instruction": "put the bowl on the stove",
+      "task_name": "put_the_bowl_on_the_stove",
+      "condition": "color_strong",
+      "success": false,
+      "init_state_sha256": "f1870b8360ae04ddc384ca2042294ef4ab89435549068dae7d5e30ebef828c16",
+      "post_settle_state_sha256": "18515f8c7fd57ef9253a19f50b1864a2372822791d8fb4b2ba90d5551818aabe",
+      "steps": 300,
+      "seconds": 29.04515269899275,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 1.5524498100858182,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.16971765202470124,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.16231999907176942,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.16591372608672827,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.21698339004069567,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.22380421694833785,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 1.5422863180283457,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.1705965019064024,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.16061968496069312,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.1567554189823568,
+          "refresh": false
+        },
+        {
+          "step": 80,
+          "seconds": 0.21549244597554207,
+          "refresh": false
+        },
+        {
+          "step": 88,
+          "seconds": 0.2182537829503417,
+          "refresh": false
+        },
+        {
+          "step": 96,
+          "seconds": 1.486397297005169,
+          "refresh": true
+        },
+        {
+          "step": 104,
+          "seconds": 0.16090381401591003,
+          "refresh": false
+        },
+        {
+          "step": 112,
+          "seconds": 0.16307999496348202,
+          "refresh": false
+        },
+        {
+          "step": 120,
+          "seconds": 0.15867657400667667,
+          "refresh": false
+        },
+        {
+          "step": 128,
+          "seconds": 0.24674241396132857,
+          "refresh": false
+        },
+        {
+          "step": 136,
+          "seconds": 0.21057509200181812,
+          "refresh": false
+        },
+        {
+          "step": 144,
+          "seconds": 1.2793884580023587,
+          "refresh": true
+        },
+        {
+          "step": 152,
+          "seconds": 0.2777067059651017,
+          "refresh": false
+        },
+        {
+          "step": 160,
+          "seconds": 0.15872483199927956,
+          "refresh": false
+        },
+        {
+          "step": 168,
+          "seconds": 0.16463825898244977,
+          "refresh": false
+        },
+        {
+          "step": 176,
+          "seconds": 0.23334676201920956,
+          "refresh": false
+        },
+        {
+          "step": 184,
+          "seconds": 0.24103293498046696,
+          "refresh": false
+        },
+        {
+          "step": 192,
+          "seconds": 1.2705176470335573,
+          "refresh": true
+        },
+        {
+          "step": 200,
+          "seconds": 0.3473296669544652,
+          "refresh": false
+        },
+        {
+          "step": 208,
+          "seconds": 0.2495468200650066,
+          "refresh": false
+        },
+        {
+          "step": 216,
+          "seconds": 0.24374350509606302,
+          "refresh": false
+        },
+        {
+          "step": 224,
+          "seconds": 0.23458141705486923,
+          "refresh": false
+        },
+        {
+          "step": 232,
+          "seconds": 0.23524237994570285,
+          "refresh": false
+        },
+        {
+          "step": 240,
+          "seconds": 1.2558310199528933,
+          "refresh": true
+        },
+        {
+          "step": 248,
+          "seconds": 0.3529394520446658,
+          "refresh": false
+        },
+        {
+          "step": 256,
+          "seconds": 0.16698338906280696,
+          "refresh": false
+        },
+        {
+          "step": 264,
+          "seconds": 0.15609039401169866,
+          "refresh": false
+        },
+        {
+          "step": 272,
+          "seconds": 0.1744742520386353,
+          "refresh": false
+        },
+        {
+          "step": 280,
+          "seconds": 0.21727714710868895,
+          "refresh": false
+        },
+        {
+          "step": 288,
+          "seconds": 1.1797460629604757,
+          "refresh": true
+        },
+        {
+          "step": 296,
+          "seconds": 0.300499502918683,
+          "refresh": false
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "48a6c5c429642b89c8225324b64c1d270a148e7887c00dcd34d6ba4d0bc5cfe5"
+    },
+    {
+      "task_id": 1,
+      "episode_id": 8,
+      "env_seed": 560831873,
+      "instruction": "put the bowl on the stove",
+      "task_name": "put_the_bowl_on_the_stove",
+      "condition": "color_strong",
+      "success": false,
+      "init_state_sha256": "3d5cf04093f539313a0f1e3ba5346afe436e6fa8556a6e91adc148c9439ce093",
+      "post_settle_state_sha256": "bc55a0f99b7e37a928fd6ae042071eda45972fb1cc6425cb25ddaa8d47feb1d0",
+      "steps": 300,
+      "seconds": 28.193489618017338,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 1.5522712219972163,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.17491030099336058,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.20150124409701675,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.20447313005570322,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.2629494359716773,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.23141070292331278,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 1.5321995849953964,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.15689263597596437,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.16182652895804495,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.17156395793426782,
+          "refresh": false
+        },
+        {
+          "step": 80,
+          "seconds": 0.282665726961568,
+          "refresh": false
+        },
+        {
+          "step": 88,
+          "seconds": 0.29409253504127264,
+          "refresh": false
+        },
+        {
+          "step": 96,
+          "seconds": 1.3616889769909903,
+          "refresh": true
+        },
+        {
+          "step": 104,
+          "seconds": 0.24115775304380804,
+          "refresh": false
+        },
+        {
+          "step": 112,
+          "seconds": 0.22302241099532694,
+          "refresh": false
+        },
+        {
+          "step": 120,
+          "seconds": 0.16815200401470065,
+          "refresh": false
+        },
+        {
+          "step": 128,
+          "seconds": 0.244151743943803,
+          "refresh": false
+        },
+        {
+          "step": 136,
+          "seconds": 0.1629604189656675,
+          "refresh": false
+        },
+        {
+          "step": 144,
+          "seconds": 1.0531217560637742,
+          "refresh": true
+        },
+        {
+          "step": 152,
+          "seconds": 0.33848578098695725,
+          "refresh": false
+        },
+        {
+          "step": 160,
+          "seconds": 0.27814556402154267,
+          "refresh": false
+        },
+        {
+          "step": 168,
+          "seconds": 0.20507942000404,
+          "refresh": false
+        },
+        {
+          "step": 176,
+          "seconds": 0.21672210900578648,
+          "refresh": false
+        },
+        {
+          "step": 184,
+          "seconds": 0.17883070302195847,
+          "refresh": false
+        },
+        {
+          "step": 192,
+          "seconds": 1.1518282929901034,
+          "refresh": true
+        },
+        {
+          "step": 200,
+          "seconds": 0.3413695110939443,
+          "refresh": false
+        },
+        {
+          "step": 208,
+          "seconds": 0.2768794749863446,
+          "refresh": false
+        },
+        {
+          "step": 216,
+          "seconds": 0.22718381509184837,
+          "refresh": false
+        },
+        {
+          "step": 224,
+          "seconds": 0.21962158707901835,
+          "refresh": false
+        },
+        {
+          "step": 232,
+          "seconds": 0.15319482306949794,
+          "refresh": false
+        },
+        {
+          "step": 240,
+          "seconds": 1.1362537120003253,
+          "refresh": true
+        },
+        {
+          "step": 248,
+          "seconds": 0.2803436090471223,
+          "refresh": false
+        },
+        {
+          "step": 256,
+          "seconds": 0.16365223401226103,
+          "refresh": false
+        },
+        {
+          "step": 264,
+          "seconds": 0.20892208197619766,
+          "refresh": false
+        },
+        {
+          "step": 272,
+          "seconds": 0.21410322899464518,
+          "refresh": false
+        },
+        {
+          "step": 280,
+          "seconds": 0.1581794429803267,
+          "refresh": false
+        },
+        {
+          "step": 288,
+          "seconds": 0.9823864999925718,
+          "refresh": true
+        },
+        {
+          "step": 296,
+          "seconds": 0.21045051899272949,
+          "refresh": false
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "b940a9f939233e553657baf7af174267232babce219a1532825270af0ccdd14d"
+    },
+    {
+      "task_id": 1,
+      "episode_id": 9,
+      "env_seed": 925673485,
+      "instruction": "put the bowl on the stove",
+      "task_name": "put_the_bowl_on_the_stove",
+      "condition": "color_strong",
+      "success": false,
+      "init_state_sha256": "e99d87858bf79864568081622d605cc195b9a5d17e314dd27faa526e88b0f9ee",
+      "post_settle_state_sha256": "c1d645364f011829f6e5402d57dcdd0bc80a00f5a537a43bc249a73e2eb930cb",
+      "steps": 300,
+      "seconds": 24.60974878189154,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 1.100582665996626,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.1779820949304849,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.18396899104118347,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.21154579904396087,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.21409698808565736,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.17131509399041533,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 1.1087218050379306,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.17060764506459236,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.17395928699988872,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.21707232296466827,
+          "refresh": false
+        },
+        {
+          "step": 80,
+          "seconds": 0.21788827888667583,
+          "refresh": false
+        },
+        {
+          "step": 88,
+          "seconds": 0.16118831501808017,
+          "refresh": false
+        },
+        {
+          "step": 96,
+          "seconds": 1.178575629950501,
+          "refresh": true
+        },
+        {
+          "step": 104,
+          "seconds": 0.1590002659941092,
+          "refresh": false
+        },
+        {
+          "step": 112,
+          "seconds": 0.16881738102529198,
+          "refresh": false
+        },
+        {
+          "step": 120,
+          "seconds": 0.208274831995368,
+          "refresh": false
+        },
+        {
+          "step": 128,
+          "seconds": 0.21060228103306144,
+          "refresh": false
+        },
+        {
+          "step": 136,
+          "seconds": 0.16010164993349463,
+          "refresh": false
+        },
+        {
+          "step": 144,
+          "seconds": 0.9186681709252298,
+          "refresh": true
+        },
+        {
+          "step": 152,
+          "seconds": 0.15584114100784063,
+          "refresh": false
+        },
+        {
+          "step": 160,
+          "seconds": 0.15476695098914206,
+          "refresh": false
+        },
+        {
+          "step": 168,
+          "seconds": 0.20618664706125855,
+          "refresh": false
+        },
+        {
+          "step": 176,
+          "seconds": 0.20132987201213837,
+          "refresh": false
+        },
+        {
+          "step": 184,
+          "seconds": 0.19126426905859262,
+          "refresh": false
+        },
+        {
+          "step": 192,
+          "seconds": 0.9328348119743168,
+          "refresh": true
+        },
+        {
+          "step": 200,
+          "seconds": 0.19047882198356092,
+          "refresh": false
+        },
+        {
+          "step": 208,
+          "seconds": 0.1695899460464716,
+          "refresh": false
+        },
+        {
+          "step": 216,
+          "seconds": 0.20144340605475008,
+          "refresh": false
+        },
+        {
+          "step": 224,
+          "seconds": 0.1638384909601882,
+          "refresh": false
+        },
+        {
+          "step": 232,
+          "seconds": 0.15980095195118338,
+          "refresh": false
+        },
+        {
+          "step": 240,
+          "seconds": 0.907751147984527,
+          "refresh": true
+        },
+        {
+          "step": 248,
+          "seconds": 0.16147240402642637,
+          "refresh": false
+        },
+        {
+          "step": 256,
+          "seconds": 0.15507888502907008,
+          "refresh": false
+        },
+        {
+          "step": 264,
+          "seconds": 0.19855753995943815,
+          "refresh": false
+        },
+        {
+          "step": 272,
+          "seconds": 0.19673808303195983,
+          "refresh": false
+        },
+        {
+          "step": 280,
+          "seconds": 0.1969008499290794,
+          "refresh": false
+        },
+        {
+          "step": 288,
+          "seconds": 0.8693985569989309,
+          "refresh": true
+        },
+        {
+          "step": 296,
+          "seconds": 0.1525895099621266,
+          "refresh": false
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "1fbaf06e01a6c8d9303f0364fc0626493f19c3c272fe70e0b2e025efe36db0fc"
+    }
+  ],
+  "timing_scope": "synchronous official client, cached goal cadence"
+}

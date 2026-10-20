@@ -216,7 +216,7 @@ def state_record(step, obs, env, inner, bowl, plate, bid, pid, grip, offset, sli
     any_finger = pads['left_finger'] or pads['right_finger']
     both_pads = pads['left_fingerpad'] and pads['right_fingerpad']
     xy = float(np.linalg.norm(bowl_pos[:2] - plate_pos[:2]))
-    contact = bool(inner.check_contact(bowl, plate))
+    contact = None if plate is None else bool(inner.check_contact(bowl, plate))
     above = bool(bowl_pos[2] >= plate_pos[2])
     return dict(state_step=int(step), time_s=step / 20,
                 **{f'eef_{a}': float(v) for a, v in zip('xyz', eef_pos)},
@@ -336,7 +336,9 @@ def main():
                         raise ValueError(f'{key} differs from the archived run; pairing is broken')
                 inner = env.env
                 bowl = inner.objects_dict[a.grasp_body]
-                plate = inner.objects_dict[a.target_body]
+                # The placement target may be a fixture (e.g. flat_stove_1) that has a body
+                # id but no object wrapper, so contact with it cannot be tested the same way.
+                plate = inner.objects_dict.get(a.target_body)
                 bid = inner.obj_body_id[a.grasp_body]
                 pid = inner.obj_body_id[a.target_body]
                 grip = env.robots[0].gripper

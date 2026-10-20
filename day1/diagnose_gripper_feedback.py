@@ -257,6 +257,9 @@ def main():
     p.add_argument('--expect-init-sha256')
     p.add_argument('--expect-post-settle-sha256')
     p.add_argument('--save-videos', action='store_true')
+    p.add_argument('--force-goal', metavar='NPY', default=None,
+                   help='Inject this goal latent (oracle goal) on every query instead of letting the '
+                        'world model generate one; a planning upper bound on the goal channel')
     p.add_argument('--dump-goal', metavar='DIR', default=None,
                    help="Save each query step's policy-view image pair and the goal latent "
                         'the world model produced for it, for offline prediction scoring')
@@ -293,6 +296,12 @@ def main():
         raise ValueError('Episode ID exceeds available LIBERO initial states')
 
     client = ModelClient(policy_ckpt_path=a.ckpt, host='127.0.0.1', port=a.port, image_size=[224, 224])
+    force_goal = force_horizon = None
+    if a.force_goal:
+        import numpy as _np
+        force_goal = _np.load(a.force_goal).astype('float32')
+        force_horizon = client.goal_horizon_rows if client.goal_horizon_rows is not None else 1.0
+        client.goal_horizon_rows = None  # client stops managing the goal; we inject it
     results = []
     for task_id in protocol['task_ids']:
         task = suite.get_task(task_id)
@@ -358,6 +367,9 @@ def main():
                         else 'cached'
                     example['goal_horizon_rows'] = float(max(1.0, (horizon or 1) - client._steps_since_refresh))
                     is_query = step % client.action_chunk_size == 0
+                    if force_goal is not None:
+                        example['goal_latent'] = force_goal
+                        example['goal_horizon_rows'] = float(force_horizon)
                     started = time.perf_counter()
                     response = client.step(example=example, step=step)
                     if is_query:

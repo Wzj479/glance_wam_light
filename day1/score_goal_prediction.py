@@ -83,6 +83,7 @@ def main():
     if not ref_latents:
         raise SystemExit('no reference frames found')
     g_star = torch.stack(ref_latents).mean(0)
+    np.save(str(a.out) + '.g_star.npy', g_star.numpy())
     out = dict(reference=a.ref, n_ref=len(ref_latents), fresh=a.fresh,
                g_star_shape=list(g_star.shape), g_star_norm=round(float(g_star.norm()), 4), runs={})
 

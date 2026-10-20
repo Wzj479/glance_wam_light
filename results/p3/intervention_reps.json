@@ -1,0 +1,210 @@
+{
+  "runs_root": "results/p3",
+  "baseline": "results/flip20/flip_map.json",
+  "results": {
+    "28:C": {
+      "episode_id": 28,
+      "model": "C",
+      "runs": 5,
+      "successes": 5,
+      "success_rate": 1.0,
+      "steps": [
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "overridden_steps": [
+        19
+      ],
+      "baseline_successes": 0,
+      "baseline_runs": 5,
+      "verdict": "recovered"
+    },
+    "28:P": {
+      "episode_id": 28,
+      "model": "P",
+      "runs": 5,
+      "successes": 5,
+      "success_rate": 1.0,
+      "steps": [
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "overridden_steps": [
+        19
+      ],
+      "baseline_successes": 0,
+      "baseline_runs": 5,
+      "verdict": "recovered"
+    },
+    "28:base_T20": {
+      "episode_id": 28,
+      "model": "base_T20",
+      "runs": 3,
+      "successes": 0,
+      "success_rate": 0.0,
+      "steps": [
+        300,
+        300,
+        300
+      ],
+      "overridden_steps": [
+        0,
+        7,
+        9
+      ],
+      "baseline_successes": null,
+      "baseline_runs": null,
+      "verdict": "baseline_unstable"
+    },
+    "34:C": {
+      "episode_id": 34,
+      "model": "C",
+      "runs": 5,
+      "successes": 5,
+      "success_rate": 1.0,
+      "steps": [
+        78,
+        78,
+        78,
+        79,
+        78
+      ],
+      "overridden_steps": [
+        15,
+        16
+      ],
+      "baseline_successes": 0,
+      "baseline_runs": 5,
+      "verdict": "recovered"
+    },
+    "34:P": {
+      "episode_id": 34,
+      "model": "P",
+      "runs": 5,
+      "successes": 5,
+      "success_rate": 1.0,
+      "steps": [
+        85,
+        77,
+        77,
+        77,
+        78
+      ],
+      "overridden_steps": [
+        16
+      ],
+      "baseline_successes": 0,
+      "baseline_runs": 5,
+      "verdict": "recovered"
+    },
+    "34:base_T20": {
+      "episode_id": 34,
+      "model": "base_T20",
+      "runs": 3,
+      "successes": 0,
+      "success_rate": 0.0,
+      "steps": [
+        300,
+        300,
+        300
+      ],
+      "overridden_steps": [
+        10,
+        11
+      ],
+      "baseline_successes": null,
+      "baseline_runs": null,
+      "verdict": "baseline_unstable"
+    },
+    "34:base_T25": {
+      "episode_id": 34,
+      "model": "base_T25",
+      "runs": 3,
+      "successes": 3,
+      "success_rate": 1.0,
+      "steps": [
+        78,
+        80,
+        78
+      ],
+      "overridden_steps": [
+        15,
+        16
+      ],
+      "baseline_successes": null,
+      "baseline_runs": null,
+      "verdict": "baseline_unstable"
+    },
+    "34:base_T35": {
+      "episode_id": 34,
+      "model": "base_T35",
+      "runs": 3,
+      "successes": 3,
+      "success_rate": 1.0,
+      "steps": [
+        78,
+        77,
+        78
+      ],
+      "overridden_steps": [
+        15,
+        16
+      ],
+      "baseline_successes": null,
+      "baseline_runs": null,
+      "verdict": "baseline_unstable"
+    },
+    "42:C": {
+      "episode_id": 42,
+      "model": "C",
+      "runs": 5,
+      "successes": 5,
+      "success_rate": 1.0,
+      "steps": [
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "overridden_steps": [
+        16,
+        17,
+        18
+      ],
+      "baseline_successes": 0,
+      "baseline_runs": 5,
+      "verdict": "recovered"
+    },
+    "42:P": {
+      "episode_id": 42,
+      "model": "P",
+      "runs": 5,
+      "successes": 5,
+      "success_rate": 1.0,
+      "steps": [
+        70,
+        70,
+        77,
+        70,
+        70
+      ],
+      "overridden_steps": [
+        16
+      ],
+      "baseline_successes": 0,
+      "baseline_runs": 5,
+      "verdict": "recovered"
+    }
+  },
+  "verdict_counts": {
+    "recovered": 6,
+    "baseline_unstable": 4
+  }
+}

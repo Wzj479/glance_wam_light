@@ -256,6 +256,16 @@ cd <repo> && .venv/bin/python day1/analyze_intervention_reps.py \
   --out results/p2/intervention_reps.json
 ```
 
+## 在线规则的泛化与鲁棒性
+
+```bash
+cd /root/autodl-tmp/wam_glance_project/GlanceWAM
+bash /root/autodl-tmp/run_p3.sh 0 && bash /root/autodl-tmp/run_p3.sh 1   # 跨模型+阈值
+bash /root/autodl-tmp/run_p3_audit.sh                                    # 20 态零扰动审计
+cd <repo> && .venv/bin/python day1/analyze_intervention_reps.py \
+  --runs results/p3 --baseline results/flip20/flip_map.json --out results/p3/intervention_reps.json
+```
+
 ## 翻转率协议
 
 `day1/analyze_flip_rates.py` 汇总重复运行的回合级结果：每个 (模型, 回合) 的成功次数、步数区间、

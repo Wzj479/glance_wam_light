@@ -8,8 +8,8 @@
     "sha256": "d66d1e7d84b4f39cae9da6aa657646913b8316f691ffa9230fef147fdec8f51a"
   },
   "README.md": {
-    "bytes": 13588,
-    "sha256": "6ec80219c4ab80726f0c5b6ff879958c22a13f619ddd2b3397b7928955e679ca"
+    "bytes": 13826,
+    "sha256": "78d733bb6505e72e73990c84671978d42d41576c296b445b403ed50ed5f38ca3"
   },
   "UPSTREAM_COMMIT": {
     "bytes": 41,
@@ -360,8 +360,8 @@
     "sha256": "91eba162c0aa4be23df3789a193a5b09ea64ac28133cdcab46e3bd093da4dddf"
   },
   "docs/REPRODUCE.md": {
-    "bytes": 20058,
-    "sha256": "d4877a22dac667ca67797fc0c206478052a1f29cf5b2858cda875a4cc7d7c66c"
+    "bytes": 20513,
+    "sha256": "68f824b5cf222668ae40b6d7568d43357bb30a0da6cc7e454b1e9eb652b7ad5c"
   },
   "docs/STAGE_FINETUNE.md": {
     "bytes": 9487,
@@ -2640,8 +2640,8 @@
     "sha256": "10965f70932aa61f1ceb7c6e5d17dff28afec2c9c97dac6b74a2f12ed07b1938"
   },
   "results/failure_structure/失败结构清单.md": {
-    "bytes": 9047,
-    "sha256": "85e19ff2a0fba5797be698b03dff1722036279de10d74240244d39141f2bd895"
+    "bytes": 9346,
+    "sha256": "88b9c50300f05eb479ddc6c988b51b7bc74a7b5a0b94a9e3f42c17a517d9435a"
   },
   "results/flip4/flip_rates.json": {
     "bytes": 9448,
@@ -5516,8 +5516,1264 @@
     "sha256": "28f1f430a12a4c8bbfe0805020918a6e1bdb90408dc12ffee6ac0255367b4d42"
   },
   "results/p2/在线规则.md": {
-    "bytes": 4532,
-    "sha256": "af09b788b7637db79a0263c649fa4b594db41857c6c9a799788d8d81cb906295"
+    "bytes": 4619,
+    "sha256": "7ef479140c23fce0ec3ddc6cf0165d75b5699503a057e8902ffcf50b29525cc7"
+  },
+  "results/p3/intervention_reps.json": {
+    "bytes": 3785,
+    "sha256": "2d8f9b9b80ce1e3320f780c0523cae1ace2bafabaa8ddcd8a4a58bf0029cba26"
+  },
+  "results/p3/state27_base_audit/driver/episodes.jsonl": {
+    "bytes": 1356,
+    "sha256": "d383a1e824c28ad7ee66d4c799b9ed0abb8c10b55afaf02db4999b5931a68c78"
+  },
+  "results/p3/state27_base_audit/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "fb771ec58cd231f0eabe34748e5f146b64bbe0d527e328f7d017bbcfb6e01a0c"
+  },
+  "results/p3/state27_base_audit/driver/results.json": {
+    "bytes": 2598,
+    "sha256": "914dd6ceabbe11a3f8a87c68d6f07d4aa9de1229ad86e52f9f8259f68006f3ea"
+  },
+  "results/p3/state27_base_audit/driver/task_08_episode_027_actions.npy": {
+    "bytes": 4440,
+    "sha256": "69324e6d19cda4c188d602cce2fff8eeae0c508902f4892cde751687e11649ab"
+  },
+  "results/p3/state27_base_audit/driver/task_08_episode_027_override_log.csv": {
+    "bytes": 1522,
+    "sha256": "5c12ff4f2b40872fa833cd5c4513a0b2cb0934fa1831b7d49727cf3b7ba31efd"
+  },
+  "results/p3/state27_base_audit/driver/task_08_episode_027_state_log.csv": {
+    "bytes": 35512,
+    "sha256": "fb45d24f29c862eab84db590e4a03a77f2980aecbdff46e96318c5d5164f91c2"
+  },
+  "results/p3/state28_C_r1/driver/episodes.jsonl": {
+    "bytes": 1292,
+    "sha256": "23727e6d1b1bbac0178e6966e3c92d91e6a71f72671e7bef152655a097b20263"
+  },
+  "results/p3/state28_C_r1/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "2e93e1baab7e52943ba804b3ddcdf0d766f12a200590ceba17b87cb1e0039515"
+  },
+  "results/p3/state28_C_r1/driver/results.json": {
+    "bytes": 2452,
+    "sha256": "60c23621cd4fe9d8024ce35d130956d690456bf7897b975012ce755a04badded"
+  },
+  "results/p3/state28_C_r1/driver/task_08_episode_028_actions.npy": {
+    "bytes": 4048,
+    "sha256": "e846befc57d3a057cbf4280cf3d9ca419eef4d43f8e6ccf79ee631351bb0bbeb"
+  },
+  "results/p3/state28_C_r1/driver/task_08_episode_028_override_log.csv": {
+    "bytes": 1402,
+    "sha256": "d6bdaec8671d913cc50c0b9aa12fc8b36b312d50f6de847a164b6ec7e0d423fb"
+  },
+  "results/p3/state28_C_r1/driver/task_08_episode_028_state_log.csv": {
+    "bytes": 32351,
+    "sha256": "549a0dc40d3b9c8c0d6a5051358fa007665cc6fcd52abe638880d7741eb5f82a"
+  },
+  "results/p3/state28_C_r2/driver/episodes.jsonl": {
+    "bytes": 1288,
+    "sha256": "a993558d509ce0670752d6fb007999b52bcecd48bf71afb44b8dbf1357909ed1"
+  },
+  "results/p3/state28_C_r2/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "83a093bd9bdc0e5ada9f0c8bbb5eb6321177e593e2b5b8a13bd680357aa89f02"
+  },
+  "results/p3/state28_C_r2/driver/results.json": {
+    "bytes": 2448,
+    "sha256": "7d68063853fcaa2b6a5ff2bbf0a43365c04263b05eb10e7d570400d5542f62bb"
+  },
+  "results/p3/state28_C_r2/driver/task_08_episode_028_actions.npy": {
+    "bytes": 4048,
+    "sha256": "0fcf3c100c851ae837f4171e39acf74353a12e59dbf01ee3e739a5eac7c802f6"
+  },
+  "results/p3/state28_C_r2/driver/task_08_episode_028_override_log.csv": {
+    "bytes": 1402,
+    "sha256": "d6bdaec8671d913cc50c0b9aa12fc8b36b312d50f6de847a164b6ec7e0d423fb"
+  },
+  "results/p3/state28_C_r2/driver/task_08_episode_028_state_log.csv": {
+    "bytes": 32319,
+    "sha256": "6440f06b41e11d95ebdca7f62670e279706f880bb06c9504a51d39c117a4ddda"
+  },
+  "results/p3/state28_C_r3/driver/episodes.jsonl": {
+    "bytes": 1289,
+    "sha256": "d1d6a691316b110194bf535ad10f0275675c55c2a41235a53bcba859fbb55a1e"
+  },
+  "results/p3/state28_C_r3/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "e80f10d2b5495cc487803caa217cbdb568ea0ae24ac12d3fdfeae42c977ccb1d"
+  },
+  "results/p3/state28_C_r3/driver/results.json": {
+    "bytes": 2449,
+    "sha256": "9a6cb3dc3e99ab42028edcfd017c4b21d0856e1d3e143b96ebd463a71ce279dd"
+  },
+  "results/p3/state28_C_r3/driver/task_08_episode_028_actions.npy": {
+    "bytes": 4048,
+    "sha256": "2b405c95699d4919fa54f382da2b44ee6f77b2044b21e002196e92762a77d3ee"
+  },
+  "results/p3/state28_C_r3/driver/task_08_episode_028_override_log.csv": {
+    "bytes": 1402,
+    "sha256": "d6bdaec8671d913cc50c0b9aa12fc8b36b312d50f6de847a164b6ec7e0d423fb"
+  },
+  "results/p3/state28_C_r3/driver/task_08_episode_028_state_log.csv": {
+    "bytes": 32334,
+    "sha256": "e302513f4f15e5ab5a4549cae6dbf866a93efaffb993edae720c06c0bd39768d"
+  },
+  "results/p3/state28_C_r4/driver/episodes.jsonl": {
+    "bytes": 1292,
+    "sha256": "f06610c72d1771d473a50f696dc84e9670265015d8791601a46d69524ff84ad9"
+  },
+  "results/p3/state28_C_r4/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "d803f5c1142e4a406752d95d60f23fc0b38999d31ef0e39277d03e131e6dd14b"
+  },
+  "results/p3/state28_C_r4/driver/results.json": {
+    "bytes": 2452,
+    "sha256": "4f30e5614770c679c297a9d10ac6247dfd60882222c60d18c9c853b885d66bf1"
+  },
+  "results/p3/state28_C_r4/driver/task_08_episode_028_actions.npy": {
+    "bytes": 4048,
+    "sha256": "72faf2f447536d6d5614be2763b413563ea2263adeee48efe0a2c4381ae0662c"
+  },
+  "results/p3/state28_C_r4/driver/task_08_episode_028_override_log.csv": {
+    "bytes": 1402,
+    "sha256": "d6bdaec8671d913cc50c0b9aa12fc8b36b312d50f6de847a164b6ec7e0d423fb"
+  },
+  "results/p3/state28_C_r4/driver/task_08_episode_028_state_log.csv": {
+    "bytes": 32328,
+    "sha256": "5822105ae3a89f259e6dfe21b57859201fa04a78f9ae317184b94bc7770cfc08"
+  },
+  "results/p3/state28_C_r5/driver/episodes.jsonl": {
+    "bytes": 1289,
+    "sha256": "2af5672abaac72bb0d1852daf0cb8cb9916f4f10f116b36837bbf130f21b77da"
+  },
+  "results/p3/state28_C_r5/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "eaf4dbb9277923036243249b0d1efb3e2f1ffa8eda4ced21225be76258325ddc"
+  },
+  "results/p3/state28_C_r5/driver/results.json": {
+    "bytes": 2449,
+    "sha256": "19d6e538b141e11de4eed2db89163ec9e38d6809f8f201d7810c49ac41d31a5c"
+  },
+  "results/p3/state28_C_r5/driver/task_08_episode_028_actions.npy": {
+    "bytes": 4048,
+    "sha256": "49f781f3e26beb6fb441f7ae1a39895aa4eb325b5c0f4296eabae90de9fdf105"
+  },
+  "results/p3/state28_C_r5/driver/task_08_episode_028_override_log.csv": {
+    "bytes": 1402,
+    "sha256": "d6bdaec8671d913cc50c0b9aa12fc8b36b312d50f6de847a164b6ec7e0d423fb"
+  },
+  "results/p3/state28_C_r5/driver/task_08_episode_028_state_log.csv": {
+    "bytes": 32331,
+    "sha256": "961dc624390f28c022de4ba0caf1c04d3df886b090fbcdc9f1bbc8214237cb3e"
+  },
+  "results/p3/state28_P_r1/driver/episodes.jsonl": {
+    "bytes": 1292,
+    "sha256": "4f417866e14ee9bee0ecbf1d8eedaeab4e7e00a93297ae3b6c0957b4d3eae63f"
+  },
+  "results/p3/state28_P_r1/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "e512b32169133539809694bde629e286f58ac9eaaab057a6b7dce41004eb1ea2"
+  },
+  "results/p3/state28_P_r1/driver/results.json": {
+    "bytes": 2452,
+    "sha256": "e18effe23d622f83c051e843251922f7a32ca5aae6c041d07964c08d0ecd417a"
+  },
+  "results/p3/state28_P_r1/driver/task_08_episode_028_actions.npy": {
+    "bytes": 4048,
+    "sha256": "a339b8e5440991dc49c4f8db777ee93e0ecf17a5ba3b3735522a57eb1a9c22b6"
+  },
+  "results/p3/state28_P_r1/driver/task_08_episode_028_override_log.csv": {
+    "bytes": 1402,
+    "sha256": "d6bdaec8671d913cc50c0b9aa12fc8b36b312d50f6de847a164b6ec7e0d423fb"
+  },
+  "results/p3/state28_P_r1/driver/task_08_episode_028_state_log.csv": {
+    "bytes": 32305,
+    "sha256": "48f6ec69465264b9d4f72511be8a7ae709528f2c9779c0fffcc6393737a5d025"
+  },
+  "results/p3/state28_P_r2/driver/episodes.jsonl": {
+    "bytes": 1290,
+    "sha256": "72144f2a856561730fbd1cfdc95a56251d7d9bc96110bb535d767fad6e3fce9c"
+  },
+  "results/p3/state28_P_r2/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "72659c645e0ee3174379abab7096eb5f788bf676eca6cdb79409c4a230f96885"
+  },
+  "results/p3/state28_P_r2/driver/results.json": {
+    "bytes": 2450,
+    "sha256": "a440e5aaecb8ab9f2069c41aaf4444ce30120d21d1be594aed120372e98c5a65"
+  },
+  "results/p3/state28_P_r2/driver/task_08_episode_028_actions.npy": {
+    "bytes": 4048,
+    "sha256": "2bcd273b665c8b2be6e93a305e6e05adb82d176dddc17670830552bcce206fe6"
+  },
+  "results/p3/state28_P_r2/driver/task_08_episode_028_override_log.csv": {
+    "bytes": 1402,
+    "sha256": "d6bdaec8671d913cc50c0b9aa12fc8b36b312d50f6de847a164b6ec7e0d423fb"
+  },
+  "results/p3/state28_P_r2/driver/task_08_episode_028_state_log.csv": {
+    "bytes": 32320,
+    "sha256": "8780ade2c38a62d0eb411468a814155222fc710cb62f4f3462052f2ef42bac09"
+  },
+  "results/p3/state28_P_r3/driver/episodes.jsonl": {
+    "bytes": 1289,
+    "sha256": "022d9f0c031fb4ebe83ff2a4c6a0e182d4105d456f12ca508581c10365cd7cf3"
+  },
+  "results/p3/state28_P_r3/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "79c22fb55ddf0196a7ea0012d2175e1b74039ee8e07c91a4cdd6ad18c254bcc7"
+  },
+  "results/p3/state28_P_r3/driver/results.json": {
+    "bytes": 2449,
+    "sha256": "851506d740ed22a3bbea7b885f19b64df51ea005f950b39857c75de252031893"
+  },
+  "results/p3/state28_P_r3/driver/task_08_episode_028_actions.npy": {
+    "bytes": 4048,
+    "sha256": "a95318ec75d90c60196172fd128e7467072f657f838a8ad2ba964281ce06b112"
+  },
+  "results/p3/state28_P_r3/driver/task_08_episode_028_override_log.csv": {
+    "bytes": 1402,
+    "sha256": "d6bdaec8671d913cc50c0b9aa12fc8b36b312d50f6de847a164b6ec7e0d423fb"
+  },
+  "results/p3/state28_P_r3/driver/task_08_episode_028_state_log.csv": {
+    "bytes": 32304,
+    "sha256": "afbdcfa2c9ed506aa3a5ca4874f7a021ea248578368aa8b5b0253e3c4ad1299c"
+  },
+  "results/p3/state28_P_r4/driver/episodes.jsonl": {
+    "bytes": 1290,
+    "sha256": "dfdf5b02800ff1a3ea404ec286073033ce83a3f3906639a653752dffb641d4a3"
+  },
+  "results/p3/state28_P_r4/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "d1498324b34606b9e191b2ea11848997069fcf63908958d67860ca5205a6cea5"
+  },
+  "results/p3/state28_P_r4/driver/results.json": {
+    "bytes": 2450,
+    "sha256": "ef0a1e12ed65adf49376208494681ffbd5cea052b477c13231176d24af6dc7e1"
+  },
+  "results/p3/state28_P_r4/driver/task_08_episode_028_actions.npy": {
+    "bytes": 4048,
+    "sha256": "3e96b6c6446620d4e63ae5096531bcd7dec37d1a87965f1c1f9cb8579b010fa3"
+  },
+  "results/p3/state28_P_r4/driver/task_08_episode_028_override_log.csv": {
+    "bytes": 1402,
+    "sha256": "d6bdaec8671d913cc50c0b9aa12fc8b36b312d50f6de847a164b6ec7e0d423fb"
+  },
+  "results/p3/state28_P_r4/driver/task_08_episode_028_state_log.csv": {
+    "bytes": 32306,
+    "sha256": "f86013bfe6650e78a61531dd1542469d8e1889ce6c4ec810a5d55ac45ef988e3"
+  },
+  "results/p3/state28_P_r5/driver/episodes.jsonl": {
+    "bytes": 1288,
+    "sha256": "5fee3460b6773831046e43f758d970af39e9c3eb42ffe03f902bbff1124437f3"
+  },
+  "results/p3/state28_P_r5/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "0cd6ae833b69d2d9d99c658b24e98748327f7fe2ecf33a5c62d2b379c1775fe1"
+  },
+  "results/p3/state28_P_r5/driver/results.json": {
+    "bytes": 2448,
+    "sha256": "ff9d48ed0e1b736bf4342668f99a9e94222078cefd9afe0a7bcb8de953061a55"
+  },
+  "results/p3/state28_P_r5/driver/task_08_episode_028_actions.npy": {
+    "bytes": 4048,
+    "sha256": "876e5373922b8fc8fe93edff7c3fb6818f1fce0b1f442c143b83312c1d6e04ff"
+  },
+  "results/p3/state28_P_r5/driver/task_08_episode_028_override_log.csv": {
+    "bytes": 1402,
+    "sha256": "d6bdaec8671d913cc50c0b9aa12fc8b36b312d50f6de847a164b6ec7e0d423fb"
+  },
+  "results/p3/state28_P_r5/driver/task_08_episode_028_state_log.csv": {
+    "bytes": 32315,
+    "sha256": "ecd1f11cac1562fc59746368679ab764edd817e2c3c1d1cdcaea93a348d7bbcd"
+  },
+  "results/p3/state28_base_T20_r1/driver/episodes.jsonl": {
+    "bytes": 3155,
+    "sha256": "2bb98ca05df3519b1430d49a3f4710fe1c966d9bc7fe3d4b81380c7395a3015e"
+  },
+  "results/p3/state28_base_T20_r1/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "043892914529a576bc30fa7b035311490b3e11e793d2db2bcca0ebe2e14dc016"
+  },
+  "results/p3/state28_base_T20_r1/driver/results.json": {
+    "bytes": 5741,
+    "sha256": "c5aba568deb8ac28f3b5fc2caa25518d37c7886ec3bc8b7759619908bc391f5f"
+  },
+  "results/p3/state28_base_T20_r1/driver/task_08_episode_028_actions.npy": {
+    "bytes": 16928,
+    "sha256": "ad34ff52e3e9b64dfe35be3b0a9c375abb5df5e55f31344e9c83d924e78e1656"
+  },
+  "results/p3/state28_base_T20_r1/driver/task_08_episode_028_override_log.csv": {
+    "bytes": 6126,
+    "sha256": "49256bd69e05827f5416626789d988be3b54ea0637df5bd832c325b9aaec1ebe"
+  },
+  "results/p3/state28_base_T20_r1/driver/task_08_episode_028_state_log.csv": {
+    "bytes": 136777,
+    "sha256": "c187bbe568ba515c392d35cd8bfdf338e879d34a46604afda3f51901e0d86a17"
+  },
+  "results/p3/state28_base_T20_r2/driver/episodes.jsonl": {
+    "bytes": 3155,
+    "sha256": "21850277012002d5cdd3f35d6ceab1817919834ba67f35372f7133deab068223"
+  },
+  "results/p3/state28_base_T20_r2/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "fbf0ff1c30788e50e39119efd14ca48a912e5b032bb89e5d4d3c403301664acf"
+  },
+  "results/p3/state28_base_T20_r2/driver/results.json": {
+    "bytes": 5741,
+    "sha256": "576f9a3b4c6fbf726be3e16844bdb904418f06bca614f7f88f05aca0c7f52f33"
+  },
+  "results/p3/state28_base_T20_r2/driver/task_08_episode_028_actions.npy": {
+    "bytes": 16928,
+    "sha256": "7a8af2c124b6d7d11a3e282781f4a2ce6d3f42094a677338cc784c4fd8990a41"
+  },
+  "results/p3/state28_base_T20_r2/driver/task_08_episode_028_override_log.csv": {
+    "bytes": 6222,
+    "sha256": "3b904752fc0c8f571979cf5ccb0f1e451a2d4d24ea11edb54f0beef5fed401b8"
+  },
+  "results/p3/state28_base_T20_r2/driver/task_08_episode_028_state_log.csv": {
+    "bytes": 137155,
+    "sha256": "4940145241cc012b9ee78aca7b0cc03af633606dbdb79effbea4a8a0c7b2f9f2"
+  },
+  "results/p3/state28_base_T20_r3/driver/episodes.jsonl": {
+    "bytes": 3157,
+    "sha256": "9067beb94798537a339a9bbb895bada2ffc04a3a029bf9d68e2c6ddb0a3a0c0b"
+  },
+  "results/p3/state28_base_T20_r3/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "82fab94c15d4013975608f8c3fd614c0b06249ac2f9524c7c854eb5fd8f8e9f5"
+  },
+  "results/p3/state28_base_T20_r3/driver/results.json": {
+    "bytes": 5743,
+    "sha256": "382bfeef4bc2ffa4e16cb80d9d5dab512c08625cf3db7b3e0ba2625c8b2188e4"
+  },
+  "results/p3/state28_base_T20_r3/driver/task_08_episode_028_actions.npy": {
+    "bytes": 16928,
+    "sha256": "bbf05d0aa6685a24e062808f149a33ac8c7d97cb81d7deba4b008ab2e89ff107"
+  },
+  "results/p3/state28_base_T20_r3/driver/task_08_episode_028_override_log.csv": {
+    "bytes": 6222,
+    "sha256": "07e594e43746a550c444252fdf5a3edd96fa0f7c6fada555a1bbd136c5738cf7"
+  },
+  "results/p3/state28_base_T20_r3/driver/task_08_episode_028_state_log.csv": {
+    "bytes": 137488,
+    "sha256": "d8359bf19e0935e5900c0aab199b9cbca20423e89ec0bd5e6cb4352e474d4665"
+  },
+  "results/p3/state32_base_audit/driver/episodes.jsonl": {
+    "bytes": 1353,
+    "sha256": "93fa37bb5e731358b3fe0a2880f987aa3b32f2dbfb8c86f84e53191952ae5aa0"
+  },
+  "results/p3/state32_base_audit/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "d963e1e96056dd98626f323ebb472bed8c3b3c496b4f2df7c2bd559deeb46127"
+  },
+  "results/p3/state32_base_audit/driver/results.json": {
+    "bytes": 2595,
+    "sha256": "4492b1ec1838e2e251da62b2bdebac2120e613aaa98fe5871aabdc19b99bbd28"
+  },
+  "results/p3/state32_base_audit/driver/task_08_episode_032_actions.npy": {
+    "bytes": 4608,
+    "sha256": "114e372931af8c535d6d9d8b5b1c631837eae2095c4873c1bf948aa9671a13d9"
+  },
+  "results/p3/state32_base_audit/driver/task_08_episode_032_override_log.csv": {
+    "bytes": 1580,
+    "sha256": "c2c0823dbdb134574a3c049ce3e46da464197dd8e6e887a487a70bda64db2a2e"
+  },
+  "results/p3/state32_base_audit/driver/task_08_episode_032_state_log.csv": {
+    "bytes": 36974,
+    "sha256": "f025f6d360405a03990243e9b73494ba49fe8d90c46a8b7a55a0d2285679d7b5"
+  },
+  "results/p3/state34_C_r1/driver/episodes.jsonl": {
+    "bytes": 1356,
+    "sha256": "c2832dd76f49d128bba232acb22a89e5035f784cf9951de99550b24871bbd648"
+  },
+  "results/p3/state34_C_r1/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "c5b9a92e4b3677c4187064d1a0f13afa77741c0104961bf4f327c0cd50705c99"
+  },
+  "results/p3/state34_C_r1/driver/results.json": {
+    "bytes": 2564,
+    "sha256": "30625d79b7c6dcce4b294365ea6a4bc8f68b390347bec1fcef3fd8bd280e20cd"
+  },
+  "results/p3/state34_C_r1/driver/task_08_episode_034_actions.npy": {
+    "bytes": 4496,
+    "sha256": "8f500a05ff21e9955384b32445c945eb4d353cd7ef30e98ab0f39b240ae7638e"
+  },
+  "results/p3/state34_C_r1/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 1550,
+    "sha256": "ea5f1de76be8ef09009398bc3af7dbc2723cf5aa7148d0e2f55707ea01790914"
+  },
+  "results/p3/state34_C_r1/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 36033,
+    "sha256": "fafb1ddc178fc27c48c19f92aecb581f2f9225058fd74ce8dae4c877ba1a7fe3"
+  },
+  "results/p3/state34_C_r2/driver/episodes.jsonl": {
+    "bytes": 1354,
+    "sha256": "05f995729ddba82d43c6553f0ba42dc3d48c92fa887ad624cdb30e29e06889b8"
+  },
+  "results/p3/state34_C_r2/driver/metadata.json": {
+    "bytes": 1754,
+    "sha256": "5a0bb7ca953931926e46317162697bc9259b1d95e806988e3c6b81727e0fd7f9"
+  },
+  "results/p3/state34_C_r2/driver/results.json": {
+    "bytes": 2562,
+    "sha256": "f9d8b04e8bb5bd8b2a40806647c830e491d72d6e4426e04d4f3d1d0cce7e3583"
+  },
+  "results/p3/state34_C_r2/driver/task_08_episode_034_actions.npy": {
+    "bytes": 4496,
+    "sha256": "083288bf7ace35ef7f4d034fd466e7019155298cd99bd7595c8a6c8200624e1b"
+  },
+  "results/p3/state34_C_r2/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 1550,
+    "sha256": "ea5f1de76be8ef09009398bc3af7dbc2723cf5aa7148d0e2f55707ea01790914"
+  },
+  "results/p3/state34_C_r2/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 35998,
+    "sha256": "426798e0e5c26b65fef223231c21a8e63f630aa21166eb9d590f4cb892beb142"
+  },
+  "results/p3/state34_C_r3/driver/episodes.jsonl": {
+    "bytes": 1355,
+    "sha256": "d4bfb3176a6cd901a8006e05aa9a80c189e6cb2e0bd93a102907dcf3576e8fec"
+  },
+  "results/p3/state34_C_r3/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "63db6c55ab28c860b08d80c36547ea2bbec2218e696beb8eb56a081e77fc5197"
+  },
+  "results/p3/state34_C_r3/driver/results.json": {
+    "bytes": 2563,
+    "sha256": "126ff38ebabc1a496c052a95cb454dc84d457f8ccc0616c577b21f77ab4d829d"
+  },
+  "results/p3/state34_C_r3/driver/task_08_episode_034_actions.npy": {
+    "bytes": 4496,
+    "sha256": "a9cf84693a322b770c6441826b92875604496c8e6bfb8159d9f436e20aa13b01"
+  },
+  "results/p3/state34_C_r3/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 1550,
+    "sha256": "a7c9fefcfb1b6323337a62abe2baae552dd38b6d74cb9e4d0a335dd360132dcf"
+  },
+  "results/p3/state34_C_r3/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 36042,
+    "sha256": "909fe8a76e44b57ea7b7cfe3abd3e3840fa80b10d841e8a0dcc37e9551c071a1"
+  },
+  "results/p3/state34_C_r4/driver/episodes.jsonl": {
+    "bytes": 1356,
+    "sha256": "50166d5751ea313136837265ef6e9391e0664b689c24a4659cbbbb2a779257a8"
+  },
+  "results/p3/state34_C_r4/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "194bd9ef7c601decb655f98ecfec0bf0e43eac55043df0b1baf23927a206956b"
+  },
+  "results/p3/state34_C_r4/driver/results.json": {
+    "bytes": 2564,
+    "sha256": "d7565ff7d54a68e5145d19d9d64cdc1f8a6e0bc2b5b69ee4ee9360ebb44728a3"
+  },
+  "results/p3/state34_C_r4/driver/task_08_episode_034_actions.npy": {
+    "bytes": 4552,
+    "sha256": "64e579db3409dbe7e2840ef9019f79ef0be2aade56f0ae1296c84dfbda149e3e"
+  },
+  "results/p3/state34_C_r4/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 1568,
+    "sha256": "ec0ed7245e6884c427a260f6d7fb4d4ae8f842cded1c40cbe1d0545243a7f07a"
+  },
+  "results/p3/state34_C_r4/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 36449,
+    "sha256": "edfdc784fda298eb3b27890fa67c7f9e65d162722fe6e53c9aa9bdeb49662a93"
+  },
+  "results/p3/state34_C_r5/driver/episodes.jsonl": {
+    "bytes": 1357,
+    "sha256": "366bdfc8acee7fb3e6d3648f8614dfd551a443b914c8956e59f94478c0f71d25"
+  },
+  "results/p3/state34_C_r5/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "3e0307dcea4c93e8291e0210c86c9995f0d5d9ed09976415ca15d25449d313fb"
+  },
+  "results/p3/state34_C_r5/driver/results.json": {
+    "bytes": 2565,
+    "sha256": "bad64845b798390ca433fd869d24c3ed0321a7a7ce8c551e74fbfba9aefc48a1"
+  },
+  "results/p3/state34_C_r5/driver/task_08_episode_034_actions.npy": {
+    "bytes": 4496,
+    "sha256": "922e9a35ea1117455ffd2f3ad960f1de733787687a6da7ebb2e604797e4b7c1c"
+  },
+  "results/p3/state34_C_r5/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 1550,
+    "sha256": "ea5f1de76be8ef09009398bc3af7dbc2723cf5aa7148d0e2f55707ea01790914"
+  },
+  "results/p3/state34_C_r5/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 35991,
+    "sha256": "c967e1e0d641bf188450b454563496aa0502bf095042e25da7f62fd077a55f9b"
+  },
+  "results/p3/state34_P_r1/driver/episodes.jsonl": {
+    "bytes": 1419,
+    "sha256": "bec4073941b0615551ae54ea60b2e6eb92ffa268a066e740c546b9dc40835e5e"
+  },
+  "results/p3/state34_P_r1/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "40c476948e4bf0ced510fca6dee08e65495daee16923d9f497f6a114fc12eaba"
+  },
+  "results/p3/state34_P_r1/driver/results.json": {
+    "bytes": 2675,
+    "sha256": "f5e252e18b96ca7a2af3e6eed3f3518a0c6d4db25a53c9752308965481516bda"
+  },
+  "results/p3/state34_P_r1/driver/task_08_episode_034_actions.npy": {
+    "bytes": 4888,
+    "sha256": "23463dfc06ec474f1562ad39f28899c8b80f172912d6df7f36bbc1701eb43b51"
+  },
+  "results/p3/state34_P_r1/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 1676,
+    "sha256": "47001782897af212dc6c4bda51e21353139f3367c39d6e0581714cfd32051ca0"
+  },
+  "results/p3/state34_P_r1/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 39195,
+    "sha256": "95f8a9935621523cfbb99c037c2b518c8f0370b0771af0c64008a35c616d764a"
+  },
+  "results/p3/state34_P_r2/driver/episodes.jsonl": {
+    "bytes": 1358,
+    "sha256": "4e006b40f743a4d595b675177eee96e0c1a30cfe4259d40ab267becb76294272"
+  },
+  "results/p3/state34_P_r2/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "4ea6e9c2d94f71b2de6cb26c3812a95b6f207c99afd3ed000afd7ae52366262e"
+  },
+  "results/p3/state34_P_r2/driver/results.json": {
+    "bytes": 2566,
+    "sha256": "b6bdf650e109342a31c0278902017cc4d2dc2b45fb3dce6fc910a858e5f1f666"
+  },
+  "results/p3/state34_P_r2/driver/task_08_episode_034_actions.npy": {
+    "bytes": 4440,
+    "sha256": "96b3cef0e389fc8fc1395e6a52ff6036c8f3638390d3defd93a4ecc8afa99239"
+  },
+  "results/p3/state34_P_r2/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 1532,
+    "sha256": "2dde99940aca5f3d075fc2d274f69caf104c869da593fd8d4c6d02448d916493"
+  },
+  "results/p3/state34_P_r2/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 35590,
+    "sha256": "03255a9f37b41c5c8b4a369687f4f1911920e9a593ccf48b535fe0a985e92047"
+  },
+  "results/p3/state34_P_r3/driver/episodes.jsonl": {
+    "bytes": 1357,
+    "sha256": "496e8101361ad0f1468d38ba97a25f82a873e5776b59f3e5be9f78ff55949d2f"
+  },
+  "results/p3/state34_P_r3/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "39c2cbffd52fab326082090a0922473fb7b2306f90cff5b144cbf0b6025aa467"
+  },
+  "results/p3/state34_P_r3/driver/results.json": {
+    "bytes": 2565,
+    "sha256": "a393c584f668cc91372e28f7bf1d05f2e4a816ebbe57fed014dafd09e1bfb914"
+  },
+  "results/p3/state34_P_r3/driver/task_08_episode_034_actions.npy": {
+    "bytes": 4440,
+    "sha256": "b3b68ea6cf2cc7bff0b399ac15ede5e39c94656d0c68c37a25f2761e3de406cc"
+  },
+  "results/p3/state34_P_r3/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 1532,
+    "sha256": "2dde99940aca5f3d075fc2d274f69caf104c869da593fd8d4c6d02448d916493"
+  },
+  "results/p3/state34_P_r3/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 35614,
+    "sha256": "04367a9fa6f133809e8b33aa383c63c53e3bc8ce5fdb9525b5771832c059c1cb"
+  },
+  "results/p3/state34_P_r4/driver/episodes.jsonl": {
+    "bytes": 1355,
+    "sha256": "be9f9bec9b3d742d8e5b7b6b60f18e918474f838144088612cf7e785e22941cf"
+  },
+  "results/p3/state34_P_r4/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "4ea6e9c2d94f71b2de6cb26c3812a95b6f207c99afd3ed000afd7ae52366262e"
+  },
+  "results/p3/state34_P_r4/driver/results.json": {
+    "bytes": 2563,
+    "sha256": "1e1dff28a73aea72fb094981338340d77137460b9eed5f9ab92b5cbdab88b7ba"
+  },
+  "results/p3/state34_P_r4/driver/task_08_episode_034_actions.npy": {
+    "bytes": 4440,
+    "sha256": "e7ce29d4bd19432f4db4ea3ce4c13d6cb3f2fc720247bb0694d31fba61a747d0"
+  },
+  "results/p3/state34_P_r4/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 1532,
+    "sha256": "2dde99940aca5f3d075fc2d274f69caf104c869da593fd8d4c6d02448d916493"
+  },
+  "results/p3/state34_P_r4/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 35606,
+    "sha256": "078146223093d6f9c065ffe7a9da83ab092d18a7e58389c5f9f7e8d2a792fb71"
+  },
+  "results/p3/state34_P_r5/driver/episodes.jsonl": {
+    "bytes": 1351,
+    "sha256": "5fae02525f8c753a291e515a68a2726316bcb54c08465f382a868546bbe28b33"
+  },
+  "results/p3/state34_P_r5/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "1743978398c92f77607bdbf94b134787d03115663060921642869fa94c4ed624"
+  },
+  "results/p3/state34_P_r5/driver/results.json": {
+    "bytes": 2559,
+    "sha256": "0f35c3536bc625e36fd4ac1372a1a9cc89734397900ed1c5b6495d8d74c220bb"
+  },
+  "results/p3/state34_P_r5/driver/task_08_episode_034_actions.npy": {
+    "bytes": 4496,
+    "sha256": "40c9039d13cab07c790be3f6aae3bec77ce1285709ef4797f477da18fc341ba6"
+  },
+  "results/p3/state34_P_r5/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 1550,
+    "sha256": "a7c9fefcfb1b6323337a62abe2baae552dd38b6d74cb9e4d0a335dd360132dcf"
+  },
+  "results/p3/state34_P_r5/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 36051,
+    "sha256": "b1175720a9969168325da4d8ac021bb07c932b756edbfb9d38a80b6c703a5da0"
+  },
+  "results/p3/state34_base_T20_r1/driver/episodes.jsonl": {
+    "bytes": 3158,
+    "sha256": "c941e46b8860b616f9aca48db988f5e55ea8215608a825ad4722429906e6a8c2"
+  },
+  "results/p3/state34_base_T20_r1/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "404173911812e86c61139717044a491240095efa0505ad1e8ff1c9035b15b71d"
+  },
+  "results/p3/state34_base_T20_r1/driver/results.json": {
+    "bytes": 5744,
+    "sha256": "a58180e6d5406ee3fcb5436e151ef1ef20eaf1c88b627c58bd10f1e31d27343a"
+  },
+  "results/p3/state34_base_T20_r1/driver/task_08_episode_034_actions.npy": {
+    "bytes": 16928,
+    "sha256": "282e54a4ef743b0c4cec822ec5e6cbebe57232ed074accd36ca1ae684da1f8f1"
+  },
+  "results/p3/state34_base_T20_r1/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 6222,
+    "sha256": "dd624386f6d21e80adffd28261b013136663a2aa4abdba6ae83acf9801d328b0"
+  },
+  "results/p3/state34_base_T20_r1/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 137340,
+    "sha256": "9f885c5cc450b48daec03a962b03e351426817df18b0e7f3cb9fffbb22e2ac1c"
+  },
+  "results/p3/state34_base_T20_r2/driver/episodes.jsonl": {
+    "bytes": 3158,
+    "sha256": "aba000c6abb5cc20125b611469e32d30dffa5cf61c7131f6f5642a66bf2e9de6"
+  },
+  "results/p3/state34_base_T20_r2/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "855d43902b9a17fbcdcb33b08788a2bff9ea59019ff93296c249252d26af3b44"
+  },
+  "results/p3/state34_base_T20_r2/driver/results.json": {
+    "bytes": 5744,
+    "sha256": "58a0aec166e346f8d7a227c7d7a33612bff9c0e4e08305420ac4413e578e8dfa"
+  },
+  "results/p3/state34_base_T20_r2/driver/task_08_episode_034_actions.npy": {
+    "bytes": 16928,
+    "sha256": "58bfc75c3c28eaf5568441c4bc3a25b93c1076d409be868858f040770f497faf"
+  },
+  "results/p3/state34_base_T20_r2/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 6222,
+    "sha256": "5cb9fb1f338ca5038265e27305bc1983a2ce9262f937414fc74709ddc343bf00"
+  },
+  "results/p3/state34_base_T20_r2/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 137256,
+    "sha256": "e89a7b539e52cf406cbae46f276641dde1f27c9064d165071dd738a314689328"
+  },
+  "results/p3/state34_base_T20_r3/driver/episodes.jsonl": {
+    "bytes": 3153,
+    "sha256": "d0bff6c9ae29992e913dd2e54239d5a21bde18bdbb4d8fc32cc3e25d1abf002f"
+  },
+  "results/p3/state34_base_T20_r3/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "65a0a0210198b54878c69fba0c9e0526ce0c523eaa6bd08ab996c959db39ac19"
+  },
+  "results/p3/state34_base_T20_r3/driver/results.json": {
+    "bytes": 5739,
+    "sha256": "d65843728918135422ee422530eeeb54be2ce5a93471c740b4601aef559d9d66"
+  },
+  "results/p3/state34_base_T20_r3/driver/task_08_episode_034_actions.npy": {
+    "bytes": 16928,
+    "sha256": "3b3903df6c5884913cf3fb1ac28294bb9096207945ea5808fee51af41a0ff636"
+  },
+  "results/p3/state34_base_T20_r3/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 6222,
+    "sha256": "5cb9fb1f338ca5038265e27305bc1983a2ce9262f937414fc74709ddc343bf00"
+  },
+  "results/p3/state34_base_T20_r3/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 137020,
+    "sha256": "b8baf319455ce3ac9e4551a55d5af47b69f3839f2f4d2a1a5be887b81e277831"
+  },
+  "results/p3/state34_base_T25_r1/driver/episodes.jsonl": {
+    "bytes": 1355,
+    "sha256": "dd38fd3d1a4e8c0b7a6e68e33bf374a1e729ac1e6e8c249613d07f1f44bc032e"
+  },
+  "results/p3/state34_base_T25_r1/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "689ec70de796233c400d93ec93c5608b69bc1177b4f4b20bff2c89ebfaaffadd"
+  },
+  "results/p3/state34_base_T25_r1/driver/results.json": {
+    "bytes": 2597,
+    "sha256": "f2beae2d9efe9e20660fe133689bcde617c6ef90e07e6250a82e59a8586c859c"
+  },
+  "results/p3/state34_base_T25_r1/driver/task_08_episode_034_actions.npy": {
+    "bytes": 4496,
+    "sha256": "683f750216797fb25ecd77e8213f2dfe45bdf0ab8e8f1d76f716ccf7683b426d"
+  },
+  "results/p3/state34_base_T25_r1/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 1548,
+    "sha256": "8e954f8055d1275beea1b48e3b9c81549281a7449bf406fd11dce7e8f855425c"
+  },
+  "results/p3/state34_base_T25_r1/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 36044,
+    "sha256": "cc060a2a7ca99a0bfed53ee40e126dc150610af8f94125b428aad9a9a6d3bb48"
+  },
+  "results/p3/state34_base_T25_r2/driver/episodes.jsonl": {
+    "bytes": 1355,
+    "sha256": "012913fd1a7bc02f793432037fdf1df718a17ca55da59bfb0b38b45b73f1c91a"
+  },
+  "results/p3/state34_base_T25_r2/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "fff00173415554742838d862810c80fb208c40fd63f999ade6cd730fe49a6802"
+  },
+  "results/p3/state34_base_T25_r2/driver/results.json": {
+    "bytes": 2597,
+    "sha256": "b36640740b2bae8baf29aa2916141bf9e2a1784b603bed3aa92bb2e38dc3ae74"
+  },
+  "results/p3/state34_base_T25_r2/driver/task_08_episode_034_actions.npy": {
+    "bytes": 4608,
+    "sha256": "80bb6232f491113bd6ff7f69cbfa28f64b2cee7fb40bcb4f7d09937d3eda523f"
+  },
+  "results/p3/state34_base_T25_r2/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 1586,
+    "sha256": "81d6e65c5398fbf37926204204963f3406a0095bed9c1b307ff21815e62c03df"
+  },
+  "results/p3/state34_base_T25_r2/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 36927,
+    "sha256": "a778d72331ffaad78593ff8c5d8feada11d1dc7db7ffc605c8817e884ffaf519"
+  },
+  "results/p3/state34_base_T25_r3/driver/episodes.jsonl": {
+    "bytes": 1358,
+    "sha256": "3fa75673abe2b12d626f146ad452c0cd5be5a0b8efe985563b81102b4b413d1e"
+  },
+  "results/p3/state34_base_T25_r3/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "17034968be2bb0baba52d8345295d8f306061439362d1e3b4937aa0c03358bf3"
+  },
+  "results/p3/state34_base_T25_r3/driver/results.json": {
+    "bytes": 2600,
+    "sha256": "aec1623de4822f62840188f63cd8772b0200a8fd509fa1a74693b3ae206479fe"
+  },
+  "results/p3/state34_base_T25_r3/driver/task_08_episode_034_actions.npy": {
+    "bytes": 4496,
+    "sha256": "287987779d0ce04b2cb82254dcbc6c05798bbcbb9e9ac2a2da578082c3865330"
+  },
+  "results/p3/state34_base_T25_r3/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 1550,
+    "sha256": "ea5f1de76be8ef09009398bc3af7dbc2723cf5aa7148d0e2f55707ea01790914"
+  },
+  "results/p3/state34_base_T25_r3/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 36042,
+    "sha256": "81c98310656677dbc86e430a08dc2b4f148a7698df4a0ae8b8920d0a29ad3748"
+  },
+  "results/p3/state34_base_T35_r1/driver/episodes.jsonl": {
+    "bytes": 1357,
+    "sha256": "2b67d22822e9f54a4fbb2a4d6dcb696fbe7bfe35228a97255195a3c60440c04d"
+  },
+  "results/p3/state34_base_T35_r1/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "d17a2d96d6ffef1b65b913f41ca4269c5c39308b2e895dcb1d1a35000cf3cdc3"
+  },
+  "results/p3/state34_base_T35_r1/driver/results.json": {
+    "bytes": 2599,
+    "sha256": "1ee52c6022ce4ce3be69eac2e1d50ffe249cb15afad42a1a85924114eece146b"
+  },
+  "results/p3/state34_base_T35_r1/driver/task_08_episode_034_actions.npy": {
+    "bytes": 4496,
+    "sha256": "9e38097f055016003a3e44b817f3350934d1d48fb620819a243274c48763fe56"
+  },
+  "results/p3/state34_base_T35_r1/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 1548,
+    "sha256": "8e954f8055d1275beea1b48e3b9c81549281a7449bf406fd11dce7e8f855425c"
+  },
+  "results/p3/state34_base_T35_r1/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 36051,
+    "sha256": "f9aa2d12f4d9d80e19d89052cfc869e7b9645114e26fd582b4ea1138b80a483d"
+  },
+  "results/p3/state34_base_T35_r2/driver/episodes.jsonl": {
+    "bytes": 1357,
+    "sha256": "f4cc04fe9d9fd13d930bb8958e6822701d9e68378b968899cbbf1d8ea11e0bf4"
+  },
+  "results/p3/state34_base_T35_r2/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "2865af256deab2f14cdfa89b0f7907326599da9c5fe242e72dec52f3a65678e6"
+  },
+  "results/p3/state34_base_T35_r2/driver/results.json": {
+    "bytes": 2599,
+    "sha256": "e49f8c67804f7a1bc42b547bd709346343ad5cca19297404d3db243dd234715d"
+  },
+  "results/p3/state34_base_T35_r2/driver/task_08_episode_034_actions.npy": {
+    "bytes": 4440,
+    "sha256": "b8e07893df7a3ab4006a29f741dc4c1d5bd5e04574425d7cf95cc43e1dcab3a9"
+  },
+  "results/p3/state34_base_T35_r2/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 1532,
+    "sha256": "75f5633a713d2a5dd2ac3f2c7207b8b5f7684791ac9654e55f1c1f263ae544f8"
+  },
+  "results/p3/state34_base_T35_r2/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 35579,
+    "sha256": "88f1f82a618a26d7fcc0caff4286057cdf6b59c69f9ecf59acc7f52a40aa87ac"
+  },
+  "results/p3/state34_base_T35_r3/driver/episodes.jsonl": {
+    "bytes": 1357,
+    "sha256": "c2e2a7d55ffa2ac390560dc982e10b9416d425253baaff799d9ab1b81bce98de"
+  },
+  "results/p3/state34_base_T35_r3/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "8c0b3d823d67aa7d4f23b9f89d115ed6ceaa28806c7a1c3ea622af7513ac0e87"
+  },
+  "results/p3/state34_base_T35_r3/driver/results.json": {
+    "bytes": 2599,
+    "sha256": "556613a2b9a16afae4598f3e751e16848fef380b8afd9741e0da9757a8127558"
+  },
+  "results/p3/state34_base_T35_r3/driver/task_08_episode_034_actions.npy": {
+    "bytes": 4496,
+    "sha256": "3ea1117a5f3b8155889771903f68985a6aa32b5c13d7c0ee4697a2977639ed5b"
+  },
+  "results/p3/state34_base_T35_r3/driver/task_08_episode_034_override_log.csv": {
+    "bytes": 1550,
+    "sha256": "a7c9fefcfb1b6323337a62abe2baae552dd38b6d74cb9e4d0a335dd360132dcf"
+  },
+  "results/p3/state34_base_T35_r3/driver/task_08_episode_034_state_log.csv": {
+    "bytes": 36007,
+    "sha256": "80fa0b703237d362ccca34cf081317f28d73020949bf0dde8adf8899b495bfa6"
+  },
+  "results/p3/state36_base_audit/driver/episodes.jsonl": {
+    "bytes": 1357,
+    "sha256": "05f4903c58325cbac1e153e6f2cf98bec0c1219f13ff25682a758eb64279eeaf"
+  },
+  "results/p3/state36_base_audit/driver/metadata.json": {
+    "bytes": 1754,
+    "sha256": "2759281aba35ea36cb3c2d837d96d957b6e1e029cd01af179f28153789d9af32"
+  },
+  "results/p3/state36_base_audit/driver/results.json": {
+    "bytes": 2599,
+    "sha256": "b3cc17451d66699a59fe14f3533f2048182d3169811459fafa54fec124d35909"
+  },
+  "results/p3/state36_base_audit/driver/task_08_episode_036_actions.npy": {
+    "bytes": 4608,
+    "sha256": "3819d367ae250f06c6f479b840e829d72a42c2080cb213a02401d0af391ca225"
+  },
+  "results/p3/state36_base_audit/driver/task_08_episode_036_override_log.csv": {
+    "bytes": 1578,
+    "sha256": "84589a710d019d26c5da6ead604fabbdee909b8cbdc8c2eb2271a417f3264dc1"
+  },
+  "results/p3/state36_base_audit/driver/task_08_episode_036_state_log.csv": {
+    "bytes": 36895,
+    "sha256": "3cca6fff92febfcbebbd8fbaff33ad635e01ec740f48657ef92c66f024179759"
+  },
+  "results/p3/state37_base_audit/driver/episodes.jsonl": {
+    "bytes": 1356,
+    "sha256": "6154ede4f55823e9964d358f0d00d03610bb59b3b73012ab4a94f23a94dc1cef"
+  },
+  "results/p3/state37_base_audit/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "563c7de43c57e19ed761837f9ae977a34c460cd90fecc701afcc283f3b76861c"
+  },
+  "results/p3/state37_base_audit/driver/results.json": {
+    "bytes": 2598,
+    "sha256": "971712932bc450100b82bbe7a7a728f28eb2d26f734c1980efd585a107a1424f"
+  },
+  "results/p3/state37_base_audit/driver/task_08_episode_037_actions.npy": {
+    "bytes": 4552,
+    "sha256": "843b477f5b12919f87ce961c29c3578364ca8a70fee7a18a090d3544b8a2fa51"
+  },
+  "results/p3/state37_base_audit/driver/task_08_episode_037_override_log.csv": {
+    "bytes": 1562,
+    "sha256": "7364bd2ba7ce3f598bad48ec6873f61242b6a4f68a0fdf67ad42c4f742862a9b"
+  },
+  "results/p3/state37_base_audit/driver/task_08_episode_037_state_log.csv": {
+    "bytes": 36379,
+    "sha256": "27aef3a2b52bdffa2b670c347e70c9c035c2fef94555b1d22cc8f8a1f454687a"
+  },
+  "results/p3/state38_base_audit/driver/episodes.jsonl": {
+    "bytes": 1353,
+    "sha256": "5d0e917c3cd0b7b2af4472b9f6d75733975863da1929b64d7b6ae8e7aa1ac6dc"
+  },
+  "results/p3/state38_base_audit/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "a76a9e6845dfce9c314dbdc5e4e7cf90ca6284a861dbee5ab17e1e7ee9a1a939"
+  },
+  "results/p3/state38_base_audit/driver/results.json": {
+    "bytes": 2595,
+    "sha256": "e1d81187695823e11ed1c0036a6d28861dbe139e1280992ad25e043729298862"
+  },
+  "results/p3/state38_base_audit/driver/task_08_episode_038_actions.npy": {
+    "bytes": 4552,
+    "sha256": "109751ff1e007a201ccd086251c2abbb19b80d9d38569553607eb4ea87ccf85b"
+  },
+  "results/p3/state38_base_audit/driver/task_08_episode_038_override_log.csv": {
+    "bytes": 1562,
+    "sha256": "7364bd2ba7ce3f598bad48ec6873f61242b6a4f68a0fdf67ad42c4f742862a9b"
+  },
+  "results/p3/state38_base_audit/driver/task_08_episode_038_state_log.csv": {
+    "bytes": 36467,
+    "sha256": "0d0d0aff74412a746c0a450bdd6c704ef4896b4a4512bead9f2e60ca6f7fc444"
+  },
+  "results/p3/state39_base_audit/driver/episodes.jsonl": {
+    "bytes": 1358,
+    "sha256": "840fd3952fd3e96ab28af730711121a2693a683cca4b2662517f4f0faac7ed07"
+  },
+  "results/p3/state39_base_audit/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "1c823113ccd50ab1d76199cb4e61a601015c23d8b29772b3cc1f26fef082a138"
+  },
+  "results/p3/state39_base_audit/driver/results.json": {
+    "bytes": 2600,
+    "sha256": "a24da4edb551b035cd72c6ff7f865fbd18a3be9dd2c3ccc839f8fc567c3f1639"
+  },
+  "results/p3/state39_base_audit/driver/task_08_episode_039_actions.npy": {
+    "bytes": 4552,
+    "sha256": "8d550f11836303b3108f18788c1e1972b69947534789ccae2ec711015597b8ed"
+  },
+  "results/p3/state39_base_audit/driver/task_08_episode_039_override_log.csv": {
+    "bytes": 1560,
+    "sha256": "d016677d79cca01a2881647cdc6b680ddd58dab7389b9c781ef973b7c7b0978b"
+  },
+  "results/p3/state39_base_audit/driver/task_08_episode_039_state_log.csv": {
+    "bytes": 36522,
+    "sha256": "b5fbf7f6bff71f91b2eafd644df7ffdc2f39bc0966002c0cd127c76b5b4f790b"
+  },
+  "results/p3/state40_base_audit/driver/episodes.jsonl": {
+    "bytes": 1356,
+    "sha256": "2661663e53fc90f590813d39d68df50bbc01f94be528eed30d16dde2e94f7dd6"
+  },
+  "results/p3/state40_base_audit/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "eefacfac7d0b309d711adeda3bf3467150da9327d4c4bc17a6b4e34f2e92a515"
+  },
+  "results/p3/state40_base_audit/driver/results.json": {
+    "bytes": 2598,
+    "sha256": "6199527f9c1db5a931dfd38c768932a71e7cc63521c229e7ff7786a5e5e36a9d"
+  },
+  "results/p3/state40_base_audit/driver/task_08_episode_040_actions.npy": {
+    "bytes": 4552,
+    "sha256": "73d9d4a206cd02580a3eee552febc72d3de95aefcb30e42259ae532c23e5e0f6"
+  },
+  "results/p3/state40_base_audit/driver/task_08_episode_040_override_log.csv": {
+    "bytes": 1564,
+    "sha256": "66d601833831d7da2b63110137a13ebd2dc332b64fe159dd4f7d2ddc76b07e49"
+  },
+  "results/p3/state40_base_audit/driver/task_08_episode_040_state_log.csv": {
+    "bytes": 36406,
+    "sha256": "4d4735873225b8be63eba6e86fe8681a80d1296178f717ba96e57db85b7958dd"
+  },
+  "results/p3/state41_base_audit/driver/episodes.jsonl": {
+    "bytes": 1352,
+    "sha256": "bc6b4eb16ab578a028e9244d28e6d2f998a86554445ea6b41935785dbd8d8a55"
+  },
+  "results/p3/state41_base_audit/driver/metadata.json": {
+    "bytes": 1754,
+    "sha256": "f65ff67747d4c93d68c7ca1f8aa0660c155cbab981b243491dff3ef3fd3b963e"
+  },
+  "results/p3/state41_base_audit/driver/results.json": {
+    "bytes": 2594,
+    "sha256": "aecce15419f7ab23315334a04ecdf9c78773ab7d87da3371568b1f9c14dc9503"
+  },
+  "results/p3/state41_base_audit/driver/task_08_episode_041_actions.npy": {
+    "bytes": 4552,
+    "sha256": "099adc891054c5354380d15d7160e9437815cdfd919ea3dbeaa2dd25d6cc0307"
+  },
+  "results/p3/state41_base_audit/driver/task_08_episode_041_override_log.csv": {
+    "bytes": 1562,
+    "sha256": "ad61fb23feb97a7f6e06e98668bee0274b53756c91b21384ac41020a934c0e93"
+  },
+  "results/p3/state41_base_audit/driver/task_08_episode_041_state_log.csv": {
+    "bytes": 36404,
+    "sha256": "3ec9f4d14f865b83f9b636de8483fc7670c8fa41ca1ef684afadec5871159910"
+  },
+  "results/p3/state42_C_r1/driver/episodes.jsonl": {
+    "bytes": 1292,
+    "sha256": "7b6126a6fdb8082b00752f78ef46cc99cf6699fa05f1dc908619d86dde22853b"
+  },
+  "results/p3/state42_C_r1/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "52244719f053dd7cf825ffe6d8fabea5d58dcb152a19fc0288bc963799212ea2"
+  },
+  "results/p3/state42_C_r1/driver/results.json": {
+    "bytes": 2452,
+    "sha256": "35e58660659bd854be751afae90e0d22f578ef64e014cb4d5809b349cdba3d2b"
+  },
+  "results/p3/state42_C_r1/driver/task_08_episode_042_actions.npy": {
+    "bytes": 4048,
+    "sha256": "bc7405765f51c568578a8c079268e1c19f00c95c2b769d86ac38c294fecbfe5e"
+  },
+  "results/p3/state42_C_r1/driver/task_08_episode_042_override_log.csv": {
+    "bytes": 1400,
+    "sha256": "c41bf21daca1cf25ec42e70e7d3b3404c0b4601a6e014201d9d2087f1ad19b25"
+  },
+  "results/p3/state42_C_r1/driver/task_08_episode_042_state_log.csv": {
+    "bytes": 32410,
+    "sha256": "443deb488291236b7c94793f7ee595bb3ecc218d31ec5048edfe49a6c4bd0670"
+  },
+  "results/p3/state42_C_r2/driver/episodes.jsonl": {
+    "bytes": 1289,
+    "sha256": "ac9e569bdf86333d266fab1be7e7cceaff66025143569fd6cbc740b064027c1e"
+  },
+  "results/p3/state42_C_r2/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "7322a56b21236327a53ec914b7899e2147e7fbe4d1b7fb7c12220a2c01af693b"
+  },
+  "results/p3/state42_C_r2/driver/results.json": {
+    "bytes": 2449,
+    "sha256": "4d97e10bf6d25dfffa33b36a1c8ed7218bb0f659776d68471a9c1ec77cc69aa2"
+  },
+  "results/p3/state42_C_r2/driver/task_08_episode_042_actions.npy": {
+    "bytes": 4048,
+    "sha256": "a21f1eb9de6d447ffae3b8f41d87cdc5e3676f76252564fe89e74a888a251894"
+  },
+  "results/p3/state42_C_r2/driver/task_08_episode_042_override_log.csv": {
+    "bytes": 1400,
+    "sha256": "c41bf21daca1cf25ec42e70e7d3b3404c0b4601a6e014201d9d2087f1ad19b25"
+  },
+  "results/p3/state42_C_r2/driver/task_08_episode_042_state_log.csv": {
+    "bytes": 32412,
+    "sha256": "c7fd233ee790620227622d0eb0af4710cf30dcf40b64218e6c24f0f006828610"
+  },
+  "results/p3/state42_C_r3/driver/episodes.jsonl": {
+    "bytes": 1292,
+    "sha256": "6d3884b663c89612ba0ae8b2c95099f53afd877f564fd652d821c82145f7d922"
+  },
+  "results/p3/state42_C_r3/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "00c7ff76681cb44c714ec13c5d389a4de9357c002deb51d669cc729a2ca2d793"
+  },
+  "results/p3/state42_C_r3/driver/results.json": {
+    "bytes": 2452,
+    "sha256": "b09d69ae3acfd0727071171dea8e0f38a01b6a412d4c1a35319c33c8d57dd680"
+  },
+  "results/p3/state42_C_r3/driver/task_08_episode_042_actions.npy": {
+    "bytes": 4048,
+    "sha256": "e88386f09882b29471c1ed8a796096b74e26ea9e070fbac4c5a5424370c57ecd"
+  },
+  "results/p3/state42_C_r3/driver/task_08_episode_042_override_log.csv": {
+    "bytes": 1402,
+    "sha256": "d1703de45ef696a1bb076b1a0ec768ff3bea609d6df640e449e74cec5b937ed3"
+  },
+  "results/p3/state42_C_r3/driver/task_08_episode_042_state_log.csv": {
+    "bytes": 32438,
+    "sha256": "e507722abd89bb58cc14f08303ceae5096cd4e4e3f61812d7f76ad457762dd24"
+  },
+  "results/p3/state42_C_r4/driver/episodes.jsonl": {
+    "bytes": 1291,
+    "sha256": "661219b038642b346ebbc7c54cac4282cc6cf1f286422b5e710b4b4ba7cd9d76"
+  },
+  "results/p3/state42_C_r4/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "2d20e1901ae8b93b253e59212c0ee5eced1bb5302ef71f0bf78a1969862e5ea3"
+  },
+  "results/p3/state42_C_r4/driver/results.json": {
+    "bytes": 2451,
+    "sha256": "0e8c28761f2cdd2fb1db0198a35c4f34704e13bd46ce536740deabf558bff3fa"
+  },
+  "results/p3/state42_C_r4/driver/task_08_episode_042_actions.npy": {
+    "bytes": 4048,
+    "sha256": "9eab7c8940bde4c88fa820fa2a69fd6f786ccdcc71853afb48b4d1e666b036b1"
+  },
+  "results/p3/state42_C_r4/driver/task_08_episode_042_override_log.csv": {
+    "bytes": 1402,
+    "sha256": "6810845c03382c67545b2fa1e30d3a7c1437405dd6c55d2bc18bed82bf0f7506"
+  },
+  "results/p3/state42_C_r4/driver/task_08_episode_042_state_log.csv": {
+    "bytes": 32463,
+    "sha256": "74c02bde2a5683dd22a73028b683f73ed4326fe28b6f12f41a622183a0f9a55d"
+  },
+  "results/p3/state42_C_r5/driver/episodes.jsonl": {
+    "bytes": 1294,
+    "sha256": "8818faa193aa403e6bd835eb76d66f659915c748d61355386559ed5468e6874f"
+  },
+  "results/p3/state42_C_r5/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "538019b08d3cb66e21f6fb76fae3033f90c10ab97517a00d98500d7a6e8ad112"
+  },
+  "results/p3/state42_C_r5/driver/results.json": {
+    "bytes": 2454,
+    "sha256": "df7e8ef3f8f975ec37ba7719c51801007e7ececca82b08e749b8966df89fb93c"
+  },
+  "results/p3/state42_C_r5/driver/task_08_episode_042_actions.npy": {
+    "bytes": 4048,
+    "sha256": "4a37fcb77e10561f4c9421ec4d1f6a4c3c671542306b11d5609726ba7d0a1fb8"
+  },
+  "results/p3/state42_C_r5/driver/task_08_episode_042_override_log.csv": {
+    "bytes": 1400,
+    "sha256": "b9168e304790a678c6b1f9891e1e56f72e636f39b48c10b51e2dfe5efb554711"
+  },
+  "results/p3/state42_C_r5/driver/task_08_episode_042_state_log.csv": {
+    "bytes": 32408,
+    "sha256": "d1b10edf9ec226e0dce5adf6aefb71d65cdcfcd0f67ace87e6f429b60fe1ea62"
+  },
+  "results/p3/state42_P_r1/driver/episodes.jsonl": {
+    "bytes": 1288,
+    "sha256": "7b1234520c946ca07324401e054d94b103b648e1bbc0b146272dad75267ce5ad"
+  },
+  "results/p3/state42_P_r1/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "45a0241cb5a590febf6b87fcdf3750e882a13375a06e37fef613e64813760d40"
+  },
+  "results/p3/state42_P_r1/driver/results.json": {
+    "bytes": 2448,
+    "sha256": "948c65a38228d3feaff5660724c83f07dd56a2fe4bb901c273ed01b39e684216"
+  },
+  "results/p3/state42_P_r1/driver/task_08_episode_042_actions.npy": {
+    "bytes": 4048,
+    "sha256": "d9ee0a426ce14a69623e9cd8766bdf55518d882962e04d7458d892ddd22a31d1"
+  },
+  "results/p3/state42_P_r1/driver/task_08_episode_042_override_log.csv": {
+    "bytes": 1400,
+    "sha256": "c41bf21daca1cf25ec42e70e7d3b3404c0b4601a6e014201d9d2087f1ad19b25"
+  },
+  "results/p3/state42_P_r1/driver/task_08_episode_042_state_log.csv": {
+    "bytes": 32424,
+    "sha256": "229f438af99a8ec4a88efd0c37a6fdcbf0bccc827eb2cd3a0494c7b9b77d2bda"
+  },
+  "results/p3/state42_P_r2/driver/episodes.jsonl": {
+    "bytes": 1289,
+    "sha256": "d5f5e0be6a45dc5274255f3e50f1ab8060238e87292a7802cb87ab797eab41c0"
+  },
+  "results/p3/state42_P_r2/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "1dd6c73b3b773bbbb32718139be886e1b122ea43fa8a2ea3941d2727797d57d2"
+  },
+  "results/p3/state42_P_r2/driver/results.json": {
+    "bytes": 2449,
+    "sha256": "adec5a9cfe1d0c7b1f93ea2569730359dc51c84f14b5cd3b8c261e113ef3ce72"
+  },
+  "results/p3/state42_P_r2/driver/task_08_episode_042_actions.npy": {
+    "bytes": 4048,
+    "sha256": "74fe4b34768c74bd8a6bbe86ee403b3fc91b4d7561baf4a8802165edf8bf02e0"
+  },
+  "results/p3/state42_P_r2/driver/task_08_episode_042_override_log.csv": {
+    "bytes": 1400,
+    "sha256": "c41bf21daca1cf25ec42e70e7d3b3404c0b4601a6e014201d9d2087f1ad19b25"
+  },
+  "results/p3/state42_P_r2/driver/task_08_episode_042_state_log.csv": {
+    "bytes": 32419,
+    "sha256": "af8ad8e73a66920a03ec79c89a816f0104db61daffae17fe50ec57c2eacd2e5f"
+  },
+  "results/p3/state42_P_r3/driver/episodes.jsonl": {
+    "bytes": 1352,
+    "sha256": "65cfed3667143c5450b4a9b812a4308bbd3fc9db6631341fc81674995c802aaa"
+  },
+  "results/p3/state42_P_r3/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "1a4f5ffac2dd359b80bbd0c77835101f54491e9bc7f068fae26d43669c750050"
+  },
+  "results/p3/state42_P_r3/driver/results.json": {
+    "bytes": 2560,
+    "sha256": "c3fe476add859fe19428501019ffb62284aebe2d9643d3ec0754fd20d0fed3e6"
+  },
+  "results/p3/state42_P_r3/driver/task_08_episode_042_actions.npy": {
+    "bytes": 4440,
+    "sha256": "f046bce3cef237c01afce4bd632328d89a27b0a5e2998af318093c424da2be3c"
+  },
+  "results/p3/state42_P_r3/driver/task_08_episode_042_override_log.csv": {
+    "bytes": 1528,
+    "sha256": "08c9e2b2de2d1f09c911caf7d914d1c2f064fa067cff71602f87ad8b77c156fa"
+  },
+  "results/p3/state42_P_r3/driver/task_08_episode_042_state_log.csv": {
+    "bytes": 35554,
+    "sha256": "989df406362a143240d73c7f05267556b8dac745d117c627e33b05adad6d03d7"
+  },
+  "results/p3/state42_P_r4/driver/episodes.jsonl": {
+    "bytes": 1292,
+    "sha256": "77560d2a794f235a9ff6ddba20429502a01819a20bb04b3f5beb5ef8eb200ddc"
+  },
+  "results/p3/state42_P_r4/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "102fa4eaf1d54292b7623350c598c9e336ccf7f95808627136fa0bfee6ddba4f"
+  },
+  "results/p3/state42_P_r4/driver/results.json": {
+    "bytes": 2452,
+    "sha256": "b6f8d7e92dba659e296655bc8a71659a87689e5595b0820c5ff4d109cfc0cf6a"
+  },
+  "results/p3/state42_P_r4/driver/task_08_episode_042_actions.npy": {
+    "bytes": 4048,
+    "sha256": "c9d2812c80a2e2581d2c049602fb4eb135cda35e3a01eb71f405c710dd5a5b15"
+  },
+  "results/p3/state42_P_r4/driver/task_08_episode_042_override_log.csv": {
+    "bytes": 1400,
+    "sha256": "c41bf21daca1cf25ec42e70e7d3b3404c0b4601a6e014201d9d2087f1ad19b25"
+  },
+  "results/p3/state42_P_r4/driver/task_08_episode_042_state_log.csv": {
+    "bytes": 32379,
+    "sha256": "a81df97129218c7ab62db8356e98b35cee13d3a808cfc483c6087e4bc37a4f12"
+  },
+  "results/p3/state42_P_r5/driver/episodes.jsonl": {
+    "bytes": 1289,
+    "sha256": "fd794c169dd8e2d2d87a3d667a6caa86cc0c20bf0dc58d361cd20d4039de05a9"
+  },
+  "results/p3/state42_P_r5/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "3378eb136b30d672e1e2f12c1acac962d980d5e8b146510e85777aa986c47feb"
+  },
+  "results/p3/state42_P_r5/driver/results.json": {
+    "bytes": 2449,
+    "sha256": "88c4446ed6948f1b9a268da142a8969c2bf0e8331c745eb0372038b098d1b7c8"
+  },
+  "results/p3/state42_P_r5/driver/task_08_episode_042_actions.npy": {
+    "bytes": 4048,
+    "sha256": "ac336c552bb8a897d65ee83cff5581fb472e9565ead907442153ae85c85b1771"
+  },
+  "results/p3/state42_P_r5/driver/task_08_episode_042_override_log.csv": {
+    "bytes": 1400,
+    "sha256": "c41bf21daca1cf25ec42e70e7d3b3404c0b4601a6e014201d9d2087f1ad19b25"
+  },
+  "results/p3/state42_P_r5/driver/task_08_episode_042_state_log.csv": {
+    "bytes": 32426,
+    "sha256": "82314a307238fd7a44a4b51f9808871e8818b4d1d31f47c368187f216cb77eea"
+  },
+  "results/p3/state43_base_audit/driver/episodes.jsonl": {
+    "bytes": 1353,
+    "sha256": "b82abf875122175387c487343d325b0eeac5b5707aedd517da77ab3c85e03421"
+  },
+  "results/p3/state43_base_audit/driver/metadata.json": {
+    "bytes": 1755,
+    "sha256": "8d9267f8c4562683c46aa8e3ad19aeb1aadaf87ad3e8fe528c21a1b5765b2b86"
+  },
+  "results/p3/state43_base_audit/driver/results.json": {
+    "bytes": 2595,
+    "sha256": "f2e12c342a5096e8b74e93452cdd175a0a5bac077e9abfc2b71abb92ee60173f"
+  },
+  "results/p3/state43_base_audit/driver/task_08_episode_043_actions.npy": {
+    "bytes": 4552,
+    "sha256": "d700d08a1f70dae6c3642f64fe786c7f79e6931ef350e0aab7ab6e17201cecc7"
+  },
+  "results/p3/state43_base_audit/driver/task_08_episode_043_override_log.csv": {
+    "bytes": 1562,
+    "sha256": "64d143d36e098a4bb22396946b90da750aabe2b4a7857cc5739498c4b9da5cdb"
+  },
+  "results/p3/state43_base_audit/driver/task_08_episode_043_state_log.csv": {
+    "bytes": 36548,
+    "sha256": "dbb4467532cf11a71cdd9383a47f5e5a882f5a4e70b72da1391afedff9d6fdbc"
+  },
+  "results/p3/state44_base_audit/driver/episodes.jsonl": {
+    "bytes": 1354,
+    "sha256": "2b99efab8450564876dab915831aa4176f08ca6931c382e3d52526e0a207e8bc"
+  },
+  "results/p3/state44_base_audit/driver/metadata.json": {
+    "bytes": 1754,
+    "sha256": "fb4a9af9a94234ff769eeaad906334d4bb149cebf3918af08546a45be442ea94"
+  },
+  "results/p3/state44_base_audit/driver/results.json": {
+    "bytes": 2596,
+    "sha256": "5ceb90ad20e9c5c6ac65c62804688ff315afa2eae2ca693ca36ad7537419f1c9"
+  },
+  "results/p3/state44_base_audit/driver/task_08_episode_044_actions.npy": {
+    "bytes": 4496,
+    "sha256": "a5a241f8690e3b186a26825c726eb244ece31df34cb90a2346987e6c84d5945d"
+  },
+  "results/p3/state44_base_audit/driver/task_08_episode_044_override_log.csv": {
+    "bytes": 1540,
+    "sha256": "34881db9880ebf478c300e76fc47568af2fd37941f013ce509d1531d56a881f9"
+  },
+  "results/p3/state44_base_audit/driver/task_08_episode_044_state_log.csv": {
+    "bytes": 35861,
+    "sha256": "cbbe089dc84002812e53f2c38cf8c0c4abe4e5ee2f583783171bf570c962cb54"
+  },
+  "results/p3/泛化与鲁棒性.md": {
+    "bytes": 4603,
+    "sha256": "d0c364f2bac13e53060e1bd1729698f1566c6873cb31e5cd09557a9f66915771"
   },
   "results/perturbation_pilot/SHA256SUMS.json": {
     "bytes": 7120,

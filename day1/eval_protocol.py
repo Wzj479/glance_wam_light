@@ -33,7 +33,13 @@ def validate_protocol(p):
     sealed = reserved_states(p)
     clash = sealed.intersection(p['episode_ids'])
     if clash:
-        raise ValueError(f'Initial states {sorted(clash)} are held back and must not be evaluated')
+        # The set is held back so a *later* evaluation has states that never informed the
+        # development conclusions. Consuming it is allowed only as a deliberate act, so a
+        # protocol must carry a written reason; an accidental 45-49 listing still fails.
+        reason = p.get('held_back_reason')
+        if not (isinstance(reason, str) and reason.strip()):
+            raise ValueError(f'Initial states {sorted(clash)} are held back and must not be evaluated '
+                             'without a declared held_back_reason')
     if type(p.get('seed')) is not int or p['seed'] < 0:
         raise ValueError('Invalid seed')
     if not p.get('conditions'):

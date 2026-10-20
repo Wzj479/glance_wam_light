@@ -36,6 +36,19 @@ class EnforcementTests(unittest.TestCase):
     def test_reserved_states_reported_for_a_task_include_only_that_task(self):
         self.assertEqual(reserved_states(protocol([33])), {45, 46, 47, 48, 49})
 
+    def test_a_declared_reason_unlocks_the_held_back_states(self):
+        p = protocol([45, 46, 47, 48, 49])
+        p['held_back_reason'] = 'Out-of-sample test of the robustness conclusions.'
+        validate_protocol(p)
+
+    def test_a_blank_or_non_string_reason_still_fails(self):
+        for bad in ('', '   ', None, 7):
+            p = protocol([33, 46])
+            p['held_back_reason'] = bad
+            with self.assertRaises(ValueError) as caught:
+                validate_protocol(p)
+            self.assertIn('held back', str(caught.exception))
+
 
 class HashTests(unittest.TestCase):
     def test_a_reserved_state_changes_the_hash_before_it_is_rejected(self):

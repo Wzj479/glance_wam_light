@@ -1,0 +1,398 @@
+{
+  "schema_version": 1,
+  "model": "base",
+  "checkpoint": "/root/autodl-tmp/wam_glance_project/GlanceWAM/glancewam_bundle/checkpoints/glancewam_libero/checkpoints/steps_15000_pytorch_model_ema.pt",
+  "protocol_sha256": "2c573dca4b2fee9d170cd9b1b1376dc2c5e96fd3e636e63e82f3380f685382af",
+  "condition": "color_strong",
+  "corruption": {
+    "brightness": 1.0,
+    "saturation": 1.0,
+    "gains": [
+      0.7,
+      1.0,
+      1.3
+    ]
+  },
+  "successes": 5,
+  "episodes": 5,
+  "success_rate": 1.0,
+  "hold_close_inclusive": null,
+  "episode_results": [
+    {
+      "task_id": 8,
+      "episode_id": 45,
+      "env_seed": 1487761520,
+      "instruction": "put the bowl on the plate",
+      "task_name": "put_the_bowl_on_the_plate",
+      "condition": "color_strong",
+      "success": true,
+      "init_state_sha256": "c3027e409b8887a59c27e4fcf2b6d77eec6260951b620fcf8441b1e48fef7588",
+      "post_settle_state_sha256": "5579ff5ec0ff576c80bf56e7260783ef3a03371a8341c4ef17a8ebffdbd2cc73",
+      "steps": 78,
+      "seconds": 11.52163599000778,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 5.347357086953707,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.16359744302462786,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.163435033056885,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.1652969199931249,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.15804513089824468,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.17074327205773443,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 0.8930493380175903,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.1547344729769975,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.15698064805474132,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.15620639792177826,
+          "refresh": false
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "f2c153280ba21b0483c7f27ad919512a415a0c2de6025de182d19ccecba0f4f2"
+    },
+    {
+      "task_id": 8,
+      "episode_id": 46,
+      "env_seed": 609243333,
+      "instruction": "put the bowl on the plate",
+      "task_name": "put_the_bowl_on_the_plate",
+      "condition": "color_strong",
+      "success": true,
+      "init_state_sha256": "7338f9f458a36affb1f5b7ddd7b94da9c0d9496a47bd30d54e31c6d940355575",
+      "post_settle_state_sha256": "6ca757035cc167ce50fd0f14b1b0fd907eff5665bcf95e3be4649ad10e569cb7",
+      "steps": 76,
+      "seconds": 6.905562324915081,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 0.9045427090022713,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.16521397896576673,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.15420199104119092,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.1586317700566724,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.17914657504297793,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.15781701100058854,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 0.8888393040979281,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.15959431789815426,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.16337720095179975,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.15921227994840592,
+          "refresh": false
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "5c3b5b116cde799662dbc5618929b27b2879154847daa7d01d5898210e8a93af"
+    },
+    {
+      "task_id": 8,
+      "episode_id": 47,
+      "env_seed": 2106863380,
+      "instruction": "put the bowl on the plate",
+      "task_name": "put_the_bowl_on_the_plate",
+      "condition": "color_strong",
+      "success": true,
+      "init_state_sha256": "7d401169a9739ea9a1b819c17ced96429e3d6153446d4b8fe8cbee4fbbe081ef",
+      "post_settle_state_sha256": "c110f73589b37e47b479fb01492853bea23dfb07cde59846ca28ea6a8f173f78",
+      "steps": 81,
+      "seconds": 17.290471157990396,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 5.8553582628956065,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.1982874620007351,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.16127202205825597,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.15804281004238874,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.16123168903868645,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.19424408301711082,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 0.9961726110195741,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.1690767799736932,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.16175084398128092,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.16882065101526678,
+          "refresh": false
+        },
+        {
+          "step": 80,
+          "seconds": 0.15754160401411355,
+          "refresh": false
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "67fd15b64097131b05ac8821e8f10d344abb33663e7fafd6053e5e68a29f4d79"
+    },
+    {
+      "task_id": 8,
+      "episode_id": 48,
+      "env_seed": 409161578,
+      "instruction": "put the bowl on the plate",
+      "task_name": "put_the_bowl_on_the_plate",
+      "condition": "color_strong",
+      "success": true,
+      "init_state_sha256": "faef35d875bb1cb24bec2cdd07a60d3f012a9ff0678a843747305c06b663e97e",
+      "post_settle_state_sha256": "bffb19b1a68b5ef12678de99a6f5f63c36528a02c8df22ec7bc399786d6e1150",
+      "steps": 74,
+      "seconds": 7.086516164010391,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 0.9326770940097049,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.15658331895247102,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.1553826150484383,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.15802107495255768,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.20539088605437428,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.20855221909005195,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 0.9223332270048559,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.15380555193405598,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.15461865602992475,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.17693232698366046,
+          "refresh": false
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "d385d03f6857c5f655136061c9382c840fc97f1b54edf1434357e3484c5074c6"
+    },
+    {
+      "task_id": 8,
+      "episode_id": 49,
+      "env_seed": 1183983070,
+      "instruction": "put the bowl on the plate",
+      "task_name": "put_the_bowl_on_the_plate",
+      "condition": "color_strong",
+      "success": true,
+      "init_state_sha256": "7bc3ebed763bde95f99ac7c8c4aece4edecf38d5890f7f453864ce6f8070f2c1",
+      "post_settle_state_sha256": "565facb81832257c944469cb34f8b259d8bfce890613b749f2c8d596dc259b8a",
+      "steps": 90,
+      "seconds": 7.783557930961251,
+      "query_times": [
+        {
+          "step": 0,
+          "seconds": 0.926346161053516,
+          "refresh": true
+        },
+        {
+          "step": 8,
+          "seconds": 0.16053836699575186,
+          "refresh": false
+        },
+        {
+          "step": 16,
+          "seconds": 0.1604856220073998,
+          "refresh": false
+        },
+        {
+          "step": 24,
+          "seconds": 0.16110850707627833,
+          "refresh": false
+        },
+        {
+          "step": 32,
+          "seconds": 0.20541967498138547,
+          "refresh": false
+        },
+        {
+          "step": 40,
+          "seconds": 0.20317809097468853,
+          "refresh": false
+        },
+        {
+          "step": 48,
+          "seconds": 0.9450900289230049,
+          "refresh": true
+        },
+        {
+          "step": 56,
+          "seconds": 0.15614382992498577,
+          "refresh": false
+        },
+        {
+          "step": 64,
+          "seconds": 0.15943327406421304,
+          "refresh": false
+        },
+        {
+          "step": 72,
+          "seconds": 0.1596212099539116,
+          "refresh": false
+        },
+        {
+          "step": 80,
+          "seconds": 0.161725461948663,
+          "refresh": false
+        },
+        {
+          "step": 88,
+          "seconds": 0.1584652130259201,
+          "refresh": false
+        }
+      ],
+      "video_frames": 0,
+      "video_fps": 20,
+      "video_time_base": "simulation",
+      "video_layout": "rows: primary/wrist; columns: original/observed",
+      "gripper_overridden_steps": 0,
+      "divergence_step_vs_reference": null,
+      "action_sha256": "765a0931348dbe5cc493e6331b30daf6a73ae330cbfdd11bfe6cc3d0a9a2dc05"
+    }
+  ],
+  "timing_scope": "synchronous official client, cached goal cadence"
+}

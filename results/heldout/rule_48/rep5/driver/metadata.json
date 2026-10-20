@@ -1,0 +1,41 @@
+{
+  "coordinates": "MuJoCo world frame, metres; object body origins",
+  "eef_quaternion": "xyzw",
+  "state_index": "0 is settled; k is after k actions",
+  "action_index": "row k applies from state k to k+1",
+  "control_hz": 20,
+  "gripper_sign": "+1 close, -1 open, per the official client binarisation",
+  "success_predicate": "bowl body z >= plate body z AND contact AND XY distance < 0.03 m",
+  "grasp_proxy": "Both fingerpad groups contact the bowl; not a stability guarantee",
+  "contact_groups": {
+    "left_finger": [
+      "gripper0_finger1_collision",
+      "gripper0_finger1_pad_collision"
+    ],
+    "right_finger": [
+      "gripper0_finger2_collision",
+      "gripper0_finger2_pad_collision"
+    ],
+    "left_fingerpad": [
+      "gripper0_finger1_pad_collision"
+    ],
+    "right_fingerpad": [
+      "gripper0_finger2_pad_collision"
+    ]
+  },
+  "slip_note": "per-step change of the bowl offset from the EEF origin, expressed in the EEF frame, matching the column analyze_contact_transfer.py recomputes so the closed-loop and offline metrics are directly comparable",
+  "hold_close_inclusive": null,
+  "grasp_hold_rule": {
+    "rule": "min_closed_steps_or_min_lift",
+    "min_closed_steps": 30,
+    "min_lift_mm": null,
+    "grasp_started": true,
+    "closed_steps": 35,
+    "origin_z": 0.9611981274656999
+  },
+  "intervention_rule": "only action[6] inside the window; the six arm channels are never modified",
+  "post_window_rule": "no gripper override and no added release gate after the window",
+  "inference_cadence": "action_chunk_size=8, goal_horizon_rows=48.0",
+  "chunk_log": "one row per query step, holding the full returned action block",
+  "scope": "Closed loop with policy inference; intervention limited to the gripper channel"
+}

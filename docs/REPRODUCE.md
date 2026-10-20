@@ -84,7 +84,7 @@ stage_v1 族里只有 C 和 P 是自己训出来的，base 是上游预训练权
 
 ### 扩展协议与归档复现校验
 
-把 stage_v1 的评测集从 25–44 扩到 0–44 时，`run_robust_eval.py` 会遍历协议里的全部条件；协议只写 `color_strong` 即可，45 回合 × 3 模型 = 135 次。`clean` 在归档里是三模型全 20/20 的天花板，零区分度，而复现覆盖度由 color_strong 的 45 × 3 已足够。封存初态 45–49 由 `validate_protocol` 机械拒绝，不必靠人工检查。
+把 stage_v1 的评测集从 25–44 扩到 0–44 时，`run_robust_eval.py` 会遍历协议里的全部条件；协议只写 `color_strong` 即可，45 回合 × 3 模型 = 135 次。`clean` 在归档里是三模型全 20/20 的天花板，零区分度，而复现覆盖度由 color_strong 的 45 × 3 已足够。封存初态 45–49 由 `validate_protocol` 机械拒绝；只有协议声明非空 `held_back_reason` 时才放行，用于样本外检验（见 `results/heldout/`），误列仍会被拒。
 
 `aggregate()` 只在单次 `--out` **内部**做模型间配对校验（`run_robust_eval.py` 中 `if 'base' in summaries` 一段），**不与既有归档比对**。因此扩展与归档的确定性复现必须显式请求：
 

@@ -257,6 +257,9 @@ def main():
     p.add_argument('--expect-init-sha256')
     p.add_argument('--expect-post-settle-sha256')
     p.add_argument('--save-videos', action='store_true')
+    p.add_argument('--dump-goal', metavar='DIR', default=None,
+                   help="Save each query step's policy-view image pair and the goal latent "
+                        'the world model produced for it, for offline prediction scoring')
     a = p.parse_args()
 
     from eval_protocol import MAX_STEPS, protocol_hash, validate_episode_results
@@ -364,6 +367,19 @@ def main():
                                            goal_horizon_rows=example['goal_horizon_rows'], seed=seed,
                                            chunk_position=int(step % client.action_chunk_size),
                                            actions=np.asarray(client.raw_actions, dtype=float)))
+                        if a.dump_goal:
+                            goal_dir = out / a.dump_goal
+                            goal_dir.mkdir(parents=True, exist_ok=True)
+                            goal = getattr(client, '_cached_goal', None)
+                            np.savez_compressed(
+                                goal_dir / f'step_{step:03d}.npz',
+                                view0=np.asarray(viewed[0], dtype=np.uint8),
+                                view1=np.asarray(viewed[1], dtype=np.uint8),
+                                goal=np.zeros((1,), np.float32) if goal is None
+                                else np.asarray(goal, dtype=np.float32),
+                                has_goal=np.array([goal is not None]),
+                                seed=np.array([seed]),
+                                lang=np.array([str(instruction)]))
                     raw = response['raw_action']
                     action = np.concatenate([
                         np.asarray(raw['world_vector'], dtype=np.float32).reshape(-1),

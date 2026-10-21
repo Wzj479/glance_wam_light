@@ -1,0 +1,171 @@
+10/20 [22:10:55] INFO     | >> [*] Loading from local         share_tools.py:432
+                          checkpoint path                                       
+                          `/root/autodl-tmp/wam_glance_projec                   
+                          t/GlanceWAM/results/day1_base/check                   
+                          points/steps_15000_pytorch_model_em                   
+                          a.pt`                                                 
+                 INFO     | >> [*]  normalised config from    share_tools.py:584
+                          version_id=None to '0.21'                             
+10/20 [22:10:56] INFO     | >> [*] Loading SkyReels-V2 DF    SkyReelsV2DF.py:142
+                          from                                                  
+                          /root/autodl-tmp/wam_glance_projec                    
+                          t/GlanceWAM/models/skyreels-base                      
+                 INFO     | >> [*] skip_text_encoder=True;   SkyReelsV2DF.py:150
+                          UMT5 not loaded. build_inputs()                       
+                          requires examples with                                
+                          `lang_embed`.                                         
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.85s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.23s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.63s/it]
+Total number of DiT parameters:  144449536
+10/20 [22:11:03] INFO     | >> [*] >> [*] goal_conditioning:    GlanceWAM.py:340
+                          goal-aware 3-class prefix-LM mask on                  
+                          60 attention processors                               
+                          (n_goal_frames=1, dropout_p=0.1,                      
+                          gen_steps=10).                                        
+                 INFO     | >> [*] >> [*] E7.0 multi-tap        GlanceWAM.py:432
+                          conditioning: taps=[5, 12, 19, 26] ->                 
+                          head KV length x4 (4x(obs+goal)                       
+                          tokens), zero-init per-tap embedding.                 
+/root/autodl-tmp/wam_glance_project/GlanceWAM/.venv/lib/python3.11/site-packages/albumentations/check_version.py:49: UserWarning: Error fetching version info <urlopen error _ssl.c:999: The handshake operation timed out>
+  data = fetch_version_info()
+10/20 [22:11:14] INFO     | >>  Loaded data_config from LIBERO:  registry.py:106
+                          ['libero_franka']                                     
+                 INFO     | >>  Loaded embodiment_tags from      registry.py:111
+                          LIBERO (data_config):                                 
+                          ['libero_franka']                                     
+                 INFO     | >>  Loaded mixtures from LIBERO      registry.py:116
+                          (data_config): ['libero_all',                         
+                          'libero_goal']                                        
+                 INFO     | >>  Loaded data_config from          registry.py:106
+                          Robocasa_kitchen: ['panda_omron']                     
+                 INFO     | >>  Loaded embodiment_tags from      registry.py:111
+                          Robocasa_kitchen (data_config):                       
+                          ['panda_omron']                                       
+                 INFO     | >>  Loaded mixtures from             registry.py:116
+                          Robocasa_kitchen (data_config):                       
+                          ['robocasa_kitchen_all',                              
+                          'robocasa_kitchen_pnp',                               
+                          'robocasa_kitchen_turnoffmicrowave']                  
+                 INFO     | >> [*] >> [*]                       GlanceWAM.py:447
+                          resident_text_table=True: caching                     
+                          unique cached-text embeds on GPU (max                 
+                          1024 rows; eager-prefilled 10).                       
+10/20 [22:11:25] INFO     | >> server listening on 127.0.0.1:6694  server.py:341
+                 INFO     | >> Batching:           websocket_policy_server.py:80
+                          max_batch=1,                                          
+                          batch_wait_ms=0.0                                     
+10/20 [22:11:26] ERROR    | >> opening handshake failed            server.py:365
+                          ╭─ Traceback (most recent call last) ──╮              
+                          │ /root/autodl-tmp/wam_glance_project/ │              
+                          │ GlanceWAM/.venv/lib/python3.11/site- │              
+                          │ packages/websockets/http11.py:138 in │              
+                          │ parse                                │              
+                          │                                      │              
+                          │   135 │   │   # to implement HTTP/1. │              
+                          │   136 │   │                          │              
+                          │   137 │   │   try:                   │              
+                          │ ❱ 138 │   │   │   request_line = yie │              
+                          │   139 │   │   except EOFError as exc │              
+                          │   140 │   │   │   raise EOFError("co │              
+                          │   141                                │              
+                          │                                      │              
+                          │ /root/autodl-tmp/wam_glance_project/ │              
+                          │ GlanceWAM/.venv/lib/python3.11/site- │              
+                          │ packages/websockets/http11.py:320 in │              
+                          │ parse_line                           │              
+                          │                                      │              
+                          │   317 │                              │              
+                          │   318 │   """                        │              
+                          │   319 │   try:                       │              
+                          │ ❱ 320 │   │   line = yield from read │              
+                          │   321 │   except RuntimeError:       │              
+                          │   322 │   │   raise SecurityError("l │              
+                          │   323 │   # Not mandatory but safe - │              
+                          │                                      │              
+                          │ /root/autodl-tmp/wam_glance_project/ │              
+                          │ GlanceWAM/.venv/lib/python3.11/site- │              
+                          │ packages/websockets/streams.py:46 in │              
+                          │ read_line                            │              
+                          │                                      │              
+                          │    43 │   │   │   if p > m:          │              
+                          │    44 │   │   │   │   raise RuntimeE │              
+                          │    45 │   │   │   if self.eof:       │              
+                          │ ❱  46 │   │   │   │   raise EOFError │              
+                          │    47 │   │   │   yield              │              
+                          │    48 │   │   if n > m:              │              
+                          │    49 │   │   │   raise RuntimeError │              
+                          ╰──────────────────────────────────────╯              
+                          EOFError: stream ends after 0 bytes,                  
+                          before end of line                                    
+                                                                                
+                          The above exception was the direct cause              
+                          of the following exception:                           
+                                                                                
+                          ╭─ Traceback (most recent call last) ──╮              
+                          │ /root/autodl-tmp/wam_glance_project/ │              
+                          │ GlanceWAM/.venv/lib/python3.11/site- │              
+                          │ packages/websockets/server.py:547 in │              
+                          │ parse                                │              
+                          │                                      │              
+                          │   544 │   def parse(self) -> Generat │              
+                          │   545 │   │   if self.state is CONNE │              
+                          │   546 │   │   │   try:               │              
+                          │ ❱ 547 │   │   │   │   request = yiel │              
+                          │   548 │   │   │   │   │   self.reade │              
+                          │   549 │   │   │   │   )              │              
+                          │   550 │   │   │   except Exception a │              
+                          │                                      │              
+                          │ /root/autodl-tmp/wam_glance_project/ │              
+                          │ GlanceWAM/.venv/lib/python3.11/site- │              
+                          │ packages/websockets/http11.py:140 in │              
+                          │ parse                                │              
+                          │                                      │              
+                          │   137 │   │   try:                   │              
+                          │   138 │   │   │   request_line = yie │              
+                          │   139 │   │   except EOFError as exc │              
+                          │ ❱ 140 │   │   │   raise EOFError("co │              
+                          │   141 │   │                          │              
+                          │   142 │   │   try:                   │              
+                          │   143 │   │   │   method, raw_path,  │              
+                          ╰──────────────────────────────────────╯              
+                          EOFError: connection closed while                     
+                          reading HTTP request line                             
+                                                                                
+                          The above exception was the direct cause              
+                          of the following exception:                           
+                                                                                
+                          ╭─ Traceback (most recent call last) ──╮              
+                          │ /root/autodl-tmp/wam_glance_project/ │              
+                          │ GlanceWAM/.venv/lib/python3.11/site- │              
+                          │ packages/websockets/asyncio/server.p │              
+                          │ y:356 in conn_handler                │              
+                          │                                      │              
+                          │   353 │   │   try:                   │              
+                          │   354 │   │   │   async with asyncio │              
+                          │   355 │   │   │   │   try:           │              
+                          │ ❱ 356 │   │   │   │   │   await conn │              
+                          │   357 │   │   │   │   │   │   self.p │              
+                          │   358 │   │   │   │   │   │   self.p │              
+                          │   359 │   │   │   │   │   │   self.s │              
+                          │                                      │              
+                          │ /root/autodl-tmp/wam_glance_project/ │              
+                          │ GlanceWAM/.venv/lib/python3.11/site- │              
+                          │ packages/websockets/asyncio/server.p │              
+                          │ y:207 in handshake                   │              
+                          │                                      │              
+                          │   204 │   │   # response that reject │              
+                          │   205 │   │                          │              
+                          │   206 │   │   if self.protocol.hands │              
+                          │ ❱ 207 │   │   │   raise self.protoco │              
+                          │   208 │                              │              
+                          │   209 │   def process_event(self, ev │              
+                          │   210 │   │   """                    │              
+                          ╰──────────────────────────────────────╯              
+                          InvalidMessage: did not receive a valid               
+                          HTTP request                                          
+10/20 [22:11:31] INFO     | >> connection open                     server.py:531
+                 INFO     | >> Connection from    websocket_policy_server.py:104
+                          ('127.0.0.1', 59412)                                  
+                          opened                                                
+10/20 [22:13:12] INFO     | >> Connection from    websocket_policy_server.py:122
+                          ('127.0.0.1', 59412)                                  
+                          closed                                                

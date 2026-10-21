@@ -1,0 +1,44 @@
+{
+  "curve": [
+    {
+      "refresh_rows": 48,
+      "episodes": 10,
+      "successes": 2,
+      "success_rate": 0.2,
+      "mean_steps": 259.3,
+      "staleness_rows": 0
+    },
+    {
+      "refresh_rows": 72,
+      "episodes": 10,
+      "successes": 3,
+      "success_rate": 0.3,
+      "mean_steps": 239.0,
+      "staleness_rows": 24
+    },
+    {
+      "refresh_rows": 96,
+      "episodes": 10,
+      "successes": 1,
+      "success_rate": 0.1,
+      "mean_steps": 281.8,
+      "staleness_rows": 48
+    },
+    {
+      "refresh_rows": 144,
+      "episodes": 10,
+      "successes": 1,
+      "success_rate": 0.1,
+      "mean_steps": 287.6,
+      "staleness_rows": 96
+    },
+    {
+      "refresh_rows": 288,
+      "episodes": 10,
+      "successes": 0,
+      "success_rate": 0.0,
+      "mean_steps": 300.0,
+      "staleness_rows": 240
+    }
+  ]
+}
